@@ -1,0 +1,1633 @@
+{
+  "bookId": "moby-dick",
+  "version": 1,
+  "generatedBy": "claude-haiku-5-5",
+  "choicePoints": [
+    {
+      "id": "cp01",
+      "chapter": 1,
+      "anchorAfter": "c001p014",
+      "rejoinAt": "c001p015",
+      "prompt": "Ishmael's curiosity about the great whale is pulling him toward the voyage. What should he do first?",
+      "isIntro": true,
+      "availableCharacters": [
+        "ishmael"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Follow the crowds down to the wharves and watch",
+          "detourBrief": "The narrator walks through the crowds to the crowded wharves. He watches gulls, tall masts, and sailors loading casks for distant voyages. A breeze off the harbor makes him feel light and hopeful. He notices a whaling ship's crew heading out, their songs drifting across the water. He smiles, lets the sights settle in his mind, and turns back toward the thoughts of the whale.",
+          "mustPreserve": [
+            "Ishmael goes to sea as a simple sailor, not as a passenger or officer.",
+            "The great whale draws Ishmael's curiosity and pulls him toward the trip."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Study old maps of the faraway southern seas",
+          "detourBrief": "The narrator unrolls old maps in a dim room and traces the wild southern seas with his finger. He imagines the coasts of Patagonia and unknown islands where strange creatures might swim. The maps show more blank spaces than known shores, which excites him. He closes the maps with a sense of wonder, ready to wonder about the whale again.",
+          "mustPreserve": [
+            "Ishmael's voyage is a whaling voyage he chooses partly because of the whale.",
+            "Ishmael loves faraway and forbidden seas."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Rest quietly and let the feelings of the sea grow",
+          "detourBrief": "The narrator sits by an open window, listening to the distant waves. He recalls childhood evenings when the sea seemed to call him. He feels calm, then restless, as if the ocean were whispering his name. He decides that the feeling is a kind of friendship with the sea. He takes a deep breath and lets the quiet thoughts drift toward the great whale once more.",
+          "mustPreserve": [
+            "Ishmael always goes to sea when he feels gloomy or restless.",
+            "The Fates, or some strange force, guide Ishmael toward the whaling voyage."
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ishmael": [
+          {
+            "id": "ishmael-1",
+            "label": "Ask an old sailor on the wharf about whales",
+            "detourBrief": "Ishmael finds a weathered sailor mending rope and asks about the great whale. The sailor laughs, then tells a short, cheerful tale of a huge pale shape rising from the waves. Ishmael thanks him, feeling his itch for faraway things grow stronger. He walks on, eager and curious, and his thoughts return to the whale.",
+            "mustPreserve": [
+              "Ishmael goes to sea as a simple sailor, not as a passenger or officer.",
+              "The great whale draws Ishmael's curiosity."
+            ]
+          },
+          {
+            "id": "ishmael-2",
+            "label": "Write a list of wonders he hopes to see",
+            "detourBrief": "Ishmael sits on his sea chest and writes a list in his notebook: flying fish, icebergs, distant islands, and the great whale at the top. He imagines each sight with delight. The list makes him feel brave and ready for the adventure. He closes the notebook, thinking again of the great whale and the endless sea ahead.",
+            "mustPreserve": [
+              "Ishmael always goes to sea as a sailor because he is paid for his work.",
+              "The great whale draws Ishmael's curiosity and pulls him toward the trip."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp02",
+      "chapter": 3,
+      "anchorAfter": "c003p057",
+      "rejoinAt": "c003p061",
+      "prompt": "Queequeg is busy with his strange little idol and his pipe. What should Ishmael do before the light goes out?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ishmael",
+        "queequeg"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Ask the landlord to explain what Queequeg really is",
+          "detourBrief": "Ishmael calls out for the landlord, who appears with a candle and a grin. He explains that Queequeg is a kind man from far-off islands who has traveled a long way, and that the tattoos are simply part of his home customs. Ishmael listens, feels a little less scared, and watches Queequeg tuck the idol away. The landlord leaves, and the room grows quiet again.",
+          "mustPreserve": [
+            "Queequeg is a harpooneer who came from the South Seas",
+            "The landlord is the one who left the room before the tomahawk scene"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Stay quiet and watch Queequeg closely",
+          "detourBrief": "Ishmael decides to keep still and study the harpooneer carefully, as a curious observer would. He notices Queequeg's careful manners, how gently he handles the biscuit and the idol, and how he tidies his things with care. Ishmael starts to think there is more kindness in him than fear. Queequeg settles his pipe and the moment passes calmly.",
+          "mustPreserve": [
+            "Ishmael has not yet spoken to Queequeg",
+            "The tomahawk is still in Queequeg's hands"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Offer Queequeg a friendly sign of peace",
+          "detourBrief": "Ishmael tries to show he means no harm, perhaps by nodding politely and holding out an open hand. Queequeg studies him, then nods back and puts the tomahawk down on the chest. Neither can speak the other's language well, but they share a small, friendly moment. The mood in the room softens as the candle flickers.",
+          "mustPreserve": [
+            "Queequeg's tomahawk is still in the room",
+            "Ishmael is still a stranger to Queequeg at this point"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ishmael": [
+          {
+            "id": "ishmael-1",
+            "label": "Hold still and wait for Queequeg to speak",
+            "detourBrief": "Ishmael stays frozen and listens, hoping the harpooneer will explain himself. Queequeg mutters a few words in his own tongue and gestures to the chest. Ishmael understands only that he is not being attacked. He breathes slowly and waits until the tension eases a little.",
+            "mustPreserve": [
+              "Ishmael does not yet know Queequeg's name or home",
+              "The tomahawk is still lit and near"
+            ]
+          },
+          {
+            "id": "ishmael-2",
+            "label": "Politely ask Queequeg to put out his pipe",
+            "detourBrief": "Ishmael speaks up, keeping his voice steady, and asks Queequeg to stop smoking in bed. Queequeg looks surprised, then nods and sets his pipe aside with care. Ishmael feels braver now that he has spoken. The room settles, and the two stop being quite so wary of each other.",
+            "mustPreserve": [
+              "Ishmael has not yet agreed to share the bed",
+              "The tomahawk is still in the room"
+            ]
+          }
+        ],
+        "queequeg": [
+          {
+            "id": "queequeg-1",
+            "label": "Show Ishmael the little wooden idol gently",
+            "detourBrief": "Queequeg holds up his small carved idol and points to it with a friendly, serious face, trying to explain it in broken words. Ishmael listens and realizes it is a treasured object, not a threat. Queequeg tucks it back into his coat and smiles a little. The strangeness fades, and the room becomes calmer.",
+            "mustPreserve": [
+              "The idol belongs to Queequeg and stays with him",
+              "Queequeg has not harmed Ishmael"
+            ]
+          },
+          {
+            "id": "queequeg-2",
+            "label": "Set the tomahawk aside and offer a pipe",
+            "detourBrief": "Queequeg lays the tomahawk down on the chest and offers Ishmael a seat and a moment of rest. He makes it clear with gestures that he means no harm and wants to be friends. Ishmael accepts the friendly gesture. The two sit quietly, and the earlier fear slowly drains away.",
+            "mustPreserve": [
+              "Queequeg's tomahawk remains in the room",
+              "No one is harmed in the room"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp03",
+      "chapter": 9,
+      "anchorAfter": "c009p018",
+      "rejoinAt": "c009p021",
+      "prompt": "Father Mapple's sermon about Jonah is growing fierce. What should Ishmael do while the storm rages outside?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ishmael"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Slip to the chapel door and watch the storm",
+          "detourBrief": "Ishmael tiptoes to the chapel door and peers out at the gray, churning sea and the wind tugging at the ship's ropes. The salt spray stings his face. He hears the preacher's voice rise behind him and hurries back to his bench, just as Mapple turns to describe Jonah's prayer from the whale's belly.",
+          "mustPreserve": [
+            "Jonah is swallowed by the whale and survives",
+            "Father Mapple is the preacher delivering the sermon"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Ask a sailor beside you what he thinks",
+          "detourBrief": "Ishmael leans toward a weathered old whaler and whispers that the sermon feels true. The old man nods gravely and says Mapple has spoken like a man who knows the sea. Together they listen as the preacher finishes describing Jonah's sorrow and his repentance in the fish's belly.",
+          "mustPreserve": [
+            "Jonah repents while inside the whale",
+            "The congregation is made up of sailors listening to the sermon"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Hold very still and listen closely",
+          "detourBrief": "Ishmael sits quietly and fixes Mapple's words in his memory. He notices how the lamps flicker and how the people hold their breath. The preacher's voice grows softer as he speaks of Jonah's prayer, and Ishmael feels the chapel grow still, waiting for the next words.",
+          "mustPreserve": [
+            "Jonah prays from inside the great fish",
+            "Father Mapple is still speaking"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ishmael": [
+          {
+            "id": "ishmael-1",
+            "label": "Write Mapple's words about the whale in a notebook",
+            "detourBrief": "Ishmael pulls out a small notebook and copies Mapple's phrase about Jonah's prayer from the belly of the fish. He underlines the words about repentance and thinks about them carefully. When the sermon grows louder, he closes the book and lifts his eyes back to the preacher.",
+            "mustPreserve": [
+              "Jonah's prayer comes from inside the whale",
+              "Mapple is preaching about repentance"
+            ]
+          },
+          {
+            "id": "ishmael-2",
+            "label": "Look around to see how the sailors feel",
+            "detourBrief": "Ishmael glances along the benches and sees rough sailors wiping their eyes and nodding slowly. Some look thoughtful, others worried about their own voyages. He sees that the storm outside has made everyone feel close to the drowning Jonah, and then he turns back to the preacher.",
+            "mustPreserve": [
+              "The sailors are listening to a sermon about Jonah",
+              "The storm is outside the chapel"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp04",
+      "chapter": 13,
+      "anchorAfter": "c013p013",
+      "rejoinAt": "c013p015",
+      "prompt": "The Captain is furious and the main-sail boom has broken loose. What should happen next on the Moss?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ishmael",
+        "queequeg"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Watch the swinging boom from the rail",
+          "detourBrief": "Ishmael grips the rail and watches the boom slam from side to side while the crew freezes. Queequeg crawls beneath it, ropes the spar, and it is trapped. He dives after the fallen young passenger and the boat pulls them both up alive. The Captain apologizes to Queequeg, and Ishmael feels his heart pounding.",
+          "mustPreserve": [
+            "The young passenger is rescued alive.",
+            "Queequeg trapped the boom with a rope and dove into the sea."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Shout a warning to the frightened crew",
+          "detourBrief": "Ishmael shouts loudly, and the sailors duck away from the flying boom. Queequeg steps in, crawls under the swinging spar, and lashes a rope around it to stop it. Then he leaps into the foam, searches the waves, and brings the young passenger back to the boat alive. The crew cheers, and the Captain says sorry.",
+          "mustPreserve": [
+            "The young passenger is rescued alive.",
+            "The Captain apologizes after the rescue."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Help the crew steady the schooner",
+          "detourBrief": "Ishmael runs to help the sailors turn the schooner into the wind, which slows the boom. Queequeg uses a rope to catch the spar, then darts over the side to save the young passenger. The stern boat reaches them, and the sailors pull the boy aboard, breathing. The Captain admits he was wrong to threaten Queequeg.",
+          "mustPreserve": [
+            "Queequeg catches the boom with a rope before he dives.",
+            "The young passenger survives."
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ishmael": [
+          {
+            "id": "ishmael-1",
+            "label": "Grab a rope and rush to the bow",
+            "detourBrief": "Ishmael grabs a loose line and runs toward the bow, where the crew is huddled. He sees Queequeg crawl beneath the boom and trap it with a rope. Ishmael then watches Queequeg dive into the sea, and the crew lowers the stern boat. The young passenger is pulled out alive, and the Captain apologizes.",
+            "mustPreserve": [
+              "Queequeg traps the boom and dives in.",
+              "The young passenger is pulled out alive."
+            ]
+          },
+          {
+            "id": "ishmael-2",
+            "label": "Stay close and cheer Queequeg on",
+            "detourBrief": "Ishmael stays beside the bowsprit, gripping the rail as the boom sweeps past. He cheers Queequeg as he ropes the spar and leaps overboard. Ishmael counts the minutes until Queequeg surfaces, dragging the bumpkin. The boat hauls them aboard, and the sailors agree that Queequeg is a hero.",
+            "mustPreserve": [
+              "Queequeg ropes the boom before diving.",
+              "Queequeg brings the young passenger back alive."
+            ]
+          }
+        ],
+        "queequeg": [
+          {
+            "id": "queequeg-1",
+            "label": "Study the boom's swing and wait",
+            "detourBrief": "Queequeg studies the boom as it flies from side to side, timing its swing carefully. He drops to his knees, crawls under the spar, and throws a rope that catches it. The boom is trapped and the ship is safe. He then dives into the sea after the young passenger and brings him back alive.",
+            "mustPreserve": [
+              "The boom is trapped with a rope.",
+              "The young passenger is saved alive."
+            ]
+          },
+          {
+            "id": "queequeg-2",
+            "label": "Call out to the greenhorn to hold on",
+            "detourBrief": "Queequeg shouts to the young passenger in the water to keep his head up. He ropes the boom first so it cannot strike anyone else. Then he dives under the foam, searches, and lifts the boy back toward the boat. The sailors haul them both aboard, and the Captain begs Queequeg's pardon.",
+            "mustPreserve": [
+              "Queequeg ropes the boom before he dives.",
+              "The Captain apologizes to Queequeg."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp05",
+      "chapter": 19,
+      "anchorAfter": "c019p033",
+      "rejoinAt": "c019p034",
+      "prompt": "The ragged stranger has said his name is Elijah, and he may be following them. What should Ishmael do?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ishmael",
+        "queequeg"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Follow Elijah quietly and see where he goes",
+          "detourBrief": "Ishmael and Queequeg trail Elijah at a careful distance along the waterfront. He stops at a sailors' lodging, looks back once, then goes inside. The friends agree that he is only a strange, lonely man and turn back toward their own lodging, still puzzled.",
+          "mustPreserve": [
+            "Ishmael and Queequeg have already signed the articles for the Pequod.",
+            "Elijah reveals nothing certain about Captain Ahab."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Ask a passing sailor what he knows of Elijah",
+          "detourBrief": "Ishmael stops an old sailor mending a rope and asks about the ragged man. The sailor laughs and says Elijah is harmless, a beggar who talks of doom and warnings to every ship. He says not to take such talk too seriously, and the friends walk on.",
+          "mustPreserve": [
+            "Captain Ahab's lost leg and the silver calabash remain unexplained.",
+            "Elijah is described only as a stranger, not as a villain."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Brush off the stranger and think only of the voyage",
+          "detourBrief": "Ishmael decides not to dwell on the stranger's words. He and Queequeg walk on, talking about the sea, the long voyage, and what they will need to bring aboard. Ishmael's thoughts keep drifting back to the Pequod, but he sets Elijah aside for now.",
+          "mustPreserve": [
+            "The Pequod is the ship the friends have signed on to sail in.",
+            "Ishmael still does not know what Elijah meant."
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ishmael": [
+          {
+            "id": "ishmael-1",
+            "label": "Turn back and ask Elijah plainly what he means",
+            "detourBrief": "Ishmael walks back and asks Elijah straight out what he knows. Elijah only repeats that the ship will see what it will see, then shuffles off. Ishmael feels a chill but cannot learn more, and rejoins Queequeg with his questions still unanswered.",
+            "mustPreserve": [
+              "Elijah does not explain the lost leg or the silver calabash.",
+              "Ishmael and Queequeg are still heading toward their lodging together."
+            ]
+          },
+          {
+            "id": "ishmael-2",
+            "label": "Write the strange words down to think about later",
+            "detourBrief": "Ishmael takes out a small notebook and copies Elijah's odd phrases: the leg, the calabash, the prophecy. He wonders whether they fit together. Queequeg looks over his shoulder, shrugs kindly, and the two keep walking with the notes safely tucked away.",
+            "mustPreserve": [
+              "The prophecy about Captain Ahab's leg is only hinted at, not explained.",
+              "Elijah's words are a riddle for Ishmael, not a final answer."
+            ]
+          }
+        ],
+        "queequeg": [
+          {
+            "id": "queequeg-1",
+            "label": "Greet Elijah with a friendly nod and a smile",
+            "detourBrief": "Queequeg turns, gives Elijah a warm nod in the manner of his island home, and offers a polite word of greeting. Elijah blinks, mutters something unclear, and goes on his way. Queequeg says quietly to Ishmael that the man looks tired and sad rather than dangerous.",
+            "mustPreserve": [
+              "Elijah still refuses to say what he knows.",
+              "Queequeg and Ishmael remain friends walking together."
+            ]
+          },
+          {
+            "id": "queequeg-2",
+            "label": "Study the stranger's face and wonder about his story",
+            "detourBrief": "Queequeg studies Elijah's weathered face for a long moment, as he might read the sky before a storm. He tells Ishmael that the man has seen hard seas and bad days. Queequeg suggests they might learn more another time, and the two friends continue on.",
+            "mustPreserve": [
+              "Queequeg has no certain knowledge of Captain Ahab's past.",
+              "The friends are still on their way to the lodging after leaving the Pequod."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp06",
+      "chapter": 28,
+      "anchorAfter": "c028p005",
+      "rejoinAt": "c028p007",
+      "prompt": "Ahab keeps appearing on deck as the weather warms. What should Ishmael do next?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ishmael",
+        "ahab"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Watch Ahab closely from the quarterdeck rail",
+          "detourBrief": "Ishmael keeps watch from the rail as Ahab comes up again and again. The mates run the ship and Ahab says little, pacing with his ivory leg as the air grows mild and sunny. Ishmael notices small details of his stern face, then the sun warms the planks and Ahab's shadow stretches across the deck, while the clouds still sit on his brow.",
+          "mustPreserve": [
+            "Ahab's bone leg is made from sperm whale jawbone",
+            "The mates command the ship while Ahab speaks little",
+            "The Pequod is only passing south and is not yet hunting whales"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Ask an old sailor what he remembers of Ahab",
+          "detourBrief": "Ishmael finds an old sailor coiling rope and asks about Ahab's past. The sailor shares a few rumors about the scar and the lost leg, but admits nobody knows the truth. He warns that the captain dislikes questions, and they agree to wait and see. Ishmael returns to his work, still curious and uncertain.",
+          "mustPreserve": [
+            "No one knows for certain where Ahab's scar came from",
+            "Ahab lost his leg and later replaced it with bone",
+            "Ishmael is a sailor who is only beginning to know the crew"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Climb the rigging to see the warming sea",
+          "detourBrief": "Ishmael climbs partway up the mainmast to get a wider view. From his perch he sees the grey sea turning blue and the sky brightening as the ship sails away from winter. Below, Ahab stands in his auger hole, a small dark figure looking ahead. Ishmael climbs back down to the deck as the warm breeze carries on.",
+          "mustPreserve": [
+            "The Pequod is sailing away from the cold northern winter",
+            "Ahab stands in an auger hole on the quarterdeck",
+            "Ishmael is a sailor who works on the ship's crew"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ishmael": [
+          {
+            "id": "ishmael-1",
+            "label": "Quietly count how often Ahab appears today",
+            "detourBrief": "Ishmael tallies each time Ahab comes up from the cabin, and notices he stays longer as the sun warms the deck. He asks a mate whether this is usual, and the mate shrugs and says the captain has his reasons. Ishmael feels the air growing milder, while Ahab remains unsmiling at the rail.",
+            "mustPreserve": [
+              "The mates command the ship in Ahab's absence",
+              "Ahab rarely speaks to the crew",
+              "The voyage is a passage, not yet a whale hunt"
+            ]
+          },
+          {
+            "id": "ishmael-2",
+            "label": "Offer a friendly word to the nearest sailor",
+            "detourBrief": "Ishmael chats with a sailor about the sudden mild weather and the homesick feeling of leaving Nantucket. The sailor warns him that the captain does not like idle talk. They laugh softly, then turn back to their work as Ahab paces past the mizzen shrouds without looking at them.",
+            "mustPreserve": [
+              "Ishmael has just left Nantucket on the Pequod",
+              "Ahab does not like idle talk on deck",
+              "The ship is only making a passage south"
+            ]
+          }
+        ],
+        "ahab": [
+          {
+            "id": "ahab-1",
+            "label": "Lean on the rail and gaze at the horizon",
+            "detourBrief": "Ahab grips a shroud and stares ahead while the warm wind tugs at his grey hair. A deckhand brings him a cup of water and he nods without a word. For a moment a faint twitch touches his lips, then his face clouds over again and he turns back to the endless sea.",
+            "mustPreserve": [
+              "Ahab's face bears a long pale scar",
+              "Ahab stands with his bone leg in an auger hole",
+              "Ahab does not yet smile openly"
+            ]
+          },
+          {
+            "id": "ahab-2",
+            "label": "Call the mates over for a quiet word",
+            "detourBrief": "Ahab summons the mates to check the rigging and asks brief questions about the ship's course. He keeps his larger plans private and dismisses them with a short nod. Then he returns to the rail and watches the sea, while the mates exchange uneasy glances behind him.",
+            "mustPreserve": [
+              "Ahab keeps his larger plans secret from the crew",
+              "The mates run the ship day to day",
+              "The Pequod is still only passing toward warmer waters"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp07",
+      "chapter": 34,
+      "anchorAfter": "c034p005",
+      "rejoinAt": "c034p008",
+      "prompt": "Flask is still hungry and has no butter at the captain's table. What should happen next?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ahab",
+        "starbuck",
+        "queequeg"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Let Flask sneak a secret pat of butter",
+          "detourBrief": "Flask quietly slips a pat of butter from the pantry shelf and eats it in a corner of the pantry, feeling cheerful for once. Ahab notices nothing. Flask hurries up to the deck as the officers finish, and the harpooneers are called in to eat their own meal in the cabin.",
+          "mustPreserve": [
+            "Ahab never forbade Flask from helping himself",
+            "The harpooneers dine in the cabin after the officers leave"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Have Stubb crack a small joke at the table",
+          "detourBrief": "Stubb cracks a quiet joke about the saltbeef, and the table laughs for a moment. Ahab does not smile, but he lets the moment pass. Flask forgets his hunger for a while. The officers then rise and leave, and the harpooneers are called to the cabin to eat.",
+          "mustPreserve": [
+            "Ahab is the only one who stays silent at his table",
+            "Flask is the youngest officer at the table"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Ask the steward to bring Flask extra biscuit",
+          "detourBrief": "Dough-Boy trembles but hurries to the pantry and brings Flask an extra helping of biscuit. Flask eats gratefully, unsure whether he is allowed to. Then the officers head up to the deck, and the harpooneers are invited into the cabin for their own meal.",
+          "mustPreserve": [
+            "Dough-Boy is the nervous steward who serves the cabin",
+            "Flask is always hungry after becoming an officer"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ahab": [
+          {
+            "id": "ahab-1",
+            "label": "Slide the saltbeef platter toward Flask silently",
+            "detourBrief": "Ahab, still silent, slides the saltbeef platter toward Flask without a word. Flask is astonished and eats more than he expected. Ahab returns to carving his own meat, and the officers leave in turn. The harpooneers are then called to the cabin to eat.",
+            "mustPreserve": [
+              "Ahab speaks very little at his table",
+              "Ahab carves while the officers wait to be served"
+            ]
+          },
+          {
+            "id": "ahab-2",
+            "label": "Rise early and stare out over the sea",
+            "detourBrief": "Ahab rises from the table before the others and climbs to the quarter-deck to stare at the sea. Starbuck and Stubb follow up quietly, unsure what he is thinking. Flask gets his fill of biscuit at last. The harpooneers are then invited to the cabin to eat.",
+            "mustPreserve": [
+              "Ahab does not speak at table",
+              "The harpooneers eat in the cabin after the officers depart"
+            ]
+          }
+        ],
+        "starbuck": [
+          {
+            "id": "starbuck-1",
+            "label": "Pass Flask his own portion of beef",
+            "detourBrief": "Starbuck, careful and kind, passes Flask his own portion of beef with a quiet nod. Flask thanks him, surprised, and eats a full meal for once. Ahab says nothing. The mates then go up, and the harpooneers are called to the cabin to eat.",
+            "mustPreserve": [
+              "Starbuck is the careful first mate who sits near Ahab",
+              "Flask is the youngest officer at the table"
+            ]
+          },
+          {
+            "id": "starbuck-2",
+            "label": "Walk the deck to clear his troubled thoughts",
+            "detourBrief": "Starbuck steps out onto the planks and looks at the sea, wondering about Ahab's gloom. He says a few words to Stubb about the weather. Flask shuffles up behind them, still hungry. The harpooneers are then called to the cabin for their meal.",
+            "mustPreserve": [
+              "Starbuck questions Ahab's dangerous quest",
+              "The officers return to the deck after dinner"
+            ]
+          }
+        ],
+        "queequeg": [
+          {
+            "id": "queequeg-1",
+            "label": "Share a biscuit with Flask with a grin",
+            "detourBrief": "Queequeg, loyal and warm, grins and passes Flask a biscuit from his own pile. Flask munches gratefully and marvels at the kindness of the harpooneer. Tashtego teases him, and the cabin grows loud. Dough-Boy trembles at the noise from his pantry.",
+            "mustPreserve": [
+              "Queequeg is a skilled harpooner from the South Seas",
+              "The harpooneers dine loudly in the cabin after the officers leave"
+            ]
+          },
+          {
+            "id": "queequeg-2",
+            "label": "Sharpen his knife with a whetstone at the table",
+            "detourBrief": "Queequeg pulls out his whetstone and sharpens his blade at the table, making a grating sound. Dough-Boy peeks through his pantry blinds in alarm. Tashtego laughs, and Daggoo chuckles from the floor. Queequeg then puts the knife away, and the harpooneers finish their meal.",
+            "mustPreserve": [
+              "Queequeg is Ishmael's loyal friend",
+              "Dough-Boy is frightened by the harpooneers at dinner"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp08",
+      "chapter": 48,
+      "anchorAfter": "c048p048",
+      "rejoinAt": "c048p050",
+      "prompt": "The squall has swamped our boat in the dark, and the ship is out of sight. What should we do while we wait for daylight?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ishmael",
+        "queequeg",
+        "starbuck"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Bail with the floating oars while waiting",
+          "detourBrief": "We lash the floating oars across the gunwale and scoop water with our hands. The rising sea keeps pouring back in, so we give up bailing and hold on. The lantern keeps flickering on, and we wait through the long dark for the ship to search for us.",
+          "mustPreserve": [
+            "The crew survives the squall and stays together in the boat.",
+            "Queequeg keeps holding the lantern until dawn."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Shout across the storm toward the other boats",
+          "detourBrief": "We call out again and again toward where the other boats might be. The wind swallows every cry, and no answer comes back through the howling dark. We fall silent, cold and tired, and keep watching the lantern glow in the mist until the night begins to thin.",
+          "mustPreserve": [
+            "The other boats are not reached during the storm.",
+            "The ship is still cruising nearby and has not given up the search."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Watch the mist for any sign of the ship",
+          "detourBrief": "We take turns staring into the grey mist, hoping for a shape of sails or a mast. Nothing shows but drifting spray and the pale glow of the lantern. Our eyes ache from the effort, and we keep watching until the first hint of light begins to show in the east.",
+          "mustPreserve": [
+            "No one sees the ship before dawn.",
+            "The lantern is the only light in the boat during the night."
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ishmael": [
+          {
+            "id": "ishmael-1",
+            "label": "Grip the gunwale and steady the boat",
+            "detourBrief": "I grab the sinking gunwale with both hands and call to the others to lean with me. Each wave tips us, and we shift our weight together to keep the boat from rolling over. My arms ache, but the boat stays afloat as the night drags on.",
+            "mustPreserve": [
+              "The boat is swamped but does not sink away.",
+              "Ishmael stays in the boat with the crew."
+            ]
+          },
+          {
+            "id": "ishmael-2",
+            "label": "Think back on the shadows seen at Nantucket",
+            "detourBrief": "In the cold dark I remember the mysterious shadows creeping aboard the Pequod at dawn in Nantucket. I wonder what Ahab truly planned from the start. The thought makes me shiver more than the water does, and I hold tight to the boat until the night slowly passes.",
+            "mustPreserve": [
+              "The reason behind the strangers on the Pequod stays unexplained.",
+              "The ship is still the crew's only hope of rescue."
+            ]
+          }
+        ],
+        "queequeg": [
+          {
+            "id": "queequeg-1",
+            "label": "Raise the lantern high for the ship",
+            "detourBrief": "Queequeg stands carefully in the rocking boat and lifts the lantern high above his head. Its small flame shines through the mist. He keeps it steady all night, the glow his silent promise to the crew that help may still come.",
+            "mustPreserve": [
+              "Queequeg holds the lantern until dawn.",
+              "The lantern remains the only light in the storm."
+            ]
+          },
+          {
+            "id": "queequeg-2",
+            "label": "Listen hard through the wind for sounds",
+            "detourBrief": "Queequeg cups a hand to his ear and listens carefully through the howling wind. He tells the others to stay quiet for a moment, and everyone holds their breath. Only the waves answer him, but he keeps listening patiently through the long, dark hours.",
+            "mustPreserve": [
+              "No sound of the ship is heard until dawn.",
+              "Queequeg remains calm and loyal to his crewmates."
+            ]
+          }
+        ],
+        "starbuck": [
+          {
+            "id": "starbuck-1",
+            "label": "Check the match keg for dry matches",
+            "detourBrief": "Starbuck carefully opens the waterproof match keg and feels for any dry matches that survived the storm. He finds only a few, and he keeps them safe for the lantern. He counts them quietly, knowing the light must last until morning.",
+            "mustPreserve": [
+              "The lantern stays lit through the night.",
+              "Starbuck remains the careful mate in charge of the boat."
+            ]
+          },
+          {
+            "id": "starbuck-2",
+            "label": "Call each crew member by name",
+            "detourBrief": "Starbuck calls out each sailor's name in the dark, one by one, to be sure no one has slipped overboard. Each man answers with a weak but steady voice. The count is complete, and the crew takes comfort in staying together until the grey light comes.",
+            "mustPreserve": [
+              "Every crew member in the boat survives the squall.",
+              "The crew stays together until the ship appears."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp09",
+      "chapter": 52,
+      "anchorAfter": "c052p005",
+      "rejoinAt": "c052p007",
+      "prompt": "The little fish dart away toward the stranger ship, and Ahab has noticed. What should happen next on the Pequod?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ishmael",
+        "ahab"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Watch the fish scatter and wonder what they sense",
+          "detourBrief": "Ishmael clings to the masthead and studies the fleeing fish, which bunch along the stranger's side like frightened children. A sailor below says fish sense trouble before men do. Ishmael feels a small chill. Ahab murmurs, 'Swim away from me, do ye?' Then he orders, 'Up helm! Keep her off round the world!'",
+          "mustPreserve": [
+            "The Albatross is a whaler that passes without boarding",
+            "Ahab orders the Pequod kept round the world"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Wave a flag to ask the stranger about the whale",
+          "detourBrief": "Ishmael runs a signal flag up the mast and waves it toward the Albatross. Its pale crew wave back slowly but the wind carries no answer across the gap. Ahab watches, murmurs that the fish swim away from him, and then orders the ship turned. 'Up helm! Keep her off round the world!'",
+          "mustPreserve": [
+            "The Albatross never answers and never boards",
+            "Ahab orders the Pequod kept round the world"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Climb down to ask the old sailors about the White Whale",
+          "detourBrief": "Ishmael climbs down the rigging and asks the older seamen what they think of the White Whale. They glance at Ahab and go quiet, saying only that some names are not spoken lightly at sea. Ahab, hearing the fish scatter, murmurs they swim away from him. He orders, 'Up helm! Keep her off round the world!'",
+          "mustPreserve": [
+            "The White Whale's name is spoken only with care aboard",
+            "Ahab orders the Pequod kept round the world"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ishmael": [
+          {
+            "id": "ishmael-1",
+            "label": "Shout down to Ahab that the fish seem frightened",
+            "detourBrief": "Ishmael calls down from the masthead that the fish are fleeing the ship, and his voice carries over the wind. Ahab looks up, quiet for a moment, and says the sea often tells the truth to those who watch it. Then he murmurs that the fish swim away from him and orders, 'Up helm! Keep her off round the world!'",
+            "mustPreserve": [
+              "Ahab is the captain who gives the order to sail round the world",
+              "The Albatross passes without answering the hail"
+            ]
+          },
+          {
+            "id": "ishmael-2",
+            "label": "Write the strange fish behavior in his notebook",
+            "detourBrief": "Ishmael pulls a damp notebook from his coat and sketches the fish darting in a line along the stranger's flanks. He writes that small creatures often flee what they cannot understand. Below, Ahab murmurs that the fish swim away from him. Ahab orders, 'Up helm! Keep her off round the world!'",
+            "mustPreserve": [
+              "The Pequod is bound round the world",
+              "Ahab's words to the fish are heard only by those nearby"
+            ]
+          }
+        ],
+        "ahab": [
+          {
+            "id": "ahab-1",
+            "label": "Lean over the rail and speak softly to the fish",
+            "detourBrief": "Ahab stares into the water and speaks quietly to the fleeing fish, as if they could hear him. His voice is full of a deep, helpless sadness. Ishmael watches from above. Ahab straightens, turns to the helmsman, and roars, 'Up helm! Keep her off round the world!'",
+            "mustPreserve": [
+              "Ahab's sadness is private and not a sign of changed plans",
+              "The Pequod keeps sailing round the world"
+            ]
+          },
+          {
+            "id": "ahab-2",
+            "label": "Order a boat lowered to board the stranger",
+            "detourBrief": "Ahab turns toward the Albatross and orders a boat readied to visit her. The wind rises sharply, and the sailors struggle with the lines. Ahab watches the stranger drift farther off and gives up on boarding. He growls at the helmsman, 'Up helm! Keep her off round the world!'",
+            "mustPreserve": [
+              "The boat never reaches the Albatross",
+              "Ahab orders the Pequod kept round the world"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp10",
+      "chapter": 64,
+      "anchorAfter": "c064p008",
+      "rejoinAt": "c064p010",
+      "prompt": "Sharks churn loudly around the dead whale while Stubb eats. What should you do?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ishmael",
+        "starbuck"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Lean over the rail and watch the sharks feed",
+          "detourBrief": "Ishmael leans over the rail with a lantern and watches sharks roll onto their backs to scoop out whale blubber. He is amazed at how neatly they work. A sailor warns him to keep his hands inside the rail. The noise rises and falls, and then Ishmael turns back toward the capstan, where Stubb is still busy with his supper.",
+          "mustPreserve": [
+            "The sharks feed on the whale that is moored alongside the Pequod.",
+            "Stubb is eating his steak at the capstan by lantern light."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Ask Starbuck what the crew will do next",
+          "detourBrief": "Ishmael goes to Starbuck, who is calmly keeping watch over the deck while Stubb has charge of the feast. Starbuck says the whale will be secured until morning and the crew will cut it up then. He mentions that Ahab has gone below. Ishmael nods, and the two of them listen to the sharks splashing below until the talk fades and Stubb's voice is heard again.",
+          "mustPreserve": [
+            "Ahab has gone into his cabin and will not come on deck until morning.",
+            "Starbuck has let Stubb manage the ship's affairs for the night."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Go below and check on the sleeping crew",
+          "detourBrief": "Ishmael climbs down to the bunks, where the sailors are sleeping. Each time a shark slaps the hull, the hammocks sway. He tucks a blanket over a snoring sailor and listens to the thumping outside. Nobody wakes fully. He climbs back up on deck, where the feast is still going on and Stubb keeps eating.",
+          "mustPreserve": [
+            "The sharks keep slapping the hull close to the sleepers.",
+            "The whale stays moored to the ship for the night."
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ishmael": [
+          {
+            "id": "ishmael-1",
+            "label": "Count the sharks and note their strange habits",
+            "detourBrief": "Ishmael tries to count the sharks in the dark water but loses track after a hundred. He notes how they turn over to bite and how their eyes glow in the lantern light. A shipmate calls him to help steady a line. He hurries back to the rail, and the sharks are still feasting as Stubb keeps eating at the capstan.",
+            "mustPreserve": [
+              "Thousands of sharks feed on the whale through the night.",
+              "Stubb keeps eating his steak at the capstan."
+            ]
+          },
+          {
+            "id": "ishmael-2",
+            "label": "Hold a lantern steady for Stubb's supper",
+            "detourBrief": "Ishmael carries a lantern over to the capstan so Stubb can see his plate. Stubb grins and jokes about the cook's sermon to the sharks. Ishmael laughs politely, then stands guard while Stubb eats. The sharks keep up their splashing outside, and Stubb simply keeps his fork moving between bites.",
+            "mustPreserve": [
+              "Stubb is eating whale steak at the capstan by lantern light.",
+              "The cook has been sent to preach to the sharks."
+            ]
+          }
+        ],
+        "starbuck": [
+          {
+            "id": "starbuck-1",
+            "label": "Quietly ask the crew to keep clear of the rail",
+            "detourBrief": "Starbuck walks along the deck and asks the sailors to stay back from the rail where the sharks splash. He wants no one to fall in. The men nod and step away. Stubb calls out cheerfully that the feast is safe, and Starbuck only shakes his head, keeping a watchful eye on the dark water as the whale stays moored alongside.",
+            "mustPreserve": [
+              "Starbuck is the first mate who stays calm and careful.",
+              "The whale remains moored beside the ship until morning."
+            ]
+          },
+          {
+            "id": "starbuck-2",
+            "label": "Look up at Ahab's dark cabin window",
+            "detourBrief": "Starbuck glances up at the faint light in Ahab's cabin. He thinks about the white whale and wonders what the captain is planning. He says nothing. Below, the sharks thrash and feed, and Starbuck turns back to the deck, where Stubb is still eating his steak and paying no attention to the thoughts of anyone else.",
+            "mustPreserve": [
+              "Ahab is in his cabin and will not come on deck until morning.",
+              "Moby Dick has not yet been caught."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp11",
+      "chapter": 73,
+      "anchorAfter": "c073p040",
+      "rejoinAt": "c073p043",
+      "prompt": "The great whale heads are hoisted and the ship leans. What should the crew do next?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ishmael",
+        "ahab"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Watch the ship tilt and then steady",
+          "detourBrief": "The narrator climbs partway up the rigging to watch the Pequod lean toward the sperm whale's head, then settle level as the right whale's head swings up. Sailors shout and grab ropes. The tackles creak but hold, and the rocking calms. The men mutter that Flask's old tale seems true, and they return to the heavy heads on the side.",
+          "mustPreserve": [
+            "The tackles hold and both whale heads stay hanging on the Pequod's sides",
+            "The whale carcasses drift astern and are not yet cut up"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Ask Flask for the rest of the old tale",
+          "detourBrief": "The narrator asks Flask where he heard the story about the ship that can never capsize. Flask laughs and says a sailor told him in a foggy port, but he cannot recall which one. They agree that charms are only talk. Then they turn back to the hoisting ropes, and the crew keeps working.",
+          "mustPreserve": [
+            "Fedallah remains a mystery and no one proves he is the devil",
+            "The Pequod is not wrecked by the heavy heads"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Row out to tie the drifting right whale",
+          "detourBrief": "Two boats row out to the right whale carcass that has drifted astern and tie it fast with stout ropes so it cannot slip away. The men work hard in the cold spray and count their lines. Once it is secured, they row back to the ship, tired but pleased, and the crew resumes its work on the heads.",
+          "mustPreserve": [
+            "The whale carcasses stay with the Pequod for later cutting",
+            "Captain Ahab remains aboard and in command"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ishmael": [
+          {
+            "id": "ishmael-1",
+            "label": "Study how the ship balances the two heads",
+            "detourBrief": "The narrator leans on the rail and counts how each head pulls the Pequod one way, then the other. He notices the crew's patience and the creak of the tackles. He sketches the balance in his notebook and thinks about how small changes shift a whole ship. He then rejoins the men at the rail.",
+            "mustPreserve": [
+              "The ship does not capsize and the heads stay secured",
+              "The narrator is a sailor on board, not the captain"
+            ]
+          },
+          {
+            "id": "ishmael-2",
+            "label": "Listen to the crew's talk about Fedallah",
+            "detourBrief": "The narrator edges closer to a group of sailors who whisper about Fedallah's strange hands and quiet ways. Some laugh and some grow uneasy. The narrator decides it is only sailors' gossip and keeps his own opinion. Then the talk drifts back to the work on the heads, and he returns to his task.",
+            "mustPreserve": [
+              "Fedallah is not proven to be the devil",
+              "The crew keeps working on the whale heads"
+            ]
+          }
+        ],
+        "ahab": [
+          {
+            "id": "ahab-1",
+            "label": "Watch Fedallah's shadow mingle with his own",
+            "detourBrief": "Ahab notices the Parsee's shadow blending with his own on the deck. He stays silent and watches the crew's uneasy glances. He says nothing to Fedallah, but he makes a mental note to keep an eye on the strange man. Then he turns back to the ship and gives a sharp nod to the mates.",
+            "mustPreserve": [
+              "Ahab stays in command and the ship continues its course",
+              "Fedallah has not yet revealed his purpose"
+            ]
+          },
+          {
+            "id": "ahab-2",
+            "label": "Urge the mates to finish hoisting before dusk",
+            "detourBrief": "Ahab calls out to the mates to hurry the hoisting before the light fades. The men pick up the pace, the tackles groan, and the heads rise by degrees. Ahab keeps a firm watch on the work until the lines are fast. Then he returns to his quiet pacing on the quarterdeck.",
+            "mustPreserve": [
+              "The whale heads are secured to the ship's sides",
+              "Ahab remains calm and focused on the crew's work"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp12",
+      "chapter": 84,
+      "anchorAfter": "c084p003",
+      "rejoinAt": "c084p006",
+      "prompt": "The whales are fleeing fast and the iron will not hold. What should the crew try next?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ishmael"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Hold the boat steady and wait for the whale to tire",
+          "detourBrief": "The crew keeps their oars ready and watches the whale stream ahead. The planted iron tugs and strains, and the men talk over the choices. Stubb grins and says the whale will not run forever. Then Stubb rises to his feet in the bow, ready to try a new way.",
+          "mustPreserve": [
+            "Tashtego's iron is planted in the whale",
+            "The whale is still swimming hard ahead"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Row hard to pull alongside the whale's flank",
+          "detourBrief": "The crew pulls hard on the oars, but the whale is too fast and the boat cannot close the gap. Spray drenches everyone and the men shout to each other over the wind. They soon give up on rowing straight at it. Stubb calls out a clever idea and stands up in the bow.",
+          "mustPreserve": [
+            "The whale swims too fast to be reached by rowing",
+            "Stubb is the one who comes up with the next plan"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Look for a clever trick to slow the whale down",
+          "detourBrief": "Stubb studies the sea and the whale's path, thinking carefully. He notices how the frothing water makes the boat rock and sway. He decides that a daring throw from the rocking bow may work better than any rope. He grips the long lance and gets ready to stand.",
+          "mustPreserve": [
+            "Stubb is the boat's experienced whaleman",
+            "The lance must be thrown from the boat, not the whale's back"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ishmael": [
+          {
+            "id": "ishmael-1",
+            "label": "Watch closely and learn how the whalemen judge the chase",
+            "detourBrief": "Ishmael clings to the gunwale and studies the crew's faces, noticing how each man reads the sea. He hears the older whalemen mutter about the flying whale. He records what he sees in his notebook, sure that the sea holds lessons. He keeps his eyes on the bow, where the next move will come.",
+            "mustPreserve": [
+              "Ishmael is a young sailor learning the trade",
+              "The whale is still fleeing ahead of the boats"
+            ]
+          },
+          {
+            "id": "ishmael-2",
+            "label": "Offer to help Tashtego keep hold of the line",
+            "detourBrief": "Ishmael scrambles forward and grabs the line near Tashtego, feeling the iron pull hard through the rope. He braces his feet against the boards and steadies himself as the boat bucks. Tashtego nods thanks, and the two of them hold on tight. Together they wait for Stubb to make his next move.",
+            "mustPreserve": [
+              "Tashtego planted the first iron in the whale",
+              "Stubb's boat is the one leading the chase"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp13",
+      "chapter": 94,
+      "anchorAfter": "c094p007",
+      "rejoinAt": "c094p011",
+      "prompt": "The sperm is cooling into lumps and the crew is busy below. What should Ishmael do next?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ishmael"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Follow the crew down to the blubber-room",
+          "detourBrief": "Ishmael climbs down with a lantern and watches a gaffman and a spademan work carefully on the slippery blubber sheet. He notices how the sailors keep their footing and how they warn each other. He climbs back up to the deck, thoughtful and safe, before the day's work goes on.",
+          "mustPreserve": [
+            "The blubber is cut into portable pieces in the blubber-room.",
+            "The sperm work on deck is still ongoing."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Walk to the bow for fresh air",
+          "detourBrief": "Ishmael leaves the squeezing and walks to the bow. He watches the blue sky and the calm sea, and sees the Pequod gliding gently under sail. A sailor nods to him and says the calm will not last long. Ishmael returns to his place on the deck, still curious about the whale's parts.",
+          "mustPreserve": [
+            "The ship is under indolent sail in calm weather.",
+            "Ishmael is still working on the whale's parts when the detour ends."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Ask an old hand about the strange parts",
+          "detourBrief": "Ishmael asks a weathered whaleman to explain the odd whale parts. The sailor laughs, names each one with pride, and tells a short tale about his first voyage. He warns that the work is messy but honest. Ishmael thanks him and goes back to the deck, ready to listen to the rest.",
+          "mustPreserve": [
+            "The whale's parts are named by whalemen in their own words.",
+            "Ishmael is part of the crew doing the work on deck."
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ishmael": [
+          {
+            "id": "ishmael-1",
+            "label": "Let the warm sperm soothe your worries",
+            "detourBrief": "Ishmael sinks his hands into the soft, sweet-smelling sperm and feels calm. He thinks kindly of his shipmates and smiles at them. He finds himself wishing everyone could be this gentle. He sits back up, still dreaming, ready for the next task.",
+            "mustPreserve": [
+              "The sperm is squeezed back into liquid by hand.",
+              "Ishmael's dreamy mood stays gentle, not angry."
+            ]
+          },
+          {
+            "id": "ishmael-2",
+            "label": "Watch the blubber-room men with care",
+            "detourBrief": "Ishmael pictures the spademen balancing on slippery blubber without shoes. He decides to stay alert and notice where the sailors place their feet. He reminds himself to be careful whenever he helps with the cutting. He returns to the squeezing, more cautious than before.",
+            "mustPreserve": [
+              "The workers in the blubber-room go in pairs.",
+              "Ishmael remains a sailor on the Pequod."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp14",
+      "chapter": 102,
+      "anchorAfter": "c102p010",
+      "rejoinAt": "c102p012",
+      "prompt": "Ishmael's twine has run out inside the whale's bones. What should he do next?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ishmael"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Follow the carved bones deeper into the temple",
+          "detourBrief": "Ishmael searches the carved vertebrae and finds strange markings that seem to tell of old storms and calm seas. He copies a few symbols into his notebook, then returns to the ribs, measures the final rib with the green rod, and slips out of the opening, having finished his figures quietly.",
+          "mustPreserve": [
+            "The skeleton lies in King Tranquo's temple at Pupella.",
+            "The priests keep the flame burning in the skull."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Ask the priests politely for their own measurements",
+          "detourBrief": "Ishmael calls up to the priests through the skull and asks how long they think the whale is. They argue over feet and inches, and an old priest finally smiles and waves him on. Ishmael thanks them, measures the last rib quickly with the green rod, and leaves through the opening without any trouble.",
+          "mustPreserve": [
+            "The priests keep the flame burning in the skull.",
+            "Ishmael's measurements are later tattooed on his right arm."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Sit still and watch the flame rise from the skull",
+          "detourBrief": "Ishmael sits among the ribs and watches the aromatic smoke curl up from the skull, thinking about how the living sap in the trees moves like the weaver's shuttle. When the priests turn away, he stands, measures the final rib with his green rod, and walks out past the vines to find his friend Tranquo.",
+          "mustPreserve": [
+            "The priests keep the flame burning in the skull.",
+            "The skeleton is a dead sperm whale that was stranded on Tranque's shore."
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ishmael": [
+          {
+            "id": "ishmael-1",
+            "label": "Measure the final rib and call out the number",
+            "detourBrief": "Ishmael calls out his measurement loudly through the ribs. The priests shout back, disagree about the number, and begin to argue. Ishmael quietly writes down his figures, leaves through the arrow-slit opening, and waves goodbye to the palms as he heads back toward the villa.",
+            "mustPreserve": [
+              "The skeleton is kept in a temple at Pupella.",
+              "Ishmael's measurements are later tattooed on his right arm."
+            ]
+          },
+          {
+            "id": "ishmael-2",
+            "label": "Study the carved hieroglyphs on the backbone",
+            "detourBrief": "Ishmael runs his fingers over the carved vertebrae and tries to read their strange hieroglyphs. He guesses they record the whale's long life and the great gale that stranded him. Then he hears the priests stir, takes his final measurements quickly, and climbs back out of the ribs into the sunlight.",
+            "mustPreserve": [
+              "The vertebrae are carved with hieroglyphs, not with a new story.",
+              "The skeleton was placed in a temple by the priests."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp15",
+      "chapter": 110,
+      "anchorAfter": "c110p016",
+      "rejoinAt": "c110p018",
+      "prompt": "Queequeg lies back in his hammock beside his waiting coffin. What should happen next?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ishmael",
+        "queequeg",
+        "starbuck"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Follow the carpenter back to his workbench",
+          "detourBrief": "The narrator follows the carpenter, who sweeps up shavings and hums while the crew slowly calms down. Word drifts back that Queequeg has stirred and asked for food. Soon Queequeg himself sits up, saying he has a duty ashore left undone and will not die yet. The narrator hurries back to see him.",
+          "mustPreserve": [
+            "Queequeg does not die and the coffin is never used",
+            "Pip stays aboard and the crew remains kind to him"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Stay beside Queequeg and watch his eyes",
+          "detourBrief": "Ishmael sits by the hammock and notices Queequeg's eyes are bright again. Queequeg whispers that he has remembered a small duty ashore left undone, and that he has changed his mind about dying. Color returns to his cheeks, and he smiles at his friend, who grins back with relief.",
+          "mustPreserve": [
+            "Queequeg survives the fever",
+            "Ishmael remains Queequeg's close friend"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Go find Pip and sit with him",
+          "detourBrief": "Ishmael finds Pip near the deck, still holding his tambourine, looking sad. He gently tells Pip that Queequeg's kindness is still there, and Pip brightens a little. Then a sailor shouts that Queequeg has sat up and is calling for his harpoon, so the two hurry back toward the hammock together.",
+          "mustPreserve": [
+            "Pip is still aboard and is not punished for his fear",
+            "Queequeg is alive and sitting up in his hammock"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ishmael": [
+          {
+            "id": "ishmael-1",
+            "label": "Offer Queequeg a cup of fresh water",
+            "detourBrief": "Ishmael brings a flask of fresh water and holds it to his friend's lips. Queequeg drinks slowly, then says he has a duty ashore left undone and has changed his mind about dying. Ishmael feels a rush of relief and laughs softly, promising to help him eat a hearty meal.",
+            "mustPreserve": [
+              "Queequeg survives the fever and does not die",
+              "Ishmael and Queequeg remain close friends"
+            ]
+          },
+          {
+            "id": "ishmael-2",
+            "label": "Ask Queequeg what unfinished duty he means",
+            "detourBrief": "Ishmael asks what duty is left undone. Queequeg smiles and says it is a promise to someone far away, not to be explained yet. Ishmael laughs. Queequeg sits up, stretches like a strong man, and asks for something to eat, showing he is well enough to live.",
+            "mustPreserve": [
+              "The duty ashore is only mentioned, never fully explained",
+              "Queequeg lives and gains his strength again"
+            ]
+          }
+        ],
+        "queequeg": [
+          {
+            "id": "queequeg-1",
+            "label": "Tell your friend you will not die yet",
+            "detourBrief": "Queequeg, still weak, tells Ishmael that he remembered a small duty ashore he has not finished. He says a man who decides to live cannot be killed by sickness alone. He sits up, calls for his harpoon to be laid beside him, and feels his strength return.",
+            "mustPreserve": [
+              "Queequeg decides to live and the coffin is put away",
+              "Sickness alone does not kill Queequeg"
+            ]
+          },
+          {
+            "id": "queequeg-2",
+            "label": "Ask for Yojo to be set near your pillow",
+            "detourBrief": "Queequeg asks that his little god Yojo be placed beside his pillow where he can see it. Holding it close, he feels a warm calm and begins to breathe more easily. He tells his friend he has a duty ashore left undone, and that he wants to be well enough to finish it.",
+            "mustPreserve": [
+              "Yojo is Queequeg's small god and stays with him",
+              "Queequeg is recovering, not dying"
+            ]
+          }
+        ],
+        "starbuck": [
+          {
+            "id": "starbuck-1",
+            "label": "Whisper a quiet prayer over the coffin",
+            "detourBrief": "Starbuck bows his head beside the open scuttle and speaks a quiet prayer for the sick harpooneer. As he finishes, Queequeg stirs and speaks clearly, saying he has a duty ashore left undone. Starbuck is astonished and says it may be a sign of God's mercy.",
+            "mustPreserve": [
+              "Queequeg does not die and the coffin is not needed",
+              "Starbuck is careful and thoughtful, not mocking"
+            ]
+          },
+          {
+            "id": "starbuck-2",
+            "label": "Ask the carpenter to set the coffin aside",
+            "detourBrief": "Starbuck asks the carpenter to put the coffin away until it is truly needed. Some sailors chuckle at the sight of the long dark box. Later that afternoon, Queequeg rises from his hammock, announcing he has a duty ashore left undone and will not die yet.",
+            "mustPreserve": [
+              "The coffin is set aside and never used for a burial",
+              "Queequeg recovers after his sudden rally"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp16",
+      "chapter": 116,
+      "anchorAfter": "c116p003",
+      "rejoinAt": "c116p007",
+      "prompt": "The whale turns its dying head toward the sun. What does Ahab do while he watches?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ahab"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Watch the whale until the last light fades",
+          "detourBrief": "The narrator stays in the still boat as the sunset fades. The crew talks softly and the sea rocks them gently. Ahab keeps his eyes on the whale until the water turns dark. Then the mood settles, and Ahab's thoughts turn toward the sea, ready for his next words.",
+          "mustPreserve": [
+            "Ahab kills this whale at sunset",
+            "The whale dies turning its head toward the sun"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Call the crew over to help haul the whale",
+          "detourBrief": "The narrator signals the other boats to come closer for the work of hauling the whale to the Pequod. Sailors call out and tie ropes in the dusk. The work is calm and steady, and the whale is secured for the night. Ahab stays a little apart, lost in his thoughts, and then speaks to the sea.",
+          "mustPreserve": [
+            "Ahab kills this whale at sunset",
+            "Ahab speaks to the sea and calls its waves his foster-brothers"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Look back toward the Pequod on the horizon",
+          "detourBrief": "The narrator turns to see the Pequod sailing in the distance, its sails glowing orange. The sight makes him think of the crew waiting aboard and the long voyage ahead. The sea is quiet, and the narrator feels the wide ocean around them. Then Ahab's thoughts return to the dying whale.",
+          "mustPreserve": [
+            "The whale dies turning its head toward the sun",
+            "Ahab speaks to the sea and calls its waves his foster-brothers"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ahab": [
+          {
+            "id": "ahab-1",
+            "label": "Stare at the dying whale and read its meaning",
+            "detourBrief": "Ahab leans over the side of his boat and studies the whale's slow turn toward the sun. He tries to see a lesson in its last movements and in the calm dark sea. He feels a strange wonder at the sight. His thoughts grow quiet, and then he begins to speak aloud to the waves.",
+            "mustPreserve": [
+              "The whale dies turning its head toward the sun",
+              "Ahab speaks to the sea and calls its waves his foster-brothers"
+            ]
+          },
+          {
+            "id": "ahab-2",
+            "label": "Order the boat turned back to the Pequod",
+            "detourBrief": "Ahab tells his oarsmen to turn the boat toward the Pequod, pausing to look back at the whale one last time. The sun sinks lower and the sea darkens around them. The oarsmen row quietly through the gloom. Ahab's mood stays heavy, and he speaks to the sea before the boat reaches the ship.",
+            "mustPreserve": [
+              "Ahab kills this whale at sunset",
+              "Ahab speaks to the sea and calls its waves his foster-brothers"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp17",
+      "chapter": 121,
+      "anchorAfter": "c121p003",
+      "rejoinAt": "c121p005",
+      "prompt": "Stubb says a sensible man stays calm in any storm. How should Flask answer him?",
+      "isIntro": false,
+      "availableCharacters": [],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Grip the rope and ask Stubb how the lucifers stay dry",
+          "detourBrief": "Flask tightens his grip on the rope and asks Stubb how the matches could stay dry in such spray. Stubb laughs, shakes water from his beard, and promises they will be fine. Flask watches the dark sea rise and fall beside the anchors. He sighs and says, I don't know that, Stubb. You sometimes find it rather hard.",
+          "mustPreserve": [
+            "Stubb and Flask are lashing the anchors on the forecastle bulwarks.",
+            "The ship is not harmed by the storm during this moment.",
+            "Stubb is teasing Flask and has not yet become serious."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Look up the mast for the lightning rod",
+          "detourBrief": "Flask squints up the wet mast into the dark, searching for a lightning rod and finding none. A flash lights the sky far off, and he shivers. Stubb tells him to stop staring and keep hauling. Flask turns back to the ropes, still uneasy. He says, I don't know that, Stubb. You sometimes find it rather hard.",
+          "mustPreserve": [
+            "The mast has no lightning rod at this point in the story.",
+            "Stubb still believes the crew is safe despite the storm.",
+            "The work on the anchors continues without anyone being hurt."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Wring out the wet jacket and stay quiet",
+          "detourBrief": "Flask says nothing for a while and wrings out a dripping jacket with careful hands. He thinks about the many ships on the sea and how lightning follows no set rule. The wind howls and the lashings creak but hold firm. Stubb glances at him, waiting for an answer. Flask says, I don't know that, Stubb. You sometimes find it rather hard.",
+          "mustPreserve": [
+            "The anchors are being lashed down for the storm.",
+            "Flask is not convinced by Stubb's argument about lightning rods.",
+            "Stubb is the one who keeps talking through the work."
+          ]
+        }
+      ],
+      "characterOptions": {}
+    },
+    {
+      "id": "cp18",
+      "chapter": 126,
+      "anchorAfter": "c126p005",
+      "rejoinAt": "c126p008",
+      "prompt": "A sailor has fallen into the sea and the life-buoy is sinking. What should the crew do?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ishmael",
+        "queequeg",
+        "starbuck",
+        "ahab"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Run to the rail and reach for the sinking cask",
+          "detourBrief": "Ishmael sprints to the stern and stretches toward the life-buoy, but it has already soaked through and slips under the waves. He sees only a few bubbles where the sailor went down. The crew stands in stunned silence, and Starbuck calls for the men to come back to their work, so the ship's stern is left without a buoy for now.",
+          "mustPreserve": [
+            "The sailor is lost and does not survive.",
+            "The life-buoy cask fills with water and sinks."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Watch the water and say a quiet prayer",
+          "detourBrief": "Ishmael stays at the rail and looks at the foam where the sailor fell. Many crewmen bow their heads, and the pagan harpooneers murmur their own prayers. The Manxman mutters about drowned men's voices. After a long pause, the ship keeps moving over the calm sea, and the men turn back to their duties with heavy hearts.",
+          "mustPreserve": [
+            "The sailor is lost and does not survive.",
+            "The Pequod keeps sailing on her course toward the Equator."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Climb the rigging and search the sea for the man",
+          "detourBrief": "Ishmael climbs partway up the rigging to get a better view and scans the blue water in every direction. He sees only white bubbles fading away and no sign of the sailor. He reports this to the deck below, and the mates agree there is nothing more to be done. He climbs down as the ship sails on.",
+          "mustPreserve": [
+            "The sailor is lost and does not survive.",
+            "No boat can save him, and the search finds nothing."
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ishmael": [
+          {
+            "id": "ishmael-1",
+            "label": "Shout to Starbuck that a man has gone overboard",
+            "detourBrief": "Ishmael cries out a warning, and the mates rush to the rail. Starbuck looks over the side and sees only the tossed white bubbles. The crew gathers to stare at the sea, and the sailor is nowhere to be seen. Ishmael feels a cold sadness settle over the ship as the Pequod keeps sailing.",
+            "mustPreserve": [
+              "The sailor is lost and does not survive.",
+              "The life-buoy is dropped but it fills with water and sinks."
+            ]
+          },
+          {
+            "id": "ishmael-2",
+            "label": "Stare at the sea and try to find the sailor",
+            "detourBrief": "Ishmael watches the waves closely and tries to spot a head or an arm in the water. There is nothing but the foam and the endless blue. He thinks of the seals and how easily they can be mistaken for men. The sea offers no answer, and he turns away slowly as the ship drifts on.",
+            "mustPreserve": [
+              "The sailor is lost and does not survive.",
+              "The seals were heard earlier and are not the cause of this death."
+            ]
+          }
+        ],
+        "queequeg": [
+          {
+            "id": "queequeg-1",
+            "label": "Dive from the rail to try to reach the sailor",
+            "detourBrief": "Queequeg leaps from the rail and swims hard toward the bubbles, strong and steady. He dives again and again, searching the dark water, but the sailor has already gone too deep. He comes back up to the ship, shaking water from his face, and the crew hauls him aboard. The sea keeps its silence.",
+            "mustPreserve": [
+              "The sailor is lost and does not survive.",
+              "Queequeg is safe and returns to the Pequod."
+            ]
+          },
+          {
+            "id": "queequeg-2",
+            "label": "Toss a rope end over the side to the water",
+            "detourBrief": "Queequeg quickly grabs a loose line and throws it over the stern, hoping the sailor might grab hold. The rope trails in the waves, but no hand reaches for it. He hauls it back in slowly, and the men stand quietly beside him. He then looks at the cask sinking beneath the water.",
+            "mustPreserve": [
+              "The sailor is lost and does not survive.",
+              "The life-buoy cask fills with water and sinks."
+            ]
+          }
+        ],
+        "starbuck": [
+          {
+            "id": "starbuck-1",
+            "label": "Order the boats lowered to search the waves",
+            "detourBrief": "Starbuck shouts for the boats to be lowered at once. The men row across the rolling sea, calling out and scanning the foam. They find nothing but scattered bubbles and drifting wood. Starbuck calls them back with a heavy voice, and the crew returns to the ship in grim silence.",
+            "mustPreserve": [
+              "The sailor is lost and does not survive.",
+              "No sailor is found alive in the search."
+            ]
+          },
+          {
+            "id": "starbuck-2",
+            "label": "Order the men to check the buoy and look for a replacement",
+            "detourBrief": "Starbuck tells the carpenter to inspect the stern for any light cask to serve as a new life-buoy. The crew searches the stores and the deck, but nothing is light enough. Starbuck stands over the sea, troubled, as the Pequod keeps her steady course toward the Equator.",
+            "mustPreserve": [
+              "The life-buoy cask fills with water and sinks.",
+              "No light cask can be found to replace it."
+            ]
+          }
+        ],
+        "ahab": [
+          {
+            "id": "ahab-1",
+            "label": "Stand silent at the rail and watch the wake",
+            "detourBrief": "Ahab comes up from the hatch and stands at the rail, his face grim and still. He watches the white wake fade behind the ship without a word. The men glance at him nervously, and he says nothing about the lost sailor. Then he turns and gives the order to hold the course.",
+            "mustPreserve": [
+              "The sailor is lost and does not survive.",
+              "The Pequod keeps her course toward the Equator."
+            ]
+          },
+          {
+            "id": "ahab-2",
+            "label": "Note the time in the log and speak little",
+            "detourBrief": "Ahab calls for the log and writes the hour and position in his book with a steady hand. He speaks only a few short words about the sea and the course. The crew listens in uneasy silence. He tells the mates to carry on, and the ship moves forward as the sun climbs higher.",
+            "mustPreserve": [
+              "The sailor is lost and does not survive.",
+              "Ahab keeps the ship on her steady southeast course."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp19",
+      "chapter": 130,
+      "anchorAfter": "c130p012",
+      "rejoinAt": "c130p015",
+      "prompt": "A savage hawk circles Ahab high on the masthead, and the crew is watching. What should happen next?",
+      "isIntro": false,
+      "availableCharacters": [
+        "starbuck",
+        "queequeg",
+        "ahab"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Warn Ahab sooner and point toward the hawk",
+          "detourBrief": "The Sicilian sailor shouts again, pointing at the hawk. Ahab turns his head and sees the bird circling closer. Below, the crew holds its breath. The hawk still darts away with the hat, which falls far off into the waves. Ahab watches it sink. Starbuck keeps the rope steady.",
+          "mustPreserve": [
+            "Ahab's hat falls into the sea and is never returned",
+            "Starbuck keeps watch of the rope holding Ahab aloft"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Scan the horizon for the white whale's spout",
+          "detourBrief": "Several men look away from the hawk and search the far horizon for a spout. Ahab's keen eyes sweep the sea too. The hawk swoops in again and snatches the hat from his head, carrying it off over the waves. The hat drops toward the water far away. No spout appears yet.",
+          "mustPreserve": [
+            "Ahab's hat is never returned",
+            "No whale is sighted during this detour"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Hold the rope steady and let the bird pass",
+          "detourBrief": "Starbuck grips the rope tightly and calls softly to Ahab to keep still. The hawk circles, then dives and grabs the hat, flying away with it. Starbuck reaches out, but the hat is too far. It falls into the sea and drifts out of reach. Ahab steadies himself on the mast.",
+          "mustPreserve": [
+            "Ahab's hat is lost to the sea for good",
+            "Starbuck holds the rope that keeps Ahab safe"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "starbuck": [
+          {
+            "id": "starbuck-1",
+            "label": "Reach for the hat with one hand while holding the rope",
+            "detourBrief": "Starbuck lets one hand leave the rope to grab for the hat, keeping the rope gripped in his other hand. The hawk snatches the hat first and flies off with it. Starbuck hauls the rope back firmly, worried for Ahab. The hat falls into the sea, far beyond reach.",
+            "mustPreserve": [
+              "Ahab's hat is never returned",
+              "Starbuck never lets go of the rope"
+            ]
+          },
+          {
+            "id": "starbuck-2",
+            "label": "Call up to Ahab and ask if he is steady",
+            "detourBrief": "Starbuck calls up to ask whether Ahab is steady. Ahab answers with a short nod and keeps watching the sea. The hawk swoops, grabs the hat, and flies off. The hat falls into the waves and is not recovered. Starbuck keeps his watch on the rope.",
+            "mustPreserve": [
+              "Ahab's hat is lost to the sea",
+              "Starbuck remains the rope's watchman"
+            ]
+          }
+        ],
+        "queequeg": [
+          {
+            "id": "queequeg-1",
+            "label": "Watch the hawk closely and warn the crew",
+            "detourBrief": "Queequeg fixes his sharp eyes on the hawk and sees its wings flicker close. He calls a warning, first in his own tongue and then in English. The bird still darts down, claws the hat, and flies off. The hat falls far into the sea. Queequeg signals Starbuck to hold the rope tight.",
+            "mustPreserve": [
+              "Ahab's hat is never returned",
+              "Starbuck keeps the rope secure"
+            ]
+          },
+          {
+            "id": "queequeg-2",
+            "label": "Climb partway up the rigging to reach the hat",
+            "detourBrief": "Queequeg climbs partway up the rigging, trying to reach the hat. The hawk snatches it first and carries it away over the sea. The hat drops far beyond reach. Queequeg slides back down, while Starbuck keeps the rope steady.",
+            "mustPreserve": [
+              "The hat is lost at sea and not recovered",
+              "Starbuck holds the rope for Ahab"
+            ]
+          }
+        ],
+        "ahab": [
+          {
+            "id": "ahab-1",
+            "label": "Keep eyes on the horizon and ignore the bird",
+            "detourBrief": "Ahab stares at the far horizon and refuses to look at the bird. The hawk circles, dives, and takes the hat from his head. Ahab does not turn to chase it. The hat falls into the sea, growing smaller. He keeps searching for the white whale's spout.",
+            "mustPreserve": [
+              "Ahab's hat is never returned",
+              "Ahab stays at the masthead searching for the whale"
+            ]
+          },
+          {
+            "id": "ahab-2",
+            "label": "Swing an arm and try to drive the hawk away",
+            "detourBrief": "Ahab swings his arm at the hawk, but it dodges easily. It darts in, snatches the hat, and flies off with it. Ahab grips the mast and glares after it. The hat falls far into the sea. He turns back to the horizon, still searching.",
+            "mustPreserve": [
+              "The hat is lost to the sea and never returned",
+              "Ahab stays safely held by the rope"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp20",
+      "chapter": 134,
+      "anchorAfter": "c134p021",
+      "rejoinAt": "c134p024",
+      "prompt": "The White Whale has tangled the lines and smashed the boats. What should happen while the sailors are in the water?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ahab",
+        "starbuck"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Watch the wreckage from the high mast",
+          "detourBrief": "From the mast-head you see the broken boats scattered across the foam. Stubb's voice carries over the water, shouting for help and laughing shakily. Flask bobs like an empty bottle. The whale slides away to leeward, trailing lines, and the sea grows calm enough for the ship's boat to be lowered. Everyone is alive and waiting.",
+          "mustPreserve": [
+            "Every crew survives the wreck",
+            "Moby Dick is not killed in this chase"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Follow the whale's trail in a spare boat",
+          "detourBrief": "A lookout spots a distant spout, and the narrator steers closer to study the whale's wake. The White Whale shows only a dark shadow beneath the water before diving out of sight. No one is harmed, and the boat turns back toward the wreckage, where the rescue boat is already on its way.",
+          "mustPreserve": [
+            "The whale escapes for now",
+            "The ship remains the rescuers' home base"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Count the crew and hold steady",
+          "detourBrief": "Ahab's men call their names across the water, one by one. Each voice answers, though some are bruised and gasping. Everyone is accounted for except the Parsee, whose absence weighs heavily on the crew. The whale turns away to leeward, and the rescue boat draws near to lift the sailors aboard.",
+          "mustPreserve": [
+            "The Parsee is missing and not yet found",
+            "The crew is rescued in the same order as the original"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ahab": [
+          {
+            "id": "ahab-1",
+            "label": "Grip the broken lance and shout orders",
+            "detourBrief": "Ahab hauls himself up on the shivered lance, roaring commands over the water. His voice cuts through the foam, and the men turn toward his call. He will not admit fear, though his wooden leg throbs. As the whale glides off, he orders the ship's boats to come about and gather the sailors from the sea.",
+            "mustPreserve": [
+              "Ahab's ivory leg is snapped during this wreck",
+              "The whale is not killed today"
+            ]
+          },
+          {
+            "id": "ahab-2",
+            "label": "Watch the whale with a cold, steady eye",
+            "detourBrief": "Ahab stares at the White Whale as it slides leeward, trailing tangled lines. For a moment he thinks the whale turns its head toward him, as if it knows him. He mutters a vow to return at dawn, then sends word down to the water for the men to be picked up before dusk.",
+            "mustPreserve": [
+              "Moby Dick escapes this encounter",
+              "Ahab stays captain of the Pequod"
+            ]
+          }
+        ],
+        "starbuck": [
+          {
+            "id": "starbuck-1",
+            "label": "Hurry to lower the rescue boat",
+            "detourBrief": "Starbuck orders the spare boat lowered at once and takes the oars himself. He pulls through the floating planks and oars, lifting Stubb and Flask from the cold water one by one. Every man is coughing but breathing. He counts the crew twice, then turns the boat back toward the ship with steady strokes.",
+            "mustPreserve": [
+              "Stubb and Flask survive the wreck",
+              "The rescue happens before the chase continues"
+            ]
+          },
+          {
+            "id": "starbuck-2",
+            "label": "Plead quietly with Ahab to turn back",
+            "detourBrief": "Starbuck leans close to Ahab and begs him to call off the chase before more men drown. Ahab grumbles but gives no final answer. Starbuck gazes at the white wake and prays silently. He sends the crew to pull the wrecked men aboard first, and promises they will speak again once everyone is safe.",
+            "mustPreserve": [
+              "Ahab does not agree to stop the chase here",
+              "Starbuck stays first mate on the ship"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

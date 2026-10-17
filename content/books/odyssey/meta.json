@@ -1,0 +1,17 @@
+{
+  "id": "odyssey",
+  "title": "The Odyssey",
+  "shortTitle": "The Odyssey",
+  "author": "Homer",
+  "translator": "Samuel Butler",
+  "gutenbergId": 1727,
+  "hook": "A hero lost at sea for ten years, and every island hides a new danger.",
+  "difficulty": "medium",
+  "length": "medium",
+  "estMinutes": 786,
+  "cover": {
+    "from": "#1B7F7F",
+    "to": "#6B4C9A",
+    "motif": "sail"
+  }
+}

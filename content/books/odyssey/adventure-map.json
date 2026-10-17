@@ -1,0 +1,1281 @@
+{
+  "bookId": "odyssey",
+  "version": 1,
+  "generatedBy": "claude-haiku-5-5",
+  "choicePoints": [
+    {
+      "id": "cp01",
+      "chapter": 1,
+      "anchorAfter": "c001p031",
+      "rejoinAt": "c001p032",
+      "prompt": "The suitors are curious about the stranger who vanished. What should Telemachus do before bedtime?",
+      "isIntro": true,
+      "availableCharacters": [
+        "telemachus"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Watch the suitors whispering about the stranger",
+          "detourBrief": "Eurymachus and the others murmur together and glance at the door, sensing Telemachus is hiding something. Telemachus keeps his face calm and says little more. The feast drags on with songs and wine, and the whispering fades into yawns. Telemachus slips away quietly, and as night falls the suitors finally go home to bed, ready for the story to resume.",
+          "mustPreserve": [
+            "The suitors never learn that the stranger was Minerva.",
+            "Telemachus goes to bed alone in his high room."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Slip outside to check the harbour for the stranger",
+          "detourBrief": "Telemachus sneaks past the gate and walks toward the harbour where the stranger said her ship was waiting. He sees only the calm sea and a single gull, and remembers Minerva's advice about going to find his father. He returns quietly to the hall, realising the ship is already gone, and goes upstairs as the night grows late.",
+          "mustPreserve": [
+            "Minerva's ship is never found by Telemachus.",
+            "Ulysses has not yet returned to Ithaca."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Ask Phemius about the old friendship with Mentes",
+          "detourBrief": "Telemachus signals to the bard Phemius and asks whether he remembers the Taphian chief Mentes. Phemius shrugs and says he only knows stories of heroes, not of ships. The bard turns back to his lyre. Telemachus thanks him and rises to leave the feast, and the night's quiet settles over the house.",
+          "mustPreserve": [
+            "Phemius knows nothing that reveals the goddess.",
+            "The feast continues until nightfall."
+          ]
+        }
+      ],
+      "characterOptions": {
+        "telemachus": [
+          {
+            "id": "telemachus-1",
+            "label": "Keep the goddess secret and study the suitors",
+            "detourBrief": "Telemachus decides to say nothing about the goddess, and watches each suitor closely. He notices who whispers, who eats most, and who keeps glancing at the door. He tucks these thoughts away for the assembly he has promised. Then, tired and thoughtful, he rises and walks toward the stairs as the feast slowly ends.",
+            "mustPreserve": [
+              "Minerva's true identity stays hidden.",
+              "The assembly is still planned for the morning."
+            ]
+          },
+          {
+            "id": "telemachus-2",
+            "label": "Tell the suitors plainly that the stranger was a god",
+            "detourBrief": "Telemachus stands and announces to the hall that the visitor was a goddess in disguise. The suitors laugh, then grow uneasy as the room falls silent. Telemachus feels braver but also worried about what they might do. He sits back down, and the feasting resumes with quieter voices, until he goes upstairs for the night.",
+            "mustPreserve": [
+              "Telemachus still does not know where his father is.",
+              "The suitors remain in the house overnight."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp02",
+      "chapter": 2,
+      "anchorAfter": "c002p017",
+      "rejoinAt": "c002p020",
+      "prompt": "Telemachus prays alone by the grey sea, and the goddess Minerva is near. What should he do next?",
+      "isIntro": false,
+      "availableCharacters": [
+        "telemachus",
+        "minerva"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Wait by the shore for a sign",
+          "detourBrief": "Telemachus sits on the rocks as the waves roll in. A gull lands near him and seems to watch him closely. Soon a stranger in Mentor's shape walks up, speaks kindly, and promises that a good ship will be found. Telemachus thanks him and turns homeward, troubled but hopeful.",
+          "mustPreserve": [
+            "Minerva promises to find a ship and sail with Telemachus",
+            "Telemachus has no ship or crew of his own yet"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Ask the fishermen on the beach for help",
+          "detourBrief": "Telemachus walks along the sand and finds fishermen mending their nets. They quietly say the suitors are strong, but a few men might still row for the son of Ulysses. They tell him the best ships are kept in the harbour. He thanks them and sets off homeward with new courage.",
+          "mustPreserve": [
+            "The suitors remain in Ulysses' house and still feast there",
+            "Telemachus has no ship yet"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Head straight home to prepare",
+          "detourBrief": "Telemachus decides not to wait and walks briskly back up toward the town. On the road he passes the sheep pens and thinks hard about the journey to Pylos and Sparta. He tells himself he must be brave and careful. When he reaches the house, he is ready to face the suitors.",
+          "mustPreserve": [
+            "Telemachus cannot sail until his supplies are ready",
+            "Telemachus has not yet told the suitors about his journey"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "telemachus": [
+          {
+            "id": "telemachus-1",
+            "label": "Pray again and listen closely",
+            "detourBrief": "Telemachus kneels on the wet stones and prays once more, asking for a clear sign. The wind drops and he hears gulls calling over the bay. He feels calmer and resolves to sail to Pylos. He walks back toward the town, ready to face the suitors.",
+            "mustPreserve": [
+              "Telemachus is determined to seek news of his father",
+              "Minerva is the goddess he prays to"
+            ]
+          },
+          {
+            "id": "telemachus-2",
+            "label": "Look over the harbour for ships",
+            "detourBrief": "Telemachus walks along the harbour and studies the old and new ships tied to the posts. He notices a sturdy one with strong sails and wonders who owns it. He worries the suitors may stop him, then turns homeward to gather supplies. The suitors are still feasting when he returns.",
+            "mustPreserve": [
+              "Ulysses' house is still full of suitors",
+              "No ship has been chosen for the voyage yet"
+            ]
+          }
+        ],
+        "minerva": [
+          {
+            "id": "minerva-1",
+            "label": "Speak as Mentor and encourage the prince",
+            "detourBrief": "Minerva steps out from the shore grasses in Mentor's form. She praises Telemachus for his courage and says his father would be proud. She promises to find a good ship and to sail with him. Then she sends him home to gather supplies before the suitors wake.",
+            "mustPreserve": [
+              "Minerva promises to find a ship and sail with Telemachus",
+              "Minerva appears in the likeness of Mentor"
+            ]
+          },
+          {
+            "id": "minerva-2",
+            "label": "Warn him softly about the suitors",
+            "detourBrief": "Minerva appears in Mentor's shape and warns Telemachus that the suitors plot against him. She says he must keep his plans secret and trust her help. She promises that a ship will be ready and that she will go with him. She tells him to hurry home.",
+            "mustPreserve": [
+              "Telemachus must keep his voyage secret",
+              "Minerva will provide the ship"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp03",
+      "chapter": 4,
+      "anchorAfter": "c004p010",
+      "rejoinAt": "c004p012",
+      "prompt": "Telemachus is too shy to speak, and Menelaus is unsure what to do. What should Telemachus do?",
+      "isIntro": false,
+      "availableCharacters": [
+        "telemachus"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Wait quietly and let the silence settle over the hall",
+          "detourBrief": "Menelaus keeps still and lets Telemachus collect himself while the guests murmur softly. Helen comes down from her high, perfumed room, lovely as Diana. Adraste brings her a seat, Alcippe a soft rug, and Phylo sets down the silver work-box from Alcandra. Helen sits, rests her feet on the footstool, and gets ready to ask her question.",
+          "mustPreserve": [
+            "Helen comes down from her upstairs room before she asks any questions",
+            "The silver work-box was a gift from Alcandra, wife of Polybus"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Call for water so Telemachus can wash his face",
+          "detourBrief": "Menelaus waves to a servant, who brings a basin of cool water. Telemachus washes his face and feels a little calmer, and Menelaus smiles kindly at him. Then Helen comes down from her high, perfumed room. Her maids bring her a seat, a rug, and her silver work-box. She sits, rests her feet, and turns to ask about the strangers.",
+          "mustPreserve": [
+            "Telemachus is Ulysses' son and is visiting Menelaus as a guest",
+            "Helen is the one who asks about the strangers first"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Step into the courtyard to look at the horses",
+          "detourBrief": "Telemachus stands and walks out with Pisistratus to the courtyard. They see the bright chariot and the sweating horses, now fed with oats and barley. The sunlight shines on the gold and bronze of the palace. Helen then comes down from her high room, and her maids settle her with a seat, a rug, and a work-box. She sits and begins to speak.",
+          "mustPreserve": [
+            "Telemachus and Pisistratus arrived by chariot and their horses were cared for",
+            "Helen speaks only after she has sat down in her seat"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "telemachus": [
+          {
+            "id": "telemachus-1",
+            "label": "Lower your cloak and speak softly about your father",
+            "detourBrief": "Telemachus lowers his cloak and says in a small voice that he misses his father very much. Menelaus listens with great kindness and promises to help him. Helen then comes down from her high room. Her maids bring her a seat, a soft rug, and her silver work-box. She sits down with her feet on the footstool and prepares to ask her question.",
+            "mustPreserve": [
+              "Telemachus is Ulysses' son and his father is still missing",
+              "Helen comes down and sits before she asks any questions"
+            ]
+          },
+          {
+            "id": "telemachus-2",
+            "label": "Whisper to Pisistratus and ask him what to say",
+            "detourBrief": "Telemachus leans close and whispers to Pisistratus, asking what he should say. Pisistratus squeezes his arm and reminds him of Nestor's good advice. Telemachus sits up straighter and feels braver. Then Helen comes down from her high room, and her maids bring her a seat, a rug, and a silver work-box. She sits and gets ready to ask about the guests.",
+            "mustPreserve": [
+              "Pisistratus is the son of Nestor and came to escort Telemachus",
+              "Helen speaks only after she has sat down"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp04",
+      "chapter": 5,
+      "anchorAfter": "c005p035",
+      "rejoinAt": "c005p037",
+      "prompt": "Ulysses lies cold and alone on the riverbank, the sea still roaring behind him. What should he do before night falls?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ulysses",
+        "minerva"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Follow the river inland to look for people",
+          "detourBrief": "Ulysses pulls himself up the bank and follows the river inland. He sees washing stones and footprints and hears distant voices, but meets no one. Too tired to search further tonight, he decides to wait for morning and climbs the slope toward a stand of trees where he can rest out of the wind.",
+          "mustPreserve": [
+            "Ulysses is alone and exhausted when he reaches the trees",
+            "Neptune is still angry and no one has found Ulysses yet"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Wait by the water and watch the river",
+          "detourBrief": "Ulysses lies among the rushes and watches the calm river flow past. Fish flick in the shallows and a heron stands still nearby. A cold wind starts to blow off the water, so he gets up and climbs the bank toward the woods, keeping the sound of the river behind him.",
+          "mustPreserve": [
+            "The river is calm now because a god stilled it",
+            "Ulysses is weak and must find shelter before the night air chills him"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Rest briefly, then search the hills for shelter",
+          "detourBrief": "Ulysses closes his eyes for a short rest, then wakes to a bird calling in the trees. Looking up the slope, he spots a thick grove of olive trees whose branches grow so close they seem woven together. He decides it will keep off wind and rain, and he heads up the hill toward it.",
+          "mustPreserve": [
+            "The olive grove is thick and sheltered, the place where he will sleep",
+            "Ulysses is still weak from the sea and must rest before going on"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ulysses": [
+          {
+            "id": "ulysses-1",
+            "label": "Call out loudly to anyone who might be nearby",
+            "detourBrief": "Ulysses gathers his breath and calls out, but only the river answers. A dog barks somewhere far off, and he hears oars splashing beyond a bend. Too weak to go further, he takes this as a sign that people live nearby and that he must rest before searching. He crawls up the bank toward the trees.",
+            "mustPreserve": [
+              "Ulysses is shipwrecked and does not yet know where he is",
+              "The Phaeacian people have not yet met him"
+            ]
+          },
+          {
+            "id": "ulysses-2",
+            "label": "Pray to the gods for courage and a place to rest",
+            "detourBrief": "Ulysses lifts his hands and asks the gods for help. A cool breeze rustles the reeds, and he feels a little stronger. He takes the wind as a sign to climb the slope, where thick trees may shelter him from the night air.",
+            "mustPreserve": [
+              "Minerva is the goddess who helps Ulysses",
+              "Ulysses still believes the gods are watching over him"
+            ]
+          }
+        ],
+        "minerva": [
+          {
+            "id": "minerva-1",
+            "label": "Still the waves and hush the restless gulls",
+            "detourBrief": "Minerva calms the river's current and quiets the screaming gulls. The night air stays mild, so Ulysses can rest peacefully on the bank. Then she guides his tired steps up the slope toward a thick grove of olive trees, keeping the wind gentle.",
+            "mustPreserve": [
+              "Minerva is secretly protecting Ulysses from harm",
+              "Neptune's anger has not ended and the storm is over only for now"
+            ]
+          },
+          {
+            "id": "minerva-2",
+            "label": "Whisper to Ulysses' heart about a sheltered grove",
+            "detourBrief": "Minerva sends a quiet thought into Ulysses' mind: the high ground nearby holds a thick grove that will keep out the cold. He stirs, feels a little warmer, and climbs toward it. She keeps watch over him while he goes, and the wind stays soft.",
+            "mustPreserve": [
+              "The grove on the high ground is where Ulysses will sleep",
+              "Minerva helps Ulysses without being seen by him"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp05",
+      "chapter": 6,
+      "anchorAfter": "c006p011",
+      "rejoinAt": "c006p013",
+      "prompt": "Ulysses hears girls' voices by the river. What should he do before showing himself?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ulysses"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Peek through the bush to watch the girls first",
+          "detourBrief": "Ulysses parts the leaves and watches the girls laughing as they fold clothes beside the water. Their game makes him feel hopeful. One girl stands very still, not running, and he holds his breath. Quietly, he decides it is time to step out into the open and be seen, pulling his leafy branch close around him.",
+          "mustPreserve": [
+            "Ulysses has only leafy branches to cover himself",
+            "Nausicaa is the first person Ulysses meets in this land"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Creep along the shore toward the singing",
+          "detourBrief": "Ulysses slips along the shore, keeping low among reeds and rocks. Through the gaps he sees the washing pools, the spread-out linen, and a tall young woman whose voice is clear and sweet. Remembering that strangers should be treated kindly, he moves closer without snapping any twigs. He stops at the edge of the open sand, where the girls are about to notice him.",
+          "mustPreserve": [
+            "Ulysses has no clothes except leafy branches",
+            "Nausicaa is the daughter of King Alcinous"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Call out a polite greeting to the voices",
+          "detourBrief": "Ulysses clears his throat and calls out a gentle, polite greeting. The maids gasp and scatter along the sandy spits toward the sea. Nausicaa does not run. She steadies her heart and stands firm, looking straight at him. Ulysses waits in the shadow of the bush, unsure whether to come closer or keep his distance.",
+          "mustPreserve": [
+            "The maids run away while Nausicaa stays brave",
+            "Ulysses is a stranger in this land and has no friends here"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ulysses": [
+          {
+            "id": "ulysses-1",
+            "label": "Wrap the leafy branch tightly and steady your breath",
+            "detourBrief": "Ulysses wraps the thick branch around his waist and takes a slow, calm breath, remembering that clever people think before they act. He notices the sun glinting on the waves and the birds gone quiet. Feeling braver, he peers through the leaves toward the shore, where the girls are still folding linen. He listens carefully, ready to speak to whoever is there.",
+            "mustPreserve": [
+              "Ulysses wears only leafy branches at this point",
+              "Minerva does not show herself to him"
+            ]
+          },
+          {
+            "id": "ulysses-2",
+            "label": "Choose the safest path quietly down to the water",
+            "detourBrief": "Ulysses studies the path between the trees and picks the safest way down to the water. He stops often to listen, careful not to snap a branch or frighten anyone. At the shore he sees a tall girl standing calmly on the sand, unafraid of him. He stops in the shadow of a tree, deciding how best to approach her.",
+            "mustPreserve": [
+              "Nausicaa is the daughter of King Alcinous",
+              "Ulysses is weary from his long sea journey"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp06",
+      "chapter": 9,
+      "anchorAfter": "c009p013",
+      "rejoinAt": "c009p015",
+      "prompt": "The cave is full of cheeses and lambs, and its owner is still away. What should Ulysses do while they wait?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ulysses"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Carry a few cheeses back to the ship",
+          "detourBrief": "Ulysses lets a few men quietly carry cheeses down to the shore, where the crew shares them happily and rests by the ships. Ulysses stays behind alone, deciding he still wants to meet the cave's owner in person. He hides in the shadows near the fire to wait for the shepherd's return, and the scene picks up as the flocks come home.",
+          "mustPreserve": [
+            "Ulysses stays behind to meet the cave's owner",
+            "The lambs and kids are not taken yet"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Wait quietly and keep the men hidden",
+          "detourBrief": "Ulysses gathers his men by the fire and asks them to whisper, reminding them that the gods expect guests to be treated kindly. They sacrifice a little cheese to the gods and nervously listen for footsteps. When the flocks finally come up the hill, they hide together at the far end of the cave, and the scene picks up as the shepherd arrives.",
+          "mustPreserve": [
+            "Ulysses wants to see the owner and hopes for a gift",
+            "The men are frightened but stay with Ulysses"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Walk out to explore the green meadows",
+          "detourBrief": "Ulysses leads a small group out to the sunny meadows near the shore, where they see wild goats grazing and smell the sea. They watch the sky darken and hurry back toward the cave as they hear the flocks bleating nearby. They slip back inside just before the shepherd appears, and the scene picks up from there.",
+          "mustPreserve": [
+            "The men return to the cave before the shepherd arrives",
+            "The cave's owner has not yet seen them"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ulysses": [
+          {
+            "id": "ulysses-1",
+            "label": "Leave a thank-you gift on the rock",
+            "detourBrief": "Ulysses thinks it is only polite to leave something behind for the cave's owner, so he sets a small bundle of cheese on a flat stone near the entrance. He then tells the men to keep their voices low and wait. As the sun sinks, the flocks come up the hill, and the scene picks up as the shepherd comes into the cave.",
+            "mustPreserve": [
+              "Ulysses wants to meet the owner in person",
+              "The shepherd arrives in the evening"
+            ]
+          },
+          {
+            "id": "ulysses-2",
+            "label": "Count the men and plan where to hide",
+            "detourBrief": "Ulysses counts his men carefully and makes sure everyone is accounted for. He chooses a hiding place at the back of the cave and asks the crew to stay close and quiet. He keeps one eye on the entrance, measuring how large the cave's stone door is. The flocks come up the hill, and the scene picks up as the shepherd arrives.",
+            "mustPreserve": [
+              "The stone door is too heavy for the men to move",
+              "Ulysses has not yet decided to leave"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp07",
+      "chapter": 10,
+      "anchorAfter": "c010p018",
+      "rejoinAt": "c010p022",
+      "prompt": "Eurylochus begs Ulysses not to walk into Circe's forest, and the lost men are still missing. What should Ulysses do?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ulysses"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Leave Eurylochus at the ship to guard it",
+          "detourBrief": "Ulysses decides a careful plan is best. He asks Eurylochus to guard the ship and wait there until sunset. Eurylochus reluctantly agrees. Ulysses takes his bronze sword and bow and sets off into the forest, alone, to find his men.",
+          "mustPreserve": [
+            "Eurylochus stays by the ship",
+            "Ulysses goes to Circe's house alone"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Search the forest edge for a safer path",
+          "detourBrief": "Ulysses studies the trees and finds a narrow deer path that keeps away from the wolves and lions. He follows it quietly, listening for Circe's singing, until he sees the stone house through the trees. He then continues on, alone, toward the door.",
+          "mustPreserve": [
+            "Ulysses still goes alone",
+            "Circe's house is built of cut stone in the middle of the forest"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Gather the crew and ask them to wait",
+          "detourBrief": "Ulysses gathers his men, admits he feels afraid, and asks them to wait by the ship until he returns. They promise to keep watch. Ulysses takes up his weapons and walks inland by himself toward the goddess's house.",
+          "mustPreserve": [
+            "The rest of the crew waits at the ship",
+            "Ulysses goes to Circe's house alone"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ulysses": [
+          {
+            "id": "ulysses-1",
+            "label": "Sniff the air for the scent of herbs",
+            "detourBrief": "Ulysses notices a sweet smell drifting from the trees, like honey and wine. He remembers Eurylochus's warning, grips his spear, and steps forward carefully. He wants to learn what waits in the house before walking inland alone.",
+            "mustPreserve": [
+              "Ulysses goes to Circe's house alone",
+              "Eurylochus stays by the ship"
+            ]
+          },
+          {
+            "id": "ulysses-2",
+            "label": "Pause to listen for the goddess singing",
+            "detourBrief": "Ulysses hears a soft song through the trees and feels both curious and uneasy. He tells himself to stay wise, keeps his sword ready, and walks on alone toward the stone house he saw from the hill.",
+            "mustPreserve": [
+              "Circe's house is built of cut stone in the middle of the forest",
+              "Ulysses still goes alone"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp08",
+      "chapter": 12,
+      "anchorAfter": "c012p021",
+      "rejoinAt": "c012p024",
+      "prompt": "The crew is tired and hungry, and the cattle are lowing nearby. What should Ulysses do?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ulysses"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Hear Eurylochus out, then ask for the oath",
+          "detourBrief": "Ulysses listens calmly as Eurylochus complains that the men are exhausted and fear the night winds. He admits they need rest and food. Then he gently asks each man to swear a solemn oath not to harm any cattle or sheep, eating only Circe's stores.",
+          "mustPreserve": [
+            "The men swear an oath not to harm the sun-god's cattle or sheep.",
+            "Eurylochus is the one who argues against Ulysses."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Order the oath at once and warn them sternly",
+          "detourBrief": "Ulysses cuts Eurylochus short and speaks sharply: the sun-god's anger is real and Circe warned them. He orders every man to swear a solemn oath at once not to touch any cattle or sheep, and to eat only Circe's stores. No argument will change this.",
+          "mustPreserve": [
+            "The men swear an oath not to harm the sun-god's cattle or sheep.",
+            "The ship is brought to a harbour by fresh water where the men cook suppers."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Offer to keep the first watch so the men rest",
+          "detourBrief": "Ulysses sees how tired his crew is and offers to keep the first watch himself so they can rest. Eurylochus grumbles but agrees. Before the men sleep, Ulysses asks each one to swear a solemn oath not to harm any cattle or sheep on the island, eating only Circe's stores.",
+          "mustPreserve": [
+            "The men swear an oath not to harm the sun-god's cattle or sheep.",
+            "The ship is brought to a harbour by fresh water where the men cook suppers."
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ulysses": [
+          {
+            "id": "ulysses-1",
+            "label": "Notice Eurylochus's tired face and speak kindly to him",
+            "detourBrief": "Ulysses sees Eurylochus's pale, weary face and speaks to him quietly, admitting his own hunger and fear. Eurylochus softens and says he only wants the men to live. Ulysses then asks the whole crew to swear a solemn oath not to harm any cattle or sheep, eating only Circe's stores.",
+            "mustPreserve": [
+              "The men swear an oath not to harm the sun-god's cattle or sheep.",
+              "Eurylochus is the one who argues against Ulysses."
+            ]
+          },
+          {
+            "id": "ulysses-2",
+            "label": "Repeat Circe's warning about the sun-god's island aloud",
+            "detourBrief": "Ulysses repeats Circe's warning word for word, reminding the men that the sun sees everything and that this island holds their worst danger. Some men look ashamed. Ulysses asks each man to swear a solemn oath not to harm any cattle or sheep, eating only Circe's stores.",
+            "mustPreserve": [
+              "The men swear an oath not to harm the sun-god's cattle or sheep.",
+              "The ship is brought to a harbour by fresh water where the men cook suppers."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp09",
+      "chapter": 14,
+      "anchorAfter": "c014p021",
+      "rejoinAt": "c014p023",
+      "prompt": "Eumaeus has refused your dare, and supper is near. What will Ulysses do while he waits?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ulysses"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Ask Eumaeus how he keeps the pigs safe",
+          "detourBrief": "Ulysses asks how the swineherd keeps so many pigs safe. Eumaeus proudly explains the fences and hounds, and he grows fond of the guest. Ulysses listens closely, storing every detail. Soon the shouts of the herdsmen echo over the hill, and the pigs are heading home for the night.",
+          "mustPreserve": [
+            "Eumaeus still refuses to believe Ulysses's story",
+            "Ulysses is still a stranger in the hut"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Step outside to watch the weather roll in",
+          "detourBrief": "Ulysses steps out into the wind and rain and sees dark clouds over the hills. Far off, the herdsmen whistle and call, driving the pigs up the track. Eumaeus joins him at the gate, pointing out how the west wind blows. Then the squealing herd tumbles through the gate toward the styes.",
+          "mustPreserve": [
+            "Ulysses has not revealed his true identity",
+            "The hounds guard the pigs and the yard"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Offer to help with the evening chores",
+          "detourBrief": "Ulysses offers to carry firewood, and Eumaeus accepts with a grin, though he insists the guest rest. Together they stack logs by the fire while the wind howls. Ulysses notices how carefully the swineherd keeps his tools. The herdsmen's voices grow near, and the pigs are driven into the styes.",
+          "mustPreserve": [
+            "Eumaeus keeps his promise of shelter and food",
+            "Ulysses remains disguised as a beggar"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ulysses": [
+          {
+            "id": "ulysses-1",
+            "label": "Admit to Eumaeus how weary and poor you truly are",
+            "detourBrief": "Ulysses admits he is tired and truly poor, and speaks of the sorrow of having no home to return to. Eumaeus softens, saying he respects honest sorrow, and hands him a cup of water. Then the herdsmen arrive, and the pigs are driven in with a loud squeal.",
+            "mustPreserve": [
+              "Ulysses still does not reveal who he is",
+              "Eumaeus still doubts the claims about Ulysses"
+            ]
+          },
+          {
+            "id": "ulysses-2",
+            "label": "Pretend to doze and secretly watch the swineherd",
+            "detourBrief": "Ulysses pretends to doze by the fire, watching Eumaeus check his tools and his hounds. He sees the swineherd's loyalty to his absent master in every careful task. Then voices call from the hills, and the herdsmen drive the pigs up toward the yard.",
+            "mustPreserve": [
+              "Ulysses has not yet been recognized",
+              "The swineherd's loyalty to Ulysses stays unchanged"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp10",
+      "chapter": 15,
+      "anchorAfter": "c015p044",
+      "rejoinAt": "c015p048",
+      "prompt": "A hawk has just swooped by with a dove in its talons. What should Telemachus do next?",
+      "isIntro": false,
+      "availableCharacters": [
+        "telemachus"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Ask Theoclymenus to explain the hawk's meaning",
+          "detourBrief": "Telemachus asks Theoclymenus what the hawk means. The seer explains that it promises Ithaca's royal house will stay strong. Telemachus is glad and thanks him. He then remembers his crew and his plan, and he turns toward Piraeus to arrange a place for the stranger to stay.",
+          "mustPreserve": [
+            "Theoclymenus is a seer who is an exile from Argos",
+            "The hawk is a good omen for Telemachus's house"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Watch the hawk fly out over the sea",
+          "detourBrief": "Telemachus and his crew watch the hawk soar away over the water, its feathers drifting down. The sailors cheer that the sign is good. Telemachus smiles and thinks of home. Then he calls Piraeus over and asks him to look after the stranger until he returns.",
+          "mustPreserve": [
+            "Telemachus will return to fetch Theoclymenus later",
+            "The hawk is a sign from Apollo"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Hurry the crew and send Piraeus to the ship",
+          "detourBrief": "Telemachus tells his men to hurry and keep the ship ready. He asks his friend Piraeus to take the stranger home. Piraeus agrees to care for him as a guest. Telemachus then gets his ship moving toward Ithaca, while he prepares to go to the farm.",
+          "mustPreserve": [
+            "Piraeus will host Theoclymenus at his own house",
+            "Telemachus plans to meet Theoclymenus again in Ithaca"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "telemachus": [
+          {
+            "id": "telemachus-1",
+            "label": "Ask Piraeus to host the stranger kindly",
+            "detourBrief": "Telemachus asks his friend Piraeus to welcome Theoclymenus into his home as a guest. Piraeus promises gladly and says the stranger will want for nothing. Theoclymenus thanks Telemachus for his kindness. Telemachus gives him a warm farewell and returns to the ship with his crew.",
+            "mustPreserve": [
+              "Theoclymenus is placed in Piraeus's care",
+              "Telemachus is kind to strangers who ask for help"
+            ]
+          },
+          {
+            "id": "telemachus-2",
+            "label": "Wonder aloud whether the omen will come true",
+            "detourBrief": "Telemachus says quietly that he hopes the hawk's sign is true. He thinks about his father Ulysses and how far away home still seems. Theoclymenus reassures him that the gods are watching. Telemachus nods, feeling braver, and goes to call his crew and Piraeus.",
+            "mustPreserve": [
+              "Telemachus is still searching for news of his father",
+              "The gods are watching over the journey to Ithaca"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp11",
+      "chapter": 16,
+      "anchorAfter": "c016p016",
+      "rejoinAt": "c016p018",
+      "prompt": "Minerva has just spoken to Ulysses by the yard wall. What should happen before he goes back inside to his son?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ulysses",
+        "telemachus",
+        "minerva"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Ulysses hurries back inside to tell his son the plan",
+          "detourBrief": "Ulysses turns straight back toward the hut and begins explaining his plan in a low voice. Minerva's golden wand touches him from behind, and his face and clothes change as he steps through the doorway. The scene resumes with Telemachus staring at the change.",
+          "mustPreserve": [
+            "The suitors do not yet know Ulysses has returned",
+            "Minerva's help stays secret from Telemachus"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Ulysses waits by the wall and watches the road",
+          "detourBrief": "Ulysses keeps watch by the yard wall and sees only a shepherd driving sheep far off on the road to town. Satisfied, he turns back, and Minerva's wand touches him, making him young again. He returns to the hut with new color in his cheeks.",
+          "mustPreserve": [
+            "Telemachus is still young and has never fought the suitors",
+            "Minerva's presence is hidden from mortals"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Ulysses asks Minerva whether his son is ready",
+          "detourBrief": "Ulysses asks Minerva if Telemachus is brave enough to help him. She says the young man is ready, though he has much to learn. She touches Ulysses with her wand, restoring his youth, and he goes back into the hut with new courage.",
+          "mustPreserve": [
+            "Minerva is a goddess who must stay unseen by Telemachus",
+            "The plan to fight the suitors has not yet been explained in full"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ulysses": [
+          {
+            "id": "ulysses-1",
+            "label": "Ask Minerva how many suitors your son has counted",
+            "detourBrief": "Ulysses asks Minerva whether his son has yet learned how many suitors fill the hall. She answers that Telemachus has a sharp mind and will soon know the true number. Ulysses thanks her, and she touches him with her wand so he looks young again before he returns to the hut.",
+            "mustPreserve": [
+              "The exact number of suitors is first learned from Telemachus",
+              "Minerva's help is kept secret"
+            ]
+          },
+          {
+            "id": "ulysses-2",
+            "label": "Promise Minerva you will wait for the right sign",
+            "detourBrief": "Ulysses promises Minerva that he will wait until she sends a sign before the fight begins. She nods, and her wand restores his youth and fine clothes. He walks back into the hut, calm and ready to speak to his son.",
+            "mustPreserve": [
+              "The fight with the suitors has not yet begun",
+              "Ulysses has not yet revealed himself to the suitors"
+            ]
+          }
+        ],
+        "telemachus": [
+          {
+            "id": "telemachus-1",
+            "label": "Walk to the doorway and peer out at the yard",
+            "detourBrief": "Telemachus walks to the doorway and looks out toward the yard wall. He sees only his father standing alone, speaking to the empty air. Puzzled, he returns to his seat, and soon Ulysses comes back inside looking strangely changed.",
+            "mustPreserve": [
+              "Telemachus cannot see Minerva",
+              "The suitors have not discovered Ulysses"
+            ]
+          },
+          {
+            "id": "telemachus-2",
+            "label": "Pour your father a cup of wine when he returns",
+            "detourBrief": "Telemachus pours a cup of wine from the bowl and waits by the table. When Ulysses returns, Telemachus is gently surprised to see a new brightness in his face. He offers the cup kindly, and the two sit together quietly.",
+            "mustPreserve": [
+              "Ulysses has not yet revealed his full plan",
+              "Eumaeus is away in the town and does not know the secret"
+            ]
+          }
+        ],
+        "minerva": [
+          {
+            "id": "minerva-1",
+            "label": "Whisper a warning that the suitors may return soon",
+            "detourBrief": "Minerva whispers to Ulysses that the suitors may hurry back from the town if they learn of Telemachus's return. Ulysses nods and says he is ready. She touches him gently with her wand, restoring his strength and his youthful look before he goes inside.",
+            "mustPreserve": [
+              "The suitors have not yet returned to the hut",
+              "Minerva remains unseen by Telemachus"
+            ]
+          },
+          {
+            "id": "minerva-2",
+            "label": "Stay hidden by the wall and watch the dogs",
+            "detourBrief": "Minerva stays hidden beside the yard wall and quietly watches the dogs, which are calm and have stopped barking. She sees no danger nearby. Then she touches Ulysses with her wand, and he steps back into the hut with his new appearance.",
+            "mustPreserve": [
+              "The dogs were not barking earlier because they recognised Telemachus",
+              "Minerva's presence is kept hidden from mortals"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp12",
+      "chapter": 18,
+      "anchorAfter": "c018p021",
+      "rejoinAt": "c018p024",
+      "prompt": "Penelope has come down looking radiant and has scolded Telemachus. The suitors are staring. What should happen next?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ulysses",
+        "telemachus",
+        "penelope"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Follow Penelope as she lingers by the pillar",
+          "detourBrief": "Penelope pauses by the pillar and watches the suitors' eyes with a thoughtful frown. She feels the weight of her long wait. Telemachus sighs and turns to his mother, asking her to rest. She agrees, and as the crowd murmurs, Eurymachus steps forward to speak.",
+          "mustPreserve": [
+            "Penelope has not yet recognised Ulysses",
+            "The suitors remain in the hall"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Watch Telemachus step between his mother and the suitors",
+          "detourBrief": "Telemachus stands tall and quietly tells the suitors that his mother deserves respect. He admits he is still learning how to speak up. Penelope listens, surprised by his calm words, and her frown softens. The room goes quiet as Eurymachus steps forward.",
+          "mustPreserve": [
+            "Telemachus is not yet the master of the house",
+            "Ulysses is still away from Ithaca"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Notice the old beggar watching from the threshold",
+          "detourBrief": "From the threshold, Ulysses studies his wife's face and her sorrow, and his heart tightens. He keeps silent and hides his feelings behind his rags, knowing this is not the moment to reveal himself. Telemachus glances at him kindly. Penelope turns back to the room, and Eurymachus steps forward to speak.",
+          "mustPreserve": [
+            "Ulysses must stay disguised as a beggar",
+            "Penelope has not yet recognised her husband"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ulysses": [
+          {
+            "id": "ulysses-1",
+            "label": "Hold your tongue and watch Penelope closely",
+            "detourBrief": "Ulysses keeps still by the doorpost and watches his wife speak. He notices how she still hopes for his return and feels proud and sad at once. He says nothing, not wanting to be found out. When Telemachus looks his way, Ulysses gives him a small, careful nod. Then Eurymachus steps toward Penelope.",
+            "mustPreserve": [
+              "Ulysses stays disguised as a beggar",
+              "Penelope does not yet know who he is"
+            ]
+          },
+          {
+            "id": "ulysses-2",
+            "label": "Speak gently to Penelope as a passing stranger",
+            "detourBrief": "Ulysses steps forward and tells Penelope, in a gentle voice, that her husband is still alive and will come home one day. Penelope thanks him politely but doubts his words, as she has heard many false tales. She turns back to her son. Eurymachus then approaches her with a smile.",
+            "mustPreserve": [
+              "Penelope is not yet convinced her husband will return soon",
+              "No one learns Ulysses' true identity"
+            ]
+          }
+        ],
+        "telemachus": [
+          {
+            "id": "telemachus-1",
+            "label": "Apologise to your mother and ask her to rest",
+            "detourBrief": "Telemachus bows his head and says he is sorry for the noise. He promises to keep his guests calm and asks her to return to her rooms. Penelope nods, unsure whether to trust his wisdom. Telemachus turns to the suitors with a firm but polite look. Then Eurymachus comes up to speak to Penelope.",
+            "mustPreserve": [
+              "Telemachus is still young and learning to lead",
+              "The suitors remain in the hall"
+            ]
+          },
+          {
+            "id": "telemachus-2",
+            "label": "Ask the suitors politely to end the feast",
+            "detourBrief": "Telemachus tells the suitors in a firm voice that the feast is over and the night is late. He says his mother must be respected. The suitors mutter but begin to shuffle toward the door. Penelope watches, relieved, though she does not leave. Eurymachus lingers and steps toward her.",
+            "mustPreserve": [
+              "The suitors have not yet left the house for good",
+              "Telemachus does not yet drive anyone out by force"
+            ]
+          }
+        ],
+        "penelope": [
+          {
+            "id": "penelope-1",
+            "label": "Ask Telemachus what truly troubled the hall",
+            "detourBrief": "Penelope asks her son to explain the fight in plain words. Telemachus tells her about Irus and the stranger's calm strength. Penelope listens carefully and sighs, fearing more trouble is coming. She tells him to watch the suitors closely. Then Eurymachus comes forward, smiling, to address her.",
+            "mustPreserve": [
+              "Penelope still refuses to choose a new husband",
+              "The beggar's fight with Irus has already ended"
+            ]
+          },
+          {
+            "id": "penelope-2",
+            "label": "Call the maids to bring your veil and shawl",
+            "detourBrief": "Penelope turns aside and calls her maids to bring her veil and shawl. She feels tired and wishes for quiet. As the maids fuss, she glances at the old beggar by the wall and feels a strange pity for him. Then she faces the hall again just as Eurymachus steps close.",
+            "mustPreserve": [
+              "Penelope keeps her veil before her face in the hall",
+              "Penelope has not yet recognised her husband"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp13",
+      "chapter": 19,
+      "anchorAfter": "c019p029",
+      "rejoinAt": "c019p034",
+      "prompt": "Euryclea has just recognised the scar, and the bathwater is spilled across the floor. What happens next?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ulysses",
+        "penelope"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Follow the spilled water and watch who is listening nearby",
+          "detourBrief": "The narrator watches the doorway. A maid passes, sees the puddle, shrugs, and hurries on with her jug, noticing nothing else. Euryclea quietly fetches cloths and mops the floor while Ulysses waits by the fire. The house settles into calm, and Penelope turns back toward her guest, still thinking of her dream.",
+          "mustPreserve": [
+            "Euryclea has not yet told anyone that Ulysses is home.",
+            "Ulysses's identity stays secret tonight."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Slip out to the cloister and let the tense moment cool",
+          "detourBrief": "Ulysses steps into the cool night air of the cloister. He looks up at the stars and thinks about the suitors' greed and his plan to defeat them with Minerva's help. The hall grows quiet again. He returns to the fire, sits down, and rearranges his rags over his leg while Penelope waits to speak.",
+          "mustPreserve": [
+            "Ulysses has not yet revealed himself to Penelope.",
+            "The suitors remain unaware of Ulysses's return."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Listen closely to the quiet room around the fire",
+          "detourBrief": "The narrator describes the crackling fire, the scent of smoke, and the soft sound of Euryclea's trembling breath as she wipes her eyes. Penelope gazes into the flames, lost in thought. Ulysses keeps still and says nothing. After a long pause, Penelope looks up and begins to speak to him about the night ahead.",
+          "mustPreserve": [
+            "Euryclea promises to keep silent about the scar.",
+            "Penelope still does not know who the stranger really is."
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ulysses": [
+          {
+            "id": "ulysses-1",
+            "label": "Whisper a kind promise to Euryclea before she cries out",
+            "detourBrief": "Ulysses lifts Euryclea's trembling hand and murmurs that the time has not yet come. He asks her to trust him a little longer. She dries her eyes and nods, then fetches fresh water for his feet. He settles by the fire and tucks his rags over the scar while Penelope watches the flames.",
+            "mustPreserve": [
+              "Euryclea promises to keep silent about the scar.",
+              "Ulysses's identity stays hidden from Penelope tonight."
+            ]
+          },
+          {
+            "id": "ulysses-2",
+            "label": "Ask Euryclea quietly to mop up the spilled bathwater",
+            "detourBrief": "Ulysses asks Euryclea to fetch a cloth and clear the puddle so no one notices the spill. Working together in whispers, they tidy the floor while Ulysses keeps one eye on the doorway. Euryclea keeps her promise and says nothing more. He sits again by the fire, rags over the scar, as Penelope turns toward him.",
+            "mustPreserve": [
+              "Euryclea has agreed to keep Ulysses's secret.",
+              "No one else in the house learns who Ulysses is."
+            ]
+          }
+        ],
+        "penelope": [
+          {
+            "id": "penelope-1",
+            "label": "Glance over and notice the spilled water and the maid's worried face",
+            "detourBrief": "Penelope turns her head, puzzled by the splash, and asks Euryclea if she is hurt. Euryclea says she slipped and that the bath was too full, and she keeps her secret. Penelope accepts this, too tired to ask more, and turns back to her guest with a faint sigh.",
+            "mustPreserve": [
+              "Penelope does not learn the truth about the scar tonight.",
+              "Euryclea keeps her promise to stay silent."
+            ]
+          },
+          {
+            "id": "penelope-2",
+            "label": "Ask the stranger whether the cold water has hurt his feet",
+            "detourBrief": "Penelope asks Ulysses whether the spilled bath has chilled or hurt him. He replies lightly that the old woman is clumsy but that he is well, and he jokes gently about how age makes everyone slow. Penelope gives a faint smile, then says it is time to speak of her dream and the night ahead.",
+            "mustPreserve": [
+              "Penelope still believes the stranger is only a beggar.",
+              "The stranger's true identity remains hidden."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp14",
+      "chapter": 20,
+      "anchorAfter": "c020p026",
+      "rejoinAt": "c020p029",
+      "prompt": "Ctesippus is about to throw something at the stranger. What should the reader do?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ulysses",
+        "telemachus",
+        "penelope"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Watch the suitors closely and wait for the right moment",
+          "detourBrief": "Ulysses keeps his eyes on Ctesippus and the heifer's foot, sees it fly, and dodges it with a grim smile. Telemachus stands and warns Ctesippus that the next insult will bring real trouble. The hall falls quiet, and the suitors sit still, unsure what to say.",
+          "mustPreserve": [
+            "Ulysses dodges the foot and is not hurt",
+            "Telemachus is the host who keeps order in his house",
+            "No one is killed or seriously hurt"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Let Ulysses speak first to calm the room",
+          "detourBrief": "Before the foot can fly, Ulysses calls out a calm, sharp remark about the suitors' manners. Ctesippus laughs, lowers his hand, and the foot is never thrown at him. Telemachus then tells the suitors he is grown up and will protect his guests, and the room goes quiet.",
+          "mustPreserve": [
+            "Ulysses stays seated and is not struck",
+            "Telemachus speaks boldly but does not start a fight",
+            "The suitors remain guests in the house for now"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Have servants guide Ulysses into the cloister for safety",
+          "detourBrief": "Two servants quietly lead Ulysses toward the cloister just as the foot is thrown. It hits the wall behind where he was sitting. Telemachus rebukes the suitors for their rudeness, and Ulysses later returns quietly to his seat while the hall settles down.",
+          "mustPreserve": [
+            "Ulysses is not harmed and remains in the house",
+            "The stranger stays under Telemachus's protection",
+            "The original seating and table arrangement is restored"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ulysses": [
+          {
+            "id": "ulysses-1",
+            "label": "Smile and dodge the heifer's foot without a word",
+            "detourBrief": "Ulysses sees the foot coming, turns his head, and lets it hit the wall while he smiles grimly. He keeps his temper and studies Ctesippus's face. Telemachus stands and rebukes the suitors, and the hall goes silent as Ulysses waits patiently.",
+            "mustPreserve": [
+              "Ulysses dodges the foot and is not hurt",
+              "Ulysses keeps his plan secret from the suitors",
+              "Telemachus speaks up for the guests"
+            ]
+          },
+          {
+            "id": "ulysses-2",
+            "label": "Study the suitors' faces and remember who speaks out",
+            "detourBrief": "As the foot flies past him, Ulysses memorizes which suitors laugh and which look uneasy. Telemachus rebukes Ctesippus sharply. Ulysses thinks about who might one day help him, and he sits calmly while the room falls quiet.",
+            "mustPreserve": [
+              "Ulysses is not harmed by the thrown foot",
+              "Ulysses stays hidden as a stranger",
+              "Telemachus remains in charge of the hall"
+            ]
+          }
+        ],
+        "telemachus": [
+          {
+            "id": "telemachus-1",
+            "label": "Stand up and warn Ctesippus to stop at once",
+            "detourBrief": "Telemachus rises with his spear and tells Ctesippus that the throw was lucky to miss and that guests must not be attacked. He says he will not allow more rudeness in his father's house. Ulysses turns aside, and the hall falls silent with the suitors staring at the floor.",
+            "mustPreserve": [
+              "Ulysses is not struck by the foot",
+              "Telemachus does not kill or wound anyone",
+              "Telemachus remains the host of the house"
+            ]
+          },
+          {
+            "id": "telemachus-2",
+            "label": "Remind the suitors that he has grown up",
+            "detourBrief": "Telemachus tells the suitors that he now understands right from wrong and will no longer be treated as a child. He says he has long put up with their waste of his food and wine. Ulysses avoids the foot, and the suitors grow quiet and thoughtful.",
+            "mustPreserve": [
+              "Telemachus speaks boldly but does not start a fight",
+              "Ulysses is not hurt",
+              "The suitors are still guests in the house"
+            ]
+          }
+        ],
+        "penelope": [
+          {
+            "id": "penelope-1",
+            "label": "Send a maid to ask the suitors for calm",
+            "detourBrief": "From her seat facing the court, Penelope gasps softly when the foot is thrown. She sends a maid with a gentle message asking the suitors to keep the peace. The foot has already missed Ulysses, and Telemachus speaks firmly, so the room falls quiet.",
+            "mustPreserve": [
+              "Ulysses is not struck by the foot",
+              "Penelope stays seated and does not leave the hall",
+              "Telemachus remains the one who rebukes the suitors"
+            ]
+          },
+          {
+            "id": "penelope-2",
+            "label": "Listen closely to what Telemachus says",
+            "detourBrief": "Penelope hears the thrown foot strike the wall and holds her breath. She listens as her son speaks boldly to the suitors, feeling proud and worried at once. She waits quietly, watching the hall settle into an uneasy hush.",
+            "mustPreserve": [
+              "Ulysses is not hurt",
+              "Penelope does not step into the quarrel",
+              "Telemachus speaks but does not harm anyone"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp15",
+      "chapter": 23,
+      "anchorAfter": "c023p011",
+      "rejoinAt": "c023p014",
+      "prompt": "Penelope still sits silent across the fire, unsure whether this ragged stranger is really Ulysses. What should happen next?",
+      "isIntro": false,
+      "availableCharacters": [
+        "penelope",
+        "telemachus",
+        "ulysses"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Watch Penelope quietly study the stranger's face",
+          "detourBrief": "Penelope studies the man's face in the firelight, remembering his old laugh and the way he tilted his head. Her heart beats fast, but she keeps still and waits for a sure sign. Servants wait quietly in the doorway. Ulysses lifts his head and prepares to speak, while Telemachus stays close to his mother.",
+          "mustPreserve": [
+            "Penelope does not yet accept that the stranger is Ulysses",
+            "Ulysses is still wearing his shabby clothes"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Follow the servants whispering at the doorway",
+          "detourBrief": "Eurynome and the maids peek around the doorway and whisper about the stranger who fought the suitors. Nurse Euryclea hushes them kindly and says nothing more. The servants slip back to their room, and the great hall falls quiet. Ulysses lifts his head and begins to speak as the fire crackles.",
+          "mustPreserve": [
+            "The suitors are all dead and their bodies lie in the gatehouse",
+            "Penelope has not yet embraced her husband"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Let Ulysses worry about the townspeople's reaction",
+          "detourBrief": "Ulysses glances at the windows and thinks about the families of Ithaca and how they will react to the news. He weighs how to keep the town calm until they can reach the woods. He turns to his son and his wife with a serious face. Then he lifts his head and prepares to speak of what they should do.",
+          "mustPreserve": [
+            "Ulysses plans to reach his father's land in the countryside",
+            "No one in the town yet knows the truth about the suitors"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "penelope": [
+          {
+            "id": "penelope-1",
+            "label": "Ask him a quiet question about their home",
+            "detourBrief": "Penelope leans forward and asks softly what he remembers of their home in Ithaca. He answers in a low voice, and she feels her doubt shake a little. She still keeps her hands folded and her distance. Ulysses lifts his head to speak as the firelight flickers across the stone floor.",
+            "mustPreserve": [
+              "Penelope does not yet fully recognise Ulysses",
+              "The secret of their bed has not been revealed"
+            ]
+          },
+          {
+            "id": "penelope-2",
+            "label": "Stay silent and study his hands and voice",
+            "detourBrief": "Penelope says nothing and studies the stranger's hands and steady voice. A small hope grows in her chest, but she wants to be certain before she trusts it. She notices Telemachus watching her closely. Ulysses lifts his head and prepares to speak as the room grows still.",
+            "mustPreserve": [
+              "Penelope has not yet decided whether to trust the stranger",
+              "Telemachus has not yet told his mother the whole truth"
+            ]
+          }
+        ],
+        "telemachus": [
+          {
+            "id": "telemachus-1",
+            "label": "Quietly ask his father about his long journeys",
+            "detourBrief": "Telemachus leans toward his father and asks in a whisper where he has wandered all these years. Ulysses answers with a short, tired smile and says the story is long. The two fall silent for a moment. Then Ulysses lifts his head and turns to speak of what they must do next.",
+            "mustPreserve": [
+              "Ulysses has been away from Ithaca for twenty years",
+              "The full story of the travels is told later in the night"
+            ]
+          },
+          {
+            "id": "telemachus-2",
+            "label": "Stand guard at the doorway and watch for neighbours",
+            "detourBrief": "Telemachus walks to the doorway and looks out at the quiet street. He sees a servant peeking in and kindly sends her back to her room. He returns to his father's side and stands tall beside him. Ulysses lifts his head and prepares to speak about their plan.",
+            "mustPreserve": [
+              "The suitors are dead and the town does not know yet",
+              "Telemachus is loyal to his father and his mother"
+            ]
+          }
+        ],
+        "ulysses": [
+          {
+            "id": "ulysses-1",
+            "label": "Tell Penelope she is right to be careful",
+            "detourBrief": "Ulysses speaks gently to his wife and says she is wise to be cautious after so many years of waiting. He offers to wait patiently while she decides whether to trust him. His voice is warm and kind. He then lifts his head and turns toward his son to speak about what they must do next.",
+            "mustPreserve": [
+              "Ulysses and Penelope have been apart for twenty years",
+              "Ulysses wants to protect his family and his home"
+            ]
+          },
+          {
+            "id": "ulysses-2",
+            "label": "Urge quick action before the neighbours hear",
+            "detourBrief": "Ulysses glances at the doors and urges everyone to act quickly before word of the killings spreads through the town. He asks Telemachus to keep watch while they decide what comes next. Penelope listens carefully. Ulysses lifts his head and begins to speak of the plan he has in mind.",
+            "mustPreserve": [
+              "The town must not learn the truth about the suitors yet",
+              "Ulysses intends to visit his father in the woods"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp16",
+      "chapter": 24,
+      "anchorAfter": "c024p038",
+      "rejoinAt": "c024p042",
+      "prompt": "The gate is open and the townspeople are coming. What should Ulysses do before the fighting starts?",
+      "isIntro": false,
+      "availableCharacters": [
+        "ulysses",
+        "telemachus",
+        "minerva"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Charge at the front line with swords ready",
+          "detourBrief": "Ulysses strides ahead with a fierce battle cry, and his men follow close behind. The townspeople's front line wavers at the sight of them. Mentor appears at Ulysses' side, and Ulysses urges Telemachus to be brave. Telemachus promises not to shame his family, and Laertes swells with pride to see his son and grandson so eager.",
+          "mustPreserve": [
+            "Minerva is disguised as Mentor",
+            "Laertes stays on the field and is not yet hurt"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Call out to the crowd before fighting",
+          "detourBrief": "Ulysses halts and raises his voice, asking the men of Ithaca why they come in anger. Murmurs run through the crowd, but Eupeithes's followers push forward. Mentor appears beside Ulysses, who tells Telemachus to show his courage. Telemachus replies he will not disgrace his ancestors, and Laertes is filled with joy.",
+          "mustPreserve": [
+            "Eupeithes is still alive and leading the crowd",
+            "Ulysses has not yet struck any blow"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Send Telemachus ahead to scout the crowd",
+          "detourBrief": "Ulysses sends Telemachus to a rise near the gate to count the townspeople. Telemachus returns, reporting that the crowd is large but uncertain. Mentor appears beside them, and Ulysses praises his son's courage. Telemachus vows to stand firm, and Laertes rejoices that his son and grandson are eager for the fight.",
+          "mustPreserve": [
+            "Telemachus has not yet joined the front line",
+            "Ulysses and his men are still outside the gate"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "ulysses": [
+          {
+            "id": "ulysses-1",
+            "label": "Raise your shield and shout to your men",
+            "detourBrief": "Ulysses lifts his shield and calls his men by name, reminding them of their home in Ithaca. He spots the townspeople hesitating and steps forward. Mentor appears at his elbow, and Ulysses tells Telemachus to prove his courage. Telemachus promises he will not disgrace the family, and Laertes is delighted.",
+            "mustPreserve": [
+              "Minerva is disguised as Mentor",
+              "Ulysses has not yet struck the front line"
+            ]
+          },
+          {
+            "id": "ulysses-2",
+            "label": "Pause to speak kindly to your father",
+            "detourBrief": "Ulysses turns to Laertes, who stands tall with his armor on, and thanks him for his courage. Laertes smiles and says he is ready to fight. Mentor appears beside them, and Ulysses asks Telemachus to show his bravery. Telemachus agrees, and Laertes rejoices in his family.",
+            "mustPreserve": [
+              "Laertes is still at the gate with Dolius's sons",
+              "Ulysses and Telemachus have not yet fought"
+            ]
+          }
+        ],
+        "telemachus": [
+          {
+            "id": "telemachus-1",
+            "label": "Stand firm beside your father in the line",
+            "detourBrief": "Telemachus steps to his father's side, shield up, eyes fixed on the crowd. He promises silently that he will not falter. Mentor appears and nods approval. Ulysses praises his son's steady courage, and Laertes is glad to see his grandson standing with them.",
+            "mustPreserve": [
+              "Telemachus has not yet attacked the crowd",
+              "Minerva is disguised as Mentor"
+            ]
+          },
+          {
+            "id": "telemachus-2",
+            "label": "Call out to the crowd and ask them to wait",
+            "detourBrief": "Telemachus raises his voice and asks the townspeople to pause and listen before anyone is hurt. Some in the crowd lower their spears, while others grumble. Mentor appears and praises his courage. Ulysses tells his son he has spoken well, and Laertes is filled with pride.",
+            "mustPreserve": [
+              "Eupeithes is still leading the crowd",
+              "Ulysses has not yet struck any blow"
+            ]
+          }
+        ],
+        "minerva": [
+          {
+            "id": "minerva-1",
+            "label": "Watch the crowd from the wall and report back",
+            "detourBrief": "Mentor climbs a low wall and watches the townspeople as they gather. Some look unsure and slow their steps. Mentor calls down to Ulysses, who thanks him warmly. Ulysses then urges Telemachus to be brave, and Telemachus promises not to disgrace his family. Laertes is delighted.",
+            "mustPreserve": [
+              "Minerva is disguised as Mentor",
+              "Ulysses and his men are still outside the gate"
+            ]
+          },
+          {
+            "id": "minerva-2",
+            "label": "Whisper courage to Telemachus in the line",
+            "detourBrief": "Mentor walks quietly to Telemachus and whispers encouragement, reminding him of his father's courage. Telemachus stands straighter and grips his spear. Ulysses notices and tells his son to be brave. Telemachus promises he will not shame his family, and Laertes rejoices.",
+            "mustPreserve": [
+              "Telemachus has not yet joined the fighting",
+              "Minerva remains disguised as Mentor"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

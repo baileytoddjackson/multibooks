@@ -1,0 +1,798 @@
+{
+  "bookId": "odyssey",
+  "chapters": [
+    {
+      "summary": "The gods meet in Olympus, and Minerva asks Jove to help Ulysses return home from his long wandering. She goes to Ithaca in the form of Mentes and finds the suitors eating and drinking in Ulysses' house. Telemachus welcomes her and asks who she is. She tells him about his father and urges him to call an assembly, against the suitors, and to search for news of Ulysses. Telemachus tells the suitors to leave his house. Then he goes to bed and thinks about Minerva's advice.",
+      "keyEvents": [
+        "Gods meet and Jove agrees to help Ulysses return home",
+        "Minerva goes to Ithaca disguised as Mentes",
+        "Telemachus welcomes the stranger and sits with her",
+        "Minerva urges Telemachus to call an assembly and seek news of his father",
+        "Telemachus rebukes the suitors, who mock him"
+      ],
+      "charactersPresent": [
+        "Minerva",
+        "Telemachus",
+        "Penelope",
+        "Phemius",
+        "Antinous",
+        "Eurymachus",
+        "Euryclea",
+        "Jove",
+        "Neptune"
+      ],
+      "setting": "Mount Olympus and Ulysses' house in Ithaca",
+      "kind": "mixed",
+      "contentNotes": [
+        "Mention of Aegisthus killing Agamemnon, and of Aegisthus being killed by Orestes",
+        "Mention of Ulysses' men dying from eating the cattle of Hyperion",
+        "Mention of Polyphemus being blinded"
+      ],
+      "index": 1,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Telemachus calls an assembly of the people of Ithaca and complains that the suitors are eating up his household. Aegyptius and Halitherses speak, and Eurymachus mocks their warnings. Mentor supports Telemachus, but Leiocritus tells the people to go home. Telemachus prays to Minerva, who appears as Mentor and promises to help him sail. The suitors mock him, and Euryclea gets wine and barley for the trip after promising to keep it secret. Minerva puts the suitors to sleep, and Telemachus sets sail with his crew for Pylos and Sparta.",
+      "keyEvents": [
+        "Telemachus calls an assembly and complains about the suitors",
+        "Halitherses warns the suitors of Ulysses' return",
+        "Eurymachus and Leiocritus dismiss the warnings",
+        "Telemachus prays to Minerva, who promises a ship",
+        "Euryclea prepares wine and barley for the voyage"
+      ],
+      "charactersPresent": [
+        "Telemachus",
+        "Aegyptius",
+        "Antinous",
+        "Halitherses",
+        "Eurymachus",
+        "Mentor",
+        "Leiocritus",
+        "Minerva",
+        "Euryclea"
+      ],
+      "setting": "Ithaca, the assembly place, the sea shore, and the palace",
+      "kind": "mixed",
+      "contentNotes": [
+        "Antiphus was killed by the Cyclops (mentioned, not shown)",
+        "Telemachus threatens violence against the suitors",
+        "Mocking talk about Telemachus possibly being killed at sea",
+        "Ritual goat and pig slaughter for feasting",
+        "Mention of drinking wine, including the suitors' drunkenness"
+      ],
+      "index": 2,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "At sunrise Telemachus and Minerva reach Pylos, where the people are sacrificing bulls to Neptune. Nestor welcomes them, and the guests are given food and wine. Telemachus asks Nestor what he knows about his father Ulysses. Nestor tells the story of the Greek journey home from Troy, the quarrel between Agamemnon and Menelaus, and how Aegisthus killed Agamemnon. Nestor says Orestes avenged his father. Minerva, who has flown in as an eagle, departs. Nestor offers a sacrifice to Minerva. The next morning Nestor sends Telemachus onward in a chariot with his son Pisistratus. They travel and spend the night at Pherae.",
+      "keyEvents": [
+        "Telemachus and Minerva arrive at Pylos during a sacrifice to Neptune",
+        "Nestor asks the strangers who they are",
+        "Telemachus asks Nestor about Ulysses",
+        "Nestor recounts the Greek homeward voyage and Agamemnon's death",
+        "Minerva flies off as an eagle"
+      ],
+      "charactersPresent": [
+        "Telemachus",
+        "Minerva",
+        "Nestor",
+        "Pisistratus",
+        "Thrasymedes",
+        "Echephron",
+        "Stratius",
+        "Perseus",
+        "Aretus",
+        "Polycaste",
+        "Eurydice"
+      ],
+      "setting": "Pylos, Nestor's palace and the shore",
+      "kind": "narrative",
+      "contentNotes": [
+        "Recounts deaths in war and at sea, including Agamemnon's murder by Aegisthus",
+        "A sailor dies when Apollo kills Phrontis",
+        "A bard is left on a desert island to die",
+        "Animal sacrifice of bulls and a heifer, with the throat cut"
+      ],
+      "index": 3,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Telemachus and Pisistratus arrive at the palace of Menelaus in Lacedaemon, where a wedding feast is underway. Menelaus welcomes them and tells of his long travels and his grief over the lost Ulysses. Helen drugs the wine to ease their sorrow and tells a story of Ulysses' trick at Troy. Menelaus then describes how the sea god Proteus revealed that Ulysses is trapped on Calypso's island, and he offers Telemachus a gift. At Ithaca, the suitors plan to ambush Telemachus at sea. Penelope grieves, prays to Minerva, and receives a comforting vision. The suitors sail to lie in wait near the islet of Asteris.",
+      "keyEvents": [
+        "Telemachus and Pisistratus arrive at Menelaus's palace during a wedding feast",
+        "Menelaus tells of his travels and his grief for Ulysses",
+        "Helen drugs the wine and tells of Ulysses' disguise at Troy",
+        "Menelaus recounts Proteus's news about Ulysses and the Achaean heroes",
+        "Suitors plan an ambush for Telemachus; Penelope prays and receives a vision"
+      ],
+      "charactersPresent": [
+        "Telemachus",
+        "Pisistratus",
+        "Menelaus",
+        "Helen",
+        "Eteoneus",
+        "Noemon",
+        "Antinous",
+        "Eurymachus",
+        "Medon",
+        "Penelope",
+        "Euryclea",
+        "Iphthime"
+      ],
+      "setting": "Palace of Menelaus in Lacedaemon; then Ulysses' house in Ithaca",
+      "kind": "mixed",
+      "contentNotes": [
+        "Ajax drowns after being wrecked",
+        "Agamemnon is murdered by Aegisthus at a banquet",
+        "Antilochus, Pisistratus's brother, was killed at Troy",
+        "Suitors plot to murder Telemachus",
+        "Mentions of wartime killing and a drugged wine that stops grief"
+      ],
+      "index": 4,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The gods meet in council, and Minerva asks that Ulysses be freed from Calypso's island. Jove sends Mercury to tell Calypso to let him go. Calypso is angry at the gods but agrees, and she helps Ulysses build a raft. Ulysses sails for many days, but Neptune sees him and stirs up a great storm. The raft breaks apart. Ino gives Ulysses a magic veil, and he swims toward land. After two days in the sea, he reaches a river mouth on the Phaeacian coast. He crawls into a thicket of olive trees and falls asleep under a pile of leaves.",
+      "keyEvents": [
+        "Jove sends Mercury to order Calypso to free Ulysses",
+        "Calypso agrees and helps Ulysses build a raft",
+        "Neptune stirs up a storm that breaks the raft",
+        "Ino gives Ulysses a veil and he swims toward land",
+        "Ulysses reaches a river mouth and sleeps in an olive thicket"
+      ],
+      "charactersPresent": [
+        "Minerva",
+        "Jove",
+        "Mercury",
+        "Calypso",
+        "Ulysses",
+        "Neptune",
+        "Ino"
+      ],
+      "setting": "Olympus, Calypso's island, and the Phaeacian coast",
+      "kind": "narrative",
+      "contentNotes": [
+        "Ulysses is nearly drowned in a storm",
+        "Ulysses is badly hurt on the rocks, with torn hands",
+        "Mentions past deaths of Ulysses' crew and of Orion and Iasion"
+      ],
+      "index": 5,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Minerva goes to the Phaeacian land and visits Princess Nausicaa in a dream. She tells her to wash clothes at the river before her wedding. Nausicaa asks her father for a wagon, and the girls travel to the washing pools. While they play ball, a thrown ball falls into the water and wakes Ulysses. Ulysses comes out naked from his bush, and the other girls run away, but Nausicaa stays. He begs her for help. She gives him clothes and food, and tells him how to reach her father's house. Ulysses prays at a grove of Minerva, and Minerva hears him but does not show herself.",
+      "keyEvents": [
+        "Minerva visits Nausicaa in a dream and urges a washing day",
+        "Nausicaa asks her father for a wagon and mules",
+        "The girls wash clothes and play ball by the river",
+        "A thrown ball falls into the water and wakes Ulysses",
+        "Ulysses appears; Nausicaa stays while the other maids flee"
+      ],
+      "charactersPresent": [
+        "Minerva",
+        "Nausicaa",
+        "Ulysses",
+        "Alcinous"
+      ],
+      "setting": "Phaeacian land, a river washing place, and a sacred grove near the town",
+      "kind": "narrative",
+      "contentNotes": [
+        "Ulysses appears naked before the girls",
+        "Mention of a past shipwreck and Neptune's anger"
+      ],
+      "index": 6,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Minerva disguises herself as a little girl and guides Ulysses into the city of the Phaeacians. She hides him in a mist so no one sees him. She describes King Alcinous and Queen Arete, and then flies away to Athens. Ulysses marvels at the bronze, gold, and silver palace and its magnificent garden. He kneels before Arete and Alcinous and asks for help getting home. Old Echeneus urges that he be given a seat and food. Ulysses eats and drinks, then tells of his long journey after Jove wrecked his ship. He tells of seven years with Calypso and of his landing near a river, where Nausicaa found him. Alcinous offers him a home and a marriage to his daughter, and promises a ship home. Ulysses is given a bed in a room above the gateway, and Alcinous goes to sleep with his wife.",
+      "keyEvents": [
+        "Minerva leads Ulysses into the city in disguise",
+        "Ulysses admires the palace and its garden",
+        "Ulysses kneels before Arete and Alcinous and asks for help",
+        "Ulysses tells his story of shipwreck, Calypso, and Nausicaa",
+        "Alcinous offers a home, a marriage, and a ship home"
+      ],
+      "charactersPresent": [
+        "Ulysses",
+        "Minerva",
+        "Nausicaa",
+        "Eurymedusa",
+        "Alcinous",
+        "Arete",
+        "Echeneus",
+        "Pontonous"
+      ],
+      "setting": "Palace of King Alcinous in the Phaeacian city",
+      "kind": "mixed",
+      "contentNotes": [
+        "A shipwreck and storm at sea, with Ulysses's comrades drowned",
+        "Mention of gods striking a ship with thunderbolts"
+      ],
+      "index": 7,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ulysses sits with King Alcinous and the Phaeacians at an assembly, then watches athletic games. He is teased by Euryalus and throws a heavy discus far past everyone else's mark. Alcinous calls for dancing, and Demodocus sings about Mars and Venus caught in Vulcan's chains. Ulysses gives gifts and warm bath. Demodocus then sings of the wooden horse at Troy, and Ulysses weeps. Alcinous stops the song and asks Ulysses to reveal his name and past.",
+      "keyEvents": [
+        "Alcinous calls an assembly and plans a ship and escort for Ulysses",
+        "Demodocus sings of Ulysses and Achilles, and Ulysses weeps",
+        "Games are held, and Euryalus insults Ulysses",
+        "Ulysses throws a heavy discus past every mark",
+        "Demodocus sings of Mars and Venus trapped by Vulcan"
+      ],
+      "charactersPresent": [
+        "Alcinous",
+        "Ulysses",
+        "Minerva",
+        "Demodocus",
+        "Laodamas",
+        "Euryalus",
+        "Clytoneus",
+        "Halios",
+        "Arete",
+        "Nausicaa",
+        "Mercury",
+        "Apollo",
+        "Neptune",
+        "Vulcan",
+        "Mars",
+        "Venus"
+      ],
+      "setting": "Phaeacian assembly place, athletic field, and King Alcinous's house",
+      "kind": "mixed",
+      "contentNotes": [
+        "Ulysses weeps over the songs of war and loss",
+        "Insulting remarks between Euryalus and Ulysses",
+        "Mention of Eurytus's death by Apollo's anger",
+        "Sexual content in Demodocus's song about Mars and Venus, told with comic tone",
+        "Mention of women carried into slavery in a simile"
+      ],
+      "index": 8,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ulysses tells King Alcinous his name and where he lives in Ithaca. He describes his journey after leaving Troy. His men attack the Cicons and lose men in a fight. A storm drives the ships to the Lotus-eaters, and some men are nearly lost to the lotus. Ulysses then lands on the island of the Cyclopes. He and his men enter a cave, and the giant Cyclops Polyphemus traps them and eats several men. Ulysses gets him drunk and blinds him with a burning stake. The men escape by hiding under sheep. Ulysses taunts Polyphemus as the ships sail away, and the Cyclops curses him.",
+      "keyEvents": [
+        "Ulysses names himself and his home of Ithaca",
+        "Men sack Ismarus and fight the Cicons, losing comrades",
+        "Storm drives the ships; men eat lotus and must be forced back",
+        "Polyphemus traps the men in his cave and eats several of them",
+        "Ulysses gets Polyphemus drunk and blinds him"
+      ],
+      "charactersPresent": [
+        "Ulysses",
+        "Alcinous",
+        "Polyphemus",
+        "Maron",
+        "Telemus"
+      ],
+      "setting": "Ismarus, Lotus-eaters' land, and the Cyclops' island",
+      "kind": "narrative",
+      "contentNotes": [
+        "Men are killed in battle with the Cicons",
+        "Polyphemus kills and eats several men",
+        "Polyphemus is blinded with a burning stake",
+        "Men are killed by Polyphemus and crushed in his cave",
+        "Drinking of wine, with Polyphemus becoming drunk"
+      ],
+      "index": 9,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ulysses tells how Aeolus gave him winds in a sack, and how his men opened it and were blown back to Aeolus, who refused to help them. Next they reached the Laestrygonians, where the giant Antiphates killed and ate men, and most of the fleet was destroyed. Ulysses then came to Circe's island. Eurylochus reported that Circe had turned men into pigs, so Ulysses went to rescue them. Mercury gave him a herb called Moly to protect him. Circe changed the men back and they stayed with her for a year. At last she told Ulysses he must visit the house of Hades to consult Teiresias. Elpenor died after falling from a roof.",
+      "keyEvents": [
+        "Aeolus gives Ulysses the winds in a sack",
+        "Men open the sack and are blown back to Aeolus, who refuses help",
+        "Antiphates and the Laestrygonians destroy most of the fleet",
+        "Circe turns Eurylochus's men into pigs",
+        "Mercury gives Ulysses the herb Moly"
+      ],
+      "charactersPresent": [
+        "Ulysses",
+        "Aeolus",
+        "Antiphates",
+        "Eurylochus",
+        "Circe",
+        "Mercury",
+        "Polites",
+        "Elpenor"
+      ],
+      "setting": "Aeolian island, Telepylus, Circe's island",
+      "kind": "narrative",
+      "contentNotes": [
+        "Men are killed and eaten by giants (Laestrygonians)",
+        "Men are turned into pigs by magic",
+        "Drugged drink used to deceive",
+        "Drinking and feasting",
+        "Elpenor dies after a fall",
+        "Ulysses threatens to kill Eurylochus with a sword",
+        "Sexual relations implied between Ulysses and Circe"
+      ],
+      "index": 10,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Odysseus sails with his crew to the far edge of the world, to the land of the Cimmerians beside the river Oceanus. He digs a trench and pours offerings of honey, milk, wine, and water for the dead. Many ghosts gather around the blood. He speaks with his dead comrade Elpenor, who begs for a proper burial. He then meets the prophet Teiresias, who tells him about dangers ahead, and his mother Anticlea, who tells him how things stand at home. He sees the ghosts of many famous women. He also speaks with Agamemnon, who tells how he was murdered, and with Achilles and Ajax. He sees several men punished in the underworld. Then he sails back to his ship and the crew heads away on a fair wind.",
+      "keyEvents": [
+        "Odysseus sails to the land of the Cimmerians beside Oceanus",
+        "He pours offerings and digs a trench, and the ghosts gather",
+        "Elpenor asks for a burial",
+        "Teiresias prophesies Odysseus's future",
+        "Anticlea tells Odysseus about home"
+      ],
+      "charactersPresent": [
+        "Odysseus",
+        "Circe",
+        "Perimedes",
+        "Eurylochus",
+        "Elpenor",
+        "Anticlea",
+        "Teiresias",
+        "Tyro",
+        "Antiope",
+        "Alcmena",
+        "Agamemnon",
+        "Achilles",
+        "Ajax",
+        "Minos",
+        "Orion",
+        "Tityus",
+        "Tantalus",
+        "Sisyphus",
+        "Hercules",
+        "Arete",
+        "Echeneus",
+        "Alcinous"
+      ],
+      "setting": "The land of the Cimmerians at the edge of Oceanus, and the house of Hades",
+      "kind": "narrative",
+      "contentNotes": [
+        "Ghosts and the dead, including Elpenor's death from a fall",
+        "Murder: Agamemnon is killed by Aegisthus and Clytemnestra, and Cassandra is killed",
+        "Suicide: Epicaste hangs herself",
+        "Animal sacrifice: sheep are killed and their blood poured out",
+        "Punishments in the underworld, including Tityus being torn by vultures",
+        "Drunkenness: Elpenor was drunk when he fell",
+        "Sexual content: Neptune's deception of Tyro and Jove's affairs are described"
+      ],
+      "index": 11,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ulysses tells Alcinous's court how Circe warned him about the Sirens, Scylla, Charybdis, and the sun-god's cattle. He passed the Sirens with his ears stopped with wax while bound to the mast. Scylla snatched up six of his men. His crew killed the sun-god's cattle despite his warnings, and Jove wrecked the ship. Ulysses alone survived, clinging to a fig tree above Charybdis and then drifting on a raft until Calypso's island.",
+      "keyEvents": [
+        "Elpenor's funeral is held on Circe's island",
+        "Circe warns Ulysses about the Sirens, Scylla, and Charybdis",
+        "Ulysses passes the Sirens while bound to the mast",
+        "Scylla snatches six men from the ship",
+        "The crew kills the sun-god's cattle against Ulysses' warning"
+      ],
+      "charactersPresent": [
+        "Ulysses",
+        "Circe",
+        "Eurylochus",
+        "Perimedes",
+        "Elpenor"
+      ],
+      "setting": "Circe's island, the Sirens' waters, Scylla and Charybdis, the Thrinacian island",
+      "kind": "narrative",
+      "contentNotes": [
+        "Six men are eaten alive by Scylla",
+        "Men die in a shipwreck struck by lightning",
+        "Crew kills sacred cattle of the sun-god",
+        "Men are drowned and a helmsman is crushed by a falling mast",
+        "Sirens lure men to death, with rotting bones described"
+      ],
+      "index": 12,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Phaeacians send Ulysses home with many gifts and place him asleep on the shore of Ithaca. Neptune is angry that the Phaeacians helped him, so he turns their ship into stone near the harbour. Alcinous remembers an old prophecy and orders sacrifices to Neptune. When Ulysses wakes, Minerva hides his island under a fog and disguises herself as a young shepherd. Ulysses tells a false story about Crete, and Minerva laughs at his lies before revealing herself. She shows him the harbour and the cave of the nymphs, where he hides the treasure. Minerva then plans the destruction of the suitors. She changes Ulysses into an old beggar, and then she goes to Sparta to bring back Telemachus.",
+      "keyEvents": [
+        "Ulysses sleeps as the Phaeacians carry him to Ithaca",
+        "Neptune turns the Phaeacian ship to stone",
+        "Ulysses wakes on Ithaca and laments",
+        "Minerva appears as a shepherd and Ulysses tells a false story",
+        "Minerva disguises Ulysses as an old beggar and goes to fetch Telemachus"
+      ],
+      "charactersPresent": [
+        "Alcinous",
+        "Ulysses",
+        "Arete",
+        "Pontonous",
+        "Neptune",
+        "Jove",
+        "Minerva"
+      ],
+      "setting": "Scheria and the harbour of Phorcys on Ithaca",
+      "kind": "narrative",
+      "contentNotes": [
+        "Ship turned to stone and city threatened with burial under a mountain (mythic punishment, no human deaths shown)",
+        "Ulysses tells a lie about killing a man named Orsilochus in Crete",
+        "Mention of Agamemnon's death as a warning"
+      ],
+      "index": 13,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ulysses leaves the harbor and walks to the hut of Eumaeus, the swineherd. Eumaeus welcomes him with food and wine and refuses to believe he has news of Ulysses. Ulysses tells a long false story about his past, including his time in Egypt, Phoenicia, and a shipwreck. Eumaeus rejects the story, but still shares his supper and his bed with the stranger. Ulysses then tells of a night raid before Troy when he was cold. Eumaeus gives him a warm cloak and sleeps outside with his pigs.",
+      "keyEvents": [
+        "Ulysses reaches the hut of Eumaeus the swineherd",
+        "Eumaeus welcomes him with roast pork and wine",
+        "Ulysses tells a false story of his travels",
+        "Eumaeus refuses to believe Ulysses will return",
+        "Ulysses tells of a cold night raid before Troy"
+      ],
+      "charactersPresent": [
+        "Ulysses",
+        "Eumaeus",
+        "Mesaulius",
+        "Thoas"
+      ],
+      "setting": "Hut and pig yards of Eumaeus, Ithaca",
+      "kind": "narrative",
+      "contentNotes": [
+        "Suitors eat pigs and wine belonging to Ulysses's estate",
+        "Ulysses tells of a ship wrecked by Jove's lightning, with men drowning",
+        "Ulysses tells of the Egyptian battle where many men were killed",
+        "Pig slaughter for a meal",
+        "Drinking wine, including talk of wine making men foolish",
+        "Eumaeus describes a dead or missing man and a sad, grieving household",
+        "Ulysses offers to be thrown from a cliff if his claim is false"
+      ],
+      "index": 14,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Minerva visits Telemachus in Lacedaemon and tells him to go home at once, warning that the suitors plan to kill him. Telemachus and Pisistratus leave Menelaus, who gives them gifts. Helen gives Telemachus a robe, and an eagle appears as an omen. They reach Pylos, where Telemachus asks Pisistratus to leave him at his ship. There Telemachus meets Theoclymenus, a seer fleeing exile, and takes him aboard. They sail toward Ithaca. Meanwhile Ulysses talks with the swineherd Eumaeus, who tells the sad story of his own kidnapping. At Ithaca, Telemachus sends the ship to the town and goes to Eumaeus's farm. Theoclymenus is placed in Piraeus's care, and a hawk is taken as a good sign.",
+      "keyEvents": [
+        "Minerva urges Telemachus to sail home at once",
+        "Menelaus gives gifts and Helen gives a robe",
+        "An eagle with a goose appears as an omen",
+        "Telemachus takes Theoclymenus aboard at Pylos",
+        "Ulysses tests Eumaeus and hears his story"
+      ],
+      "charactersPresent": [
+        "Minerva",
+        "Telemachus",
+        "Pisistratus",
+        "Menelaus",
+        "Helen",
+        "Megapenthes",
+        "Eteoneus",
+        "Theoclymenus",
+        "Ulysses",
+        "Eumaeus",
+        "Piraeus"
+      ],
+      "setting": "Lacedaemon, Pylos, the sea, and Ithaca",
+      "kind": "narrative",
+      "contentNotes": [
+        "A suitor plot to kill Telemachus is mentioned",
+        "A seer fled after killing a man",
+        "A woman was killed by being thrown overboard by traders",
+        "Ulysses begs in disguise"
+      ],
+      "index": 15,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ulysses and the swineherd Eumaeus are preparing breakfast at the hut when Telemachus arrives. Eumaeus welcomes him warmly and tells him about his mother Penelope's grief. Telemachus sends Eumaeus to tell Penelope that he is safe. Minerva appears to Ulysses and restores his youthful look. Ulysses reveals himself to Telemachus, and they weep together. They plan to kill the suitors, and Telemachus hears how many suitors there are. The suitors plot to kill Telemachus, but Penelope scolds Antinous. Eurymachus promises to protect Telemachus, and Amphinomus urges the suitors to wait for the gods' advice.",
+      "keyEvents": [
+        "Telemachus arrives at the swineherd's hut",
+        "Ulysses reveals himself to Telemachus",
+        "Minerva restores Ulysses' appearance",
+        "Ulysses and Telemachus plan to kill the suitors",
+        "Suitors plot against Telemachus"
+      ],
+      "charactersPresent": [
+        "Ulysses",
+        "Eumaeus",
+        "Telemachus",
+        "Minerva",
+        "Eurymachus",
+        "Amphinomus",
+        "Antinous",
+        "Penelope"
+      ],
+      "setting": "Eumaeus's hut and the swineherd's station, then the suitors' council and Penelope's house in Ithaca",
+      "kind": "narrative",
+      "contentNotes": [
+        "Suitors plan to kill Telemachus",
+        "Suitors mistreat guests and servants (described)",
+        "Ulysses describes violence he would use against the suitors",
+        "Crying and emotional reunion"
+      ],
+      "index": 16,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Telemachus gets up at dawn and goes to the town, first telling Eumaeus to take the beggar with him. At home, Euryclea and Penelope greet him with joy. Telemachus tells his mother about his trip to Pylos and Lacedaemon. He reports that Menelaus heard Ulysses is alive, held on an island by Calypso. Theoclymenus says Ulysses is near Ithaca. Ulysses walks to town with Eumaeus and is insulted by Melanthius, who kicks him. At the house, Argos the dog recognises his master and dies. Antinous throws a stool at Ulysses, who is struck on the shoulder. Penelope asks to speak with the stranger, and Eumaeus returns to his pigs.",
+      "keyEvents": [
+        "Telemachus leaves for the town at dawn",
+        "Telemachus reports his travels to Penelope",
+        "Melanthius insults and kicks Ulysses on the road",
+        "Argos recognises Ulysses and dies",
+        "Antinous strikes Ulysses with a footstool"
+      ],
+      "charactersPresent": [
+        "Telemachus",
+        "Ulysses",
+        "Eumaeus",
+        "Euryclea",
+        "Penelope",
+        "Piraeus",
+        "Theoclymenus",
+        "Mentor",
+        "Antiphus",
+        "Halitherses",
+        "Medon",
+        "Melanthius",
+        "Antinous",
+        "Eurynome",
+        "Eurymachus",
+        "Argos"
+      ],
+      "setting": "Ithaca: the palace, the town, and a road to the town",
+      "kind": "narrative",
+      "contentNotes": [
+        "Ulysses is kicked by Melanthius and struck with a footstool by Antinous",
+        "Animals are killed for a feast, including sheep, goats, pigs, and a heifer",
+        "Argos the dog dies after recognising his master",
+        "Characters wish for the death of Antinous and the suitors"
+      ],
+      "index": 17,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "A beggar named Irus, also called Arnaeus, insults Ulysses, who is disguised as a tramp, and tries to drive him from the house. The suitors egg the two men on, and they agree to fight for food. Ulysses wins with one blow, dragging Irus outside. Amphinomus gives Ulysses bread and wine and warns him about the suitors. Penelope, made beautiful by Minerva, comes down and scolds Telemachus. She complains about the suitors, who bring her gifts. Eurymachus insults Ulysses, and the suitors grow angry. Amphinomus calms them, and they go home.",
+      "keyEvents": [
+        "Irus insults Ulysses and challenges him to fight",
+        "Antinous sets up a fight for a goat's paunch of food",
+        "Ulysses defeats Irus with one blow and drags him outside",
+        "Amphinomus gives Ulysses food and a warning",
+        "Penelope appears before the suitors and scolds Telemachus"
+      ],
+      "charactersPresent": [
+        "Ulysses",
+        "Irus",
+        "Antinous",
+        "Telemachus",
+        "Amphinomus",
+        "Penelope",
+        "Eurynome",
+        "Eurymachus",
+        "Melantho",
+        "Pisander"
+      ],
+      "setting": "The outer court and hall of Ulysses' palace in Ithaca",
+      "kind": "narrative",
+      "contentNotes": [
+        "Irus's jaw and skull are broken in a fight and he is left bleeding",
+        "Threats of violence, including Antinous threatening to send Irus to King Echetus, who kills visitors",
+        "Ulysses threatens a maid, saying Telemachus will have her torn limb from limb",
+        "Eurymachus throws a footstool that knocks down the cupbearer",
+        "Heavy drinking by the suitors",
+        "Penelope describes Ulysses' fate and the suitors' wrongdoing"
+      ],
+      "index": 18,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ulysses asks Telemachus to move the armour out of the hall so the suitors will not see it. Telemachus does so, and Minerva lights the way with a golden lamp. Penelope sits with Ulysses, disguised as a beggar, and questions him. He tells a false story about himself as a Cretan who once met Ulysses. Penelope weeps and tests him by asking about Ulysses' clothing, and he describes them correctly. Euryclea washes his feet and recognises an old scar on his leg from a boar hunt. She nearly speaks, but Ulysses threatens her and she promises to keep quiet. Penelope then tells Ulysses a dream about an eagle killing her geese. Ulysses says the dream means the suitors will die. Penelope announces an archery contest with twelve axes and goes to bed.",
+      "keyEvents": [
+        "Ulysses has the armour moved out of the hall",
+        "Penelope questions Ulysses, who tells a false story about his past",
+        "Penelope tests Ulysses with questions about Ulysses' clothing",
+        "Euryclea recognises Ulysses' scar while washing his feet",
+        "Penelope tells her dream of the eagle and geese"
+      ],
+      "charactersPresent": [
+        "Ulysses",
+        "Telemachus",
+        "Euryclea",
+        "Minerva",
+        "Penelope",
+        "Melantho",
+        "Eurynome"
+      ],
+      "setting": "The hall and inner court of Ulysses' palace in Ithaca",
+      "kind": "narrative",
+      "contentNotes": [
+        "Suitors are planning to kill; Ulysses plans to kill the suitors",
+        "Melantho insults Ulysses and he threatens the maids with death",
+        "Ulysses describes a shipwreck and the death of his crew",
+        "Description of a boar attack that wounded Ulysses as a youth"
+      ],
+      "index": 19,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ulysses lies awake in the cloister, angry at the maids who go off with the suitors. Minerva comes to him in the form of a woman and tells him to sleep. Penelope weeps and prays to Diana, wishing for death rather than marriage to a worse man. Ulysses prays to Jove for signs, and Jove thunders. A miller-woman grinding grain also speaks of the suitors' end, and Ulysses takes it as a sign. Telemachus and the servants prepare for the day, and the herdsmen Eumaeus and Philoetius arrive. Melanthius insults Ulysses. The suitors start to dine. Ctesippus throws a heifer's foot at Ulysses, who dodges it. Telemachus rebukes the suitors. Theoclymenus warns of disaster and leaves the house.",
+      "keyEvents": [
+        "Ulysses lies awake plotting against the suitors",
+        "Minerva tells him to sleep",
+        "Penelope prays to Diana for death",
+        "Jove thunders and a miller-woman's words give Ulysses a sign",
+        "Eumaeus and Philoetius arrive, and Melanthius insults Ulysses"
+      ],
+      "charactersPresent": [
+        "Ulysses",
+        "Minerva",
+        "Penelope",
+        "Telemachus",
+        "Euryclea",
+        "Eumaeus",
+        "Melanthius",
+        "Philoetius",
+        "Amphinomus",
+        "Antinous",
+        "Ctesippus",
+        "Agelaus",
+        "Theoclymenus",
+        "Eurymachus",
+        "Eurynome"
+      ],
+      "setting": "Ulysses' house in Ithaca",
+      "kind": "narrative",
+      "contentNotes": [
+        "Suitors plot to murder Telemachus",
+        "Melanthius taunts and threatens to fight Ulysses",
+        "Ctesippus throws an ox's foot at Ulysses",
+        "Telemachus threatens to kill Ctesippus with a spear",
+        "Sacrificial slaughter of animals for the feast",
+        "Penelope weeps and wishes for death",
+        "Theoclymenus describes ghosts and blood"
+      ],
+      "index": 20,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Minerva puts it in Penelope's mind to hold a contest with Ulysses' great bow and twelve axes. Penelope brings out the bow and the quiver, and the suitors try one after another to string it, but none can. Ulysses, disguised as a beggar, reveals himself to the swineherd Eumaeus and the stockman Philoetius, and they promise to help him. Telemachus insists the bow is his to give, and Eumaeus brings it to Ulysses. Ulysses strings the bow easily and shoots his arrow through every axe. He then tells Telemachus to arm himself for the fight.",
+      "keyEvents": [
+        "Penelope fetches Ulysses' bow and proposes the contest of the axes",
+        "Suitors fail to string the bow one by one",
+        "Ulysses reveals himself to Eumaeus and Philoetius",
+        "Telemachus claims the right to decide who handles the bow",
+        "Ulysses strings the bow and shoots through all twelve axes"
+      ],
+      "charactersPresent": [
+        "Penelope",
+        "Antinous",
+        "Telemachus",
+        "Eumaeus",
+        "Leiodes",
+        "Melanthius",
+        "Ulysses",
+        "Eurymachus",
+        "Philoetius",
+        "Euryclea"
+      ],
+      "setting": "Ulysses' palace in Ithaca, the great hall and store-room",
+      "kind": "narrative",
+      "contentNotes": [
+        "Threats of violence against suitors and a beggar",
+        "Drunkenness mentioned, including a story of a centaur mutilated after drinking",
+        "A story of Hercules killing his guest Iphitus"
+      ],
+      "index": 21,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ulysses throws off his rags and shoots Antinous through the throat with an arrow. The suitors are shocked and angry, and they threaten him. Ulysses tells them they must fight or die, and he shoots Eurymachus and Amphinomus. Telemachus arms his father and the herdsmen, and they fight together. Melanthius is caught trying to fetch weapons and is hanged. Minerva, disguised as Mentor, helps them. The suitors are killed one by one. Leiodes and Phemius beg for mercy. Phemius and Medon are spared. Ulysses has the twelve disloyal maids hanged. He then has the hall cleansed with sulphur and fire. Euryclea brings the women to him, and they greet him with joy.",
+      "keyEvents": [
+        "Ulysses shoots Antinous in the throat",
+        "Suitors threaten Ulysses; Eurymachus is shot down",
+        "Telemachus and the herdsmen arm and fight beside Ulysses",
+        "Melanthius is caught and hanged in the storeroom",
+        "Minerva helps Ulysses and the suitors are slain"
+      ],
+      "charactersPresent": [
+        "Ulysses",
+        "Antinous",
+        "Eurymachus",
+        "Amphinomus",
+        "Telemachus",
+        "Agelaus",
+        "Melanthius",
+        "Eumaeus",
+        "Minerva",
+        "Mentor",
+        "Leiodes",
+        "Phemius",
+        "Medon",
+        "Euryclea",
+        "Ctesippus",
+        "Philoetius"
+      ],
+      "setting": "Ulysses' house in Ithaca",
+      "kind": "narrative",
+      "contentNotes": [
+        "Many characters are killed by arrows and spears, with graphic descriptions of wounds and blood",
+        "Melanthius is hanged, then mutilated; his nose, ears, hands and feet are cut off",
+        "Twelve maidservants are hanged with a ship's cable",
+        "Leiodes is beheaded while pleading for mercy",
+        "Suspected sexual misconduct by maidservants with the suitors",
+        "Ulysses is described as covered in blood and gore"
+      ],
+      "index": 22,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Euryclea runs upstairs to tell Penelope that Ulysses has come home and killed the suitors. Penelope doubts her at first. Ulysses washes and is made taller and stronger by Minerva. Penelope tests him with the secret of their bed, and when he passes, she embraces him and weeps. They lie together, then talk through the night. Ulysses tells her of his long travels and of the prophecy Teiresias gave him about a journey with an oar. At dawn Ulysses arms himself, gathers Telemachus, Philoetius, and Eumaeus, and they leave the town under Minerva's cover of darkness.",
+      "keyEvents": [
+        "Euryclea tells Penelope that Ulysses has returned and killed the suitors",
+        "Penelope doubts Euryclea and tests Ulysses with the secret of their bed",
+        "Penelope embraces Ulysses and they go to bed together",
+        "Ulysses tells Penelope of his travels and Teiresias's prophecy",
+        "Ulysses arms himself and leads Telemachus, Philoetius, and Eumaeus out of the town"
+      ],
+      "charactersPresent": [
+        "Euryclea",
+        "Penelope",
+        "Ulysses",
+        "Telemachus",
+        "Eurynome",
+        "Philoetius",
+        "Eumaeus"
+      ],
+      "setting": "Ulysses's house in Ithaca",
+      "kind": "narrative",
+      "contentNotes": [
+        "the suitors have been killed and their bodies piled in the gatehouse",
+        "violent killing of the suitors is described secondhand"
+      ],
+      "index": 23,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Mercury leads the ghosts of the slain suitors down to the underworld. There the ghosts of Achilles and Agamemnon talk, and Agamemnon hears how Penelope tricked the suitors and how Ulysses killed them. Ulysses goes to his father Laertes and tests him with questions and proof. The people of Ithaca gather to fight, and Minerva steps in and makes a peace that Jove approves.",
+      "keyEvents": [
+        "Mercury leads the suitors' ghosts to the underworld",
+        "Agamemnon hears from Amphimedon how the suitors died",
+        "Ulysses proves his identity to his father Laertes",
+        "Ithaca's people gather to avenge the suitors",
+        "Minerva stops the fighting and makes a peace"
+      ],
+      "charactersPresent": [
+        "Mercury",
+        "Achilles",
+        "Agamemnon",
+        "Amphimedon",
+        "Ulysses",
+        "Laertes",
+        "Minerva",
+        "Telemachus",
+        "Dolius",
+        "Eupeithes",
+        "Medon",
+        "Phemius",
+        "Halitherses",
+        "Jove",
+        "Eumaeus",
+        "Philoetius"
+      ],
+      "setting": "The underworld, then Laertes' farm outside Ithaca, then the city's gates",
+      "kind": "mixed",
+      "contentNotes": [
+        "Many suitors are killed with arrows and swords, with brains battered and blood spilled",
+        "Achilles' funeral and Agamemnon's murder are described",
+        "Armed battle between Ulysses' side and the people of Ithaca, stopped by Minerva",
+        "Laertes is old and grieving, and falls in a faint from emotion",
+        "Ulysses' wife Penelope is mentioned as having deceived the suitors",
+        "Ulysses' killing of the suitors is the backstory, with violence, and a deceased ghost recounts it"
+      ],
+      "index": 24,
+      "generatedBy": "claude-haiku-5-5"
+    }
+  ],
+  "synopsis": "Ulysses, a Greek hero, has been away from his home on Ithaca for many years since the Trojan War. Suitors crowd his palace, eating his food and pressing his wife Penelope to choose a new husband, while his son Telemachus feels powerless. Telemachus sails to visit old heroes Nestor and Menelaus, who tell him that Ulysses is trapped on the island of the goddess Calypso. Meanwhile Ulysses escapes Calypso, is wrecked by a storm, and is rescued by the Phaeacians. He tells them of his adventures, including the one-eyed giant Polyphemus, the witch Circe, and a visit to the underworld. Returning to Ithaca in disguise, he is insulted by the suitors, but his son, loyal servants, and Minerva help him. He tests Penelope, then wins an archery contest with his great bow and kills the suitors. He reveals himself, is reunited with Penelope, and the people of Ithaca are brought to peace.",
+  "majorArcs": [
+    "Ulysses' long journey home",
+    "Adventures on the way",
+    "Suitors in the palace",
+    "Telemachus searches for his father",
+    "Revenge on the suitors",
+    "Reunion with Penelope"
+  ]
+}

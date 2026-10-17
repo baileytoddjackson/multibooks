@@ -1,0 +1,324 @@
+{
+  "bookId": "alice",
+  "chapters": [
+    {
+      "summary": "Alice is bored sitting by her sister on a riverbank. She sees a White Rabbit with pink eyes run by, check a watch, and hurry away. She chases it and follows it down a deep rabbit-hole. While falling, she thinks about many things, including her cat Dinah. She lands in a long hall with locked doors. She finds a tiny golden key and opens a little door, but the opening is too small to get through. She drinks from a bottle marked DRINK ME and shrinks to ten inches. Her key is out of reach on a glass table, so she cries. She then eats a cake marked EAT ME, but it does not change her size.",
+      "keyEvents": [
+        "Alice gets bored beside her sister on the bank",
+        "Alice follows the White Rabbit down a rabbit-hole",
+        "Alice falls down a deep well and lands in a long hall",
+        "Alice finds a golden key and a tiny door, but cannot fit through",
+        "Alice drinks from a bottle and shrinks to ten inches"
+      ],
+      "charactersPresent": [
+        "Alice",
+        "White Rabbit"
+      ],
+      "setting": "Riverbank, rabbit-hole, and a long hall underground",
+      "kind": "narrative",
+      "contentNotes": [],
+      "index": 1,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Alice grows very tall and cries until a pool of tears forms around her. The White Rabbit runs past in a hurry, drops his gloves and fan, and flees when Alice speaks to him. Alice tries to recite lessons, but the words come out wrong, and she shrinks after using the fan. She falls into the salty pool of her own tears. There she meets a Mouse and tries to talk with it, first in English and then in French. The Mouse becomes angry when Alice mentions cats, and it swims away when she talks about dogs. Alice calls it back, and the Mouse agrees to tell its history on the shore. Many other animals and birds are swimming in the pool, and Alice leads them all to the shore.",
+      "keyEvents": [
+        "Alice grows very tall and cries, making a pool of tears",
+        "Alice shrinks after using the Rabbit's fan",
+        "Alice falls into the pool of tears",
+        "Alice talks with the Mouse and upsets it about cats and dogs",
+        "Alice leads the animals and birds to shore"
+      ],
+      "charactersPresent": [
+        "Alice",
+        "White Rabbit",
+        "Mouse"
+      ],
+      "setting": "A long hall and then a salty pool of tears",
+      "kind": "narrative",
+      "contentNotes": [
+        "Alice cries heavily and feels ashamed of herself",
+        "Alice nearly drowns in the salty pool",
+        "Alice and the Mouse talk about cats hunting mice and dogs killing rats; the Mouse is distressed"
+      ],
+      "index": 2,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Alice and a group of wet birds and animals sat in a ring on the bank to get dry. The Dodo proposed a Caucus-race, a running contest where everyone won. Alice gave out comfits and her thimble as prizes. The Mouse started a long, sad tale, but Alice mixed up the words tail and knot, and the Mouse walked away angrily. Alice mentioned her cat Dinah, and the birds hurried off. Alice was left alone and cried, hoping the Mouse would return.",
+      "keyEvents": [
+        "Wet creatures sit in a ring on the bank to get dry",
+        "Dodo proposes and runs a Caucus-race",
+        "Alice hands out comfits and her thimble as prizes",
+        "Mouse starts a tale, then walks off angrily after Alice mishears words",
+        "Birds leave after Alice mentions her cat Dinah"
+      ],
+      "charactersPresent": [
+        "Alice",
+        "Mouse",
+        "Lory",
+        "Duck",
+        "Dodo",
+        "Eaglet"
+      ],
+      "setting": "Bank beside a pool",
+      "kind": "narrative",
+      "contentNotes": [
+        "Mouse's rhyme tells of a mouse being condemned to death",
+        "Alice cries from loneliness",
+        "Mouse gets angry and insults are exchanged"
+      ],
+      "index": 3,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Alice mistakes herself for Mary Ann, the Rabbit's housemaid, and runs into the Rabbit's house to fetch his gloves and fan. She finds them, then drinks from a small bottle and grows so large she fills the room. The Rabbit tries to reach her, and Alice kicks Bill, a lizard who has come down the chimney. The animals throw pebbles that turn into cakes. Alice eats one, shrinks, and escapes into a wood. She meets a puppy, plays with it using a stick, and runs away. Finally she finds a large blue caterpillar sitting on a mushroom.",
+      "keyEvents": [
+        "Alice runs off to fetch the Rabbit's gloves and fan",
+        "Alice drinks from a bottle and grows too large for the room",
+        "Alice kicks Bill, the lizard, who is coming down the chimney",
+        "Alice eats a cake, shrinks, and escapes into a wood",
+        "Alice plays with a puppy and runs away from it"
+      ],
+      "charactersPresent": [
+        "Alice",
+        "White Rabbit",
+        "Pat",
+        "Bill"
+      ],
+      "setting": "The Rabbit's house, then a thick wood",
+      "kind": "narrative",
+      "contentNotes": [
+        "Animals throw pebbles at Alice and hit her face",
+        "Threat that the Rabbit wants to burn down the house",
+        "Lizard Bill is kicked and seems hurt",
+        "Possible threat from a hungry puppy"
+      ],
+      "index": 4,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Alice meets a Caterpillar sitting on a mushroom. It asks who she is, and their talk goes in circles. Alice recites a poem, but the Caterpillar says it is wrong. The Caterpillar tells her one side of the mushroom will make her taller and the other side shorter. Alice nibbles the pieces and grows very tall, with a long neck. A Pigeon thinks she is a serpent and screams at her. Alice says she is a little girl and admits she has eaten eggs. After more nibbling, she shrinks to her usual height. Then she shrinks further, to nine inches, so she can approach a small house.",
+      "keyEvents": [
+        "Caterpillar asks Alice who she is",
+        "Alice recites a poem that the Caterpillar rejects",
+        "Caterpillar says one side of the mushroom makes her grow taller and the other shorter",
+        "Alice grows a very long neck and meets a Pigeon",
+        "Pigeon calls Alice a serpent"
+      ],
+      "charactersPresent": [
+        "Alice",
+        "Caterpillar",
+        "Pigeon"
+      ],
+      "setting": "A mushroom in a wood, near a small house",
+      "kind": "mixed",
+      "contentNotes": [
+        "Caterpillar is rude and sharp with Alice",
+        "Pigeon describes trying to stop serpents from eating eggs, and says she has not slept in three weeks"
+      ],
+      "index": 5,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Alice finds a Fish-Footman deliver an invitation to the Duchess from the Queen, asking her to play croquet. Alice then goes into the Duchess's smoky kitchen, where the baby sneezes and howls and the cook throws dishes. The Duchess gives Alice the baby, which turns into a pig, and Alice lets it go in the wood. Alice meets the Cheshire Cat, who talks about madness and vanishes and reappears. The Cat tells her that the March Hare and the Hatter both live nearby. Alice then walks toward the March Hare's house, feeling nervous.",
+      "keyEvents": [
+        "Fish-Footman delivers croquet invitation to the Duchess",
+        "Alice enters the smoky kitchen",
+        "Alice takes the baby, which turns into a pig",
+        "Alice meets the Cheshire Cat in the wood",
+        "Cat says the March Hare and Hatter are both mad"
+      ],
+      "charactersPresent": [
+        "Alice",
+        "Fish-Footman",
+        "Frog-Footman",
+        "Duchess",
+        "Cheshire Cat"
+      ],
+      "setting": "A wood and a smoky kitchen near the Duchess's house",
+      "kind": "narrative",
+      "contentNotes": [
+        "A baby is handed to Alice and turns into a pig",
+        "Cook throws pans, plates and dishes at the Duchess and baby",
+        "Mild violence: a plate nearly hits a footman, a saucepan nearly hits the baby's nose",
+        "Talk of murder, with Alice saying leaving the baby would be murder"
+      ],
+      "index": 6,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Alice comes upon the March Hare, the Hatter, and a sleepy Dormouse having tea at a long table under a tree. They argue with her and ask her riddles, and the Hatter explains that Time has stopped at six o'clock since he quarreled with it. The Dormouse tells a silly story about three sisters who lived in a treacle-well. Alice gets angry at the rude remarks and walks off through the wood. She finds a door in a tree, goes back into the long hall, and enters the beautiful garden.",
+      "keyEvents": [
+        "Alice sits down at the crowded tea-table",
+        "Hatter and March Hare ask a raven riddle and argue about words",
+        "Hatter explains his quarrel with Time",
+        "Dormouse tells the treacle-well story",
+        "Alice storms off and enters the garden through a tree door"
+      ],
+      "charactersPresent": [
+        "Alice",
+        "March Hare",
+        "Hatter",
+        "Dormouse"
+      ],
+      "setting": "A tea-table under a tree in front of a house, then a wood and a long hall",
+      "kind": "mixed",
+      "contentNotes": [
+        "Queen of Hearts orders someone beheaded in a story the Hatter tells (\"Off with his head!\")",
+        "Characters are rude to Alice and insult her",
+        "Alice eats a piece of mushroom to change size"
+      ],
+      "index": 7,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Alice comes upon three gardeners painting white roses red, because they planted the wrong kind by mistake. The Queen arrives with a grand procession of cards. The Queen demands Alice's name and orders the gardeners beheaded, but Alice hides them in a flower-pot. Alice then joins a croquet game using hedgehogs as balls and flamingoes as mallets. The Cheshire Cat appears, and Alice talks with it. The King and Queen argue with the executioner about the Cat's head. The Duchess is brought back, and the Cat's head vanishes.",
+      "keyEvents": [
+        "Alice finds three gardeners painting white roses red",
+        "The Queen's procession arrives and the Queen orders the gardeners beheaded",
+        "Alice hides the gardeners in a flower-pot",
+        "Alice plays croquet with hedgehogs and flamingoes",
+        "The Cheshire Cat appears and talks with Alice"
+      ],
+      "charactersPresent": [
+        "Alice",
+        "Five",
+        "Seven",
+        "Two",
+        "The Queen",
+        "The King",
+        "The Knave of Hearts",
+        "The White Rabbit",
+        "The Cheshire Cat"
+      ],
+      "setting": "The Queen's garden and croquet-ground",
+      "kind": "narrative",
+      "contentNotes": [
+        "Characters are threatened with beheading repeatedly",
+        "Three gardeners are sentenced to execution and hidden by Alice",
+        "The Queen screams and rages at others",
+        "The Duchess is sent to prison and brought to the Queen for execution"
+      ],
+      "index": 8,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Alice walks with the Duchess, who keeps stating silly morals and resting her sharp chin on Alice's shoulder. The Queen appears and threatens the Duchess with execution, and the Duchess quickly vanishes. Back at the croquet game, the Queen keeps shouting for executions until almost all the players are arrested. The Queen then sends Alice with a Gryphon to hear the Mock Turtle's history. The Mock Turtle begins telling about his school under the sea and its odd lessons, such as Reeling and Writhing and Uglification.",
+      "keyEvents": [
+        "Duchess walks arm-in-arm with Alice and shares morals",
+        "Queen threatens Duchess with execution and Duchess flees",
+        "Queen orders many executions during croquet game",
+        "Queen sends Alice with Gryphon to hear Mock Turtle's history",
+        "Mock Turtle describes his school under the sea and its lessons"
+      ],
+      "charactersPresent": [
+        "Alice",
+        "Duchess",
+        "Queen",
+        "King",
+        "Gryphon",
+        "Mock Turtle"
+      ],
+      "setting": "Croquet-ground, then a rocky ledge by the sea",
+      "kind": "mixed",
+      "contentNotes": [
+        "Queen threatens beheading and orders many executions",
+        "Mock Turtle sobs and sighs over his sorrow",
+        "Duchess is threatened with losing her head"
+      ],
+      "index": 9,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Mock Turtle, still sobbing, describes the Lobster Quadrille, a dance with lobsters, seals, turtles and salmon along the sea-shore. The Gryphon adds wild details, and the two creatures dance around Alice while the Mock Turtle sings a sad song about a whiting and a snail. They talk about why whiting have their tails in their mouths, and the Gryphon explains that whiting do the boots and shoes. Alice then tries to recite a poem, but the words come out wrong. The Mock Turtle sings Beautiful Soup. Suddenly a cry says the trial is beginning, and the Gryphon pulls Alice away while the song is still going.",
+      "keyEvents": [
+        "Mock Turtle describes the Lobster Quadrille",
+        "Mock Turtle sings the whiting and snail song",
+        "Gryphon explains why whiting have tails in mouths",
+        "Alice recites a garbled poem",
+        "Mock Turtle sings Beautiful Soup"
+      ],
+      "charactersPresent": [
+        "Alice",
+        "Mock Turtle",
+        "Gryphon"
+      ],
+      "setting": "Seashore under the sea",
+      "kind": "mixed",
+      "contentNotes": [
+        "Mock Turtle sobs and chokes at times",
+        "Gryphon punches the Mock Turtle on the back to help him breathe"
+      ],
+      "index": 10,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The King and Queen of Hearts sit in court for the trial of the Knave, who is in chains. Alice waits for the trial to end so the food on the table can be served. She watches the jury write on their slates, and she takes away a squeaky pencil from Bill the Lizard. The White Rabbit reads an accusation saying the Knave stole the tarts. The Hatter gives confused evidence, and the Dormouse falls asleep. The Queen orders the Dormouse removed, and the cook disappears. Alice is growing again during the trial. At the end, the White Rabbit calls out Alice's name as the next witness.",
+      "keyEvents": [
+        "Trial of the Knave begins in court with the King and Queen on their thrones",
+        "Alice takes the squeaky pencil from Bill the Lizard",
+        "White Rabbit reads the accusation about the stolen tarts",
+        "Hatter gives confused evidence and is dismissed",
+        "Cook disappears after the Dormouse is removed"
+      ],
+      "charactersPresent": [
+        "Alice",
+        "King of Hearts",
+        "Queen of Hearts",
+        "White Rabbit",
+        "Gryphon",
+        "Bill the Lizard",
+        "Hatter",
+        "March Hare",
+        "Dormouse"
+      ],
+      "setting": "Court of justice in the Queen's palace",
+      "kind": "narrative",
+      "contentNotes": [
+        "Threats of execution by the King and Queen",
+        "Queen orders people beheaded and a Dormouse pinched",
+        "Guinea-pigs are forcibly suppressed in a canvas bag",
+        "Mild mockery of a trial and courtroom authority"
+      ],
+      "index": 11,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Alice knocks over the jury-box by accident and upsets the jurymen. The King reads a paper of verses as evidence against the Knave, but Alice says it has no meaning. The Queen throws an inkstand at the Lizard and orders Alice's head cut off. Alice calls the court a pack of cards, and the cards fly at her. She wakes on the riverbank with her sister, who tells her to run in to tea. Her sister then dreams of Alice and Wonderland and thinks about Alice growing up.",
+      "keyEvents": [
+        "Alice upsets the jury-box and the jurymen",
+        "Alice says she knows nothing about the business",
+        "The King reads the verses as evidence",
+        "Alice says the verses make no sense",
+        "The Queen orders Alice's head cut off"
+      ],
+      "charactersPresent": [
+        "Alice",
+        "King",
+        "Queen",
+        "White Rabbit",
+        "Knave",
+        "Bill"
+      ],
+      "setting": "Wonderland courtroom, then a riverbank",
+      "kind": "narrative",
+      "contentNotes": [
+        "The Queen orders an execution ('Off with her head!'), not carried out",
+        "Queen throws an inkstand at the Lizard",
+        "Cards attack Alice"
+      ],
+      "index": 12,
+      "generatedBy": "claude-haiku-5-5"
+    }
+  ],
+  "synopsis": "Bored on a riverbank, Alice follows a White Rabbit with a watch down a deep rabbit-hole into a strange underground world. She drinks a potion and eats a cake that make her shrink and grow, but she cannot reach the tiny golden key that would open the little door. She meets many odd creatures, including a Mouse, a Caterpillar, a Duchess with a baby that turns into a pig, the Cheshire Cat, and the Mad Hatter and March Hare at a never-ending tea party. In the Queen of Hearts' garden, the Queen keeps shouting for executions at a croquet game. Alice is called as a witness at the trial of the Knave, who is accused of stealing tarts. The Queen orders Alice's head cut off, but Alice calls the court a pack of cards, and the cards fly at her. She wakes on the riverbank beside her sister, who dreams about Alice and Wonderland.",
+  "majorArcs": [
+    "Shrinking and growing after eating and drinking",
+    "Searching for the key and the garden",
+    "Meeting odd creatures and nonsense conversations",
+    "The Queen of Hearts' croquet game and executions",
+    "The Knave's trial and Alice's escape",
+    "Waking up from the dream on the riverbank"
+  ]
+}

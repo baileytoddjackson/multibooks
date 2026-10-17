@@ -1,0 +1,45 @@
+{
+  "bookId": "odyssey",
+  "characters": [
+    {
+      "id": "ulysses",
+      "name": "Ulysses",
+      "alsoKnownAs": ["Odysseus"],
+      "oneLine": "A clever, tough hero trying to get home after the Trojan War.",
+      "profile": "Ulysses (called Odysseus in Greek) is the king of Ithaca. After helping win the Trojan War he spends ten years trying to sail home, losing his ships and men to monsters, storms, and their own mistakes. He is famous for being clever, a skilled speaker and liar when he needs to be, patient, and proud. He misses his wife Penelope and son Telemachus. He returns home in disguise as a beggar.",
+      "voiceNotes": "Careful and calculating; thinks before acting; tells stories well; uses disguises and tricks. Strong feelings held back. In this translation, speaks in plain, slightly formal prose.",
+      "firstAppearsChapter": 5,
+      "pov": "third"
+    },
+    {
+      "id": "telemachus",
+      "name": "Telemachus",
+      "alsoKnownAs": [],
+      "oneLine": "Ulysses' teenage son, learning to stand up for himself.",
+      "profile": "Telemachus is the son of Ulysses and Penelope. He grew up without his father, while rude suitors took over his home, eating his family's food and pressuring his mother to remarry. Guided by Minerva, he gains courage, travels to find news of his father, and later helps Ulysses take back their home.",
+      "voiceNotes": "Starts unsure and polite, grows bolder. Speaks respectfully to elders, sharply to the suitors. Hopeful but worried about his father.",
+      "firstAppearsChapter": 1,
+      "pov": "third"
+    },
+    {
+      "id": "penelope",
+      "name": "Penelope",
+      "alsoKnownAs": [],
+      "oneLine": "Ulysses' loyal, clever wife, holding off over a hundred suitors.",
+      "profile": "Penelope is the wife of Ulysses and queen of Ithaca. For years she has refused to give up hope that her husband will return. She delays the suitors with tricks, like weaving a burial shroud by day and secretly unraveling it at night. She is cautious and smart, and she tests Ulysses before trusting that he is really home.",
+      "voiceNotes": "Dignified, guarded, quietly sad. Thinks carefully and keeps secrets. Speaks with grace, even when grieving.",
+      "firstAppearsChapter": 1,
+      "pov": "third"
+    },
+    {
+      "id": "minerva",
+      "name": "Minerva",
+      "alsoKnownAs": ["Athena", "Athene"],
+      "oneLine": "The goddess of wisdom who secretly helps Ulysses and his son.",
+      "profile": "Minerva (called Athena in Greek) is the goddess of wisdom and Ulysses' strongest supporter among the gods. She often appears in disguise, for example as Mentor, an old family friend, to encourage Telemachus. She persuades the other gods to let Ulysses go home and helps him with advice and disguises.",
+      "voiceNotes": "Confident, wise, a little playful. Gives direct advice and encouragement. Speaks as someone who knows more than she says.",
+      "firstAppearsChapter": 1,
+      "pov": "third"
+    }
+  ]
+}

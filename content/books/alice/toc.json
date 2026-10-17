@@ -1,0 +1,90 @@
+{
+  "bookId": "alice",
+  "totalWords": 26648,
+  "chapters": [
+    {
+      "index": 1,
+      "title": "Down the Rabbit-Hole",
+      "wordCount": 2162,
+      "pages": 3,
+      "wordsBefore": 0
+    },
+    {
+      "index": 2,
+      "title": "The Pool of Tears",
+      "wordCount": 2121,
+      "pages": 3,
+      "wordsBefore": 2162
+    },
+    {
+      "index": 3,
+      "title": "A Caucus-Race and a Long Tale",
+      "wordCount": 1711,
+      "pages": 2,
+      "wordsBefore": 4283
+    },
+    {
+      "index": 4,
+      "title": "The Rabbit Sends in a Little Bill",
+      "wordCount": 2663,
+      "pages": 4,
+      "wordsBefore": 5994
+    },
+    {
+      "index": 5,
+      "title": "Advice from a Caterpillar",
+      "wordCount": 2173,
+      "pages": 3,
+      "wordsBefore": 8657
+    },
+    {
+      "index": 6,
+      "title": "Pig and Pepper",
+      "wordCount": 2610,
+      "pages": 4,
+      "wordsBefore": 10830
+    },
+    {
+      "index": 7,
+      "title": "A Mad Tea-Party",
+      "wordCount": 2314,
+      "pages": 3,
+      "wordsBefore": 13440
+    },
+    {
+      "index": 8,
+      "title": "The Queen’s Croquet-Ground",
+      "wordCount": 2498,
+      "pages": 3,
+      "wordsBefore": 15754
+    },
+    {
+      "index": 9,
+      "title": "The Mock Turtle’s Story",
+      "wordCount": 2303,
+      "pages": 3,
+      "wordsBefore": 18252
+    },
+    {
+      "index": 10,
+      "title": "The Lobster Quadrille",
+      "wordCount": 2057,
+      "pages": 3,
+      "wordsBefore": 20555
+    },
+    {
+      "index": 11,
+      "title": "Who Stole the Tarts?",
+      "wordCount": 1899,
+      "pages": 3,
+      "wordsBefore": 22612
+    },
+    {
+      "index": 12,
+      "title": "Alice’s Evidence",
+      "wordCount": 2137,
+      "pages": 3,
+      "wordsBefore": 24511
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "bookId": "odyssey",
+  "totalWords": 117843,
+  "chapters": [
+    {
+      "index": 1,
+      "title": "Book I",
+      "subtitle": "The Gods in Council—Minerva’s Visit to Ithaca—The Challenge from Telemachus to the Suitors",
+      "wordCount": 4135,
+      "pages": 6,
+      "wordsBefore": 0
+    },
+    {
+      "index": 2,
+      "title": "Book II",
+      "subtitle": "Assembly of the People of Ithaca—Speeches of Telemachus and of the Suitors—Telemachus Makes His Preparations and Starts for Pylos with Minerva Disguised as Mentor",
+      "wordCount": 4215,
+      "pages": 6,
+      "wordsBefore": 4135
+    },
+    {
+      "index": 3,
+      "title": "Book III",
+      "subtitle": "Telemachus Visits Nestor at Pylos",
+      "wordCount": 4728,
+      "pages": 7,
+      "wordsBefore": 8350
+    },
+    {
+      "index": 4,
+      "title": "Book IV",
+      "subtitle": "The Visit to King Menelaus, Who Tells His Story—Meanwhile the Suitors in Ithaca Plot Against Telemachus",
+      "wordCount": 8118,
+      "pages": 11,
+      "wordsBefore": 13078
+    },
+    {
+      "index": 5,
+      "title": "Book V",
+      "subtitle": "Calypso—Ulysses Reaches Scheria on a Raft",
+      "wordCount": 4710,
+      "pages": 7,
+      "wordsBefore": 21196
+    },
+    {
+      "index": 6,
+      "title": "Book VI",
+      "subtitle": "The Meeting Between Nausicaa and Ulysses",
+      "wordCount": 3451,
+      "pages": 5,
+      "wordsBefore": 25906
+    },
+    {
+      "index": 7,
+      "title": "Book VII",
+      "subtitle": "Reception of Ulysses at the Palace of King Alcinous",
+      "wordCount": 3364,
+      "pages": 5,
+      "wordsBefore": 29357
+    },
+    {
+      "index": 8,
+      "title": "Book VIII",
+      "subtitle": "Banquet in the House of Alcinous—The Games",
+      "wordCount": 5624,
+      "pages": 8,
+      "wordsBefore": 32721
+    },
+    {
+      "index": 9,
+      "title": "Book IX",
+      "subtitle": "Ulysses Declares Himself and Begins His Story—The Cicons, Lotophagi, and Cyclopes",
+      "wordCount": 5860,
+      "pages": 8,
+      "wordsBefore": 38345
+    },
+    {
+      "index": 10,
+      "title": "Book X",
+      "subtitle": "Aeolus, the Laestrygones, Circe",
+      "wordCount": 5754,
+      "pages": 8,
+      "wordsBefore": 44205
+    },
+    {
+      "index": 11,
+      "title": "Book XI",
+      "subtitle": "The Visit to the Dead",
+      "wordCount": 6081,
+      "pages": 8,
+      "wordsBefore": 49959
+    },
+    {
+      "index": 12,
+      "title": "Book XII",
+      "subtitle": "The Sirens, Scylla and Charybdis, the Cattle of the Sun",
+      "wordCount": 4645,
+      "pages": 6,
+      "wordsBefore": 56040
+    },
+    {
+      "index": 13,
+      "title": "Book XIII",
+      "subtitle": "Ulysses Leaves Scheria and Returns to Ithaca",
+      "wordCount": 4204,
+      "pages": 6,
+      "wordsBefore": 60685
+    },
+    {
+      "index": 14,
+      "title": "Book XIV",
+      "subtitle": "Ulysses in the Hut with Eumaeus",
+      "wordCount": 5401,
+      "pages": 7,
+      "wordsBefore": 64889
+    },
+    {
+      "index": 15,
+      "title": "Book XV",
+      "subtitle": "Minerva Summons Telemachus from Lacedaemon—He Meets with Theoclymenus at Pylos and Brings Him to Ithaca—On Landing He Goes to the Hut of Eumaeus",
+      "wordCount": 5408,
+      "pages": 8,
+      "wordsBefore": 70290
+    },
+    {
+      "index": 16,
+      "title": "Book XVI",
+      "subtitle": "Ulysses Reveals Himself to Telemachus",
+      "wordCount": 4557,
+      "pages": 7,
+      "wordsBefore": 75698
+    },
+    {
+      "index": 17,
+      "title": "Book XVII",
+      "subtitle": "Telemachus and His Mother Meet—Ulysses and Eumaeus Come Down to the Town, and Ulysses Is Insulted by Melanthius—He Is Recognised by the Dog Argos—He Is Insulted and Presently Struck by Antinous with a Stool—Penelope Desires That He Shall Be Sent to Her",
+      "wordCount": 5840,
+      "pages": 8,
+      "wordsBefore": 80255
+    },
+    {
+      "index": 18,
+      "title": "Book XVIII",
+      "subtitle": "The Fight with Irus—Ulysses Warns Amphinomus—Penelope Gets Presents from the Suitors—The Braziers—Ulysses Rebukes Eurymachus",
+      "wordCount": 4165,
+      "pages": 6,
+      "wordsBefore": 86095
+    },
+    {
+      "index": 19,
+      "title": "Book XIX",
+      "subtitle": "Telemachus and Ulysses Remove the Armour—Ulysses Interviews Penelope—Euryclea Washes His Feet and Recognises the Scar on His Leg—Penelope Tells Her Dream to Ulysses",
+      "wordCount": 6026,
+      "pages": 10,
+      "wordsBefore": 90260
+    },
+    {
+      "index": 20,
+      "title": "Book XX",
+      "subtitle": "Ulysses Cannot Sleep—Penelope’s Prayer to Diana—The Two Signs from Heaven—Eumaeus and Philoetius Arrive—The Suitors Dine—Ctesippus Throws an Ox’s Foot at Ulysses—Theoclymenus Foretells Disaster and Leaves the House",
+      "wordCount": 3831,
+      "pages": 6,
+      "wordsBefore": 96286
+    },
+    {
+      "index": 21,
+      "title": "Book XXI",
+      "subtitle": "The Trial of the Axes, During Which Ulysses Reveals Himself to Eumaeus and Philoetius",
+      "wordCount": 4262,
+      "pages": 6,
+      "wordsBefore": 100117
+    },
+    {
+      "index": 22,
+      "title": "Book XXII",
+      "subtitle": "The Killing of the Suitors—The Maids Who Have Misconducted Themselves Are Made to Cleanse the Cloisters and Are Then Hanged",
+      "wordCount": 4560,
+      "pages": 6,
+      "wordsBefore": 104379
+    },
+    {
+      "index": 23,
+      "title": "Book XXIII",
+      "subtitle": "Penelope Eventually Recognises Her Husband—Early in the Morning Ulysses, Telemachus, Eumaeus, and Philoetius Leave the Town",
+      "wordCount": 3700,
+      "pages": 5,
+      "wordsBefore": 108939
+    },
+    {
+      "index": 24,
+      "title": "Book XXIV",
+      "subtitle": "The Ghosts of the Suitors in Hades—Ulysses and His Men Go to the House of Laertes—The People of Ithaca Come Out to Attack Ulysses, But Minerva Concludes a Peace",
+      "wordCount": 5204,
+      "pages": 8,
+      "wordsBefore": 112639
+    }
+  ]
+}

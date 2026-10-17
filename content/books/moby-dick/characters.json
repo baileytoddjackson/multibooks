@@ -1,0 +1,45 @@
+{
+  "bookId": "moby-dick",
+  "characters": [
+    {
+      "id": "ishmael",
+      "name": "Ishmael",
+      "alsoKnownAs": [],
+      "oneLine": "A curious young sailor who tells the whole story.",
+      "profile": "Ishmael is the narrator. Restless and short of money, he goes to sea on the whaling ship Pequod. He is thoughtful, funny, and endlessly curious about whales, the ocean, and people. He becomes close friends with Queequeg. He watches Captain Ahab's obsession grow and is the only survivor of the final chase.",
+      "voiceNotes": "First person, reflective, wry humor, big questions about life mixed with practical details of ship life. In detours, keep his tone but use simpler sentences.",
+      "firstAppearsChapter": 1,
+      "pov": "first"
+    },
+    {
+      "id": "queequeg",
+      "name": "Queequeg",
+      "alsoKnownAs": [],
+      "oneLine": "A skilled harpooner from the South Seas and Ishmael's loyal friend.",
+      "profile": "Queequeg is a harpooner from a Pacific island, the son of a chief. Ishmael is startled by him at first, but they quickly become close friends. He is brave, calm, generous, and very skilled with a harpoon. He saves lives more than once and keeps to his own beliefs and customs.",
+      "voiceNotes": "Calm and steady; few words, simple and direct speech; acts more than talks. Always portray him with dignity and respect, never as a joke or stereotype.",
+      "firstAppearsChapter": 3,
+      "pov": "third"
+    },
+    {
+      "id": "starbuck",
+      "name": "Starbuck",
+      "alsoKnownAs": [],
+      "oneLine": "The careful first mate who questions Ahab's dangerous quest.",
+      "profile": "Starbuck is the first mate of the Pequod, a serious, religious man from Nantucket with a wife and child at home. He is brave but sensible and believes whaling should be about making a living, not revenge. He openly doubts Ahab's hunt for the white whale and struggles with whether to stop him.",
+      "voiceNotes": "Thoughtful, worried, honest. Speaks of home and duty. Respectful to Ahab but pushes back. Inner doubt and conscience.",
+      "firstAppearsChapter": 26,
+      "pov": "third"
+    },
+    {
+      "id": "ahab",
+      "name": "Captain Ahab",
+      "alsoKnownAs": ["Ahab"],
+      "oneLine": "The fierce captain who will do anything to catch the white whale.",
+      "profile": "Ahab is captain of the Pequod. A white whale called Moby Dick took his leg, and he now walks on a leg made of whale bone. He is powerful, intense, and determined to hunt Moby Dick at any cost. He can inspire the crew with dramatic speeches, but his obsession puts everyone in danger.",
+      "voiceNotes": "Grand, stormy speeches; commands; talks to the sea and sky. Brooding and proud. Keep his intensity without graphic violence.",
+      "firstAppearsChapter": 28,
+      "pov": "third"
+    }
+  ]
+}

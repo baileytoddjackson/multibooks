@@ -1,0 +1,958 @@
+{
+  "bookId": "moby-dick",
+  "totalWords": 212011,
+  "chapters": [
+    {
+      "index": 1,
+      "title": "Loomings",
+      "wordCount": 2237,
+      "pages": 3,
+      "wordsBefore": 0
+    },
+    {
+      "index": 2,
+      "title": "The Carpet-Bag",
+      "wordCount": 1448,
+      "pages": 2,
+      "wordsBefore": 2237
+    },
+    {
+      "index": 3,
+      "title": "The Spouter-Inn",
+      "wordCount": 5902,
+      "pages": 8,
+      "wordsBefore": 3685
+    },
+    {
+      "index": 4,
+      "title": "The Counterpane",
+      "wordCount": 1666,
+      "pages": 3,
+      "wordsBefore": 9587
+    },
+    {
+      "index": 5,
+      "title": "Breakfast",
+      "wordCount": 747,
+      "pages": 1,
+      "wordsBefore": 11253
+    },
+    {
+      "index": 6,
+      "title": "The Street",
+      "wordCount": 830,
+      "pages": 1,
+      "wordsBefore": 12000
+    },
+    {
+      "index": 7,
+      "title": "The Chapel",
+      "wordCount": 947,
+      "pages": 2,
+      "wordsBefore": 12830
+    },
+    {
+      "index": 8,
+      "title": "The Pulpit",
+      "wordCount": 958,
+      "pages": 2,
+      "wordsBefore": 13777
+    },
+    {
+      "index": 9,
+      "title": "The Sermon",
+      "wordCount": 3629,
+      "pages": 6,
+      "wordsBefore": 14735
+    },
+    {
+      "index": 10,
+      "title": "A Bosom Friend",
+      "wordCount": 1562,
+      "pages": 2,
+      "wordsBefore": 18364
+    },
+    {
+      "index": 11,
+      "title": "Nightgown",
+      "wordCount": 730,
+      "pages": 1,
+      "wordsBefore": 19926
+    },
+    {
+      "index": 12,
+      "title": "Biographical",
+      "wordCount": 882,
+      "pages": 2,
+      "wordsBefore": 20656
+    },
+    {
+      "index": 13,
+      "title": "Wheelbarrow",
+      "wordCount": 1714,
+      "pages": 3,
+      "wordsBefore": 21538
+    },
+    {
+      "index": 14,
+      "title": "Nantucket",
+      "wordCount": 758,
+      "pages": 1,
+      "wordsBefore": 23252
+    },
+    {
+      "index": 15,
+      "title": "Chowder",
+      "wordCount": 1195,
+      "pages": 2,
+      "wordsBefore": 24010
+    },
+    {
+      "index": 16,
+      "title": "The Ship",
+      "wordCount": 5544,
+      "pages": 8,
+      "wordsBefore": 25205
+    },
+    {
+      "index": 17,
+      "title": "The Ramadan",
+      "wordCount": 2300,
+      "pages": 3,
+      "wordsBefore": 30749
+    },
+    {
+      "index": 18,
+      "title": "His Mark",
+      "wordCount": 1362,
+      "pages": 2,
+      "wordsBefore": 33049
+    },
+    {
+      "index": 19,
+      "title": "The Prophet",
+      "wordCount": 1213,
+      "pages": 2,
+      "wordsBefore": 34411
+    },
+    {
+      "index": 20,
+      "title": "All Astir",
+      "wordCount": 927,
+      "pages": 2,
+      "wordsBefore": 35624
+    },
+    {
+      "index": 21,
+      "title": "Going Aboard",
+      "wordCount": 1079,
+      "pages": 2,
+      "wordsBefore": 36551
+    },
+    {
+      "index": 22,
+      "title": "Merry Christmas",
+      "wordCount": 1660,
+      "pages": 3,
+      "wordsBefore": 37630
+    },
+    {
+      "index": 23,
+      "title": "The Lee Shore",
+      "wordCount": 366,
+      "pages": 1,
+      "wordsBefore": 39290
+    },
+    {
+      "index": 24,
+      "title": "The Advocate",
+      "wordCount": 1677,
+      "pages": 3,
+      "wordsBefore": 39656
+    },
+    {
+      "index": 25,
+      "title": "Postscript",
+      "wordCount": 282,
+      "pages": 1,
+      "wordsBefore": 41333
+    },
+    {
+      "index": 26,
+      "title": "Knights and Squires",
+      "wordCount": 1226,
+      "pages": 2,
+      "wordsBefore": 41615
+    },
+    {
+      "index": 27,
+      "title": "Knights and Squires",
+      "wordCount": 1689,
+      "pages": 3,
+      "wordsBefore": 42841
+    },
+    {
+      "index": 28,
+      "title": "Ahab",
+      "wordCount": 1413,
+      "pages": 3,
+      "wordsBefore": 44530
+    },
+    {
+      "index": 29,
+      "title": "Enter Ahab; to Him, Stubb",
+      "wordCount": 1208,
+      "pages": 2,
+      "wordsBefore": 45943
+    },
+    {
+      "index": 30,
+      "title": "The Pipe",
+      "wordCount": 290,
+      "pages": 1,
+      "wordsBefore": 47151
+    },
+    {
+      "index": 31,
+      "title": "Queen Mab",
+      "wordCount": 886,
+      "pages": 1,
+      "wordsBefore": 47441
+    },
+    {
+      "index": 32,
+      "title": "Cetology",
+      "wordCount": 5194,
+      "pages": 7,
+      "wordsBefore": 48327
+    },
+    {
+      "index": 33,
+      "title": "The Specksnyder",
+      "wordCount": 974,
+      "pages": 2,
+      "wordsBefore": 53521
+    },
+    {
+      "index": 34,
+      "title": "The Cabin-Table",
+      "wordCount": 2227,
+      "pages": 4,
+      "wordsBefore": 54495
+    },
+    {
+      "index": 35,
+      "title": "The Mast-Head",
+      "wordCount": 2612,
+      "pages": 4,
+      "wordsBefore": 56722
+    },
+    {
+      "index": 36,
+      "title": "The Quarter-Deck",
+      "wordCount": 2825,
+      "pages": 4,
+      "wordsBefore": 59334
+    },
+    {
+      "index": 37,
+      "title": "Sunset",
+      "wordCount": 511,
+      "pages": 1,
+      "wordsBefore": 62159
+    },
+    {
+      "index": 38,
+      "title": "Dusk",
+      "wordCount": 395,
+      "pages": 1,
+      "wordsBefore": 62670
+    },
+    {
+      "index": 39,
+      "title": "First Night-Watch",
+      "wordCount": 267,
+      "pages": 1,
+      "wordsBefore": 63065
+    },
+    {
+      "index": 40,
+      "title": "Midnight, Forecastle",
+      "wordCount": 1581,
+      "pages": 2,
+      "wordsBefore": 63332
+    },
+    {
+      "index": 41,
+      "title": "Moby Dick",
+      "wordCount": 3793,
+      "pages": 5,
+      "wordsBefore": 64913
+    },
+    {
+      "index": 42,
+      "title": "The Whiteness of the Whale",
+      "wordCount": 3647,
+      "pages": 5,
+      "wordsBefore": 68706
+    },
+    {
+      "index": 43,
+      "title": "Hark!",
+      "wordCount": 310,
+      "pages": 1,
+      "wordsBefore": 72353
+    },
+    {
+      "index": 44,
+      "title": "The Chart",
+      "wordCount": 2054,
+      "pages": 3,
+      "wordsBefore": 72663
+    },
+    {
+      "index": 45,
+      "title": "The Affidavit",
+      "wordCount": 3557,
+      "pages": 5,
+      "wordsBefore": 74717
+    },
+    {
+      "index": 46,
+      "title": "Surmises",
+      "wordCount": 996,
+      "pages": 2,
+      "wordsBefore": 78274
+    },
+    {
+      "index": 47,
+      "title": "The Mat-Maker",
+      "wordCount": 931,
+      "pages": 2,
+      "wordsBefore": 79270
+    },
+    {
+      "index": 48,
+      "title": "The First Lowering",
+      "wordCount": 3984,
+      "pages": 6,
+      "wordsBefore": 80201
+    },
+    {
+      "index": 49,
+      "title": "The Hyena",
+      "wordCount": 835,
+      "pages": 1,
+      "wordsBefore": 84185
+    },
+    {
+      "index": 50,
+      "title": "Ahab’s Boat and Crew. Fedallah",
+      "wordCount": 1012,
+      "pages": 2,
+      "wordsBefore": 85020
+    },
+    {
+      "index": 51,
+      "title": "The Spirit-Spout",
+      "wordCount": 1522,
+      "pages": 2,
+      "wordsBefore": 86032
+    },
+    {
+      "index": 52,
+      "title": "The Albatross",
+      "wordCount": 724,
+      "pages": 1,
+      "wordsBefore": 87554
+    },
+    {
+      "index": 53,
+      "title": "The Gam",
+      "wordCount": 1642,
+      "pages": 3,
+      "wordsBefore": 88278
+    },
+    {
+      "index": 54,
+      "title": "The Town-Ho’s Story",
+      "wordCount": 8116,
+      "pages": 11,
+      "wordsBefore": 89920
+    },
+    {
+      "index": 55,
+      "title": "Of the Monstrous Pictures of Whales",
+      "wordCount": 1901,
+      "pages": 3,
+      "wordsBefore": 98036
+    },
+    {
+      "index": 56,
+      "title": "Of the Less Erroneous Pictures of Whales, and the True",
+      "wordCount": 1311,
+      "pages": 2,
+      "wordsBefore": 99937
+    },
+    {
+      "index": 57,
+      "title": "Of Whales in Paint; in Teeth; in Wood; in Sheet-Iron; in",
+      "wordCount": 960,
+      "pages": 2,
+      "wordsBefore": 101248
+    },
+    {
+      "index": 58,
+      "title": "Brit",
+      "wordCount": 1010,
+      "pages": 2,
+      "wordsBefore": 102208
+    },
+    {
+      "index": 59,
+      "title": "Squid",
+      "wordCount": 933,
+      "pages": 2,
+      "wordsBefore": 103218
+    },
+    {
+      "index": 60,
+      "title": "The Line",
+      "wordCount": 1487,
+      "pages": 2,
+      "wordsBefore": 104151
+    },
+    {
+      "index": 61,
+      "title": "Stubb Kills a Whale",
+      "wordCount": 1980,
+      "pages": 3,
+      "wordsBefore": 105638
+    },
+    {
+      "index": 62,
+      "title": "The Dart",
+      "wordCount": 571,
+      "pages": 1,
+      "wordsBefore": 107618
+    },
+    {
+      "index": 63,
+      "title": "The Crotch",
+      "wordCount": 474,
+      "pages": 1,
+      "wordsBefore": 108189
+    },
+    {
+      "index": 64,
+      "title": "Stubb’s Supper",
+      "wordCount": 3018,
+      "pages": 4,
+      "wordsBefore": 108663
+    },
+    {
+      "index": 65,
+      "title": "The Whale as a Dish",
+      "wordCount": 996,
+      "pages": 2,
+      "wordsBefore": 111681
+    },
+    {
+      "index": 66,
+      "title": "The Shark Massacre",
+      "wordCount": 631,
+      "pages": 1,
+      "wordsBefore": 112677
+    },
+    {
+      "index": 67,
+      "title": "Cutting In",
+      "wordCount": 741,
+      "pages": 1,
+      "wordsBefore": 113308
+    },
+    {
+      "index": 68,
+      "title": "The Blanket",
+      "wordCount": 1204,
+      "pages": 2,
+      "wordsBefore": 114049
+    },
+    {
+      "index": 69,
+      "title": "The Funeral",
+      "wordCount": 436,
+      "pages": 1,
+      "wordsBefore": 115253
+    },
+    {
+      "index": 70,
+      "title": "The Sphynx",
+      "wordCount": 880,
+      "pages": 1,
+      "wordsBefore": 115689
+    },
+    {
+      "index": 71,
+      "title": "The Jeroboam’s Story",
+      "wordCount": 2277,
+      "pages": 3,
+      "wordsBefore": 116569
+    },
+    {
+      "index": 72,
+      "title": "The Monkey-Rope",
+      "wordCount": 1660,
+      "pages": 2,
+      "wordsBefore": 118846
+    },
+    {
+      "index": 73,
+      "title": "Stubb and Flask kill a Right Whale; and Then Have a Talk",
+      "wordCount": 2172,
+      "pages": 3,
+      "wordsBefore": 120506
+    },
+    {
+      "index": 74,
+      "title": "The Sperm Whale’s Head—Contrasted View",
+      "wordCount": 1642,
+      "pages": 2,
+      "wordsBefore": 122678
+    },
+    {
+      "index": 75,
+      "title": "The Right Whale’s Head—Contrasted View",
+      "wordCount": 1231,
+      "pages": 2,
+      "wordsBefore": 124320
+    },
+    {
+      "index": 76,
+      "title": "The Battering-Ram",
+      "wordCount": 873,
+      "pages": 1,
+      "wordsBefore": 125551
+    },
+    {
+      "index": 77,
+      "title": "The Great Heidelburgh Tun",
+      "wordCount": 637,
+      "pages": 1,
+      "wordsBefore": 126424
+    },
+    {
+      "index": 78,
+      "title": "Cistern and Buckets",
+      "wordCount": 1664,
+      "pages": 2,
+      "wordsBefore": 127061
+    },
+    {
+      "index": 79,
+      "title": "The Prairie",
+      "wordCount": 936,
+      "pages": 2,
+      "wordsBefore": 128725
+    },
+    {
+      "index": 80,
+      "title": "The Nut",
+      "wordCount": 904,
+      "pages": 2,
+      "wordsBefore": 129661
+    },
+    {
+      "index": 81,
+      "title": "The Pequod Meets The Virgin",
+      "wordCount": 4386,
+      "pages": 6,
+      "wordsBefore": 130565
+    },
+    {
+      "index": 82,
+      "title": "The Honor and Glory of Whaling",
+      "wordCount": 1155,
+      "pages": 2,
+      "wordsBefore": 134951
+    },
+    {
+      "index": 83,
+      "title": "Jonah Historically Regarded",
+      "wordCount": 780,
+      "pages": 1,
+      "wordsBefore": 136106
+    },
+    {
+      "index": 84,
+      "title": "Pitchpoling",
+      "wordCount": 807,
+      "pages": 1,
+      "wordsBefore": 136886
+    },
+    {
+      "index": 85,
+      "title": "The Fountain",
+      "wordCount": 2076,
+      "pages": 3,
+      "wordsBefore": 137693
+    },
+    {
+      "index": 86,
+      "title": "The Tail",
+      "wordCount": 1851,
+      "pages": 3,
+      "wordsBefore": 139769
+    },
+    {
+      "index": 87,
+      "title": "The Grand Armada",
+      "wordCount": 4790,
+      "pages": 7,
+      "wordsBefore": 141620
+    },
+    {
+      "index": 88,
+      "title": "Schools and Schoolmasters",
+      "wordCount": 1196,
+      "pages": 2,
+      "wordsBefore": 146410
+    },
+    {
+      "index": 89,
+      "title": "Fast-Fish and Loose-Fish",
+      "wordCount": 1433,
+      "pages": 2,
+      "wordsBefore": 147606
+    },
+    {
+      "index": 90,
+      "title": "Heads or Tails",
+      "wordCount": 1053,
+      "pages": 2,
+      "wordsBefore": 149039
+    },
+    {
+      "index": 91,
+      "title": "The Pequod Meets The Rose-Bud",
+      "wordCount": 2538,
+      "pages": 4,
+      "wordsBefore": 150092
+    },
+    {
+      "index": 92,
+      "title": "Ambergris",
+      "wordCount": 977,
+      "pages": 2,
+      "wordsBefore": 152630
+    },
+    {
+      "index": 93,
+      "title": "The Castaway",
+      "wordCount": 1625,
+      "pages": 2,
+      "wordsBefore": 153607
+    },
+    {
+      "index": 94,
+      "title": "A Squeeze of the Hand",
+      "wordCount": 1280,
+      "pages": 2,
+      "wordsBefore": 155232
+    },
+    {
+      "index": 95,
+      "title": "The Cassock",
+      "wordCount": 499,
+      "pages": 1,
+      "wordsBefore": 156512
+    },
+    {
+      "index": 96,
+      "title": "The Try-Works",
+      "wordCount": 1833,
+      "pages": 3,
+      "wordsBefore": 157011
+    },
+    {
+      "index": 97,
+      "title": "The Lamp",
+      "wordCount": 242,
+      "pages": 1,
+      "wordsBefore": 158844
+    },
+    {
+      "index": 98,
+      "title": "Stowing Down and Clearing Up",
+      "wordCount": 1029,
+      "pages": 2,
+      "wordsBefore": 159086
+    },
+    {
+      "index": 99,
+      "title": "The Doubloon",
+      "wordCount": 2451,
+      "pages": 3,
+      "wordsBefore": 160115
+    },
+    {
+      "index": 100,
+      "title": "Leg and Arm",
+      "wordCount": 2738,
+      "pages": 4,
+      "wordsBefore": 162566
+    },
+    {
+      "index": 101,
+      "title": "The Decanter",
+      "wordCount": 1783,
+      "pages": 3,
+      "wordsBefore": 165304
+    },
+    {
+      "index": 102,
+      "title": "A Bower in the Arsacides",
+      "wordCount": 1573,
+      "pages": 3,
+      "wordsBefore": 167087
+    },
+    {
+      "index": 103,
+      "title": "Measurement of The Whale’s Skeleton",
+      "wordCount": 925,
+      "pages": 1,
+      "wordsBefore": 168660
+    },
+    {
+      "index": 104,
+      "title": "The Fossil Whale",
+      "wordCount": 1429,
+      "pages": 2,
+      "wordsBefore": 169585
+    },
+    {
+      "index": 105,
+      "title": "Does the Whale’s Magnitude Diminish?—Will He Perish?",
+      "wordCount": 1569,
+      "pages": 2,
+      "wordsBefore": 171014
+    },
+    {
+      "index": 106,
+      "title": "Ahab’s Leg",
+      "wordCount": 934,
+      "pages": 1,
+      "wordsBefore": 172583
+    },
+    {
+      "index": 107,
+      "title": "The Carpenter",
+      "wordCount": 1062,
+      "pages": 2,
+      "wordsBefore": 173517
+    },
+    {
+      "index": 108,
+      "title": "Ahab and the Carpenter",
+      "wordCount": 1589,
+      "pages": 2,
+      "wordsBefore": 174579
+    },
+    {
+      "index": 109,
+      "title": "Ahab and Starbuck in the Cabin",
+      "wordCount": 918,
+      "pages": 1,
+      "wordsBefore": 176168
+    },
+    {
+      "index": 110,
+      "title": "Queequeg in His Coffin",
+      "wordCount": 2266,
+      "pages": 3,
+      "wordsBefore": 177086
+    },
+    {
+      "index": 111,
+      "title": "The Pacific",
+      "wordCount": 423,
+      "pages": 1,
+      "wordsBefore": 179352
+    },
+    {
+      "index": 112,
+      "title": "The Blacksmith",
+      "wordCount": 939,
+      "pages": 1,
+      "wordsBefore": 179775
+    },
+    {
+      "index": 113,
+      "title": "The Forge",
+      "wordCount": 1239,
+      "pages": 2,
+      "wordsBefore": 180714
+    },
+    {
+      "index": 114,
+      "title": "The Gilder",
+      "wordCount": 646,
+      "pages": 1,
+      "wordsBefore": 181953
+    },
+    {
+      "index": 115,
+      "title": "The Pequod Meets The Bachelor",
+      "wordCount": 893,
+      "pages": 1,
+      "wordsBefore": 182599
+    },
+    {
+      "index": 116,
+      "title": "The Dying Whale",
+      "wordCount": 520,
+      "pages": 1,
+      "wordsBefore": 183492
+    },
+    {
+      "index": 117,
+      "title": "The Whale Watch",
+      "wordCount": 473,
+      "pages": 1,
+      "wordsBefore": 184012
+    },
+    {
+      "index": 118,
+      "title": "The Quadrant",
+      "wordCount": 899,
+      "pages": 1,
+      "wordsBefore": 184485
+    },
+    {
+      "index": 119,
+      "title": "The Candles",
+      "wordCount": 2548,
+      "pages": 4,
+      "wordsBefore": 185384
+    },
+    {
+      "index": 120,
+      "title": "The Deck Towards the End of the First Night Watch",
+      "wordCount": 181,
+      "pages": 1,
+      "wordsBefore": 187932
+    },
+    {
+      "index": 121,
+      "title": "Midnight.—The Forecastle Bulwarks",
+      "wordCount": 627,
+      "pages": 1,
+      "wordsBefore": 188113
+    },
+    {
+      "index": 122,
+      "title": "Midnight Aloft.—Thunder and Lightning",
+      "wordCount": 47,
+      "pages": 1,
+      "wordsBefore": 188740
+    },
+    {
+      "index": 123,
+      "title": "The Musket",
+      "wordCount": 1245,
+      "pages": 2,
+      "wordsBefore": 188787
+    },
+    {
+      "index": 124,
+      "title": "The Needle",
+      "wordCount": 1211,
+      "pages": 2,
+      "wordsBefore": 190032
+    },
+    {
+      "index": 125,
+      "title": "The Log and Line",
+      "wordCount": 1110,
+      "pages": 2,
+      "wordsBefore": 191243
+    },
+    {
+      "index": 126,
+      "title": "The Life-Buoy",
+      "wordCount": 1394,
+      "pages": 2,
+      "wordsBefore": 192353
+    },
+    {
+      "index": 127,
+      "title": "The Deck",
+      "wordCount": 720,
+      "pages": 1,
+      "wordsBefore": 193747
+    },
+    {
+      "index": 128,
+      "title": "The Pequod Meets The Rachel",
+      "wordCount": 1414,
+      "pages": 2,
+      "wordsBefore": 194467
+    },
+    {
+      "index": 129,
+      "title": "The Cabin",
+      "wordCount": 586,
+      "pages": 1,
+      "wordsBefore": 195881
+    },
+    {
+      "index": 130,
+      "title": "The Hat",
+      "wordCount": 1709,
+      "pages": 2,
+      "wordsBefore": 196467
+    },
+    {
+      "index": 131,
+      "title": "The Pequod Meets The Delight",
+      "wordCount": 430,
+      "pages": 1,
+      "wordsBefore": 198176
+    },
+    {
+      "index": 132,
+      "title": "The Symphony",
+      "wordCount": 1631,
+      "pages": 3,
+      "wordsBefore": 198606
+    },
+    {
+      "index": 133,
+      "title": "The Chase—First Day",
+      "wordCount": 3589,
+      "pages": 5,
+      "wordsBefore": 200237
+    },
+    {
+      "index": 134,
+      "title": "The Chase—Second Day",
+      "wordCount": 3342,
+      "pages": 5,
+      "wordsBefore": 203826
+    },
+    {
+      "index": 135,
+      "title": "The Chase.—Third Day",
+      "wordCount": 4572,
+      "pages": 6,
+      "wordsBefore": 207168
+    },
+    {
+      "index": 136,
+      "title": "Epilogue",
+      "wordCount": 271,
+      "pages": 1,
+      "wordsBefore": 211740
+    }
+  ]
+}

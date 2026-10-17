@@ -1,0 +1,16 @@
+{
+  "id": "alice",
+  "title": "Alice's Adventures in Wonderland",
+  "shortTitle": "Alice in Wonderland",
+  "author": "Lewis Carroll",
+  "gutenbergId": 11,
+  "hook": "Follow a rabbit with a pocket watch down a hole, and nothing makes sense anymore.",
+  "difficulty": "easy",
+  "length": "short",
+  "estMinutes": 178,
+  "cover": {
+    "from": "#F2B33D",
+    "to": "#E0563F",
+    "motif": "watch"
+  }
+}

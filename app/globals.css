@@ -1,26 +1,160 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * MultiBooks design tokens.
+ * Contrast-checked (WCAG AA): text colors are only used on the grounds noted.
+ * Bright coral/teal/marigold are decorative or used as fills behind dark/white text that passes.
+ */
+@theme {
+  --color-ink: #1f2a44; /* 13.2:1 on paper */
+  --color-ink-soft: #4a5368; /* 7.1:1 on paper — secondary text */
+  --color-paper: #fbf6ec;
+  --color-paper-deep: #f4ecdc;
+  --color-card: #fffdf8;
+  --color-line: #e6dcc8;
+
+  --color-coral: #e0563f; /* decorative only */
+  --color-coral-strong: #c2412d; /* white text 5.1:1, on paper 4.8:1 */
+  --color-teal: #1b7f7f; /* white text 4.8:1 */
+  --color-teal-strong: #176f6f; /* text on paper */
+  --color-marigold: #f2b33d; /* fill behind ink text 7.7:1 */
+  --color-plum: #6b4c9a; /* white text 6.7:1, on paper 6.2:1 */
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-reading: var(--font-literata), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-atkinson), system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --radius-card: 1.25rem;
+  --shadow-page: 0 1px 2px rgb(31 42 68 / 0.06), 0 8px 28px rgb(31 42 68 / 0.08);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Reader themes: applied with data-theme on the reader root. */
+[data-theme="light"] {
+  --reader-bg: var(--color-paper);
+  --reader-page: var(--color-card);
+  --reader-text: var(--color-ink);
+  --reader-muted: var(--color-ink-soft);
+  --reader-line: var(--color-line);
+  --reader-accent: var(--color-plum);
+}
+[data-theme="sepia"] {
+  --reader-bg: #e9dcc0;
+  --reader-page: #f1e4cc;
+  --reader-text: #3e2f22; /* 10.2:1 */
+  --reader-muted: #6e573f; /* 5.4:1 */
+  --reader-line: #d8c6a4;
+  --reader-accent: #7a4f2a;
+}
+[data-theme="dark"] {
+  --reader-bg: #0f1115;
+  --reader-page: #16181d;
+  --reader-text: #e6e1d6; /* 13.6:1 */
+  --reader-muted: #9aa3b5; /* 7.0:1 */
+  --reader-line: #2a2e37;
+  --reader-accent: #c6a8f0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+/* Visible, consistent keyboard focus everywhere (in the base layer so utilities can override). */
+@layer base {
+  :focus-visible {
+    outline: 3px solid var(--color-plum);
+    outline-offset: 3px;
+  }
+}
+
+/* Long-form reading typography. Size steps are set by data-font-size on the reader. */
+.prose-book {
+  font-family: var(--font-reading);
+  max-width: 65ch;
+  line-height: 1.7;
+  font-size: var(--reader-size, 1.1875rem);
+  hyphens: auto;
+  text-wrap: pretty;
+}
+.prose-book p + p {
+  margin-top: 1em;
+}
+[data-font-size="s"] {
+  --reader-size: 1.0625rem;
+}
+[data-font-size="m"] {
+  --reader-size: 1.1875rem;
+}
+[data-font-size="l"] {
+  --reader-size: 1.375rem;
+}
+@media (min-width: 768px) {
+  [data-font-size="s"] {
+    --reader-size: 1.125rem;
+  }
+  [data-font-size="m"] {
+    --reader-size: 1.3125rem;
+  }
+  [data-font-size="l"] {
+    --reader-size: 1.5rem;
+  }
+}
+
+/* Subtle paper grain for book-feel surfaces (pure CSS, no image request). */
+.paper-grain {
+  background-image:
+    radial-gradient(rgb(31 42 68 / 0.025) 1px, transparent 1px),
+    radial-gradient(rgb(31 42 68 / 0.02) 1px, transparent 1px);
+  background-size:
+    3px 3px,
+    7px 7px;
+  background-position:
+    0 0,
+    1px 2px;
+}
+
+/* Page / chapter transition. Reduced motion falls back to a short crossfade. */
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateX(24px) rotateY(-6deg);
+    transform-origin: left center;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animate-page-in {
+  animation: page-in 420ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.animate-fade-in {
+  animation: fade-in 300ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-page-in {
+    animation: fade-in 200ms ease-out both;
+  }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

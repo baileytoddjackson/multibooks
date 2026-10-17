@@ -1,0 +1,16 @@
+{
+  "id": "moby-dick",
+  "title": "Moby-Dick",
+  "shortTitle": "Moby-Dick",
+  "author": "Herman Melville",
+  "gutenbergId": 2701,
+  "hook": "One captain. One white whale. One very long chase across the sea.",
+  "difficulty": "hard",
+  "length": "long",
+  "estMinutes": 1413,
+  "cover": {
+    "from": "#1F2A44",
+    "to": "#1B7F7F",
+    "motif": "whale"
+  }
+}

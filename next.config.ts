@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Book content is read from disk on the server; make sure Vercel ships it with the functions.
+  outputFileTracingIncludes: { "/**": ["./content/books/**/*.json"] },
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {

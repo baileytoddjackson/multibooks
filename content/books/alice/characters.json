@@ -1,0 +1,45 @@
+{
+  "bookId": "alice",
+  "characters": [
+    {
+      "id": "alice",
+      "name": "Alice",
+      "alsoKnownAs": [],
+      "oneLine": "A curious, polite, and stubborn girl who keeps trying to make sense of nonsense.",
+      "profile": "Alice is a young girl who follows a talking White Rabbit down a rabbit-hole into Wonderland. She is curious and brave, often talks to herself, and tries hard to remember her lessons, though they keep coming out wrong. She changes size many times and gets frustrated by rude creatures and silly rules, but she stands up for herself more as the story goes on.",
+      "voiceNotes": "Chatty inner thoughts, polite questions, sudden indignation (\"How puzzling all these changes are!\"). Mixes up facts she learned at school. Never cruel; easily curious.",
+      "firstAppearsChapter": 1,
+      "pov": "third"
+    },
+    {
+      "id": "white-rabbit",
+      "name": "the White Rabbit",
+      "alsoKnownAs": ["White Rabbit"],
+      "oneLine": "A nervous rabbit with a waistcoat and pocket watch who is always late.",
+      "profile": "The White Rabbit wears a waistcoat, carries a pocket watch and a fan, and is always in a hurry and afraid of being late, especially for the Duchess and the Queen. He is fussy and anxious, bossy toward people he thinks are servants, and very respectful toward royalty. Later he serves as the herald at the trial.",
+      "voiceNotes": "Fretful muttering (\"Oh dear! Oh dear! I shall be too late!\"), checks his watch, short worried sentences, formal toward the King and Queen.",
+      "firstAppearsChapter": 1,
+      "pov": "third"
+    },
+    {
+      "id": "cheshire-cat",
+      "name": "the Cheshire Cat",
+      "alsoKnownAs": ["Cheshire Cat"],
+      "oneLine": "A grinning cat who appears and vanishes whenever it likes.",
+      "profile": "The Cheshire Cat belongs to the Duchess and has an enormous grin. It can vanish and reappear, sometimes bit by bit, leaving only its grin. It is calm, clever, and amused by everything, and it tells Alice that everyone in Wonderland is mad. It gives puzzling but helpful directions.",
+      "voiceNotes": "Unhurried, riddling, gently teasing. Answers questions with questions or logic twists (\"We're all mad here.\"). Never panics.",
+      "firstAppearsChapter": 6,
+      "pov": "third"
+    },
+    {
+      "id": "hatter",
+      "name": "the Hatter",
+      "alsoKnownAs": ["Mad Hatter"],
+      "oneLine": "A rude, riddle-loving hat-maker stuck at a never-ending tea party.",
+      "profile": "The Hatter hosts a tea party with the March Hare and the Dormouse that never ends, because Time stopped at six o'clock after the Hatter offended him. He asks riddles with no answers, makes personal remarks, and argues about words. He later appears, nervous and fumbling, as a witness at the trial.",
+      "voiceNotes": "Abrupt remarks, nonsense riddles (\"Why is a raven like a writing-desk?\"), quick topic changes, talks about Time as a person. Rude but silly, never menacing.",
+      "firstAppearsChapter": 7,
+      "pov": "third"
+    }
+  ]
+}

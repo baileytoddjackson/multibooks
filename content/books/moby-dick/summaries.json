@@ -1,0 +1,2975 @@
+{
+  "bookId": "moby-dick",
+  "chapters": [
+    {
+      "summary": "Ishmael, the narrator, tells the reader to call him Ishmael. He says that when he feels gloomy, he likes to go to sea. He describes crowds of city men staring at the water and says that people are drawn to water. He explains that he always goes to sea as a simple sailor, not as a passenger or officer, because sailors are paid. He says that a strange force, the Fates, guided him toward a whaling voyage. He admits that the great whale drew his curiosity and pulled him toward the trip.",
+      "keyEvents": [
+        "Ishmael says he goes to sea when he feels gloomy",
+        "He describes crowds of city men staring at the water",
+        "He explains why he always goes to sea as a sailor",
+        "He says the Fates guided him toward a whaling voyage",
+        "He admits the great whale drew his curiosity"
+      ],
+      "charactersPresent": [
+        "Ishmael"
+      ],
+      "setting": "New York City and the sea",
+      "kind": "essay",
+      "contentNotes": [
+        "Mentions drowning in the story of Narcissus",
+        "Mentions suicidal feelings in a joking way, such as stepping into the street"
+      ],
+      "index": 1,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael arrives in New Bedford on a cold Saturday night in December. He wants to sail from Nantucket, but the packet there has already left, so he must wait until Monday. With little money, he walks through dark, cold streets looking for cheap lodging. He passes The Crossed Harpoons and the Sword-Fish Inn, then stumbles into a negro church by mistake. At last he finds The Spouter Inn, run by Peter Coffin, and decides it is the place for cheap lodging. Along the way he reflects on the cold wind Euroclydon and on the rich and the poor.",
+      "keyEvents": [
+        "Ishmael arrives in New Bedford on a cold Saturday night in December",
+        "He learns the Nantucket packet has sailed and must wait until Monday",
+        "He walks the cold streets looking for cheap lodging",
+        "He mistakenly enters a negro church at The Trap",
+        "He finds The Spouter Inn, run by Peter Coffin, and decides to stay"
+      ],
+      "charactersPresent": [
+        "Ishmael"
+      ],
+      "setting": "New Bedford streets and The Spouter Inn",
+      "kind": "mixed",
+      "contentNotes": [
+        "Describes a freezing night and a poor man sleeping outside in the cold",
+        "Brief religious imagery of damnation and wailing in the church scene"
+      ],
+      "index": 2,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator enters the Spouter-Inn on a cold night and sees a strange painting and a wall of weapons. The landlord says the room is full, and the narrator must share a bed with a harpooneer. The narrator sees a crowd of seamen come in and notices a quiet Southerner named Bulkington leave. The landlord explains that the harpooneer has been out selling heads. Late at night the narrator finds the harpooneer, Queequeg, who has tattoos and a wooden idol. Queequeg has a tomahawk and frightens the narrator. The landlord calms things down, and the narrator agrees to share the bed. The narrator falls asleep easily in the end.",
+      "keyEvents": [
+        "Narrator sees a strange painting and a wall of weapons in the inn",
+        "Landlord says the only bed must be shared with a harpooneer",
+        "Seamen from the Grampus arrive and Bulkington leaves",
+        "Narrator learns the harpooneer has been selling heads",
+        "Queequeg enters the room, makes a fire offering, and threatens the narrator with a tomahawk"
+      ],
+      "charactersPresent": [
+        "Queequeg",
+        "Bulkington"
+      ],
+      "setting": "Spouter-Inn, New Bedford",
+      "kind": "mixed",
+      "contentNotes": [
+        "Drinking and drunkenness among sailors",
+        "Threatening behavior with a tomahawk",
+        "Talk of cannibalism and selling human heads",
+        "Mild racial stereotyping and slurs in dialogue"
+      ],
+      "index": 3,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Narrator wakes at daylight to find Queequeg's tattooed arm wrapped around him in a loving way. He recalls a childhood memory of being sent to bed in daylight and feeling a strange hand in his. Queequeg sleeps on, and the narrator wakes him with great effort. Queequeg gets up, gives the narrator privacy to dress, and then dresses himself, first putting on his hat and boots. He washes only his chest, arms, and hands, then shaves his face with his harpoon. He leaves the room carrying the harpoon.",
+      "keyEvents": [
+        "Narrator wakes to find Queequeg's arm hugging him",
+        "Narrator recalls a childhood memory of being sent to bed in daylight",
+        "Narrator struggles to wake Queequeg, who finally sits up",
+        "Queequeg dresses, putting on his hat and boots first",
+        "Queequeg shaves his face with his harpoon"
+      ],
+      "charactersPresent": [
+        "Queequeg"
+      ],
+      "setting": "A bedroom in a strange house",
+      "kind": "mixed",
+      "contentNotes": [
+        "Queequeg is a South Sea islander and is called a cannibal and savage in the text, reflecting outdated 19th-century attitudes"
+      ],
+      "index": 4,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator goes down to the bar-room and jokes pleasantly with the grinning landlord. The room fills with whalemen, each tanned to show how long he has been ashore. At breakfast the men sit silent and embarrassed, but Queequeg is cool as an icicle. He reaches across the table with his harpoon and pulls the beefsteaks toward him, eating them rare. Afterward he smokes his tomahawk-pipe in the public room, still wearing his hat. The narrator then goes out for a stroll.",
+      "keyEvents": [
+        "Narrator jokes with the landlord in the bar-room",
+        "Whalemen gather in the bar-room for breakfast",
+        "Men sit silent and embarrassed at the table",
+        "Queequeg uses his harpoon to grab beefsteaks",
+        "Queequeg smokes his pipe while the narrator goes out for a stroll"
+      ],
+      "charactersPresent": [
+        "Queequeg"
+      ],
+      "setting": "Inn bar-room and breakfast room",
+      "kind": "mixed",
+      "contentNotes": [
+        "Pipe smoking",
+        "Harpoon used carelessly at the breakfast table"
+      ],
+      "index": 5,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael walks through the streets of New Bedford and finds that the town is full of strange sights. He sees foreign sailors and cannibals standing on street corners, and he notices green country men from Vermont and New Hampshire who have just come to join the whale fishery. He describes these newcomers as comical, with their odd clothes and eager ideas. He also praises the town's rich houses, which he says were paid for by the whale oil trade. He ends by admiring the town's trees, flowers, and women.",
+      "keyEvents": [
+        "Ishmael takes his first daylight walk through New Bedford streets",
+        "He notices foreign sailors and cannibals at street corners",
+        "He observes green country recruits arriving for the whale fishery",
+        "He describes the wealthy houses built with whale oil money"
+      ],
+      "charactersPresent": [],
+      "setting": "The streets of New Bedford",
+      "kind": "essay",
+      "contentNotes": [],
+      "index": 6,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael went to the Whaleman's Chapel in New Bedford on a cold, stormy Sunday. Sailors, wives, and widows sat apart in silence. Marble tablets on the walls honored men lost at sea, including John Talbot, lost overboard, and Captain Ezekiel Hardy, killed by a whale. Queequeg, who could not read, was the only one who noticed Ishmael enter. Ishmael thought about the mystery of death. Then he grew cheerful again and said his body was not his true self, so a whaling death did not frighten him.",
+      "keyEvents": [
+        "Ishmael enters the chapel during a sleet storm",
+        "Reads memorial tablets for sailors lost at sea",
+        "Queequeg notices Ishmael's entrance",
+        "Reflects on death and the mysteries of the dead",
+        "Grows cheerful and cheers for Nantucket and the voyage"
+      ],
+      "charactersPresent": [
+        "Ishmael",
+        "Queequeg"
+      ],
+      "setting": "Whaleman's Chapel, New Bedford",
+      "kind": "mixed",
+      "contentNotes": [
+        "Several sailors die at sea, including a boy lost overboard",
+        "A captain is killed by a whale",
+        "A crew is towed out of sight by a whale",
+        "Discussion of death and widows' grief"
+      ],
+      "index": 7,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael enters a chapel in the snowy weather and sees Father Mapple, the chaplain, a former sailor and harpooneer. The congregation greets him warmly. He removes his wet hat and coat, then approaches the tall pulpit. The pulpit has no stairs, only a side ladder with red rope ropes, like a ship's ladder. Mapple climbs it sailor-style, then pulls the ladder up after him, shutting himself inside. Ishmael thinks this shows spiritual withdrawal. The wall behind the pulpit holds a painting of a ship in a storm, with an angel's face shining in the sunlight. The pulpit itself is shaped like a ship's bow, and Ishmael says the pulpit leads the world, like a ship's prow.",
+      "keyEvents": [
+        "Father Mapple enters the chapel in wet clothes",
+        "Mapple climbs the pulpit's side ladder like a sailor",
+        "Mapple pulls the ladder up and seals himself in the pulpit",
+        "Ishmael describes the painting of a storm-tossed ship and angel",
+        "Ishmael describes the pulpit as shaped like a ship's bow"
+      ],
+      "charactersPresent": [
+        "Father Mapple"
+      ],
+      "setting": "A chapel in New Bedford during a winter storm",
+      "kind": "essay",
+      "contentNotes": [],
+      "index": 8,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Father Mapple, a preacher, leads the congregation in a prayer and a hymn about Jonah and the whale. He then reads from the book of Jonah and preaches a sermon. He describes how Jonah fled from God by boarding a ship bound for Tarshish, paying his fare, and falling asleep in his cabin. A great storm hit the ship, and the sailors cast lots, which chose Jonah. They threw him overboard, and a whale swallowed him. Mapple says Jonah's repentance is a model for sinners. He tells the people that a preacher must speak hard truths. He ends by describing the joy of those who serve God, then kneels alone after the people leave.",
+      "keyEvents": [
+        "Father Mapple leads a prayer and a hymn",
+        "Mapple preaches on Jonah fleeing to Tarshish",
+        "Jonah pays his fare and sleeps in the ship's cabin",
+        "A storm hits and the lot falls on Jonah",
+        "Jonah is thrown into the sea and swallowed by a whale"
+      ],
+      "charactersPresent": [
+        "Father Mapple"
+      ],
+      "setting": "A whaling chapel",
+      "kind": "mixed",
+      "contentNotes": [
+        "Jonah is thrown into the sea and swallowed by a whale",
+        "Storm danger at sea",
+        "Mention of a drunken man, murder, and other crimes in a sailor's joke"
+      ],
+      "index": 9,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael returns to the Spouter-Inn from the Chapel and finds Queequeg alone by the fire, counting the pages of a big book and whistling in surprise at every fifty. Ishmael watches him and feels drawn to him despite his strange looks. They share a smoke from Queequeg's pipe, and Queequeg says they are now married, meaning bosom friends. He gives Ishmael half of his silver. Before bed, Queequeg prays to his idol, and Ishmael joins him in a small act of worship, reasoning that doing good to a fellow man is true worship. The two then lie in bed and talk.",
+      "keyEvents": [
+        "Ishmael finds Queequeg alone at the inn counting pages",
+        "Ishmael admires Queequeg's face and bearing",
+        "The two share a smoke and become friends",
+        "Queequeg gives Ishmael half his money",
+        "Ishmael joins Queequeg's idol worship before bed"
+      ],
+      "charactersPresent": [
+        "Ishmael",
+        "Queequeg"
+      ],
+      "setting": "The Spouter-Inn, a room by the fire",
+      "kind": "mixed",
+      "contentNotes": [
+        "Queequeg is described as a 'savage' and 'Pagan' in period language that some readers may find offensive",
+        "Ishmael takes part in pagan idol worship, which the text presents as a religious question",
+        "Use of tobacco (smoking)"
+      ],
+      "index": 10,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael and Queequeg lie in bed at midnight, chatting and napping. They sit up together under the blankets, since the room has no fire. Ishmael reflects on how warmth is felt by contrast with cold, and on why he likes keeping his eyes shut in bed. When he opens them, the dark room feels unpleasant. Queequeg suggests lighting a lamp so he can smoke his pipe, and Ishmael now enjoys sharing it. Queequeg then begins to tell the story of his native island.",
+      "keyEvents": [
+        "Ishmael and Queequeg lie in bed talking and napping",
+        "They sit up in bed to stay warm, with no fire in the room",
+        "Ishmael opens his eyes and feels the cold, dark room",
+        "Queequeg suggests a light and they pass his pipe as the lamp is lit",
+        "Queequeg begins to tell the story of his native island"
+      ],
+      "charactersPresent": [
+        "Ishmael",
+        "Queequeg"
+      ],
+      "setting": "bedroom at midnight in an inn",
+      "kind": "mixed",
+      "contentNotes": [
+        "Smoking a pipe in bed, with a lit lamp nearby"
+      ],
+      "index": 11,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael tells how Queequeg, a prince from the island of Rokovoko, wanted to see Christian lands. A Sag Harbor ship refused to take him, so he hid near a strait and grabbed the deck as it sailed past. The captain let him stay, and the crew made him a whaler. After seeing how sailors behaved in Sag Harbor and Nantucket, Queequeg felt that the world was wicked and said he would die a pagan. He planned to go to sea again. Ishmael said he would sail from Nantucket, and Queequeg agreed to go with him as a harpooneer. That night they smoked and fell asleep.",
+      "keyEvents": [
+        "Queequeg tries to get a ship to take him to Christian lands",
+        "He hides in the mangroves and jumps onto the passing ship",
+        "The captain lets him stay and he becomes a whaler",
+        "He decides Christians are wicked and plans to die a pagan",
+        "Queequeg agrees to sail with Ishmael from Nantucket"
+      ],
+      "charactersPresent": [
+        "Queequeg",
+        "Ishmael"
+      ],
+      "setting": "Ishmael's lodging, where the two men talk and smoke",
+      "kind": "mixed",
+      "contentNotes": [
+        "Mentions cannibalism as a past practice of Queequeg's people",
+        "Describes sailors' bad behavior in port, including spending wages"
+      ],
+      "index": 12,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "On Monday morning Ishmael settles the bill at the inn, using Queequeg's money, and the two friends wheel their belongings down to the Moss, a small schooner at the wharf. Queequeg tells two stories about wheelbarrows and a ship captain at a wedding feast in his homeland. As the schooner sails down the Acushnet river, a young passenger mocks Queequeg, who lifts him into the air and sets him down. The Captain threatens Queequeg, but then the boom breaks loose and nearly sweeps the deck. Queequeg ropes the boom and dives in to rescue the young man, who is pulled from the water alive. The Captain apologizes, and Ishmael becomes close to Queequeg from that day on.",
+      "keyEvents": [
+        "Ishmael settles the inn bill with Queequeg's money",
+        "The two friends wheel their belongings to the schooner Moss",
+        "Queequeg tells stories about a wheelbarrow and a captain at a wedding feast",
+        "A young passenger mocks Queequeg and is thrown into the air",
+        "The loose boom threatens the deck and Queequeg ropes it"
+      ],
+      "charactersPresent": [
+        "Ishmael",
+        "Queequeg",
+        "Captain"
+      ],
+      "setting": "New Bedford, then the Acushnet river aboard the schooner Moss",
+      "kind": "narrative",
+      "contentNotes": [
+        "A young passenger is nearly drowned and is revived",
+        "Queequeg throws a passenger into the air, causing injury risk",
+        "Racial stereotyping and slurs in dialogue about Queequeg",
+        "Broken speech of Queequeg reflects period racial caricature"
+      ],
+      "index": 13,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The ship makes a fine run and safely arrives at Nantucket. The narrator describes the island as a lonely sandy place, with jokes about its poor soil and its people. He then tells an old legend about how the island was first settled. The chapter goes on to praise the Nantucket people as sailors who rule the sea and spend most of their lives on it.",
+      "keyEvents": [
+        "Ship arrives safely at Nantucket after a fine run",
+        "Narrator describes the island as a sandy, lonely place",
+        "Legend of the eagle and the infant Indian is told",
+        "Nantucketers turn from the beach to whaling and sea voyages",
+        "Narrator says the Nantucketer rules the sea and lives on it"
+      ],
+      "charactersPresent": [],
+      "setting": "Nantucket island, at sea",
+      "kind": "essay",
+      "contentNotes": [
+        "An infant's death is implied in the legend of the eagle"
+      ],
+      "index": 14,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael and Queequeg arrive late at night at the Try Pots, an inn run by Mrs. Hussey in Nantucket. Its sign hangs from an old mast that looks like a gallows. Mrs. Hussey asks whether they want clam or cod, and the chowder is fishy and tasty. Ishmael tests her by asking for cod, and a cod chowder comes out. Mrs. Hussey takes Queequeg's harpoon because a former boarder, Stiggs, was found dead in his room with a harpoon in his side. She keeps the harpoon overnight, and the men order clam or cod for breakfast.",
+      "keyEvents": [
+        "Ishmael and Queequeg arrive late at the Try Pots",
+        "Ishmael sees the gallows-like sign and feels uneasy",
+        "Mrs. Hussey offers clam or cod for supper",
+        "Ishmael asks for cod and gets a cod chowder",
+        "Mrs. Hussey takes Queequeg's harpoon"
+      ],
+      "charactersPresent": [
+        "Ishmael",
+        "Queequeg",
+        "Mrs. Hussey"
+      ],
+      "setting": "The Try Pots inn, Nantucket",
+      "kind": "mixed",
+      "contentNotes": [
+        "A former boarder, Stiggs, was found dead with a harpoon in his side (mentioned, not shown)"
+      ],
+      "index": 15,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael goes to find a ship with Queequeg, who says his god Yojo wants Ishmael to choose the ship alone. Ishmael finds the Pequod, an old, strange whaling ship, and meets Captain Peleg in a wigwam on deck. Peleg questions him sharply and agrees to sign him on. In the cabin, Captain Bildad, Peleg's partner, sets Ishmael's share of the profits, the lay, at the 300th. They argue loudly, then calm down. Ishmael says Queequeg wants to ship too. Peleg tells him about Captain Ahab, who lost a leg to a whale, and warns him not to mock Ahab's name. Ishmael leaves uneasy about Ahab.",
+      "keyEvents": [
+        "Queequeg says Yojo wants Ishmael to choose the ship alone",
+        "Ishmael finds the Pequod and admires her old look",
+        "Peleg questions Ishmael and agrees to ship him",
+        "Bildad and Peleg argue over Ishmael's lay",
+        "Peleg warns Ishmael about Captain Ahab"
+      ],
+      "charactersPresent": [
+        "Ishmael",
+        "Queequeg",
+        "Captain Peleg",
+        "Captain Bildad"
+      ],
+      "setting": "Nantucket harbor, the Pequod and her cabin",
+      "kind": "mixed",
+      "contentNotes": [
+        "Heated argument between Peleg and Bildad, with threats of violence",
+        "Peleg mentions Ahab's lost leg from a whale attack",
+        "Mild religious and cultural language about Quakers and Ramadan"
+      ],
+      "index": 16,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael goes to Queequeg's room in the evening and finds the door locked. Queequeg does not answer. Ishmael grows alarmed and runs for help, and the landlady Mrs. Hussey and the chamber-maid join him. When they break the door open, Queequeg is sitting on his hams, holding Yojo on his head, and will not speak or move. Ishmael leaves him there overnight, covers him with his bearskin jacket, and sleeps poorly. At dawn Queequeg stands up and says his Ramadan is over. Ishmael lectures him about religion, but Queequeg seems unmoved. They then eat a large breakfast and head out to board the Pequod.",
+      "keyEvents": [
+        "Ishmael knocks on Queequeg's locked door and gets no answer",
+        "Ishmael and the chamber-maid alarm Mrs. Hussey",
+        "Door is forced open and Queequeg is found sitting motionless",
+        "Ishmael covers Queequeg with his jacket and goes to bed",
+        "At dawn Queequeg says his Ramadan is over"
+      ],
+      "charactersPresent": [
+        "Ishmael",
+        "Queequeg",
+        "Mrs. Hussey",
+        "Betty"
+      ],
+      "setting": "Inn where Ishmael and Queequeg lodge, then the streets toward the Pequod",
+      "kind": "mixed",
+      "contentNotes": [
+        "Ishmael fears Queequeg has had a stroke or killed himself, and the landlady mentions suicide",
+        "Queequeg sits motionless for many hours without food",
+        "Mention of cannibalism: a sailor's account of a island custom of eating slain enemies after battle"
+      ],
+      "index": 17,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "As the narrator walked toward the ship with Queequeg, Captain Peleg refused to let a cannibal aboard without papers. Captain Bildad questioned Queequeg about his church. The narrator claimed Queequeg was a member of the First Congregational Church. To prove his skill, Queequeg threw his harpoon across the deck and struck a spot of tar on the water. Peleg enrolled him in the crew. Queequeg signed with a tattooed mark. Bildad gave him a tract and warned him about hell. Then Peleg argued that pious harpooneers make poor whalers.",
+      "keyEvents": [
+        "Peleg refuses to let Queequeg board without papers",
+        "Bildad questions Queequeg about his church",
+        "Queequeg hits a tar spot with his harpoon",
+        "Queequeg signs the ship's papers with his tattoo mark",
+        "Bildad gives Queequeg a tract and warns him about hell"
+      ],
+      "charactersPresent": [
+        "Queequeg",
+        "Captain Peleg",
+        "Captain Bildad"
+      ],
+      "setting": "Nantucket wharf and the ship's deck and cabin",
+      "kind": "narrative",
+      "contentNotes": [
+        "Characters use slurs such as cannibal, savage, and Philistine for Queequeg",
+        "Bildad warns of hell and the fiery pit",
+        "Peleg mentions a former sailor who went to Davy Jones (a death reference)"
+      ],
+      "index": 18,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael and Queequeg leave the Pequod and walk along the waterfront. A ragged stranger with a scarred face stops them and asks whether they have signed on. He talks strangely about Captain Ahab, mentioning the lost leg, a fight long ago, and a silver calabash, but he will not explain. He gives his name as Elijah. Ishmael decides he is a humbug, but when Ishmael turns a corner he sees Elijah following them. Ishmael tests this by crossing the street, and Elijah walks past without looking at them. Ishmael again decides Elijah is a humbug.",
+      "keyEvents": [
+        "Elijah stops Ishmael and Queequeg and asks if they have shipped on the Pequod",
+        "Elijah hints at dark secrets about Captain Ahab and gives his name",
+        "Ishmael sees Elijah following them",
+        "Ishmael crosses the street to test him, and Elijah walks past",
+        "Ishmael again decides Elijah is a humbug"
+      ],
+      "charactersPresent": [
+        "Ishmael",
+        "Queequeg",
+        "Elijah"
+      ],
+      "setting": "Waterfront streets near the Pequod, Nantucket",
+      "kind": "narrative",
+      "contentNotes": [
+        "Mentions a sailor's lost leg and a past fight that nearly killed Ahab",
+        "Elijah's talk is strange and unsettling, with hints of doom"
+      ],
+      "index": 19,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Over a day or two, the crew of the Pequod made many last preparations. New sails, rope, and supplies came aboard, and the men worked late into the night. Aunt Charity, Captain Bildad's sister, brought many useful things to the ship. Captain Peleg shouted orders from his wigwam, and Bildad checked items off his list. Queequeg and the narrator visited often and asked about Captain Ahab. They were told he was getting better and would come aboard soon. At last, they learned the ship would sail the next day, so they set out very early.",
+      "keyEvents": [
+        "Pequod receives sails, rigging, and stores before sailing",
+        "Aunt Charity brings supplies to the ship",
+        "Queequeg and the narrator visit and ask about Ahab, who is said to be recovering",
+        "News comes that the ship will sail next day, and the two set out early"
+      ],
+      "charactersPresent": [
+        "Peleg",
+        "Bildad",
+        "Aunt Charity",
+        "Queequeg"
+      ],
+      "setting": "The Pequod and the Island, where the ship is being readied",
+      "kind": "mixed",
+      "contentNotes": [],
+      "index": 20,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "At dawn, the narrator and Queequeg walked toward the Pequod. On the wharf, a strange man named Elijah stopped them with odd questions and warnings, then walked away. On board, the ship was quiet, and they found an old rigger asleep in the forecastle. Queequeg sat on the sleeper and smoked his tomahawk pipe, which woke the man. The rigger said Captain Ahab had come aboard the night before and that the ship would sail that day. Soon the crew arrived, but Ahab stayed hidden in his cabin.",
+      "keyEvents": [
+        "Elijah stops the narrator and Queequeg on the wharf and asks strange questions",
+        "They board the Pequod and find an old rigger asleep in the forecastle",
+        "Queequeg sits on the sleeper and smokes his tomahawk pipe",
+        "The rigger wakes and says the ship sails today and Ahab came aboard last night",
+        "The crew and shore people arrive at sunrise while Ahab stays in his cabin"
+      ],
+      "charactersPresent": [
+        "Queequeg",
+        "Elijah"
+      ],
+      "setting": "New Bedford wharf and the forecastle of the Pequod at dawn",
+      "kind": "narrative",
+      "contentNotes": [
+        "Elijah makes cryptic, unsettling remarks",
+        "Queequeg jokingly waves a tomahawk over a sleeping man and says it would be easy to kill him",
+        "Pipe smoking in a closed space",
+        "Queequeg describes a custom of fattening people to use as furniture"
+      ],
+      "index": 21,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "On Christmas, after the crew finished their last jobs, the Pequod left port. Captain Peleg and Captain Bildad gave the orders, and Captain Ahab stayed below in the cabin, saying he was not yet fully recovered. Peleg shouted and kicked the sailors at the windlass while Bildad sang hymns. Once the anchor was up and the ship was out at sea, Bildad sang a hymn as pilot. The two captains then left the ship in a boat, Bildad sad to go. The crew gave three cheers as the ship sailed into the Atlantic.",
+      "keyEvents": [
+        "Pequod hauled out from the wharf and prepared to sail",
+        "Peleg orders crew to raise the anchor while Bildad sings",
+        "Ship sets sail on a cold Christmas night",
+        "Bildad sings a hymn while steering as pilot",
+        "Peleg and Bildad leave the ship by boat"
+      ],
+      "charactersPresent": [
+        "Peleg",
+        "Bildad",
+        "Starbuck",
+        "Ahab",
+        "Queequeg",
+        "Stubb",
+        "Flask",
+        "Charity"
+      ],
+      "setting": "The Pequod, leaving port and sailing into the Atlantic",
+      "kind": "narrative",
+      "contentNotes": [
+        "Peleg uses harsh language and swearing",
+        "Peleg kicks a sailor"
+      ],
+      "index": 22,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "On a freezing winter night, the Pequod sailed out to sea. The narrator saw Bulkington standing at her helm. Bulkington had just come home from a four-year voyage, yet he set out again at once. The narrator watched him with awe and fear. He compared Bulkington to a storm-tossed ship that must keep away from the shore, even though the harbor offered safety. The narrator said that deep thinking is the soul's effort to stay free on the open sea. He urged Bulkington to bear up and rise from the spray.",
+      "keyEvents": [
+        "Pequod sails out on a winter night",
+        "Narrator sees Bulkington at the helm",
+        "Narrator compares Bulkington to a ship avoiding the lee shore",
+        "Narrator urges Bulkington to endure"
+      ],
+      "charactersPresent": [
+        "Bulkington"
+      ],
+      "setting": "Aboard the Pequod at sea, leaving port in winter",
+      "kind": "essay",
+      "contentNotes": [],
+      "index": 23,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator defended whaling against landsmen who looked down on it. He said whalemen were butchers, but so were famous military commanders. He argued that whaling had opened remote lands, helped free Peru, Chili, and Bolivia, and shaped Australia and Polynesia. He pointed to royal honors, famous writers, and Benjamin Franklin's family as proof of its dignity. He ended by saying the whale-ship had been his true college.",
+      "keyEvents": [
+        "Narrator defends whaling against landsmen's low opinion",
+        "Argues whaling is as bloody as military conquest but more useful",
+        "Lists whaling's influence on exploration, trade, and freedom in South America",
+        "Cites royal honors, famous writers, and Franklin's family as signs of whaling's dignity",
+        "Declares the whale-ship was his true education"
+      ],
+      "charactersPresent": [],
+      "setting": "No specific setting; general discussion of whaling",
+      "kind": "essay",
+      "contentNotes": [
+        "Discusses the killing and butchering of whales in general terms",
+        "Brief references to battlefield carnage and soldiers' deaths"
+      ],
+      "index": 24,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator defends the dignity of whaling by arguing that a king's coronation oil must be sperm oil. He jokes about the oiling of a king's head and the seasoning of rulers with salt. He calls on loyal Britons to think of whalemen as suppliers of coronation oil. Nothing happens in the chapter except this argument.",
+      "keyEvents": [
+        "Narrator defends whaling's dignity with a suspicion about royal oil",
+        "Narrator jokes about the salt and oiling used at coronations",
+        "Narrator concludes that sperm oil must be the coronation oil"
+      ],
+      "charactersPresent": [],
+      "setting": "Unspecified; the narrator's essay addresses readers",
+      "kind": "essay",
+      "contentNotes": [],
+      "index": 25,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator described Starbuck, the chief mate of the Pequod. Starbuck was a Nantucket man of Quaker descent, thin, hard, and steady. He had a deep reverence and leaned toward superstition. Memories of his wife and child softened his rough nature. Starbuck said he wanted no man in his boat who was not afraid of a whale. Stubb, the second mate, called Starbuck careful. The narrator then praised the dignity of common workers and asked God to support his writing about them.",
+      "keyEvents": [
+        "Starbuck is introduced as chief mate",
+        "Starbuck says he wants no man in his boat who is not afraid of a whale",
+        "Stubb calls Starbuck careful",
+        "Narrator praises the dignity of common workers"
+      ],
+      "charactersPresent": [
+        "Starbuck",
+        "Stubb"
+      ],
+      "setting": "aboard the Pequod",
+      "kind": "essay",
+      "contentNotes": [
+        "Men killed by whales are mentioned",
+        "Starbuck's father and brother are lost at sea"
+      ],
+      "index": 26,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator introduced the Pequod's three mates: Stubb, Flask, and Starbuck. Stubb, a Cape Cod man, was easygoing and seemed unafraid, and he smoked his pipe constantly. Flask, a short, ruddy man from Tisbury, was pugnacious and eager to kill whales. Each mate had a harpooneer as his squire, including Queequeg, Tashtego, and Daggoo. The narrator then described the crew, many of whom were not American-born, and called such men Isolatoes. The chapter ends by recalling Pip, who went before.",
+      "keyEvents": [
+        "Stubb's easygoing nature and pipe-smoking described",
+        "Flask's hostility toward whales described",
+        "Harpooneers named as squires to the mates",
+        "Crew's mixed origins described",
+        "Pip's fate recalled"
+      ],
+      "charactersPresent": [],
+      "setting": "Aboard the Pequod",
+      "kind": "essay",
+      "contentNotes": [
+        "References to death, including Pip's implied death",
+        "Mention of cholera and disease"
+      ],
+      "index": 27,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "After the Pequod leaves Nantucket, the narrator watches for Captain Ahab, who stays hidden in his cabin while the mates run the ship. When Ahab finally comes on deck, the narrator sees his scarred face and bone leg. Ahab stands fixed in an auger hole, staring ahead with a look of deep woe. Each day he appears more often as the weather warms. Slowly, the mild spring air seems to soften his gloomy mood, and he almost smiles.",
+      "keyEvents": [
+        "Ahab stays hidden in his cabin after the ship leaves Nantucket",
+        "Ahab first appears on the quarter-deck on a gray morning",
+        "The narrator describes Ahab's white scar and ivory leg",
+        "Ahab stands fixed in an auger hole, staring out to sea",
+        "Ahab appears more often as the weather warms and nearly smiles"
+      ],
+      "charactersPresent": [
+        "Captain Ahab",
+        "Elijah",
+        "Tashtego's senior",
+        "Ahab's mates"
+      ],
+      "setting": "Aboard the Pequod, at sea after leaving Nantucket",
+      "kind": "mixed",
+      "contentNotes": [
+        "Ahab's leg is described as made from sperm whale jawbone",
+        "Mentions of a superstitious claim that Ahab was branded in a sea strife"
+      ],
+      "index": 28,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Days pass as the Pequod sails through warm, clear weather near the Tropic. Ahab, who rarely sleeps, comes up at night and paces the deck. His heavy ivory heel is loud, so Stubb suggests muffling it. Ahab angrily calls Stubb a dog and orders him below. Stubb is shaken and does not know what to make of the old captain. He goes back to his hammock and decides to sleep on it, thinking Ahab must be troubled by something.",
+      "keyEvents": [
+        "Pequod sails through calm, warm weather",
+        "Ahab paces the deck at night",
+        "Stubb suggests muffling Ahab's ivory heel",
+        "Ahab angrily calls Stubb a dog and orders him below",
+        "Stubb goes to his hammock, puzzled and shaken"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Stubb"
+      ],
+      "setting": "Deck and cabin of the Pequod at night",
+      "kind": "mixed",
+      "contentNotes": [
+        "Ahab angrily insults Stubb and threatens to clear the world of him",
+        "Mild drinking-free; mentions of sharks in passing"
+      ],
+      "index": 29,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ahab sits on his ivory stool on the weather side of the deck and smokes his pipe. He thinks about kings and royalty as he looks at himself. He starts to feel that smoking no longer brings him comfort. He says his pipe is meant for calm old men, not for a man with grey hair like his. He throws the lit pipe into the sea and paces the deck with his hat pulled low.",
+      "keyEvents": [
+        "Ahab sends for his ivory stool and pipe",
+        "Ahab smokes on the weather side of the deck",
+        "Ahab decides smoking no longer soothes him",
+        "Ahab throws his lit pipe into the sea",
+        "Ahab paces the planks with his hat slouched"
+      ],
+      "charactersPresent": [
+        "Ahab"
+      ],
+      "setting": "Deck of the Pequod",
+      "kind": "mixed",
+      "contentNotes": [],
+      "index": 30,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Stubb tells Flask about a strange dream he had. In the dream he kicked at Ahab's pyramid, and a humpbacked merman told him that being kicked by Ahab was an honor and that he should never kick back. Stubb says the dream made him wise. Then a voice from the masthead calls out that whales are nearby, and a white one should be hunted. Stubb says something special is in the wind, and Ahab comes near.",
+      "keyEvents": [
+        "Stubb tells Flask about his dream of kicking Ahab's pyramid",
+        "Merman in the dream calls Stubb wise and says to accept Ahab's kicks as honors",
+        "Masthead cry announces whales nearby, including a white one",
+        "Stubb warns Flask that Ahab has something bloody on his mind",
+        "Ahab approaches"
+      ],
+      "charactersPresent": [
+        "Stubb",
+        "Flask",
+        "Ahab"
+      ],
+      "setting": "Aboard the Pequod, on deck",
+      "kind": "mixed",
+      "contentNotes": [
+        "Ahab's ivory leg kick is mentioned as an insult",
+        "Dream imagery of a kicked leg and a merman with marlinspikes in his stern"
+      ],
+      "index": 31,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator offers a rough system for sorting whales. He begins by noting how little real knowledge exists, and lists many earlier writers on whales. He argues that the whale is a fish, using his own definition: a spouting fish with a horizontal tail. He then divides whales into three groups by size: Folio, Octavo, and Duodecimo. Each group is described, with notes on the Sperm Whale, Right Whale, Grampus, Narwhale, Huzza Porpoise, and others. He admits his system is unfinished and says he is only sketching a draft.",
+      "keyEvents": [
+        "Narrator begins describing the study of whales",
+        "Narrator defines a whale as a spouting fish with a horizontal tail",
+        "Narrator divides whales into Folio, Octavo, and Duodecimo groups",
+        "Narrator describes the Sperm Whale and other Folio whales",
+        "Narrator describes Octavo and Duodecimo whales"
+      ],
+      "charactersPresent": [
+        "Charley Coffin",
+        "Simeon Macey",
+        "Captain Scoresby",
+        "Linnæus"
+      ],
+      "setting": "Narrator's writing about whales, aboard or near the Pequod",
+      "kind": "essay",
+      "contentNotes": [
+        "Killer whales are described as attacking and worrying larger whales to death",
+        "Porpoise and whale oil are described as valued commodities"
+      ],
+      "index": 32,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator explained a custom on whaling ships. Long ago in the old Dutch whale fishery, the Specksnyder, or chief harpooneer, shared command of the ship and ruled the whale hunt. Later he became a lower officer, but he still ate and slept apart from the crew. The narrator noted that officers kept strict rules of rank at sea. He then turned to Captain Ahab, who used these forms to hide his private wishes and gain power over his men. He called Ahab a grand but rough old whale-hunter.",
+      "keyEvents": [
+        "Narrator explains the history of the Specksnyder, or chief harpooneer",
+        "Narrator describes how harpooneers live apart from the crew",
+        "Narrator explains the strict rules of rank on ships",
+        "Narrator reflects on how Captain Ahab used those forms for power"
+      ],
+      "charactersPresent": [],
+      "setting": "Whaling ships in general, no single scene",
+      "kind": "essay",
+      "contentNotes": [],
+      "index": 33,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "At noon, Dough-Boy, the steward, called the officers to dinner. Ahab went down first, then Starbuck, Stubb, and Flask. Flask danced a hornpipe before he went below. At Ahab's table, the officers stayed quiet and nervous, and Flask was always hungry. Later the harpooneers, Queequeg, Tashtego, and Daggoo, ate loudly in the cabin and frightened poor Dough-Boy. The chapter ends with a reflection on Ahab, who lived alone in his gloom like a bear in winter.",
+      "keyEvents": [
+        "Dough-Boy announces dinner to Ahab",
+        "Starbuck, Stubb, and Flask go down to dinner in turn",
+        "Flask dances a hornpipe on the quarter-deck",
+        "Officers sit silently at Ahab's table",
+        "Harpooneers eat loudly and frighten Dough-Boy"
+      ],
+      "charactersPresent": [
+        "Dough-Boy",
+        "Ahab",
+        "Starbuck",
+        "Stubb",
+        "Flask",
+        "Queequeg",
+        "Tashtego",
+        "Daggoo"
+      ],
+      "setting": "The Pequod's deck and cabin",
+      "kind": "mixed",
+      "contentNotes": [
+        "Tashtego threatens to scalp Dough-Boy as a joke; Daggoo stuffs Dough-Boy's head into a trencher",
+        "Cannibalism is joked about (Queequeg's past, Dough-Boy as a waiter to cannibals)",
+        "A rat makes noise in the hold"
+      ],
+      "index": 34,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator gets his first turn at the mast-head, the high lookout post on a whaling ship. He explains that the custom is very old and tells of ancient and modern figures who stood high places. He describes the mast-head as a lonely, sleepy place with little comfort. He praises Captain Sleet's crow's-nest on the Glacier, a shelter used by Greenland whalers. He admits he did not keep careful watch, since his mind wandered. He warns ship-owners against dreamy young men who gaze at the sea and forget to look for whales.",
+      "keyEvents": [
+        "Narrator's first mast-head turn comes around",
+        "Narrator lists ancient and modern figures who stood high places",
+        "Narrator describes the discomfort of the southern whaler's mast-head",
+        "Narrator praises Captain Sleet's crow's-nest",
+        "Narrator admits he kept poor watch and warns against dreamy young men"
+      ],
+      "charactersPresent": [
+        "Queequeg"
+      ],
+      "setting": "Whaling ship at sea, in the tropics",
+      "kind": "essay",
+      "contentNotes": [
+        "Mentions a man who dies at his post (Saint Stylites, historical)",
+        "Ends with a warning of a drowning fall from the mast-head and a figure who loses his identity"
+      ],
+      "index": 35,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "One morning after breakfast, Ahab walks the deck and then calls the whole crew aft. He asks what they do when they see a whale, and the men shout eager answers. He nails a gold ounce to the mainmast as a reward for whoever first spots the white whale with a wrinkled brow, crooked jaw, and three holes in its starboard fluke. Tashtego, Daggoo, and Queequeg say they know the whale as Moby Dick. Ahab admits Moby Dick took his leg and swears to chase it anywhere. Starbuck objects that vengeance on a dumb animal is madness, but Ahab pulls him in. Ahab then has the harpooneers and mates drink grog and swear an oath to hunt Moby Dick to his death.",
+      "keyEvents": [
+        "Ahab calls the entire crew aft",
+        "Ahab asks the crew what they do when they see a whale",
+        "Ahab nails a gold ounce to the mainmast as a reward",
+        "Tashtego, Daggoo, and Queequeg identify the whale as Moby Dick",
+        "Ahab swears revenge; Starbuck objects and is pressured into silence"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Stubb",
+        "Flask",
+        "Starbuck",
+        "Tashtego",
+        "Daggoo",
+        "Queequeg"
+      ],
+      "setting": "The quarter-deck of the Pequod",
+      "kind": "narrative",
+      "contentNotes": [
+        "Ahab's obsessive vengeance against the whale, which took his leg",
+        "Heavy drinking of grog by the crew",
+        "A ritual oath of death to Moby Dick, with harpoon-socket goblets of liquor"
+      ],
+      "index": 36,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ahab sat alone in the cabin and watched the sun set. He felt weighed down by pain and anger, like a heavy iron crown. He said sunset no longer brought him joy, and that he was cursed even amid beauty. He vowed that he would not be turned aside. He said he would take revenge on the one that cost him his leg. He spoke of his purpose as an iron track that nothing could block.",
+      "keyEvents": [
+        "Ahab sits alone in the cabin watching the sunset",
+        "He describes his heavy iron crown and his inner pain",
+        "He says beauty brings him only anguish",
+        "He vows to dismember his dismemberer",
+        "He declares his purpose cannot be swerved"
+      ],
+      "charactersPresent": [
+        "Ahab"
+      ],
+      "setting": "ship's cabin by the stern windows",
+      "kind": "essay",
+      "contentNotes": [
+        "Ahab speaks of his lost leg and seeks revenge",
+        "Ahab describes himself as mad and damned, with despair"
+      ],
+      "index": 37,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Starbuck leaned against the mainmast and spoke alone. He said Ahab, the mad captain, had overpowered his reason and tied him to a hunt for the white whale. He felt trapped, like a man bound by a cable he had no knife to cut. Revelry burst from the forecastle while Ahab brooded in his cabin. Starbuck felt the horror of life within him, but he called on blessed influences to hold and help him fight his grim fears.",
+      "keyEvents": [
+        "Starbuck leans against the mainmast and speaks alone",
+        "He complains that Ahab has overpowered his reason",
+        "Revelry bursts from the forecastle",
+        "He calls on blessed influences to help him fight his fears"
+      ],
+      "charactersPresent": [
+        "Starbuck"
+      ],
+      "setting": "Ship's deck by the mainmast",
+      "kind": "essay",
+      "contentNotes": [
+        "Dark mood of despair and dread",
+        "References to a 'heathen crew' and 'infernal orgies'"
+      ],
+      "index": 38,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Stubb sat alone in the fore-top, mending a brace. He laughed loudly and sang a drinking song about love and bubbles. He said he felt cheerful and would face whatever came with a laugh. He thought Starbuck looked troubled after some talk, and he believed Starbuck's fate was already settled. Then Starbuck called him, and Stubb answered that he was just finishing his job and was on his way.",
+      "keyEvents": [
+        "Stubb mends a brace alone in the fore-top",
+        "He laughs and sings a drinking song",
+        "He muses that Starbuck looks troubled",
+        "Starbuck calls him and he answers he is coming"
+      ],
+      "charactersPresent": [
+        "Stubb",
+        "Starbuck"
+      ],
+      "setting": "The fore-top of the ship",
+      "kind": "mixed",
+      "contentNotes": [],
+      "index": 39,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "At midnight the sailors on the forecastle sang and danced while Pip played a tambourine. The sky darkened and the wind rose. Some men kept dancing, some went below, and some lay down to sleep. The Spanish sailor and the harpooneer Daggoo insulted each other, and a fight almost broke out. Then a squall struck the ship. The mate called the crew to reef the sails, and the men scattered to their work. Pip, hiding under the windlass, prayed for mercy and spoke fearfully of the white whale.",
+      "keyEvents": [
+        "Sailors sing and dance on the forecastle",
+        "Sky darkens and wind rises",
+        "Spanish sailor and Daggoo insult each other and nearly fight",
+        "Squall hits and crew scatters to reef sails",
+        "Pip hides and prays, fearing the white whale"
+      ],
+      "charactersPresent": [
+        "Pip",
+        "Daggoo",
+        "Tashtego"
+      ],
+      "setting": "Ship's forecastle at midnight",
+      "kind": "narrative",
+      "contentNotes": [
+        "Racial insults between Daggoo and the Spanish sailor",
+        "Near fight with a knife mentioned",
+        "Drinking of wine",
+        "Swearing and oaths",
+        "Dangerous squall at sea"
+      ],
+      "index": 40,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael, one of the crew, describes the history of the White Whale, Moby Dick. Few whalemen had fought him, and rumors grew wild, so many hunters feared him. Stories said he was ubiquitous and nearly immortal. His white forehead and hump made him easy to spot, and his tricks made him more terrifying. In one fight, Moby Dick bit off Ahab's leg. Ahab then became mad with hate for the whale. On the voyage home he raved in his hammock and was tied down. Later he hid his rage and sailed again with one aim: revenge on the White Whale. Ishmael ends by saying he too was swept up in the mood and saw only evil in the whale.",
+      "keyEvents": [
+        "Moby Dick's history and rumors spread among whalemen",
+        "Moby Dick bites off Ahab's leg during a boat battle",
+        "Ahab's madness grows during the homeward voyage",
+        "Ahab hides his madness and sails again to hunt the White Whale"
+      ],
+      "charactersPresent": [
+        "Ishmael",
+        "Ahab"
+      ],
+      "setting": "Whaling grounds at sea and the Pequod's crew, with Nantucket recalled",
+      "kind": "essay",
+      "contentNotes": [
+        "Ahab loses a leg in an attack by the whale",
+        "Several whalemen are killed or maimed by the whale in past encounters",
+        "Ahab is described as raving and tied into his hammock during delirium"
+      ],
+      "index": 41,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael explains the strange horror that the whiteness of the whale caused him. He lists many cultures where white meant purity, honor, or royalty. Yet whiteness also made polar bears, white sharks, and ghosts seem more terrifying. He remembered an albatross on a ship's deck and a captain who hooked one, tagged it, and let it go. He described the White Steed of the Prairies and the ruined city of Lima. He suggested that whiteness stands for the empty, deathlike universe. The Albino whale, he said, was the symbol of all these things.",
+      "keyEvents": [
+        "Narrator sees an albatross on the ship's deck during a gale",
+        "Captain catches an albatross with a hook, ties a tally to it, and releases it",
+        "Narrator argues that whiteness makes certain creatures and sights more frightening"
+      ],
+      "charactersPresent": [
+        "Ishmael"
+      ],
+      "setting": "At sea, with examples from around the world",
+      "kind": "essay",
+      "contentNotes": [
+        "A bird is caught on a hook and line",
+        "Mention of a historical murder by the White Hoods of Ghent",
+        "References to death, ghosts, and corpses"
+      ],
+      "index": 42,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "During the middle watch, under a fair moonlight, sailors pass buckets of water in silence to fill the scuttle-butt. Archy hears a noise under the after-hatches and thinks it sounds like a cough and sleepers turning over. His neighbor Cabaco doubts him and says it is only the biscuits he ate for supper. Archy insists he has sharp ears. He suspects someone hidden in the after-hold has never been seen on deck, and he thinks Captain Ahab knows about it. He recalls Stubb saying something of that sort was in the wind.",
+      "keyEvents": [
+        "Archy hears a noise under the after-hatches during the middle watch",
+        "Cabaco brushes off the noise and tells Archy to keep working",
+        "Archy insists he has sharp ears",
+        "Archy suspects someone unseen is hidden in the after-hold"
+      ],
+      "charactersPresent": [
+        "Archy",
+        "Cabaco"
+      ],
+      "setting": "Deck of the Pequod at night, middle watch",
+      "kind": "narrative",
+      "contentNotes": [],
+      "index": 43,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "After a squall, Ahab goes to his cabin and studies old sea charts spread on his table. He marks courses using old logbooks that record where sperm whales were seen. He believes the whale hunters' knowledge of whale migrations can help him find Moby Dick. He knows Moby Dick has returned to the same waters for several years, called the Season-on-the-Line. The Pequod sailed too early to reach those waters this year, so Ahab must wait a full year. He hunts in other seas during that time. Ahab's obsession keeps him awake and haunted. At night he bursts from his room in horror, and the narrator describes his tormented mind as a separate force within him.",
+      "keyEvents": [
+        "Ahab studies charts in his cabin after the squall",
+        "Ahab reasons about whale migrations and Moby Dick's habits",
+        "Ahab realizes the Pequod must wait a year for the Season-on-the-Line",
+        "Ahab is tormented by dreams and bursts from his room in horror"
+      ],
+      "charactersPresent": [
+        "Ahab"
+      ],
+      "setting": "Ahab's cabin aboard the Pequod",
+      "kind": "essay",
+      "contentNotes": [
+        "Obsessive revenge theme",
+        "Mention of Ahab's bloody nails in his palms from clenched hands",
+        "Disturbing dream and psychological torment imagery"
+      ],
+      "index": 44,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael argues that sperm whales are powerful and clever enough to attack and sink ships. He tells of a whale that struck and destroyed a few whale hunters' ships. He describes a whale that returned to find a harpooned hunter three years later and killed him. He also tells of a sea monster in the Propontis that destroyed ships for more than fifty years. He gives these stories to show that the story of Moby Dick is believable.",
+      "keyEvents": [
+        "Ishmael describes a whale that escaped and was killed three years later by the same harpooner",
+        "Ishmael names famous whales such as Timor Tom and Don Miguel",
+        "The Essex is rammed and sunk by a sperm whale in 1820",
+        "Commodore J—— is struck by a whale and forced to repair his ship",
+        "Ishmael cites Langsdorff and Lionel Wafer's accounts of whale strikes"
+      ],
+      "charactersPresent": [
+        "Captain Pollard",
+        "Owen Chace",
+        "Captain D'Wolf",
+        "Captain Davis"
+      ],
+      "setting": "Essay on whaling history, with stories from the Pacific, the Azores, and Constantinople",
+      "kind": "essay",
+      "contentNotes": [
+        "Ships are sunk and sailors die at sea",
+        "Whale attacks and deaths during whaling are described"
+      ],
+      "index": 45,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ahab thought about why he must keep the Pequod's ordinary whaling work going while he hunts Moby Dick. He feared Starbuck secretly opposed the quest and might rebel. He believed the crew needed daily tasks and some hope of money to stay loyal. Ahab also worried that others might call his command unfair, since he had already revealed his true purpose. So he chose to act like an eager whaling captain. His voice was heard calling the three mast-heads to keep a sharp lookout, even for a porpoise. Soon, their watching was rewarded.",
+      "keyEvents": [
+        "Ahab reasons he must keep ordinary whaling work going",
+        "Ahab worries about crew unrest and Starbuck's possible rebellion",
+        "Ahab orders the three mast-heads to keep a sharp lookout",
+        "The lookout is soon rewarded"
+      ],
+      "charactersPresent": [
+        "Ahab"
+      ],
+      "setting": "Aboard the Pequod at sea",
+      "kind": "essay",
+      "contentNotes": [],
+      "index": 46,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "On a cloudy afternoon, Ishmael and Queequeg weave a sword-mat on the deck while the crew rests. Ishmael thinks about fate, chance, and free will as he works. Tashtego, high in the cross-trees, shouts that he sees whales blowing off the lee-beam. The crew gets excited and the ship turns toward the whales. Ahab orders the time kept, and the boats are lowered over the side. Just as the boats are ready, Ahab appears with five dark figures who seem to have come out of the air.",
+      "keyEvents": [
+        "Ishmael and Queequeg weave a sword-mat on a still afternoon",
+        "Ishmael reflects on fate, chance, and free will",
+        "Tashtego spots whales from the cross-trees",
+        "Ahab times the whales and the ship turns toward them",
+        "Boats are lowered over the sea"
+      ],
+      "charactersPresent": [
+        "Ishmael",
+        "Queequeg",
+        "Tashtego",
+        "Ahab",
+        "Dough-Boy"
+      ],
+      "setting": "Whaling ship at sea, deck and cross-trees",
+      "kind": "mixed",
+      "contentNotes": [],
+      "index": 47,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ahab orders the boats lowered from the Pequod, and the strange crew of Fedallah, with their yellow-skinned companions, joins the chase. Starbuck, Stubb, and Flask spread out across the sea while Stubb urges his crew with loud, odd shouts. The boats close in on a school of whales. Queequeg darts his harpoon, but the whale escapes, and a squall strikes. Starbuck lights a lantern and hands it to Queequeg. At dawn the narrator and the crew leap into the sea as the ship comes near. They are picked up and taken safely back on board.",
+      "keyEvents": [
+        "Ahab orders the boats lowered and the strange crew joins them",
+        "Ahab and the boats spread out to search for whales",
+        "Whales are sighted and the boats give chase",
+        "Queequeg's harpoon grazes the whale, which escapes",
+        "A squall swamps the boat and the crew is scattered"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Fedallah",
+        "Starbuck",
+        "Stubb",
+        "Flask",
+        "Archy",
+        "Daggoo",
+        "Tashtego",
+        "Queequeg"
+      ],
+      "setting": "the open sea near the Pequod",
+      "kind": "narrative",
+      "contentNotes": [
+        "the crew is nearly drowned in a squall",
+        "a whale is harpooned"
+      ],
+      "index": 48,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "After a boat is capsized in a squall near a whale, the narrator feels a strange, carefree mood about the dangers of whaling. He asks Queequeg, Mr. Stubb, and Mr. Flask about the risks. Stubb and Flask answer that such accidents are common and that the boat's steering is blamed on Starbuck, who drove toward the whale in a storm. The narrator decides to make a rough draft of his will. Queequeg is asked to act as his lawyer, executor, and legatee. The narrator feels relieved after finishing the will and accepts the dangers ahead.",
+      "keyEvents": [
+        "Narrator is pulled from the water after the boat capsizes",
+        "Narrator asks Stubb and Flask about the risks of whaling",
+        "Narrator decides to draft his will",
+        "Narrator names Queequeg as lawyer, executor, and legatee",
+        "Narrator feels relieved and ready to face danger"
+      ],
+      "charactersPresent": [
+        "Ishmael",
+        "Queequeg",
+        "Stubb",
+        "Flask",
+        "Starbuck"
+      ],
+      "setting": "The sea near a whale during a squall, then below deck",
+      "kind": "mixed",
+      "contentNotes": [
+        "A boat capsizes in a storm and crew are thrown into the water",
+        "Talk of death and drowning risk"
+      ],
+      "index": 49,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Stubb and Flask talk about Captain Ahab, who has one leg missing, and his ability to go out in a whale boat. The narrator explains that whaling captains are usually kept out of boat danger. Ahab secretly prepared a boat for himself, shaping its thole-pins, sheathing, and thigh board to fit his ivory leg. Crew members noticed but mostly thought he was preparing for the hunt of Moby Dick. The narrator then describes Fedallah, a strange, mysterious man who seems linked to Ahab and whom no one understands.",
+      "keyEvents": [
+        "Stubb and Flask marvel at Ahab's ability to join the whaling boats",
+        "The narrator questions whether a maimed captain should enter a whale boat",
+        "Ahab secretly prepares a boat and its crew",
+        "The crew notices Ahab's careful work on the boat but thinks little of it",
+        "Fedallah is introduced as a mysterious figure linked to Ahab"
+      ],
+      "charactersPresent": [
+        "Stubb",
+        "Flask",
+        "Ahab",
+        "Fedallah"
+      ],
+      "setting": "Aboard the Pequod, at sea",
+      "kind": "mixed",
+      "contentNotes": [],
+      "index": 50,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Pequod sailed through several cruising grounds near the Carrol Ground. One moonlit night Fedallah spotted a silvery spout, and the crew hoped for a lowering, but the spout vanished each time they chased it. Some sailors believed it was always Moby Dick, leading them on. Later, rounding the Cape of Good Hope in stormy weather, the crew stood silent in bowlines while Ahab stood gazing to windward. Starbuck saw Ahab asleep in his chair in the cabin, still in his wet coat, and thought him steadfast in his purpose.",
+      "keyEvents": [
+        "Fedallah first sights a silvery spout at night",
+        "Crew chases the spout but it disappears again",
+        "Sailors believe the spout is always Moby Dick",
+        "Storm rounds the Cape of Good Hope",
+        "Starbuck sees Ahab asleep in his cabin chair"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Fedallah",
+        "Starbuck"
+      ],
+      "setting": "The Pequod at sea, near the Carrol Ground and Cape of Good Hope",
+      "kind": "mixed",
+      "contentNotes": [],
+      "index": 51,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Pequod sailed southeast from the Cape and met a whaler called the Albatross. The other ship was bleached pale and rusty, and its look-outs looked worn from nearly four years at sea. When the stranger asked if they had seen the White Whale, his trumpet fell into the sea. Ahab shouted across that the Pequod was bound round the world. Small fish darted away from the Pequod toward the other ship, and Ahab murmured that they swam away from him. He then ordered the ship kept round the world. The narrator reflects that sailing around the globe only returns a ship to where it started.",
+      "keyEvents": [
+        "Pequod meets the Albatross, a long-absent whaler",
+        "Other captain's trumpet falls into the sea",
+        "Ahab hails the stranger about the White Whale and his voyage",
+        "Small fish flee from the Pequod toward the other ship",
+        "Ahab orders the ship kept round the world"
+      ],
+      "charactersPresent": [
+        "Ahab"
+      ],
+      "setting": "Southeast of the Cape, off the Crozetts",
+      "kind": "mixed",
+      "contentNotes": [],
+      "index": 52,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ahab does not board the whaler they have hailed, because the wind and sea look stormy and because he only wants news he can use. The narrator explains how whaling ships meet and sociably exchange news, letters, and papers on the open sea. He contrasts whalers with merchant ships, men-of-war, slave ships, and pirates, which keep their distance or treat each other coldly. He explains the word gam and describes how the captain is rowed to a gam standing in the boat, since whale-boats have no seat or tiller for him.",
+      "keyEvents": [
+        "Ahab does not board the hailed whaler",
+        "Narrator explains how whaling ships meet and exchange news",
+        "Narrator contrasts whalers with other ships",
+        "Narrator defines the word gam",
+        "Narrator describes the standing captain in the whale-boat"
+      ],
+      "charactersPresent": [
+        "Ahab"
+      ],
+      "setting": "The open sea near a whaling cruising-ground",
+      "kind": "essay",
+      "contentNotes": [
+        "Pirates and their hanging mentioned in passing",
+        "Slave ships mentioned in passing"
+      ],
+      "index": 53,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "At the Golden Inn in Lima, an old sailor tells Don Pedro and Don Sebastian the story of the Town-Ho. The ship had a leak and sailed for port. Radney, the mate, bullied Steelkilt, a Lakeman, and struck him with a hammer. Steelkilt fought back and led a mutiny. The captain locked the crew below for days. Radney was later killed by Moby Dick when he fell from a boat. Steelkilt's crew then deserted, and Steelkilt escaped to Tahiti. The sailor swears the tale is true.",
+      "keyEvents": [
+        "Town-Ho has a leak and sails for port",
+        "Radney hits Steelkilt with a hammer during a dispute over sweeping the deck",
+        "Steelkilt leads a mutiny and the crew barricades the forecastle",
+        "Captain locks the mutineers below and later hangs three of them in the rigging",
+        "Radney is killed by Moby Dick after falling from a boat"
+      ],
+      "charactersPresent": [
+        "Steelkilt",
+        "Radney",
+        "Don Pedro",
+        "Don Sebastian",
+        "Tashtego"
+      ],
+      "setting": "Golden Inn in Lima, and the Town-Ho at sea in the Pacific",
+      "kind": "narrative",
+      "contentNotes": [
+        "Radney's jaw is smashed with a hammer, a violent blow",
+        "Mutineers are beaten with a rope and hung in the rigging",
+        "A man is killed and eaten by a whale, described in graphic terms",
+        "Men are locked in a dark forecastle with little food and water",
+        "Some mention of drinking (chicha) at the inn"
+      ],
+      "index": 54,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael explains that pictures of the whale are almost always wrong. He starts with ancient sculptures from India, Egypt, and Greece, then mocks paintings by Guido and Hogarth. He criticizes old book prints, a Dutch voyage plate, Captain Colnett's drawing, and Goldsmith's natural history. He also faults Lacepede and Frederick Cuvier, whose sperm whale he calls a squash. Sign-painters' whales are no better. Ishmael argues that dead whales on land cannot show the living shape, and that the skeleton tells little either. He concludes the whale must remain unpainted, and that only a whaling voyage reveals his true look.",
+      "keyEvents": [
+        "Ishmael says pictures of the whale have long been wrong",
+        "He criticizes ancient Hindoo and Christian paintings of the whale",
+        "He mocks old book prints, a Dutch plate, and Captain Colnett's drawing",
+        "He criticizes Lacepede and Frederick Cuvier's whale pictures",
+        "He argues the whale's true shape cannot be captured in a portrait"
+      ],
+      "charactersPresent": [
+        "Stubb"
+      ],
+      "setting": "Not a specific place; a discussion of whale pictures",
+      "kind": "essay",
+      "contentNotes": [
+        "Mentions whales stoving and sinking whaleboats and sailors, and a sailor being eaten in a sign-painter's picture"
+      ],
+      "index": 55,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael compares pictures of whales and whaling scenes. He says Beale's drawings of the Sperm Whale are the best outlines he knows. He praises two large French engravings by Garnery, one of a Sperm Whale attack and one of a Right Whale attack. He says the French capture the real action of whaling better than English and American artists, who mostly draw plain outlines. He also describes two more French engravings by H. Durand, one of a calm anchored ship and one of a ship cutting in a whale.",
+      "keyEvents": [
+        "Ishmael praises Beale's outlines of the Sperm Whale",
+        "Ishmael describes Garnery's engraving of a Sperm Whale attack",
+        "Ishmael describes Garnery's engraving of a Right Whale attack",
+        "Ishmael says the French paint whaling action better than others",
+        "Ishmael describes two engravings by H. Durand"
+      ],
+      "charactersPresent": [],
+      "setting": "Ishmael's discussion of whaling pictures",
+      "kind": "essay",
+      "contentNotes": [
+        "Descriptions of whales being attacked and whales dying in engravings"
+      ],
+      "index": 56,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael describes many ways people have shown whales in art and objects. He mentions a beggar on Tower-hill who paints a board of a whale attack that cost him his leg. He describes sailors carving whale scenes on teeth and bone with jack-knives, called skrimshander work. He notes wooden whales in forecastles, brass whale knockers, and sheet-iron weathercocks. He tells of rock shapes that look like whales and hills with whale profiles. He ends by saying he has seen whales among the stars and wishes he could ride one into the sky.",
+      "keyEvents": [
+        "A beggar on Tower-hill shows a painted board of a whale attack",
+        "Sailors carve whale scenes on teeth and bone with jack-knives",
+        "Whales appear as wooden carvings, door knockers, and weathercocks",
+        "Rock formations and hill ridges look like whales",
+        "Ishmael sees whales and boats among the stars"
+      ],
+      "charactersPresent": [],
+      "setting": "Tower-hill in London, sailors' workplaces, and various lands and skies",
+      "kind": "essay",
+      "contentNotes": [
+        "A man lost his leg in a whale attack (described in a painting)"
+      ],
+      "index": 57,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The ship sailed north-east from the Crozetts into vast meadows of brit, a tiny yellow substance that Right Whales feed on. The whales swam through it with open jaws, and their movement made a sound like mowers cutting grass. From the mast-heads, the whales looked like lifeless rocks. The narrator reflected that the sea is a dangerous foe to people and even to its own creatures. He compared the sea to the dangers that surround the soul of man.",
+      "keyEvents": [
+        "Ship sails north-east into vast fields of brit",
+        "Right Whales swim through brit with open jaws",
+        "Whales make a sound like mowers cutting grass",
+        "Narrator says whales look like rocks from the mast-heads",
+        "Narrator reflects on the sea's cruelty and danger to humans"
+      ],
+      "charactersPresent": [],
+      "setting": "Open sea north-east of the Crozetts",
+      "kind": "essay",
+      "contentNotes": [
+        "General references to shipwrecks, drowning, and sea creatures killing each other",
+        "Brief mention of a shark as treacherous"
+      ],
+      "index": 58,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Pequod sails slowly north-east toward Java in calm weather. Daggoo sees a white shape rise from the sea and cries out that it is the White Whale. Ahab orders the boats lowered, and the crew pulls toward the spot. Instead of a whale, a huge pulpy squid mass rises and then sinks. Starbuck cries out that he would rather have fought Moby Dick than seen this white ghost. Flask asks what it is, and Ahab answers that it is the great live squid. Ahab turns his boat and sails back to the ship, and the others follow. The narrator then explains what whalemen believe about the squid, compares it to the Kraken, and notes that some naturalists count it among the cuttle-fish.",
+      "keyEvents": [
+        "Daggoo sights a white shape from the main-mast-head",
+        "Ahab orders the boats lowered",
+        "Crew finds a huge pulpy squid instead of a whale",
+        "Starbuck cries out about the white ghost",
+        "Ahab turns back to the ship and the others follow"
+      ],
+      "charactersPresent": [
+        "Daggoo",
+        "Ahab",
+        "Starbuck",
+        "Flask"
+      ],
+      "setting": "The open sea, sailing north-east toward Java",
+      "kind": "mixed",
+      "contentNotes": [],
+      "index": 59,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "This chapter explains the whale-line used in whaling. The narrator describes the material, first hemp and then Manilla rope, and how the line is coiled in a tub without any tangles. He tells how the line is laid through the whale-boat and attached to the harpoon. He describes how the crew feels seated among the coils, and how danger can strike suddenly. No new plot events happen. The narrator ends by saying that all people live surrounded by dangers they do not notice until death is near.",
+      "keyEvents": [
+        "Narrator describes hemp and Manilla whale-line",
+        "Line is coiled carefully in the tub",
+        "Line is run through the boat to the harpoon",
+        "Narrator reflects on the danger of sitting among the coils"
+      ],
+      "charactersPresent": [],
+      "setting": "A whale-boat and the whaling fishery",
+      "kind": "essay",
+      "contentNotes": [
+        "References to men being pulled from boats and lost at sea",
+        "Figurative mention of death and hangman's nooses"
+      ],
+      "index": 60,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Pequod's crew sits in a calm, sleepy sea. Ishmael, on the masthead, nearly falls asleep. A huge sperm whale appears close to the ship, and Ahab orders the boats lowered. The men paddle quietly after the whale until it notices them and dives. Stubb, smoking his pipe, races ahead to claim the kill. Tashtego throws the harpoon, and the line burns through Stubb's hands as the whale pulls the boat across the sea. The crew hauls the boat close, and Stubb drives his lance deep into the whale. The whale's heart bursts, and Daggoo announces that it is dead. Stubb stands looking at the dead whale.",
+      "keyEvents": [
+        "Crew drowses in the calm sea",
+        "Ishmael and others nearly fall asleep at the masthead",
+        "Sperm whale appears close to the ship",
+        "Ahab orders the boats lowered and the chase begins",
+        "Whale notices the boats and Stubb races ahead"
+      ],
+      "charactersPresent": [
+        "Queequeg",
+        "Starbuck",
+        "Ahab",
+        "Stubb",
+        "Tashtego",
+        "Daggoo",
+        "Ishmael"
+      ],
+      "setting": "Indian Ocean, aboard the Pequod and in its whaleboats",
+      "kind": "narrative",
+      "contentNotes": [
+        "A whale is hunted and killed, with blood and a violent death described in detail",
+        "Stubb's hands are burned by the running line",
+        "Stubb smokes a pipe throughout"
+      ],
+      "index": 61,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator added a note about an earlier incident in the whale-boat chase. He explained that the harpooneer must row hard and shout, then stand and throw the harpoon while exhausted. Few darts succeeded, and some harpooneers were cursed or hurt. He argued that the headsman should stay in the bows and not row, since exhaustion, not the whale's speed, caused most failures. He concluded that harpooneers should start the dart fresh, not worn out.",
+      "keyEvents": [
+        "Narrator explains the harpooneer's duties during a chase",
+        "Harpooneer is too exhausted to throw the harpoon well",
+        "Most darts fail and harpooneers are blamed",
+        "Narrator says the headsman should stay in the bows",
+        "Narrator concludes harpooneers must start fresh, not worn out"
+      ],
+      "charactersPresent": [],
+      "setting": "General discussion of whale-boats in the fishery",
+      "kind": "essay",
+      "contentNotes": [
+        "Some harpooneers burst their blood-vessels from exertion"
+      ],
+      "index": 62,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "This chapter explains the crotch, a notched stick fixed to the starboard gunwale near the bow. It holds the harpoon ready for the harpooneer to grab quickly. Two harpoons, the first and second irons, usually rest in the crotch, and both are tied to the line so that one may hold if the other pulls out. When the whale runs hard after the first iron, the second iron is often thrown overboard, where it dangles and can tangle or cut lines. This act sometimes causes deadly accidents. The narrator says these details will help explain later scenes.",
+      "keyEvents": [
+        "Crotch described as a notched stick on the starboard gunwale",
+        "First and second irons rest in the crotch, both tied to the line",
+        "Whale's violent run prevents second iron from being darted",
+        "Second iron tossed overboard, becoming a dangling danger"
+      ],
+      "charactersPresent": [],
+      "setting": "Whaleboat at the bow",
+      "kind": "essay",
+      "contentNotes": [
+        "Sailors sometimes die in fatal casualties when the second iron is thrown overboard"
+      ],
+      "index": 63,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The crew tows Stubb's dead whale toward the Pequod on a calm night. Ahab drops a lantern, gives orders, and goes into his cabin without coming back on deck until morning. The whale is moored alongside the ship, and thousands of sharks feed on it noisily. Stubb orders a steak cut from the whale and eats it at the capstan by lantern light. He makes the cook, old Fleece, preach to the sharks to quiet them. Stubb then questions Fleece about his age, birth, and faith, and gives him orders for cooking the whale. Fleece leaves muttering that the whale should eat him.",
+      "keyEvents": [
+        "Crew tows Stubb's dead whale toward the Pequod at night",
+        "Ahab gives orders and goes into his cabin",
+        "Whale is moored alongside the ship",
+        "Stubb has a steak cut and eats it at the capstan",
+        "Stubb makes old Fleece preach to the sharks"
+      ],
+      "charactersPresent": [
+        "Stubb",
+        "Ahab",
+        "Fleece",
+        "Daggoo"
+      ],
+      "setting": "Pequod at sea, at night, beside a moored whale",
+      "kind": "mixed",
+      "contentNotes": [
+        "A whale is killed and cut up",
+        "Sharks feed on a dead whale",
+        "Racial dialect and racial stereotyping of the cook, Fleece",
+        "Strong profanity and swearing",
+        "Cannibalism is mentioned in a metaphor about sea fights"
+      ],
+      "index": 64,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator explains that people have long eaten whales and other sea creatures. He tells of whale tongue prized in France, porpoise dishes in England, and Greenland castaways who lived on whale scraps. He says the whale is too rich to be a fine dish, and describes eating spermaceti and whale brains. He then argues that people who eat meat are no better than cannibals. He ends by pointing out that many everyday items, like knife handles and quill pens, come from animals too.",
+      "keyEvents": [
+        "Narrator explains the history of eating whales and porpoises",
+        "Narrator describes whale scraps eaten by castaways in Greenland",
+        "Narrator says whale meat is too rich to be a fine dish",
+        "Narrator describes eating spermaceti and whale brains",
+        "Narrator argues that meat-eaters are cannibals too"
+      ],
+      "charactersPresent": [
+        "Stubb"
+      ],
+      "setting": "Narrator's reflections on whale eating, aboard ship in the whaling trade",
+      "kind": "essay",
+      "contentNotes": [
+        "Discussion of killing and eating animals, including oxen, geese and a missionary killed by cannibals"
+      ],
+      "index": 65,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The crew did not cut in the captured Sperm Whale that night, since that work would take all hands. Instead, after supper, Stubb set an anchor-watch. Queequeg and a forecastle seaman came on deck, lowered three lanterns over the side, and drove their whaling-spades into the crowds of sharks around the carcass. The sharks snapped at each other and even bit their own bodies. A dead shark nearly took Queequeg's hand off when he tried to shut its jaw. Queequeg complained about the god who made sharks.",
+      "keyEvents": [
+        "Stubb sets the anchor-watch after supper",
+        "Queequeg and a forecastle seaman spear sharks under lanterns",
+        "A dead shark nearly takes Queequeg's hand",
+        "Queequeg complains about the god who made sharks"
+      ],
+      "charactersPresent": [
+        "Stubb",
+        "Queequeg"
+      ],
+      "setting": "Deck of the Pequod at night, beside the moored whale",
+      "kind": "mixed",
+      "contentNotes": [
+        "Sharks are killed with whaling-spades",
+        "Graphic descriptions of gore and mangled sharks",
+        "Queequeg nearly loses his hand to a dead shark"
+      ],
+      "index": 66,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "On a Saturday night the crew of the Pequod works on a dead whale. The men rig the large cutting tackles and lash them to the lower mast-head. Starbuck and Stubb, the mates, cut a hole for the blubber hook above the whale's fin. The windlass hoists the blubber, and the ship leans far over as the strip peels off. A harpooneer slices the mass in two so the upper strip can be lowered into the blubber-room. The crew sings, works hard, and swears as the work goes on.",
+      "keyEvents": [
+        "Crew begins cutting in the whale on Saturday night",
+        "Tackles are rigged to the lower mast-head",
+        "Starbuck and Stubb cut a hole for the blubber hook",
+        "Ship leans over as the windlass hoists the blubber strip",
+        "A harpooneer slices the blubber into two pieces"
+      ],
+      "charactersPresent": [
+        "Starbuck",
+        "Stubb"
+      ],
+      "setting": "Deck of the Pequod beside a dead whale",
+      "kind": "narrative",
+      "contentNotes": [
+        "Work on a dead whale involving blood and cutting flesh",
+        "Sailors swear while working",
+        "Work is done on the Sabbath"
+      ],
+      "index": 67,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator studies the skin of the whale and argues that the thick blubber is the true skin. He describes a thin, transparent outer layer and the marks and scratches on a whale's body. He explains that blubber keeps the whale warm in icy seas, since whales have lungs and warm blood. He ends by urging people to stay warm in spirit, like the whale.",
+      "keyEvents": [
+        "Narrator describes the blubber as the whale's true skin",
+        "Narrator describes a thin transparent layer and marks on the whale's body",
+        "Narrator explains how blubber keeps the whale warm in cold seas",
+        "Narrator urges people to keep their own warmth like the whale"
+      ],
+      "charactersPresent": [],
+      "setting": "Narrator's reflections on whales",
+      "kind": "essay",
+      "contentNotes": [],
+      "index": 68,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The crew cut loose the stripped whale carcass and let it drift away from the ship. Sharks and screaming birds fed on it, and the noise grew louder as the white mass floated farther off. The narrator then reflected on how the whale's ghost would scare later sailors. Ships would avoid the spot for years, following old warnings without question. The chapter ends by asking the reader whether he believes in ghosts.",
+      "keyEvents": [
+        "Crew hauls in tackles and releases the whale carcass",
+        "Sharks and birds feed on the drifting carcass",
+        "Narrator describes the carcass floating out of sight",
+        "Ship logs warn of the spot, and later ships avoid it",
+        "Narrator reflects on blind obedience to old beliefs"
+      ],
+      "charactersPresent": [],
+      "setting": "Open sea beside the ship, near the drifting whale carcass",
+      "kind": "essay",
+      "contentNotes": [
+        "Decaying whale carcass fed on by sharks and birds, described in gory detail"
+      ],
+      "index": 69,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The crew beheads the sperm whale and hoists its huge head beside the Pequod. The men go below for dinner, leaving the deck quiet under a still copper calm. Ahab comes up alone, props himself on Stubb's spade, and speaks to the hanging head as if it were the Sphynx. He asks it to tell its secrets, since it has seen many drownings and terrible sights. A cry of 'Sail ho!' comes from the masthead, and Ahab's mood lifts. He says the cry might convert a better man and wishes the breeze would come to his calm.",
+      "keyEvents": [
+        "Whale is beheaded and head is hoisted beside the ship",
+        "Crew goes below for dinner during a calm",
+        "Ahab leans over the side and addresses the whale's head",
+        "A sail is sighted from the masthead",
+        "Ahab's mood brightens at the news of wind"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Stubb"
+      ],
+      "setting": "Deck of the Pequod, becalmed at noon",
+      "kind": "mixed",
+      "contentNotes": [
+        "Describes a whale being beheaded and a bloody head hanging from the ship",
+        "Mentions drowned sailors, a murdered mate, and lovers who died at sea"
+      ],
+      "index": 70,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Pequod signals a passing whale-ship, which turns out to be the Jeroboam. Captain Mayhew refuses to come aboard because his crew has a sickness. Stubb recognizes a crazy man named Gabriel, a former Shaker prophet who controls the crew. Mayhew tells how Gabriel warned against hunting Moby Dick, and how Mate Macey was killed by the whale when he attacked it anyway. Ahab asks for a letter for one of Mayhew's officers. Starbuck passes it down on a split pole, but Gabriel grabs it and sends it back to the Pequod. Then the Jeroboam's boat rows away.",
+      "keyEvents": [
+        "Pequod signals the Jeroboam, which comes alongside",
+        "Captain Mayhew refuses to board because of an epidemic",
+        "Mayhew tells how Gabriel warned against hunting Moby Dick",
+        "Mate Macey is killed by the whale",
+        "Gabriel grabs the letter and sends it back to the Pequod"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Stubb",
+        "Captain Mayhew",
+        "Gabriel",
+        "Starbuck",
+        "Macey"
+      ],
+      "setting": "The open sea, between the Pequod and the Jeroboam",
+      "kind": "mixed",
+      "contentNotes": [
+        "A sailor, Macey, is killed when the whale throws him into the sea",
+        "Gabriel threatens death and doom to the ship and crew",
+        "An epidemic sickness is aboard the Jeroboam"
+      ],
+      "index": 71,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The crew works to cut in and strip a dead whale. Queequeg goes down onto the whale's back to set the blubber-hook, and Ishmael holds him by a monkey-rope. Ishmael reflects on how tied together every person is. Sharks circle, and Tashtego and Daggoo strike at them with whale-spades near Queequeg. When Queequeg climbs out, the steward offers him ginger and water. Stubb angrily objects, saying it should be grog for a harpooneer, and the steward admits Aunt Charity sent the ginger. Stubb fetches spirits from the lockers for Queequeg and throws the ginger away.",
+      "keyEvents": [
+        "Queequeg sets the blubber-hook on the whale's back",
+        "Ishmael holds Queequeg by the monkey-rope",
+        "Sharks circle and Tashtego and Daggoo strike at them with spades",
+        "Queequeg climbs out and the steward offers ginger and water",
+        "Stubb objects and fetches spirits for Queequeg"
+      ],
+      "charactersPresent": [
+        "Ishmael",
+        "Queequeg",
+        "Tashtego",
+        "Daggoo",
+        "Stubb",
+        "Dough-Boy",
+        "Starbuck"
+      ],
+      "setting": "The Pequod, beside a dead whale in the sea",
+      "kind": "mixed",
+      "contentNotes": [
+        "Sharks attack and kill nearby, with a near-miss of a man's leg",
+        "Stubb hits the steward Dough-Boy",
+        "Drinking of spirits (grog) for the harpooneer"
+      ],
+      "index": 72,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Pequod sees Right Whales nearby and sends out Stubb's and Flask's boats. The boats chase a whale that drags them close to the ship, and the crew cuts loose just in time. After a hard fight the whale dies and is towed alongside. While the men work, Stubb and Flask talk about Fedallah, whom Stubb calls the devil. Stubb jokes about ducking him and cutting off his tail. Flask says a ship with two whale heads on her sides can never capsize. The Pequod tilts toward the sperm whale's head, then steadies as the right whale's head is added. Fedallah studies the right whale's head and the lines on his hand, and the crew talks about these strange events.",
+      "keyEvents": [
+        "Stubb and Flask chase a Right Whale",
+        "The towing whale nearly crashes the boats into the ship",
+        "The whale dies after a hard fight with lances",
+        "Stubb and Flask talk about Fedallah being the devil",
+        "The Pequod balances with the Right Whale's head on her other side"
+      ],
+      "charactersPresent": [
+        "Stubb",
+        "Flask",
+        "Fedallah",
+        "Ahab"
+      ],
+      "setting": "Aboard the Pequod and at sea near the Right Whales",
+      "kind": "mixed",
+      "contentNotes": [
+        "A whale is killed and its carcass is cut apart",
+        "Sharks feed on the blood of the dying whale",
+        "Stubb jokes about violence toward Fedallah, including ducking and wrenching his tail",
+        "Mention of a sailor, John, who gets Asiatic cholera in a story told by Stubb"
+      ],
+      "index": 73,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator compares the heads of the Sperm Whale and the Right Whale, which hang from the Pequod's side. He notes the Sperm Whale has more dignity and a grey, experienced look. He explains that a whale's eyes sit far to the sides, so it sees two separate pictures and cannot see straight ahead. He describes the whale's tiny ear, which has an opening only in the Sperm Whale. He then describes the mouth and lower jaw, and how the jaw is hoisted on deck. Queequeg, Daggoo, and Tashtego pull out the teeth, and the jaw is sawn into slabs.",
+      "keyEvents": [
+        "Two whale heads hang from the Pequod's side for comparison",
+        "Narrator explains the whale's side-set eyes give two separate views",
+        "Narrator describes the ear, which differs between the two whales",
+        "Narrator describes the mouth and the huge lower jaw",
+        "Queequeg, Daggoo, and Tashtego draw the teeth from the hoisted jaw"
+      ],
+      "charactersPresent": [
+        "Queequeg",
+        "Daggoo",
+        "Tashtego"
+      ],
+      "setting": "Deck of the Pequod",
+      "kind": "essay",
+      "contentNotes": [
+        "Whales are hunted and their jaws are cut apart for teeth and whalebone"
+      ],
+      "index": 74,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator asks the reader to look closely at the head of a Right Whale while the ship's crew works on it. He compares the head to a shoe, a bass-viol, and a tree with a bird's nest. He describes the lower lip, the mouth, the whalebone blinds, and the tongue. He explains that the Right Whale and the Sperm Whale have very different heads. He ends by comparing the two dead whales' expressions, calling the Right Whale a Stoic and the Sperm Whale a Platonian.",
+      "keyEvents": [
+        "Narrator compares the Right Whale's head to a shoe and other objects",
+        "Narrator describes the lower lip and the mouth",
+        "Narrator describes the whalebone blinds and the tongue",
+        "Narrator contrasts the Right Whale's head with the Sperm Whale's head",
+        "Narrator compares the expressions of the two dead whales' heads"
+      ],
+      "charactersPresent": [],
+      "setting": "Deck of a whaling ship, beside the Right Whale's head",
+      "kind": "essay",
+      "contentNotes": [
+        "A whale is dead and being processed for oil",
+        "Mentions of an old woman and a whale that swallowed Jonah in a reference"
+      ],
+      "index": 75,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator asks the reader to study the front of the sperm whale's head as a physiologist would. He describes it as a blind, boneless wall covered in a tough envelope that rebounds harpoons and lances. He compares it to a cushioned wad that protects ships in crowded docks. He suggests the whale's honeycomb-like inner cells might connect to the outer air, which would give its head great force. He ends by saying a reader who doubts the whale's power is only a provincial and sentimentalist in Truth.",
+      "keyEvents": [
+        "Narrator asks reader to examine the whale's head as a physiologist",
+        "Head described as a blind, boneless wall with a tough envelope",
+        "Compared to a cushioned wad of tow, cork, and ox-hide in the docks",
+        "Narrator proposes the head's inner cells may connect to the outer air",
+        "Narrator warns skeptics they lack understanding of Truth"
+      ],
+      "charactersPresent": [],
+      "setting": "Discussion of the sperm whale's head",
+      "kind": "essay",
+      "contentNotes": [],
+      "index": 76,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator explained the inner structure of the sperm whale's head before the baling of the case. He divided the head into two parts, the bony lower part and the oily upper part. He compared the upper part, called the case, to the great Heidelburgh Tun. He described how valuable spermaceti hardens after death and how much of it is lost. He ended by saying the tapping of the tun would be a dangerous operation.",
+      "keyEvents": [
+        "Narrator explains how the whale's head divides into two parts",
+        "Upper part, the case, is compared to the Heidelburgh Tun",
+        "Spermaceti is described as precious and hardening after death",
+        "Narrator notes how much spermaceti is lost in handling",
+        "Narrator promises to describe the dangerous tapping of the tun"
+      ],
+      "charactersPresent": [],
+      "setting": "Aboard a whaling ship, beside a whale hoisted against the ship's side",
+      "kind": "essay",
+      "contentNotes": [
+        "Graphic description of cutting into a whale's head"
+      ],
+      "index": 77,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Tashtego climbs to the top of the whale's head and lowers a bucket into the cistern to bale out sperm oil. While he works, he slips and falls head-first into the Tun. Daggoo, who first recovers, is hoisted up on the bucket. One hook holding the head tears out, and the head drops into the sea. Queequeg dives in with his sword, cuts a hole in the head, and pulls Tashtego out by the hair. The narrator then reflects on the accident and compares it to other strange deaths.",
+      "keyEvents": [
+        "Tashtego climbs onto the whale's head and begins baling sperm",
+        "Tashtego slips and falls into the Tun",
+        "One hook tears out and the head drops into the sea",
+        "Queequeg dives in and rescues Tashtego",
+        "Narrator reflects on the accident"
+      ],
+      "charactersPresent": [
+        "Tashtego",
+        "Daggoo",
+        "Stubb",
+        "Queequeg"
+      ],
+      "setting": "Deck of the Pequod, beside the whale's head",
+      "kind": "mixed",
+      "contentNotes": [
+        "A man nearly drowns and is nearly buried alive in whale oil",
+        "A ship's hook tears loose and the whale's head crashes into the sea",
+        "Mention of a man who died after falling into honey"
+      ],
+      "index": 78,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator thinks about reading the face of the Sperm Whale, which is hard because the whale has no proper nose. He says the whale's huge forehead is the most impressive view of him, and that its grandeur makes it look godlike. He also says the whale's silence and lack of a tongue suggest great genius, and that the whale might have been worshipped by ancient peoples. He ends by saying that even great scholars could not read a face fully, so he can only show the brow to the reader and invite them to read it.",
+      "keyEvents": [
+        "Narrator says the whale's face is too hard to study like a human face",
+        "Narrator notes the whale has no nose and says this adds to its grandeur",
+        "Narrator describes the whale's broad forehead as its most imposing feature",
+        "Narrator claims the whale's silence and tonguelessness show genius",
+        "Narrator ends by presenting the brow to the reader to read"
+      ],
+      "charactersPresent": [],
+      "setting": "Not specified; a reflective digression",
+      "kind": "essay",
+      "contentNotes": [],
+      "index": 79,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator explains that the sperm whale's brain is very small and hidden behind its huge skull and mass of sperm. He says some whalemen think the sperm mass is the real brain. He compares the whale's skull to a human skull and claims the whale's reversed skull shows a lack of self-esteem and veneration. He then argues that a man's character shows in his spine, and he gives the whale's large spinal cord and hump a meaning tied to firmness and an unbending spirit.",
+      "keyEvents": [
+        "Narrator describes the whale's tiny brain hidden behind its skull",
+        "Narrator notes some whalemen think the sperm mass is the true brain",
+        "Narrator compares the whale's skull to a human skull",
+        "Narrator argues that the spine reveals character",
+        "Narrator links the whale's hump to firmness and indomitableness"
+      ],
+      "charactersPresent": [],
+      "setting": "None; an anatomical discussion of the sperm whale",
+      "kind": "essay",
+      "contentNotes": [],
+      "index": 80,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Pequod meets the German ship Jungfrau, captained by Derick De Deer, who comes over asking for oil for his lamp. Derick sees a pod of whales and rushes off to chase them. The Pequod's boats join the chase, and Derick is thrown from his boat when the whale rushes away. The Pequod's men harpoon a large old whale with a bad wound and blind eyes. It dies after spouting blood. The whale is tied to the ship, but it sinks and drags the Pequod over, and Queequeg cuts the chains so the ship can right itself. The Jungfrau then chases a Fin-Back whale instead.",
+      "keyEvents": [
+        "Jungfrau meets the Pequod and Derick asks for oil",
+        "Derick rushes off to chase a pod of whales",
+        "Derick's boat is passed and he is thrown into the sea",
+        "Pequod's boats harpoon a wounded old whale",
+        "The whale dies after a bloody last spout"
+      ],
+      "charactersPresent": [
+        "Derick De Deer",
+        "Starbuck",
+        "Stubb",
+        "Flask",
+        "Ahab",
+        "Tashtego",
+        "Queequeg",
+        "Daggoo"
+      ],
+      "setting": "The Pacific Ocean, near the Pequod and the Jungfrau",
+      "kind": "mixed",
+      "contentNotes": [
+        "A whale is wounded, bleeds heavily, and dies",
+        "Whale's blinded eyes are described",
+        "Men are thrown into the sea",
+        "Crude jokes and cruel remarks about the whale",
+        "Ship nearly capsizes"
+      ],
+      "index": 81,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator argued that whaling is an honorable and very old calling. He said Perseus was the first whaleman, since he harpooned a sea monster to save Andromeda. He claimed St. George's dragon was really a whale, and that Hercules and Jonah should also count as whalemen. He said the Hindu god Vishnoo became a whale to rescue sacred books from the bottom of the sea. He ended by saying no club can match the whaleman's list of heroes.",
+      "keyEvents": [
+        "Narrator praises whaling's honor and antiquity",
+        "Perseus harpoons a sea monster and saves Andromeda",
+        "St. George's dragon is argued to be a whale",
+        "Hercules and Jonah are claimed as whalemen",
+        "Vishnoo becomes a whale to rescue the Vedas"
+      ],
+      "charactersPresent": [
+        "Perseus",
+        "Andromeda",
+        "St. George",
+        "Hercules",
+        "Jonah",
+        "Vishnoo",
+        "Ezekiel"
+      ],
+      "setting": "No single setting; ancient myths, Bible stories and Hindu legend, with the narrator's reflections",
+      "kind": "essay",
+      "contentNotes": [
+        "Mythic violence: a sea monster is harpooned and killed in the Perseus story",
+        "A man is swallowed by a whale in the Hercules and Jonah accounts"
+      ],
+      "index": 82,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator discusses doubts about the Bible story of Jonah and the whale. An old Sag-Harbor whaleman questioned the story for several reasons. He pointed to a Bible picture of a whale with two spouts and to the small swallow of the Right Whale. He also doubted that Jonah could survive inside a whale and reach Nineveh in three days. The narrator rejects these doubts as proud and foolish, noting that Turks still believe the story.",
+      "keyEvents": [
+        "Narrator notes doubters of Jonah story, like doubters of Hercules and Arion",
+        "Sag-Harbor questions a Bible picture of a two-spouted whale",
+        "Sag-Harbor argues the Right Whale's small swallow could not hold Jonah",
+        "Sag-Harbor argues Jonah could not reach Nineveh in three days",
+        "Narrator dismisses Sag-Harbor's doubts as foolish pride"
+      ],
+      "charactersPresent": [
+        "Sag-Harbor",
+        "Jonah",
+        "Bishop Jebb"
+      ],
+      "setting": "Nantucket and Sag Harbor, in the narrator's reflections",
+      "kind": "essay",
+      "contentNotes": [],
+      "index": 83,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Queequeg greases the bottom of his boat so it will slide faster. Later, whales are seen, but they flee the ship. Stubb's boat chases the fastest whale. Tashtego plants one harpoon, but the whale keeps swimming hard, so the crew cannot get close. Stubb uses pitchpoling, throwing a long lance from a rocking boat. The lance strikes the whale's life spot, and the whale spouts blood. Stubb jokes about drinking punch from the spout. He throws again and again until the whale dies.",
+      "keyEvents": [
+        "Queequeg greases his boat, and whales are sighted and flee",
+        "Tashtego plants one iron in the fleeing whale",
+        "Stubb pitchpoles a lance into the whale's life spot",
+        "Stubb jokes about drinking punch from the spout",
+        "The whale dies after repeated lance throws"
+      ],
+      "charactersPresent": [
+        "Queequeg",
+        "Stubb",
+        "Tashtego"
+      ],
+      "setting": "the open sea near a whaling ship and its boats",
+      "kind": "mixed",
+      "contentNotes": [
+        "A whale is wounded and bleeds",
+        "A whale dies slowly after repeated lance strikes"
+      ],
+      "index": 84,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator explains how the sperm whale breathes. Unlike fish, the whale has lungs and must rise to the surface to breathe through its spiracle on top of its head. He describes how the whale stores air in a network of blood vessels so it can stay underwater for an hour or more. The narrator then asks whether the whale's spout is water or only vapor. He says no one can settle the question, and that the spout can sting skin and may blind a person. He offers his own idea that the spout is mist, comparing it to the steam rising from deep thinkers. The chapter ends with his reflections on doubt and faith.",
+      "keyEvents": [
+        "Narrator notes the unsolved question of whether the whale spout is water or vapor",
+        "Narrator explains that the whale has lungs and breathes through its spiracle",
+        "Narrator describes the whale's blood-vessel labyrinth that stores air for long dives",
+        "Narrator argues the spout may be mist and compares it to thinkers' steam",
+        "Narrator warns that the spout can burn skin and may blind"
+      ],
+      "charactersPresent": [],
+      "setting": "The open sea, described in general terms",
+      "kind": "essay",
+      "contentNotes": [
+        "Mentions a man whose skin peeled off from contact with the whale spout",
+        "Mentions that the spout may blind a person"
+      ],
+      "index": 85,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator praises the whale's tail as the most beautiful and powerful part of the sperm whale. He describes its size, its three layers of fibres, and its strong muscles. He explains five ways the whale uses its tail: swimming, striking boats, sweeping, lobtailing, and peaking its flukes. He compares the tail to an elephant's trunk and says the whale's tail is far stronger. He ends by saying he cannot fully understand the whale, since it seems to have no face.",
+      "keyEvents": [
+        "Narrator praises the tail's size, shape, and three-layered structure",
+        "Narrator describes five motions of the tail",
+        "Whale strikes boats with its tail, often sending them into the air",
+        "Narrator recalls a herd of whales peaking their flukes at sunrise",
+        "Narrator says he cannot understand the whale's face"
+      ],
+      "charactersPresent": [],
+      "setting": "The open sea, with a sperm whale",
+      "kind": "essay",
+      "contentNotes": [
+        "Whale strikes boats and crews are thrown into the air, with some boats crushed"
+      ],
+      "index": 86,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Pequod sails toward the Straits of Sunda, where Ahab plans to pass into the Javan sea. Malay pirates chase the ship from behind, but the Pequod outruns them. The crew spots a large herd of Sperm Whales and gives chase. The whales panic and gather into a tight herd. Queequeg harpoons one whale, which drags the boat into the middle of the herd. There the crew finds a calm lake with mother whales and calves. A wounded whale tangled in the lines then stirs up the herd, forcing the boat to escape. Queequeg loses his hat. Only one whale is captured in the end.",
+      "keyEvents": [
+        "Pequod nears the Straits of Sunda with Malay pirates chasing",
+        "Crew sights a huge herd of Sperm Whales",
+        "Whales panic and crowd together",
+        "Queequeg harpoons a whale that drags the boat into the herd",
+        "Boat reaches a calm center with mother whales and calves"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Tashtego",
+        "Queequeg",
+        "Starbuck",
+        "Flask"
+      ],
+      "setting": "Straits of Sunda near Java Head and Sumatra",
+      "kind": "narrative",
+      "contentNotes": [
+        "Whales are harpooned and wounded, and a wounded whale kills other whales",
+        "Malay pirates are described as threatening to board and pillage ships",
+        "A man's hat is lost in the chase; no human deaths are described"
+      ],
+      "index": 87,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The chapter explained schools of sperm whales, which are small groups of twenty to fifty animals. It described two kinds. Female schools were guarded by one large older male, who was compared to a sultan with his harem. Young male schools were rowdy and often fought each other. The author called the older male the schoolmaster and said old whales usually live alone. He also said that when a female is hurt, her group stays close to her, but young males leave a wounded comrade.",
+      "keyEvents": [
+        "Describes small schools of sperm whales",
+        "Compares the harem school and its large male to a sultan",
+        "Contrasts rowdy young male schools with female schools",
+        "Introduces the old male called the schoolmaster",
+        "Notes that old whales usually live alone"
+      ],
+      "charactersPresent": [],
+      "setting": "the open sea",
+      "kind": "essay",
+      "contentNotes": [
+        "Whales fight each other and are scarred or injured in battles",
+        "Whale hunting is mentioned, including striking whales with harpoons"
+      ],
+      "index": 88,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator explains the whaling laws about fast-fish and loose-fish. A fast-fish belongs to the party fastened to it, and a loose-fish belongs to whoever catches it first. He describes a famous English lawsuit, where a crew took a whale another crew had lost, and Lord Ellenborough ruled for the defendants. The narrator then compares these two rules to ownership and power in wider society, such as landlords, bankers, and nations. He ends by asking the reader whether he is a loose-fish and a fast-fish too.",
+      "keyEvents": [
+        "Narrator explains the whaling laws of fast-fish and loose-fish",
+        "Narrator describes the English lawsuit over a lost whale",
+        "Lord Ellenborough rules the whale belonged to the defendants",
+        "Narrator compares the two laws to ownership and power in society"
+      ],
+      "charactersPresent": [],
+      "setting": "A whaling ship's world, described in general terms",
+      "kind": "essay",
+      "contentNotes": [
+        "Mentions a whale being killed and a captain snapping his fingers at rivals",
+        "Mentions a crim. con. case involving a wife who was abandoned"
+      ],
+      "index": 89,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator opens with an old English law saying that the King gets a captured whale's head and the Queen gets its tail. He tells of Dover-area mariners who killed a whale, only to have a learned gentleman seize it for the Lord Warden, the Duke of Wellington. The men protest, but the Duke keeps the money. The narrator then asks why the King and Queen divide the whale this way, quoting Plowdon and William Prynne, and jokes about whalebone and sturgeon.",
+      "keyEvents": [
+        "Narrator quotes an old English law dividing a whale between King and Queen",
+        "Mariners kill and beach a whale near Dover or Sandwich",
+        "A learned gentleman seizes the whale for the Lord Warden",
+        "Mariners protest, but the whale is sold and the Duke keeps the money",
+        "Narrator questions the reasons for the division, citing Plowdon and Prynne"
+      ],
+      "charactersPresent": [
+        "Bracton",
+        "Blackstone",
+        "Plowdon",
+        "William Prynne"
+      ],
+      "setting": "England, the coast near Dover and the Cinque Ports",
+      "kind": "essay",
+      "contentNotes": [],
+      "index": 90,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Pequod sails into a calm and a terrible smell from two dead whales beside a French ship called the Bouton de Rose. Stubb sees the ship and talks with its Guernsey-man chief mate, who is angry about the stink. Stubb and the mate make a plan to trick the French captain, and the captain cuts his whales loose and offers Stubb a drink. Stubb digs into the dead whale and finds lumps of ambergris, a valuable substance. Ahab calls him back to the ship before he can take more.",
+      "keyEvents": [
+        "Pequod smells dead whales near a French ship",
+        "Stubb learns the ship is the Bouton de Rose",
+        "Stubb asks the Guernsey-man mate about Moby Dick and gets no news",
+        "Stubb and the mate trick the French captain into cutting loose the whales",
+        "Stubb digs into a dead whale and finds ambergris"
+      ],
+      "charactersPresent": [
+        "Stubb",
+        "Ahab"
+      ],
+      "setting": "Mid-day sea near a French whale ship, the Bouton de Rose",
+      "kind": "narrative",
+      "contentNotes": [
+        "Dead and rotting whales with a strong foul smell",
+        "Drinking is offered and refused",
+        "Deception and trickery against the French captain"
+      ],
+      "index": 91,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator explains that ambergris is a valuable, fragrant substance found only at sea, used in perfume and other goods. He notes that it comes from a sick whale and that small squid bones were found in it. He then argues that whales do not smell bad by nature. He blames the bad smell reputation on Greenland whaling ships that brought home blubber in casks without trying it out at sea. He also points to a Dutch village where blubber was boiled. He says Sperm Whales are fragrant, comparing them to a perfumed elephant.",
+      "keyEvents": [
+        "Narrator explains ambergris is valuable and different from amber",
+        "Narrator says ambergris comes from a sick whale's bowels",
+        "Small squid bones are found in the ambergris",
+        "Narrator blames Greenland whaling ships for the whale smell reputation",
+        "Narrator says Sperm Whales are fragrant and compares one to an elephant"
+      ],
+      "charactersPresent": [
+        "Stubb"
+      ],
+      "setting": "Aboard a whaling ship, with a reflection on whales and whaling",
+      "kind": "essay",
+      "contentNotes": [
+        "Describes a whale's diseased innards and decay"
+      ],
+      "index": 92,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Pip, a young Black crew member, is made a temporary boat oarsman after another man's hand is injured. On his second whale hunt, he jumps from the boat after a whale's rap startles him, and the line tangles around his chest. Tashtego asks whether to cut the line, and Stubb orders it cut, so the whale is lost and Pip is saved. Stubb warns Pip not to jump again. Pip jumps again, and this time Stubb does not stop the boat, so Pip is left alone in the open sea. Other boats chase whales, and the ship finally rescues him. From then on, Pip acts strangely and is called mad by the crew.",
+      "keyEvents": [
+        "Pip is put into an oarsman's place during the ambergris affair",
+        "Pip jumps from the boat and the line tangles around his chest",
+        "Tashtego asks to cut the line and Stubb orders it cut",
+        "Stubb warns Pip to stick to the boat",
+        "Pip jumps again and is left behind in the sea"
+      ],
+      "charactersPresent": [
+        "Pip",
+        "Stubb",
+        "Tashtego",
+        "Dough-Boy"
+      ],
+      "setting": "The open ocean near the Pequod during a whale hunt",
+      "kind": "narrative",
+      "contentNotes": [
+        "A man is left alone in the open sea and nearly drowns",
+        "Racist language and slurs toward Black characters",
+        "Crew cruelty toward a frightened sailor",
+        "Discussion of selling a person's worth in terms of money",
+        "Pip is left mentally damaged afterward"
+      ],
+      "index": 93,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The whale that Stubb caught is brought to the side of the Pequod and cut up in the usual way. The narrator sits on the deck with others and squeezes lumps of sperm back into liquid. He finds the work soothing and forgets the oath, and he begins squeezing his co-workers' hands. The chapter then describes other parts of the whale. These include white-horse, plum-pudding, slobgollion, gurry, and nippers. Last, the narrator explains the blubber-room, where workers cut up blubber on a sliding sheet and risk injury.",
+      "keyEvents": [
+        "Stubb's whale is brought alongside the Pequod and cut up",
+        "The narrator squeezes lumps of sperm with others on deck",
+        "The narrator forgets the oath and squeezes his co-workers' hands",
+        "Other whale parts are described: white-horse, plum-pudding, slobgollion, gurry, nippers",
+        "The blubber-room and its dangers are described"
+      ],
+      "charactersPresent": [
+        "Stubb"
+      ],
+      "setting": "Deck of the Pequod at sea",
+      "kind": "mixed",
+      "contentNotes": [
+        "A whale is killed and butchered",
+        "Describes blubber-room workers who may cut off their own toes"
+      ],
+      "index": 94,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator describes a strange black object lying in the lee scuppers of the Pequod while the crew works on a dead whale. It is a long cone of whale skin, and the sailors call it the grandissimus. A sailor called the mincer hauls it to the forecastle, strips off its dark pelt, and turns the pelt inside out to dry in the rigging. He then slips into the skin like a clergyman's robe. At a wooden horse, he cuts blubber into thin slices for the pots. The mates shout Bible leaves at him to make him cut thinner.",
+      "keyEvents": [
+        "Strange black cone is seen lying by the windlass",
+        "Mincer hauls the grandissimus to the forecastle deck",
+        "Mincer strips the pelt and hangs it in the rigging to dry",
+        "Mincer slips into the skin like a set of canonicals",
+        "Mates shout Bible leaves at the mincer as he cuts blubber"
+      ],
+      "charactersPresent": [],
+      "setting": "Deck of the Pequod, near the windlass and forecastle",
+      "kind": "essay",
+      "contentNotes": [
+        "Describes skinning and cutting up a dead whale",
+        "Mentions an idol burned as an abomination in the Bible (historical reference only)"
+      ],
+      "index": 95,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "On the Pequod, Stubb ordered the try-works started around nine at night so the crew could render whale blubber into oil. By midnight the fires burned fiercely, and the harpooneers fed the pots while the watch rested nearby. The narrator stood at the helm, dozed, and turned around until he realized his mistake and turned back to the compass just in time. He then reflected on the danger of staring too long into fire and on the difference between wisdom and madness.",
+      "keyEvents": [
+        "Stubb orders the try-works started at about nine at night",
+        "By midnight the fires run at full strength as the ship sails on",
+        "The narrator dozes at the helm and faces the wrong way",
+        "The narrator turns back to the compass just in time",
+        "The narrator reflects on fire, sorrow, and wisdom"
+      ],
+      "charactersPresent": [
+        "Stubb"
+      ],
+      "setting": "Deck of the Pequod, at the try-works and the helm, at night",
+      "kind": "mixed",
+      "contentNotes": [
+        "A whale carcass is being rendered for oil",
+        "Near-capsize of the ship after the helmsman dozes",
+        "Smoke described as horrible; references to death, a burning corpse, and hell"
+      ],
+      "index": 96,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator asks the reader to picture the Pequod's forecastle, where off-duty sailors sleep under many lamps. He compares them to figures in a shrine. He then explains that whalemen burn lamps freely, refilling old bottles with pure whale oil from the try-works. He says this oil is fresher than the oil ordinary sailors on merchant ships can get, and that whalemen go out to hunt for it themselves.",
+      "keyEvents": [
+        "Narrator describes sleeping off-duty sailors lit by lamps in the forecastle",
+        "Narrator contrasts whalemen's plentiful light with merchant sailors' darkness",
+        "Narrator explains whalemen refill lamps with fresh, pure whale oil from the try-works"
+      ],
+      "charactersPresent": [],
+      "setting": "Forecastle and try-works of the Pequod",
+      "kind": "essay",
+      "contentNotes": [],
+      "index": 97,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator explained how hot whale oil was poured into casks and rolled down into the hold. The crew then scrubbed the ship until its decks shone white, and the sailors cleaned themselves and dressed up. Soon a cry of 'There she blows!' sent the men off to hunt another whale. The narrator compared this endless cycle to human life, where people must start over again and again. He ended by remembering Pythagoras, a wise man he once taught to splice a rope.",
+      "keyEvents": [
+        "hot oil poured into casks",
+        "casks rolled down into the hold",
+        "ship scrubbed until spotless",
+        "crew washes and dresses up",
+        "cry of 'There she blows!' calls men to hunt again"
+      ],
+      "charactersPresent": [],
+      "setting": "aboard a whaling ship at sea",
+      "kind": "essay",
+      "contentNotes": [
+        "Blood and oil described on the deck; death mentioned only in figurative terms"
+      ],
+      "index": 98,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ahab often paused at the binnacle and the mainmast during his walks on the quarter-deck. One morning he stopped before the gold doubloon nailed to the mast and studied its figures. He said the coin mirrored each man's own self, and that man is born in pain and dies in pangs. Starbuck read the coin as a sad sign of God's dark valley and bright sun. Stubb read the zodiac as the story of a man's life, full of jokes. Flask counted the cigars the coin could buy. The old Manxman predicted the White Whale would be raised in a month and a day. Pip repeated grammar lessons and seemed mad. Queequeg and Fedallah also looked at the coin.",
+      "keyEvents": [
+        "Ahab stops before the doubloon and reads its signs",
+        "Ahab says the coin mirrors each man and that life is pain",
+        "Starbuck reads the coin as a sign of God's light and gloom",
+        "Stubb reads the zodiac as the life of man",
+        "The Manxman predicts the White Whale will be raised"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Starbuck",
+        "Stubb",
+        "Flask",
+        "Queequeg",
+        "Fedallah",
+        "Pip"
+      ],
+      "setting": "Deck of the Pequod, by the mainmast and try-works",
+      "kind": "essay",
+      "contentNotes": [
+        "Pip's talk suggests madness",
+        "Talk of death and pangs",
+        "Ahab's obsession with the White Whale",
+        "Stubb's crude joke about a lecherous dog"
+      ],
+      "index": 99,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Pequod meets the English ship Samuel Enderby, whose captain has also lost an arm to the White Whale. Ahab struggles to climb aboard because he has only one leg, but the crew lifts him with a blubber-hook. The English captain tells how the whale tangled his line, smashed his boat, and wounded him. Ship's surgeon Bunger adds his own story and jokes about the captain's drinking. Ahab grows fierce and eager to know where the whale was last seen. When Bunger reaches for his arm with a lancet, Ahab shoves him away and orders his boat readied. He returns to the Pequod without taking any more information from the English captain.",
+      "keyEvents": [
+        "Ahab hails the Samuel Enderby and asks about the White Whale",
+        "Ahab struggles to board the strange ship and is lifted by a blubber-hook",
+        "The English captain tells how the White Whale wounded him",
+        "Dr. Bunger describes the wound and the loss of the arm",
+        "Ahab demands to know where the whale was last seen"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Captain Boomer",
+        "Dr. Bunger",
+        "Mounttop",
+        "Fedallah"
+      ],
+      "setting": "Open sea, aboard the Pequod and the Samuel Enderby",
+      "kind": "mixed",
+      "contentNotes": [
+        "A sailor loses an arm to a whale and a man has a severe wound",
+        "Captain Boomer's drinking of rum toddies with the surgeon is mentioned",
+        "Ahab violently shoves Bunger against the bulwarks",
+        "Bunger describes a head dent and a jack-knife swallowing story",
+        "Ahab is described as enraged and obsessed"
+      ],
+      "index": 100,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator describes the English ship Samuel Enderby, named after the merchant Samuel Enderby, and the whaling house of Enderby & Sons. He recalls the history of English and Nantucket whaling, including the Amelia's voyage in 1778 and the Syren's cruise to Japan in 1819. He tells of visiting the Samuel Enderby at midnight off Patagonia, where the crew drank flip and ate beef and dumplings. He then describes an old Dutch book on whaling, Dan Coopman, which lists huge stores of food and drink for Dutch whalers. He calculates that each Dutch sailor had about two barrels of beer for a twelve-week cruise. He concludes that English whalers also enjoyed good food and drink, and the chapter ends with the decanter emptied.",
+      "keyEvents": [
+        "Samuel Enderby ship and whaling house described",
+        "Amelia and Syren voyages recalled",
+        "Narrator visits Samuel Enderby off Patagonia",
+        "Flip and beef enjoyed aboard",
+        "Dutch whaling supply list examined"
+      ],
+      "charactersPresent": [
+        "Dr. Snodhead",
+        "Ahab"
+      ],
+      "setting": "Ship Samuel Enderby off the Patagonian coast; the narrator's study of whaling history",
+      "kind": "mixed",
+      "contentNotes": [
+        "drinking (flip, gin, beer) aboard ship and in the forecastle",
+        "sailors hung aloft in a squall, a mild danger"
+      ],
+      "index": 101,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ishmael explains that he will describe the whale's bones, since he once cut open a small young whale and later studied a huge skeleton. He recalls his visit to the palm villa of his friend King Tranquo in Tranque. There, a dead sperm whale's skeleton had been placed in a temple, where priests kept a flame burning in its skull. Ishmael walked through the ribs with a ball of twine and measured the skeleton with a green rod until the priests quarreled and shouted at him. He then notes other whale skeletons in England and America that people can check his figures against. Last, he says his measurements are tattooed on his right arm.",
+      "keyEvents": [
+        "Ishmael says he will describe the whale's skeleton",
+        "Ishmael recalls cutting open a small young sperm whale",
+        "Ishmael visits King Tranquo's palm villa at Pupella",
+        "Priests keep a flame in the skull of the dead whale's skeleton",
+        "Ishmael measures the skeleton while the priests quarrel"
+      ],
+      "charactersPresent": [
+        "Ishmael",
+        "Tranquo"
+      ],
+      "setting": "Pupella, a palm villa glen near Bamboo-Town in Tranque",
+      "kind": "mixed",
+      "contentNotes": [
+        "A large whale is described as found dead on a shore after a storm"
+      ],
+      "index": 102,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator gives a plain estimate of the living Sperm Whale's size and weight, saying a whale of about ninety feet could weigh at least ninety tons. He then describes the skeleton at Tranque, which measures seventy-two feet and is much smaller than the living whale. He describes the ten pairs of ribs, noting that the largest rib is only about half the true depth of the living body. He says the whale can only be truly understood at sea, not by studying bones. Last, he describes the forty-odd vertebrae, which tapered to small bones that had been stolen by the priest's children to play marbles.",
+      "keyEvents": [
+        "Narrator estimates the living Sperm Whale weighs at least ninety tons",
+        "Skeleton at Tranque measures seventy-two feet",
+        "Ten ribs on each side are described, with the middle ribs longest",
+        "Narrator says the skeleton does not show the whale's true living bulk",
+        "Forty-odd vertebrae are described, tapering to the tail"
+      ],
+      "charactersPresent": [],
+      "setting": "Tranque, a wood where the whale skeleton is displayed",
+      "kind": "essay",
+      "contentNotes": [],
+      "index": 103,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator describes the whale as a subject too large for ordinary words. He claims to be a stone-mason and ditch-digger, and he explains that whale fossils from the Tertiary period link ancient and modern creatures. He tells of skulls found in Paris and Antwerp, and of a skeleton found in Alabama in 1842, which Owen renamed Zeuglodon. He then points to whale carvings on an Egyptian ceiling and to John Leo's account of a temple with whale-bone rafters. He ends by urging Nantucket whalemen to worship there.",
+      "keyEvents": [
+        "Narrator praises the whale as a grand subject",
+        "Discusses whale fossils found in Europe and America",
+        "Describes Alabama skeleton, renamed Zeuglodon by Owen",
+        "Cites Egyptian ceiling carving of a whale",
+        "Quotes John Leo on a temple built with whale bones"
+      ],
+      "charactersPresent": [],
+      "setting": "No fixed scene; a digression on fossil sites and historical records",
+      "kind": "essay",
+      "contentNotes": [
+        "Refers to enslaved people in Alabama as 'credulous slaves' in a condescending, dated way",
+        "Quotes a historical traveler's account, including an outdated view of whales as mysterious"
+      ],
+      "index": 104,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator asks whether whales have shrunk over time. He compares modern whales with fossil whales, and with ancient and older writers' tall claims about giant whales, which he doubts. He argues that whalers cannot wipe out whales as hunters wiped out the buffalo, because whale hunting is slow and whales can hide in the far seas and polar ice. He notes that whales live long and that several generations live at once. In the end he calls the whale immortal as a species, though each whale dies.",
+      "keyEvents": [
+        "Narrator asks whether whales have degenerated in size since ancient times",
+        "Fossil whales are compared with modern whales, which are larger",
+        "Narrator doubts ancient accounts of enormous whales",
+        "Narrator compares the whale hunt with the buffalo hunt and argues whales cannot be wiped out",
+        "Narrator concludes the whale is immortal as a species"
+      ],
+      "charactersPresent": [],
+      "setting": "Not a specific place; general discussion of whales and the sea",
+      "kind": "essay",
+      "contentNotes": [
+        "Describes the mass slaughter of buffalo and the killing of whales, with no graphic detail"
+      ],
+      "index": 105,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ahab's ivory leg was shaken when he jumped onto a thwart of his boat and then turned sharply on his own deck. He did not trust it. Ahab had earlier been found unconscious on the ground at Nantucket, because his leg had been knocked out of place and nearly pierced his groin. He thought about how grief breeds more grief. He then called the carpenter and ordered a new leg made from the best jaw-ivory that night. He also had the forge brought up from the hold so the blacksmith could make iron fittings.",
+      "keyEvents": [
+        "Ahab's ivory leg is shaken when he lands hard on a thwart and then turns on his deck",
+        "Ahab recalls being found unconscious at Nantucket after his leg injured his groin",
+        "Ahab reflects that sorrow breeds more sorrow",
+        "Ahab orders the carpenter to make a new leg that night",
+        "The forge is brought out and the blacksmith is told to make iron fittings"
+      ],
+      "charactersPresent": [
+        "Ahab"
+      ],
+      "setting": "The Pequod's deck and the ship's hold",
+      "kind": "mixed",
+      "contentNotes": [
+        "Ahab is found unconscious and badly injured in an earlier incident",
+        "Mentions of a serious groin wound"
+      ],
+      "index": 106,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator described the Pequod's carpenter, a man skilled in many trades on a long whaling voyage. He worked at a heavy vice-bench near the try-works. He filed a belaying pin, built a cage for a captured bird, and treated a sprained wrist. He also drilled a sailor's ears and tried to pull a sailor's tooth. The narrator said the carpenter seemed stolid and heartless, working almost without thought, like a handy tool. Yet some hidden life in him kept him muttering to himself.",
+      "keyEvents": [
+        "Carpenter's many skills described",
+        "Vice-bench at the try-works described",
+        "Carpenter files a belaying pin and builds a bird cage",
+        "Carpenter drills a sailor's ears and attempts tooth extraction",
+        "Carpenter's stolid, tool-like nature described"
+      ],
+      "charactersPresent": [],
+      "setting": "Pequod's deck near the try-works",
+      "kind": "essay",
+      "contentNotes": [
+        "A sailor's tooth extraction is attempted and left unfinished",
+        "A sailor's ears are drilled for shark-bone earrings"
+      ],
+      "index": 107,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "During the first night watch, the carpenter files a new ivory leg for Ahab while sneezing from the bone dust. Ahab comes to measure the leg and speaks in strange, wandering ways. He talks of Prometheus, the blacksmith, and of how a lost leg still feels present to a man. He tells the carpenter that a living thing might stand where he stands, and he says the carpenter might feel hell's pains without a body. Ahab then leaves, and the carpenter says the crew, Stubb, and Starbuck all think Ahab is queer. The carpenter promises to finish the leg within the hour.",
+      "keyEvents": [
+        "Carpenter files an ivory leg by lantern light",
+        "Ahab comes to measure the leg",
+        "Ahab talks of Prometheus and the blacksmith",
+        "Ahab speaks about his phantom leg and hell",
+        "Ahab leaves and the carpenter says Ahab is queer"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Carpenter",
+        "Stubb",
+        "Starbuck"
+      ],
+      "setting": "Ship's deck during the first night watch",
+      "kind": "mixed",
+      "contentNotes": [
+        "Ahab's talk of hell and eternal fiery pains",
+        "Bone dust and filing of bones"
+      ],
+      "index": 108,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The crew pumps the Pequod and finds a good deal of oil coming up with the water, so the casks below must be leaking. Starbuck goes to the cabin to report it. Ahab is studying charts near Formosa and the Bashee Isles and refuses to stop for repairs. Starbuck argues, and Ahab seizes a loaded musket and aims it at him, ordering him on deck. Starbuck leaves with a warning that Ahab should beware of himself. Ahab then orders the sails shortened and the Burtons hoisted to fix the leak.",
+      "keyEvents": [
+        "Oil rises with the pumped water, showing a leak in the casks",
+        "Starbuck reports the leak to Ahab in the cabin",
+        "Ahab refuses to stop and hoist the Burtons",
+        "Ahab aims a loaded musket at Starbuck, who leaves with a warning",
+        "Ahab orders the Burtons hoisted and the leak repaired"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Starbuck"
+      ],
+      "setting": "Ahab's cabin aboard the Pequod, nearing Formosa",
+      "kind": "mixed",
+      "contentNotes": [
+        "Ahab aims a loaded musket at Starbuck during an argument"
+      ],
+      "index": 109,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The crew searched for a leak deep in the ship's hold while Queequeg fell ill with a fever that nearly killed him. Believing he was dying, he asked for a coffin like the canoes of Nantucket. The carpenter built it from old dark wood, and Queequeg lay in it with his harpoon, biscuits, and his small god Yojo. Pip called out about a coward who jumped from a whale-boat. Then Queequeg suddenly rallied, saying he had a duty ashore left undone.",
+      "keyEvents": [
+        "Queequeg falls ill with a fever after working in the hold",
+        "Queequeg asks for a coffin like the Nantucket canoes",
+        "The carpenter builds the coffin from old dark wood",
+        "Queequeg lies in the coffin with his gear while Pip speaks over him",
+        "Queequeg suddenly recovers and later regains his strength"
+      ],
+      "charactersPresent": [
+        "Queequeg",
+        "Pip",
+        "Starbuck",
+        "Ahab"
+      ],
+      "setting": "Aboard the whaling ship, in the hold and forecastle",
+      "kind": "mixed",
+      "contentNotes": [
+        "Serious illness with a fever that nearly causes death",
+        "A coffin is built for a dying man",
+        "Pip's speech mentions a coward who jumped from a whale-boat and drowned",
+        "Talk of death and dying throughout"
+      ],
+      "index": 110,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Pacific sea opens wide before the Pequod. The narrator praises its calm blue waters and says it seems to hold a hidden soul. He describes it as the center of the world, with its waves washing many lands. Ahab stands at his usual place by the mizen rigging. He smells the sweet air of the Bashee isles and the salt sea, knowing the White Whale swims somewhere ahead. His purpose grows stronger, and in his sleep he cries out that the White Whale spouts thick blood.",
+      "keyEvents": [
+        "Pequod passes the Bashee isles and enters the Pacific",
+        "Narrator reflects on the Pacific as the sea of dreams",
+        "Ahab stands by the mizen rigging thinking of the White Whale",
+        "Ahab's purpose grows stronger as they head toward Japan",
+        "Ahab cries out in his sleep about the White Whale spouting blood"
+      ],
+      "charactersPresent": [
+        "Ahab"
+      ],
+      "setting": "The Pacific Ocean near the Bashee isles, aboard the Pequod",
+      "kind": "essay",
+      "contentNotes": [],
+      "index": 111,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Perth, an old blacksmith, kept his portable forge on deck and worked constantly for the crew, mending harpoons, lances, and boat gear. He rarely complained. The mariners eventually learned his sad story. On a bitter winter night, he was caught out on a road and lost the feet to the cold. Earlier, his happy home had been ruined by the Bottle Conjuror, which the text uses as a figure for drink. His wife and children died, the house was sold, and he became a homeless wanderer. The chapter ends with him deciding to go whaling.",
+      "keyEvents": [
+        "Perth keeps his forge on deck and works for the crew",
+        "The mariners learn the story of his injured feet",
+        "He loses both feet to frostbite on a winter night",
+        "His home falls to ruin and his family dies",
+        "He answers the call of the sea and goes whaling"
+      ],
+      "charactersPresent": [
+        "Perth"
+      ],
+      "setting": "Deck of the Pequod at sea; flashbacks to a country road and his former home",
+      "kind": "mixed",
+      "contentNotes": [
+        "Loss of both feet from cold exposure",
+        "Death of his wife and children",
+        "Homelessness and ruin",
+        "Drink implied through the Bottle Conjuror",
+        "Suicidal longing described, though not acted on"
+      ],
+      "index": 112,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Captain Ahab visited Perth, the ship's blacksmith, at his forge carrying a bag of horse-shoe nail-stubs. Ahab asked Perth to make a harpoon for the White Whale. Perth forged twelve rods into a shank and welded on the steel barbs. Ahab had Tashtego, Queequeg, and Daggoo give blood to temper the barb. Ahab then fitted the iron to a hickory pole and rope and walked away. Stubb watched the Parsee from the forecastle and thought he smelled of fire.",
+      "keyEvents": [
+        "Ahab brings horse-shoe nail-stubs to Perth's forge",
+        "Ahab orders a harpoon made for the White Whale",
+        "Perth forges the twelve-rod shank and welds on the barbs",
+        "Three harpooners give blood to temper the barb",
+        "Ahab fits the iron to a hickory pole and rope"
+      ],
+      "charactersPresent": [
+        "Perth",
+        "Ahab",
+        "Stubb",
+        "Tashtego",
+        "Queequeg",
+        "Daggoo"
+      ],
+      "setting": "The forge on the Pequod's deck",
+      "kind": "narrative",
+      "contentNotes": [
+        "Three men are cut so their blood can temper the harpoon barb",
+        "Ahab speaks of wanting to be mad and of murderers' bones",
+        "Ahab's mock baptism words are used during the tempering",
+        "Scalding steam from the water-cask hits Ahab's face"
+      ],
+      "index": 113,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Pequod sails deep into the Japanese cruising ground, and its crew spends many hours in the whale boats chasing whales with little success. On calm days the sea seems gentle and beautiful, and the narrator reflects on how peaceful moods pass quickly, like the storms and calms that fill life. Ahab feels a brief softening in these quiet scenes. Starbuck gazes down into the golden water and says he chooses to believe rather than remember the dangers of the sea. Stubb then declares that he has always been jolly.",
+      "keyEvents": [
+        "Pequod sails deep into the Japanese cruising ground",
+        "Crew spends long hours in the boats chasing whales with little success",
+        "Narrator reflects on calm moods and the mix of calms and storms in life",
+        "Ahab feels a brief softening in the calm scenes",
+        "Starbuck declares he looks deep down and believes"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Starbuck",
+        "Stubb"
+      ],
+      "setting": "Calm sea in the Japanese cruising ground, aboard and around the whale boats",
+      "kind": "essay",
+      "contentNotes": [],
+      "index": 114,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Pequod meets the Bachelor, a Nantucket ship returning home after a very successful whaling trip. The Bachelor is full of sperm oil and its crew celebrates loudly with drums, dancing, and music. Captain Ahab stands gloomy on the Pequod while the other captain calls out to him to come aboard. Ahab asks whether the other captain has seen the White Whale, and the captain says he does not believe in it. Ahab refuses the invitation, calls the Bachelor's captain a fool, and orders his ship to sail on. The two ships part, and Ahab looks at a small vial of Nantucket sand.",
+      "keyEvents": [
+        "The Bachelor sails near the Pequod, full of sperm oil and celebrating",
+        "The Bachelor's captain invites Ahab aboard",
+        "Ahab asks if the Bachelor has seen the White Whale",
+        "Ahab refuses and the two ships part",
+        "Ahab looks at a vial of Nantucket soundings"
+      ],
+      "charactersPresent": [
+        "Ahab"
+      ],
+      "setting": "Open sea, aboard the Pequod and the Bachelor",
+      "kind": "mixed",
+      "contentNotes": [
+        "Two islanders from the Bachelor died during the voyage",
+        "Heavy drinking and wild revelry aboard the Bachelor"
+      ],
+      "index": 115,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "After the Pequod met the Bachelor, its crew saw more whales and killed four of them. Ahab killed one of these whales. As the sun set, the whale died slowly, turning its head toward the sun. Ahab sat in his boat and watched it. He thought about the sun, the dark sea, and the faith of living things. He then spoke to the sea and called its waves his foster-brothers.",
+      "keyEvents": [
+        "Pequod kills four whales after meeting the Bachelor",
+        "Ahab kills one whale near sunset",
+        "Ahab watches the whale die with its head turned to the sun",
+        "Ahab speaks to the sea and its billows"
+      ],
+      "charactersPresent": [
+        "Ahab"
+      ],
+      "setting": "open sea at sunset, near the Manilla isles",
+      "kind": "mixed",
+      "contentNotes": [
+        "A sperm whale is killed and dies slowly",
+        "Whale slaughter during a whaling hunt"
+      ],
+      "index": 116,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Four whales were killed the evening before. The windward one was too far away to tow, so Ahab's boat stayed beside it all night. Ahab woke and spoke with the Parsee, who was watching sharks around the dead whale. Ahab said he had dreamed of hearses again. The Parsee repeated his prophecies that Ahab cannot die until two hearses are seen at sea and that only hemp can kill him. Ahab laughed and called himself immortal on land and sea. At dawn the crew woke, and by noon the dead whale was brought to the ship.",
+      "keyEvents": [
+        "Windward whale left alongside Ahab's boat overnight",
+        "Ahab wakes and tells the Parsee of his dream",
+        "Parsee repeats prophecy that hemp alone can kill Ahab",
+        "Ahab laughs and calls himself immortal",
+        "Dead whale brought to the ship by noon"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "the Parsee"
+      ],
+      "setting": "Sea beside a dead whale at night",
+      "kind": "mixed",
+      "contentNotes": [
+        "A whale is killed",
+        "Prophecy of death, including a reference to hanging (hemp)"
+      ],
+      "index": 117,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The crew waited for the order to sail for the equator. At high noon, Ahab took a sun sighting with his quadrant to find his latitude. He cursed the instrument and wished he could see farther than the sun. Then he smashed the quadrant on the deck and stamped it to pieces, saying he would navigate by the compass and log line instead. The Parsee watched silently and then walked away. Ahab ordered the ship turned. Starbuck reflected on how a fire burns down to ashes, and Stubb answered that Ahab must play the hand he was dealt.",
+      "keyEvents": [
+        "Order to steer for the equator is given",
+        "Ahab takes the noon sun sighting with his quadrant",
+        "Ahab curses the quadrant and smashes it on the deck",
+        "Ahab orders the ship turned",
+        "Starbuck and Stubb talk about fire and ashes"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Starbuck",
+        "Stubb"
+      ],
+      "setting": "Deck of the Pequod in the Japanese sea",
+      "kind": "mixed",
+      "contentNotes": [],
+      "index": 118,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "A fierce typhoon struck the Pequod in the Japanese seas and tore away her sails. A wave stove in Ahab's whale-boat. Starbuck urged the crew to turn toward home, while Stubb tried to keep his spirits up with a song. Pale flames called corpusants burned at the tops of the three masts and on Ahab's harpoon. Ahab held the burning harpoon, made the crew swear to hunt the White Whale, and blew out the flame. Many sailors ran from him in fear.",
+      "keyEvents": [
+        "Typhoon tears the Pequod's sails and stoves in Ahab's boat",
+        "Starbuck urges a turn toward home",
+        "Corpusants burn on the masts and harpoon",
+        "Ahab defies the fire and seizes the burning harpoon",
+        "Ahab blows out the flame and holds the crew to the hunt"
+      ],
+      "charactersPresent": [
+        "Starbuck",
+        "Stubb",
+        "Flask",
+        "Ahab",
+        "Daggoo",
+        "Tashtego",
+        "Queequeg",
+        "the Parsee"
+      ],
+      "setting": "The Pequod's deck during a typhoon in Japanese seas",
+      "kind": "mixed",
+      "contentNotes": [
+        "A storm damages the ship and Ahab's boat",
+        "Crew panic and a half-mutinous cry rises",
+        "Ahab swears oaths and speaks in defiance of a fire-worshipping religious image",
+        "Stubb's hand is jammed by a gunwale"
+      ],
+      "index": 119,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "During the first night watch, Starbuck approached Ahab at the helm. He asked whether to lower the main-top-sail yard, because its band was working loose. Ahab told him to lash everything and strike nothing. When Starbuck asked about the anchors, Ahab again ordered nothing moved. Ahab mocked Starbuck, called the top of the mast his brain-truck, and joked about taking medicine for colic.",
+      "keyEvents": [
+        "Starbuck asks to send down the main-top-sail yard",
+        "Ahab orders everything lashed and nothing struck",
+        "Starbuck asks whether to bring in the anchors",
+        "Ahab refuses again and mocks Starbuck's fear"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Starbuck"
+      ],
+      "setting": "Ship's deck at night, beside the helm",
+      "kind": "narrative",
+      "contentNotes": [],
+      "index": 120,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "During a midnight storm on the ship, Stubb and Flask work on the forecastle bulwarks, lashing down the anchors. Stubb teases Flask about his earlier worry that Ahab's ship was a danger, like a ship loaded with powder and matches. He argues that lightning rods make a ship safe and that sensible men stay calm. As they work, Stubb jokes about wet clothes and the anchors, and his own hat blows away. He ends by calling it a nasty night.",
+      "keyEvents": [
+        "Stubb mocks Flask for earlier fears about Ahab's ship",
+        "Stubb argues that lightning rods keep a ship safe in a storm",
+        "Stubb and Flask lash down the anchors on the forecastle",
+        "Stubb's tarpaulin blows overboard in the wind"
+      ],
+      "charactersPresent": [
+        "Stubb",
+        "Flask",
+        "Ahab"
+      ],
+      "setting": "Forecastle bulwarks of the ship at midnight during a storm",
+      "kind": "narrative",
+      "contentNotes": [],
+      "index": 121,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Tashtego worked high on the main-top-sail yard during a storm at midnight. He passed new lashings around the yard. As he worked, he grumbled about the thunder and said the crew wanted rum, not thunder, and asked for a glass of rum. The chapter was very short and gave only this one moment.",
+      "keyEvents": [
+        "Tashtego passes new lashings around the main-top-sail yard",
+        "Tashtego complains about the thunder",
+        "Tashtego asks for a glass of rum"
+      ],
+      "charactersPresent": [
+        "Tashtego"
+      ],
+      "setting": "Main-top-sail yard aloft during a thunderstorm at midnight",
+      "kind": "narrative",
+      "contentNotes": [
+        "Tashtego asks for a glass of rum (drinking)"
+      ],
+      "index": 122,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "After the worst of the Typhoon passes, Starbuck and Stubb cut away the torn sails, and the crew sets new ones. The wind turns fair, and the men sing for joy. Starbuck goes below to report to Captain Ahab and finds the loaded muskets in the cabin. He thinks about killing Ahab while he sleeps, and he holds a musket to the old man's door. Ahab mutters in his sleep about Moby Dick. Starbuck puts the musket back in its rack and leaves. He tells Stubb to wake Ahab and report the change.",
+      "keyEvents": [
+        "Typhoon eases and torn sails are cut away",
+        "Wind shifts fair and the crew sings",
+        "Starbuck goes below to report to Ahab",
+        "Starbuck holds a loaded musket against Ahab's door",
+        "Starbuck returns the musket and leaves, sending Stubb to wake Ahab"
+      ],
+      "charactersPresent": [
+        "Starbuck",
+        "Stubb",
+        "Captain Ahab"
+      ],
+      "setting": "The Pequod's deck and cabin during a typhoon",
+      "kind": "narrative",
+      "contentNotes": [
+        "Starbuck considers murdering Captain Ahab in his sleep",
+        "Loaded muskets are handled and aimed at a sleeping man",
+        "Storm at sea with dangerous rigging and sails torn away"
+      ],
+      "index": 123,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The next morning the Pequod sails on a rough sea with a strong wind. Ahab feels proud and speaks to the ship as if it were the sun's chariot. The steersman says the ship is heading east, and Ahab angrily strikes him. Ahab sees that the compasses point east while the ship is really going west. He blames the thunder from the night before. Starbuck says he has never seen this happen to him. Ahab uses a lance, a top-maul, and a sail-maker's needle to make a new magnetic needle. He hangs it over the compass and shows the crew it points true. The men look and then walk away, and Ahab looks proud and fierce.",
+      "keyEvents": [
+        "Ahab proudly speaks to the ship as the sun's chariot",
+        "Ahab strikes the frightened steersman for saying east",
+        "Ahab finds the compasses point east while the ship goes west",
+        "Ahab blames the thunder and Starbuck agrees it is strange",
+        "Ahab magnetizes a new needle with the lance and maul"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Starbuck",
+        "Stubb",
+        "Flask"
+      ],
+      "setting": "Aboard the Pequod at sea",
+      "kind": "narrative",
+      "contentNotes": [
+        "Ahab strikes the steersman with his fist",
+        "Ahab is cruel and prideful toward the crew"
+      ],
+      "index": 124,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ahab orders the crew to heave the long-unused log. The old Manxman warns that the line is rotten, but Ahab brushes off his worry. When the log is thrown, the line snaps and the log is lost. Someone cries out that Pip, who had jumped from the whale-boat, is clinging to the line in the water. Ahab rushes to the stern, takes Pip's hand, and leads him to his cabin. He declares that Pip will live with him from then on.",
+      "keyEvents": [
+        "Ahab orders the long-unused log heaved",
+        "Line snaps and the log is lost",
+        "Pip is found clinging to the line in the water",
+        "Ahab takes Pip to his cabin"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Pip"
+      ],
+      "setting": "Stern of the Pequod",
+      "kind": "narrative",
+      "contentNotes": [
+        "A boy is nearly lost in the sea",
+        "Crew shouts about cutting off Pip's arm with a hatchet",
+        "Ahab speaks in a disturbed, wild manner"
+      ],
+      "index": 125,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Pequod sails south-east toward the Equator through quiet waters. Near some rocky islets at dawn, the crew hears wild cries. Ahab explains they came from seals. At sunrise a sailor falls from the mast-head into the sea and drowns. The life-buoy is dropped but sinks, since its cask fills with water. No light cask can be found to replace it, so Queequeg suggests using his coffin. Starbuck orders the carpenter to make it into a life-buoy. Stubb and Flask joke about the job, and Stubb complains about cobbling work.",
+      "keyEvents": [
+        "Ship hears wild cries near rocky islets at dawn",
+        "Ahab explains the cries came from seals",
+        "A sailor falls from the mast-head and drowns",
+        "The life-buoy cask sinks after filling with water",
+        "Queequeg suggests his coffin as a replacement life-buoy"
+      ],
+      "charactersPresent": [
+        "Flask",
+        "Ahab",
+        "Starbuck",
+        "Stubb",
+        "Queequeg"
+      ],
+      "setting": "The Pequod at sea, near rocky islets close to the Equator",
+      "kind": "mixed",
+      "contentNotes": [
+        "A sailor falls from the mast-head and drowns",
+        "Talk of coffins and drowned men",
+        "Superstitious talk of mermaids and ghosts"
+      ],
+      "index": 126,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ahab walked past a coffin that the Carpenter was caulking on the deck. The coffin had once been made into a leg, and now it was being turned into a life-buoy, as Mr. Starbuck had ordered. Ahab teased the Carpenter about being a leg-maker, an undertaker, and a jack-of-all-trades. He asked whether the Carpenter ever sang while he worked. Ahab then thought about how the dreaded coffin had become a sign of help and hope. He told the Carpenter to stop the tapping and went below with Pip.",
+      "keyEvents": [
+        "Ahab passes the coffin being caulked on the deck",
+        "Ahab teases the Carpenter about his many trades",
+        "Ahab reflects that the coffin has become a life-buoy",
+        "Ahab orders the tapping stopped and goes below with Pip"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Pip",
+        "the Carpenter"
+      ],
+      "setting": "ship's deck near the open hatchway",
+      "kind": "mixed",
+      "contentNotes": [
+        "a coffin is shown and discussed, with references to death and the grave",
+        "mentions of a dead man's coffin (Queequeg)"
+      ],
+      "index": 127,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Pequod meets the Rachel, whose captain, Gardiner, asks for help searching for a missing whale-boat. The boat was lost after a chase with Moby Dick. Gardiner's young son is in the missing boat, and he begs Ahab for help. Ahab refuses, saying he must go on, and the Rachel sails away still searching.",
+      "keyEvents": [
+        "The Rachel approaches the Pequod, and her captain asks if Ahab has seen the White Whale",
+        "Gardiner explains that a boat was lost after a chase with Moby Dick",
+        "Gardiner asks to search together, and reveals his young son is missing",
+        "Ahab refuses and the Rachel sails away still searching"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Gardiner",
+        "Stubb",
+        "Flask",
+        "Starbuck"
+      ],
+      "setting": "Aboard the Pequod at sea",
+      "kind": "mixed",
+      "contentNotes": [
+        "A boy and several sailors are lost at sea and presumed drowned",
+        "A father's grief over his missing son",
+        "A possible reference to dead men's spirits by the old Manxman"
+      ],
+      "index": 128,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ahab tells Pip to stay in the cabin and sit in his screwed chair while Ahab goes on deck to hunt the whale. Pip begs to go with him, but Ahab refuses and says his ivory foot will still be heard above. After Ahab leaves, Pip is alone in the cabin. He imagines a gathering of captains and officers and talks to them about a missing Pip. He decides he will stay below, even as the ship seems to strike rocks.",
+      "keyEvents": [
+        "Ahab tells Pip to stay below in the cabin",
+        "Pip begs to follow Ahab and Ahab refuses",
+        "Ahab leaves for the deck and says goodbye to Pip",
+        "Pip is left alone and imagines captains and officers at a table",
+        "Pip decides to stay below even as the ship seems to be wrecked"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Pip"
+      ],
+      "setting": "Ahab's cabin on the ship",
+      "kind": "narrative",
+      "contentNotes": [
+        "Ahab threatens to murder Pip, though he is speaking in anger and is not serious",
+        "Ahab says he is mad and Pip is distressed; Pip seems to be losing his mind",
+        "Pip's imagined talk includes racial slurs and terms like 'black boy' and 'negro lad'",
+        "Pip recalls that Stubb once abandoned him at sea, leaving him to drown",
+        "Pip's imagined scene includes a ship striking rocks and sinking"
+      ],
+      "index": 129,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "Ahab believes he is close to Moby Dick and grows more fixed in his purpose. His crew goes quiet and afraid, and Fedallah seems almost like a shadow. Ahab stays on deck day and night and rarely speaks to Fedallah. When no spout is seen for several days, Ahab climbs to the masthead in a basket. He puts Starbuck in charge of the rope that holds him up. A savage hawk circles him and then snatches his hat and flies off with it. The hat falls into the sea, and it is never returned to him.",
+      "keyEvents": [
+        "Ahab feels close to Moby Dick and his purpose grows fixed",
+        "Crew goes silent and Fedallah seems like a shadow",
+        "No spout seen for several days",
+        "Ahab is hoisted to the masthead with Starbuck holding the rope",
+        "A hawk snatches Ahab's hat and flies away with it"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Starbuck",
+        "Fedallah",
+        "Stubb",
+        "Flask",
+        "Daggoo",
+        "Queequeg",
+        "Tashtego"
+      ],
+      "setting": "Pequod at sea, near the whale's latitude",
+      "kind": "mixed",
+      "contentNotes": [
+        "Ahab's obsessive pursuit of a whale that has harmed him"
+      ],
+      "index": 130,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The Pequod sails on and sights another ship, the Delight. Its broken boat hangs from the shears, and the Delight's captain says the White Whale has not been killed. Ahab holds up a harpoon and swears to strike the whale. The captain says five of his strong men died, and he buries one of them at sea. The body splashes into the water as the Pequod turns away. A voice from the Delight warns that the Pequod cannot escape the coffin-like life-buoy at its stern.",
+      "keyEvents": [
+        "Pequod sights the Delight, whose broken boat hangs from its shears",
+        "Delight's captain says the White Whale has not been killed",
+        "Ahab swears to temper his harpoon and kill the whale",
+        "Captain says five men died and buries one at sea",
+        "Pequod turns away as the body splashes into the sea"
+      ],
+      "charactersPresent": [
+        "Ahab"
+      ],
+      "setting": "Aboard the Pequod, at sea beside the Delight",
+      "kind": "mixed",
+      "contentNotes": [
+        "Five sailors die, and one is buried at sea",
+        "Burial at sea with a corpse dropped into the water",
+        "Ahab swears vengeance on the White Whale"
+      ],
+      "index": 131,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "On a calm, clear day, Ahab leans over the side of the ship and remembers his forty years at sea. He tells Starbuck he feels old and regrets the lonely life he has led, and he thinks of his wife and child in Nantucket. Starbuck begs him to sail home and give up the chase of Moby Dick. Ahab wonders whether fate controls him, then sees Fedallah leaning over the same rail. Starbuck, pale with despair, walks away.",
+      "keyEvents": [
+        "Ahab stands on deck on a calm, clear morning",
+        "Ahab drops a tear into the sea and speaks of his forty years of whaling",
+        "Ahab mentions his wife and child at home in Nantucket",
+        "Starbuck urges Ahab to turn back toward home",
+        "Ahab questions whether fate controls his actions"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Starbuck",
+        "Fedallah"
+      ],
+      "setting": "Quarterdeck of the Pequod on a calm sea",
+      "kind": "mixed",
+      "contentNotes": [
+        "Ahab describes his past marriage and loneliness, and talks of his own death-like weariness",
+        "Mentions of a prey hunt and a sea creature attacking a flying-fish"
+      ],
+      "index": 132,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "That night Ahab smelled a whale and had the ship's course changed. At dawn the crew saw Moby Dick ahead. Ahab climbed to the masthead and shouted that it was the White Whale, then lowered the boats. The whale stayed calm at first, then rose under Ahab's boat and bit it in two. Ahab was thrown into the sea and was pulled out by Stubb's crew. The Pequod came up and drove the whale away. The crew tried to chase him with the ship. As the day ended, Ahab looked at the broken boat and spoke harshly to Stubb and Starbuck. He stayed by the scuttle until dawn.",
+      "keyEvents": [
+        "Ahab smells a whale and changes course at night",
+        "Moby Dick is sighted at daybreak and Ahab climbs to the masthead",
+        "The boats are lowered and chase the whale",
+        "Moby Dick bites Ahab's boat in two",
+        "Ahab is pulled from the sea and the Pequod drives the whale off"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Daggoo",
+        "Tashtego",
+        "Stubb",
+        "Starbuck",
+        "Fedallah",
+        "Perth"
+      ],
+      "setting": "The Pequod and the open tropical sea",
+      "kind": "narrative",
+      "contentNotes": [
+        "A whaleboat is smashed and its crew is left in the water in danger",
+        "Ahab is badly hurt and nearly drowns",
+        "Whale attack and violence against men"
+      ],
+      "index": 133,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "At daybreak Ahab orders the crew to keep chasing Moby Dick. The White Whale breaches far off, and the boats race toward him. Moby Dick charges the three boats and tangles their lines. Ahab cuts loose the tangled harpoons, but Stubb and Flask's boats are smashed and their crews thrown into the sea. Moby Dick then strikes Ahab's boat and flips it over. The crews are rescued, but the Parsee is missing and Ahab's ivory leg is snapped off. Starbuck begs Ahab to stop the chase, but Ahab refuses. Through the night the crew repairs the boats, and the carpenter makes Ahab a new leg.",
+      "keyEvents": [
+        "Ahab orders the chase to continue at daybreak",
+        "Moby Dick breaches in sight of the ship",
+        "Moby Dick tangles the three boats' lines",
+        "Stubb and Flask's boats are smashed",
+        "Moby Dick sinks Ahab's boat"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Stubb",
+        "Starbuck",
+        "Flask",
+        "Fedallah",
+        "Moby Dick"
+      ],
+      "setting": "The open sea, aboard the Pequod and near its boats",
+      "kind": "narrative",
+      "contentNotes": [
+        "Whale attacks destroy boats and throw men into the sea",
+        "Men are injured with sprains, bruises, and wrenched gear",
+        "The Parsee (Fedallah) is missing and presumed dead",
+        "Ahab's ivory leg is snapped off",
+        "Mild religious oaths and curses"
+      ],
+      "index": 134,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "On the third day of the chase, Ahab sees the white whale again and is lowered into a boat with his crew. Sharks follow the boat and bite at the oars. The whale tangles and drags the body of the Parsee, and then he rams the Pequod. The whale smashes the ship's bow and sinks it. Ahab is caught in the line and pulled from the boat into the sea. The Pequod and its crew go down, and the sea closes over them. Only a few small birds fly over the place where the ship sank.",
+      "keyEvents": [
+        "Ahab sights the whale again on the third day",
+        "Ahab is lowered into a boat as sharks attack the oars",
+        "The whale kills the Parsee, whose body is tangled in the line",
+        "The whale rams and breaks the Pequod's bow",
+        "Ahab is caught in the line and pulled into the sea"
+      ],
+      "charactersPresent": [
+        "Ahab",
+        "Starbuck",
+        "Stubb",
+        "Flask",
+        "Tashtego",
+        "Queequeg",
+        "Daggoo"
+      ],
+      "setting": "The open sea during the chase of Moby Dick",
+      "kind": "narrative",
+      "contentNotes": [
+        "Ahab and crew members die at sea",
+        "The whale kills the Parsee, whose body is seen tangled in the line",
+        "Sharks attack the boats",
+        "Violent ramming and sinking of the ship",
+        "Stubb talks about his own death"
+      ],
+      "index": 135,
+      "generatedBy": "claude-haiku-5-5"
+    },
+    {
+      "summary": "The narrator, the only survivor of the wreck, was drawn into the whirlpool left by the sinking ship. He circled the dark center until a coffin life-buoy shot up from the sea and floated beside him. For almost a day and night he drifted on the calm water, passing sharks and sea-hawks that did not harm him. On the second day the ship Rachel picked him up. She had been searching for her missing children and found only one more orphan.",
+      "keyEvents": [
+        "Narrator is pulled into the sinking ship's whirlpool",
+        "Coffin life-buoy rises from the sea and he holds onto it",
+        "He floats for almost a day and night among sharks and sea-hawks",
+        "On the second day the Rachel rescues him"
+      ],
+      "charactersPresent": [],
+      "setting": "Open sea, where the Pequod sank",
+      "kind": "mixed",
+      "contentNotes": [
+        "Shipwreck and sinking, with the crew lost",
+        "Sharks and sea-hawks nearby, though they do not attack",
+        "Implied deaths of the crew"
+      ],
+      "index": 136,
+      "generatedBy": "claude-haiku-5-5"
+    }
+  ],
+  "synopsis": "Ishmael, a young sailor, goes to New Bedford and meets Queequeg, a tattooed harpooner from a faraway island. The two become close friends and sign on to the whaling ship Pequod, captained by Ahab. Ahab lost a leg to a huge white whale called Moby Dick and is obsessed with revenge. He hides his purpose at first, then openly swears his crew to the hunt. The Pequod hunts many whales, and the narrator describes whaling in great detail, from cutting up blubber to making oil. Ahab grows more driven, ignoring warnings from Starbuck, his mate, and from strange omens. Ahab's search finally finds Moby Dick. In three days of fighting, the whale destroys the boats, takes Ahab down with a line, and sinks the Pequod. Ishmael alone survives, floating on a coffin life-buoy until a ship rescues him.",
+  "majorArcs": [
+    "Ishmael's voyage with Queequeg",
+    "Ahab's obsession with Moby Dick",
+    "Starbuck's doubts about the quest",
+    "Life and work aboard a whaling ship",
+    "The final chase and the sinking of the Pequod"
+  ]
+}

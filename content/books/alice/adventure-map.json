@@ -1,0 +1,877 @@
+{
+  "bookId": "alice",
+  "version": 1,
+  "generatedBy": "claude-haiku-5-5",
+  "choicePoints": [
+    {
+      "id": "cp01",
+      "chapter": 1,
+      "anchorAfter": "c001p020",
+      "rejoinAt": "c001p023",
+      "prompt": "The tiny golden key is out of reach on the glass table. What should Alice do?",
+      "isIntro": true,
+      "availableCharacters": [
+        "alice"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Search the hall for something to stand on",
+          "detourBrief": "Alice wanders the hall, checking under the lamps and along the walls. She finds only dust and a dropped feather, nothing tall enough to stand on. Puffing, she returns to the glass table, sits down, and starts thinking of another plan.",
+          "mustPreserve": [
+            "The tiny golden key is still on the glass table, out of reach",
+            "Alice is about ten inches tall"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Listen for sounds coming from the garden",
+          "detourBrief": "Alice presses her ear to the little door and hears faint splashing from the fountains and a bird singing. A cool breeze brushes her face and cheers her a little. She wipes her eyes, takes a breath, and decides to think before trying anything else.",
+          "mustPreserve": [
+            "The little golden key is still on the glass table",
+            "Alice cannot yet reach the key at her size"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Call out and wait for someone to help",
+          "detourBrief": "Alice calls hello down the long hall. Only her own echo answers, and no one comes. Feeling lonely, she sits down by the table and decides she must solve this herself. She sniffs, straightens up, and looks around once more.",
+          "mustPreserve": [
+            "The hall is empty and no one else appears",
+            "Alice is ten inches tall and the key is on the glass table"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "alice": [
+          {
+            "id": "alice-1",
+            "label": "Give herself a firm, sensible talking-to",
+            "detourBrief": "Alice tells herself sharply that crying will not fetch the key. She takes a deep breath, dries her eyes on her sleeve, and studies the slippery table legs carefully. She decides to test a careful plan before giving up.",
+            "mustPreserve": [
+              "The key is on the glass table and Alice cannot reach it",
+              "The table is made of solid glass"
+            ]
+          },
+          {
+            "id": "alice-2",
+            "label": "Picture the garden and keep hoping",
+            "detourBrief": "Alice pictures the bright flowers and cool fountains beyond the little door, and a spark of courage returns. She sets her mind on finding a clever way up. She sniffs, squares her shoulders, and refuses to give up on the garden.",
+            "mustPreserve": [
+              "The garden lies beyond the little door",
+              "Alice is ten inches tall"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp02",
+      "chapter": 2,
+      "anchorAfter": "c002p019",
+      "rejoinAt": "c002p020",
+      "prompt": "The Mouse is silent and only winks. What should Alice do next?",
+      "isIntro": false,
+      "availableCharacters": [
+        "alice"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Paddle gently toward the edge of the pool",
+          "detourBrief": "Alice swims slowly along the edge of the pool, looking for a way out. Her feet touch something soft, and she sees the Mouse still watching her from the water with bright, patient eyes. Neither of them speaks. Alice stops to think about what to say next, and the Mouse waits beside her.",
+          "mustPreserve": [
+            "The Mouse has not yet spoken a single word.",
+            "Alice is still floating in the salty pool of her own tears."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Offer the Rabbit's white glove as a small gift",
+          "detourBrief": "Alice pulls the little white kid glove from her hand and holds it out across the water as a friendly gift. The Mouse looks at it for a long moment, then gives a small shake of its head and turns its face away. Alice feels a little silly, tucks the glove back, and wonders how to make a friend of a mouse.",
+          "mustPreserve": [
+            "Alice still wears only one of the Rabbit's white kid gloves.",
+            "The Mouse does not accept anything and still has not spoken."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Float quietly and watch the other creatures",
+          "detourBrief": "Alice floats still and looks around the pool. Far off, a Duck and a Dodo are paddling in circles, and a Lory flutters above the water. Alice notices how crowded the pool is getting. The Mouse keeps its eyes on her, and Alice decides she must think of something polite to say.",
+          "mustPreserve": [
+            "The pool is getting crowded but no one has reached the shore yet.",
+            "The Mouse is still in the water beside Alice and has not spoken."
+          ]
+        }
+      ],
+      "characterOptions": {
+        "alice": [
+          {
+            "id": "alice-1",
+            "label": "Splash gently to show the Mouse she means no harm",
+            "detourBrief": "Alice paddles softly so the water barely splashes, making sure the Mouse knows she is friendly. The Mouse's whiskers twitch, but it does not swim away. Alice whispers that she is sorry for being so loud and waits politely, hoping the Mouse will feel safe enough to speak.",
+            "mustPreserve": [
+              "Alice is polite and kind, and the Mouse has still not spoken.",
+              "Alice remains in the pool of tears."
+            ]
+          },
+          {
+            "id": "alice-2",
+            "label": "Notice the Mouse's shining eyes and wait patiently",
+            "detourBrief": "Alice sees that the Mouse's little eyes are not angry, only curious. She stays very still and waits, counting the ripples in the water. The Mouse blinks slowly, as if it is thinking hard about her. Alice decides that a clever mouse may need a little time before it talks.",
+            "mustPreserve": [
+              "The Mouse is curious about Alice and has not yet spoken.",
+              "Alice is still swimming in the pool and has not reached the shore."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp03",
+      "chapter": 3,
+      "anchorAfter": "c003p039",
+      "rejoinAt": "c003p043",
+      "prompt": "The Mouse has stormed off in a huff. What should Alice do before it disappears from sight?",
+      "isIntro": false,
+      "availableCharacters": [
+        "alice"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Run after the Mouse and say sorry",
+          "detourBrief": "Alice hurries down the bank after the Mouse and apologises sincerely. The Mouse pauses, accepts her apology with a grumpy nod, but says it still will not finish the tale. It hurries into the long grass and is gone, and Alice returns to the damp bank.",
+          "mustPreserve": [
+            "The Mouse does not come back to finish its tale.",
+            "The Mouse is out of sight when the others speak again."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Call the others to help search for it",
+          "detourBrief": "Alice calls the birds and animals to look for the Mouse along the bank. They search among the reeds and rushes for a while, but the Mouse has already gone too far to find. They give up and gather again in a sad, quiet ring, still hoping it might return.",
+          "mustPreserve": [
+            "The Mouse does not come back to finish its tale.",
+            "Alice's thimble and comfits were the prizes given earlier."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Wait quietly and watch the water",
+          "detourBrief": "Alice sits still on the bank and watches the ripples on the pool, thinking about what she said. A cool breeze passes and she tries to remember the Mouse's tale. Soon the Mouse's small figure disappears over a distant hill, and Alice sighs and turns back to the others.",
+          "mustPreserve": [
+            "The Mouse does not come back to finish its tale.",
+            "The Mouse is out of sight when the others speak again."
+          ]
+        }
+      ],
+      "characterOptions": {
+        "alice": [
+          {
+            "id": "alice-1",
+            "label": "Tell the Mouse your apology from the heart",
+            "detourBrief": "Alice speaks gently to the Mouse, explaining she only mixed up the words by accident and feels truly sorry. The Mouse listens, looks a little less cross, but still says it is too upset to continue. It walks away slowly, and Alice watches it go with a small sigh.",
+            "mustPreserve": [
+              "The Mouse does not come back to finish its tale.",
+              "Alice mixed up tail and knot by accident, not on purpose."
+            ]
+          },
+          {
+            "id": "alice-2",
+            "label": "Ask the Lory why the Mouse gets so cross",
+            "detourBrief": "Alice turns to the Lory and asks, politely, why the Mouse is so easily offended. The Lory huffs and says it is not sure, only that the Mouse is very proud of its long history. Before they can talk more, the Mouse has gone out of sight, and the Lory sighs about it.",
+            "mustPreserve": [
+              "The Mouse does not come back to finish its tale.",
+              "The Lory is older than Alice, though its age stays a secret."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp04",
+      "chapter": 4,
+      "anchorAfter": "c004p040",
+      "rejoinAt": "c004p042",
+      "prompt": "Alice is hungry and tiny, and a mushroom stands nearby. What should Alice do first?",
+      "isIntro": false,
+      "availableCharacters": [
+        "alice"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Search the grass for something safe to eat",
+          "detourBrief": "Alice crouches among the grass and sniffs at berries and petals, deciding none look safe to taste. A rustle nearby makes her jump, but it is only a beetle. Curious, she wanders back toward the tall mushroom with the round top, wondering what might be up there, and stops at its stalk, ready to look.",
+          "mustPreserve": [
+            "Alice is still tiny and must find a way to grow back",
+            "The large mushroom is the thing she wants to see the top of"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Listen carefully for sounds in the wood",
+          "detourBrief": "Alice holds very still and listens. She hears birds, a far-off bark that fades away, and a soft humming that seems to come from somewhere near the mushroom. She decides humming is friendly and not frightening. Feeling braver, she tiptoes toward the mushroom, quietly parting the grass as she goes.",
+          "mustPreserve": [
+            "Alice has not yet grown back to her normal size",
+            "The puppy has run off and is no longer close by"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Sit down and rest for a moment",
+          "detourBrief": "Alice sits in the soft shade and thinks about the puppy, the cakes, and how strange her day has been. Her stomach rumbles, which reminds her she still needs to eat something. She stands up, brushes off her dress, and decides that the mushroom is the best place to look for an answer.",
+          "mustPreserve": [
+            "Alice still needs to find out what will make her grow",
+            "The mushroom is tall enough that Alice cannot see its top"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "alice": [
+          {
+            "id": "alice-1",
+            "label": "Sniff the flowers before tasting anything",
+            "detourBrief": "Alice bends over a patch of tiny flowers and sniffs them one by one. They smell sweet, but she remembers how the cakes changed her, so she does not taste them. She decides to walk slowly around the mushroom, looking for a safe spot, and finds a gap in the grass where she can see up to the top.",
+            "mustPreserve": [
+              "Alice has been careful about what she eats since the cakes changed her size",
+              "The mushroom is still the place she is heading toward"
+            ]
+          },
+          {
+            "id": "alice-2",
+            "label": "Politely call out to whoever lives there",
+            "detourBrief": "Alice clears her throat and says politely, Excuse me, is anyone there? Only a soft rustle answers her. She waits a moment, feeling a little silly but not afraid. Then she takes a deep breath, steps closer to the mushroom, and gets ready to peek over its edge.",
+            "mustPreserve": [
+              "Alice has no idea yet who might be living in the wood",
+              "She is still the wrong size for the garden she wants to reach"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp05",
+      "chapter": 5,
+      "anchorAfter": "c005p051",
+      "rejoinAt": "c005p053",
+      "prompt": "The mushroom is perfectly round, so which side is which? What should Alice try first?",
+      "isIntro": false,
+      "availableCharacters": [
+        "alice"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Sniff each torn edge before taking any bite",
+          "detourBrief": "Alice leans close and sniffs both torn edges. One smells sweet and one smells like damp earth, but neither tells her which side is which. Deciding to trust her luck, she nibbles the right-hand piece. A sudden jolt sends her chin banging against her foot, and she begins to shrink fast.",
+          "mustPreserve": [
+            "The mushroom is perfectly round, so its two sides cannot be told apart by looking.",
+            "After the first bite, her chin strikes her foot and she shrinks rapidly."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Tie a grass stalk to one piece to mark it",
+          "detourBrief": "Alice pulls a long grass stalk and ties it around the left-hand piece so she can tell the pieces apart. Then she gets muddled about which knot means which side. Hoping for the best, she nibbles the right-hand piece. Her chin jolts against her foot, and she starts shrinking quickly.",
+          "mustPreserve": [
+            "The mushroom is perfectly round, so its two sides cannot be told apart by looking.",
+            "After the first bite, her chin strikes her foot and she shrinks rapidly."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Work out the puzzle aloud, rule by rule",
+          "detourBrief": "Alice repeats the Caterpillar's words aloud, one side taller and one side shorter, and tries to reason which bit must be which. She decides the right-hand piece must be the first to try. The bite gives a sudden blow under her chin as her foot meets it, and she begins shrinking rapidly.",
+          "mustPreserve": [
+            "The Caterpillar said one side makes you taller and the other side makes you shorter.",
+            "After the first bite, her chin strikes her foot and she shrinks rapidly."
+          ]
+        }
+      ],
+      "characterOptions": {
+        "alice": [
+          {
+            "id": "alice-1",
+            "label": "Trust the Caterpillar and test the right-hand piece first",
+            "detourBrief": "Alice remembers the Caterpillar's advice and decides to test the right-hand piece first. She nibbles it carefully, and the bite makes her chin strike her foot with a jolt. She feels herself shrinking quickly and notices it is getting very hard to think clearly.",
+            "mustPreserve": [
+              "After the first bite, her chin strikes her foot and she shrinks rapidly.",
+              "The Caterpillar's advice is about one side growing her and the other side shrinking her."
+            ]
+          },
+          {
+            "id": "alice-2",
+            "label": "Stop to grumble about the Caterpillar's unhelpful answers",
+            "detourBrief": "Alice sits on the grass, annoyed that the Caterpillar gave such short, puzzling answers. While fidgeting, she accidentally bites the right-hand piece. A jolt sends her chin banging onto her foot, and she feels herself shrinking fast, with no time to waste.",
+            "mustPreserve": [
+              "After the first bite, her chin strikes her foot and she shrinks rapidly.",
+              "Alice is still a polite and curious girl who wants to make sense of things."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp06",
+      "chapter": 6,
+      "anchorAfter": "c006p075",
+      "rejoinAt": "c006p080",
+      "prompt": "The Cheshire Cat is back on a branch, asking a strange question. What should Alice do?",
+      "isIntro": false,
+      "availableCharacters": [
+        "alice",
+        "cheshire-cat"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Ask the Cat whether the Hatter is kinder",
+          "detourBrief": "Alice asks the Cat if the Hatter is kinder than the March Hare. The Cat grins and says both are mad in different ways, then fades slowly until only its grin hangs in the air. Alice shrugs and keeps walking toward the fur-roofed house, which soon comes into view.",
+          "mustPreserve": [
+            "The March Hare lives in the house with ear-shaped chimneys and a fur roof",
+            "Alice is walking toward the March Hare's house"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Walk on quietly without answering the Cat",
+          "detourBrief": "Alice decides not to answer the Cat and keeps her eyes on the path. Behind her a soft giggle drifts through the trees, and far off she hears the Cat ask about pigs and figs. She finds a small wooden sign with an arrow, follows it, and soon sees the large house of the March Hare ahead.",
+          "mustPreserve": [
+            "The Cheshire Cat is grinning and unpredictable but not dangerous",
+            "The March Hare's house is large and has ear-shaped chimneys"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Sit down on a mossy stone to think",
+          "detourBrief": "Alice sits on a mossy stone to think about the pig-baby and hopes it is happy in the wood. She wonders whether a sensible plan would help her meet the March Hare politely. A breeze carries the smell of tea from the distant house, so she stands up, brushes off her dress, and walks on toward it.",
+          "mustPreserve": [
+            "The pig-baby went off to the wood and is not part of this story now",
+            "Alice is nervous but curious about the March Hare"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "alice": [
+          {
+            "id": "alice-1",
+            "label": "Call out to the Cat and ask what it means",
+            "detourBrief": "Alice calls up to the branch and asks the Cat what it meant by pig or fig. The Cat only says that she will find out soon enough, and its voice echoes away. Alice huffs, decides it is hopeless, and walks on through the trees until the March Hare's house comes into view.",
+            "mustPreserve": [
+              "The Cat speaks in riddles and does not explain itself",
+              "The March Hare's house is ahead and has fur on its roof"
+            ]
+          },
+          {
+            "id": "alice-2",
+            "label": "Check the trees for other strange signs",
+            "detourBrief": "Alice looks carefully at the trees and spots a tiny door at the base of one, which she politely decides not to open. She notes a few mushrooms and a teapot-shaped stump. Feeling curious but sensible, she continues along the path, and soon the house of the March Hare appears through the leaves.",
+            "mustPreserve": [
+              "Alice is polite and careful about strange things",
+              "The March Hare's house is next on her path"
+            ]
+          }
+        ],
+        "cheshire-cat": [
+          {
+            "id": "cheshire-cat-1",
+            "label": "Grin wider and hide in the leaves for a while",
+            "detourBrief": "The Cat's grin spreads wider as it slips into the leaves and hides there, peeking out now and then. Its tail twitches from behind a branch, and it giggles quietly to itself. Once Alice is a few steps on, the Cat lets her go and settles back to watch the path ahead.",
+            "mustPreserve": [
+              "The Cat is friendly and playful, never cruel",
+              "The Cat is a grin-and-vanish kind of creature"
+            ]
+          },
+          {
+            "id": "cheshire-cat-2",
+            "label": "Fade slowly, leaving only the grin to tease her",
+            "detourBrief": "The Cat begins to fade slowly, starting with its tail, and leaves only its grin hanging in the air. The grin seems to say a few words about hatters and hares before it too disappears. Alice is left alone on the path, and she walks on toward the house with fur on its roof.",
+            "mustPreserve": [
+              "The Cat vanishes and reappears as it likes",
+              "The March Hare's house is where Alice is heading"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp07",
+      "chapter": 7,
+      "anchorAfter": "c007p089",
+      "rejoinAt": "c007p095",
+      "prompt": "The tea party has gotten muddled and a bit rude, and the Dormouse's story is getting stranger. What should Alice do?",
+      "isIntro": false,
+      "availableCharacters": [
+        "alice",
+        "hatter"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Ask the Dormouse to slow down and explain the treacle well",
+          "detourBrief": "Alice asks the Dormouse kindly to explain the well slowly. The Dormouse blinks, thinks hard, and admits the well is only a story it made up. The Hatter mutters about stories, but the Dormouse sleepily promises to keep going about the three sisters and their drawings.",
+          "mustPreserve": [
+            "The three little sisters are named Elsie, Lacie, and Tillie.",
+            "The Dormouse is still telling its story about the sisters and drawing."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Count the teacups to see how long the party has lasted",
+          "detourBrief": "Alice counts the cups piled on the table and finds dozens, all dirty. She wonders aloud how long they have been moving around. The Hatter insists it is always six o'clock. Alice gives up counting, and the Dormouse yawns and begins its story again.",
+          "mustPreserve": [
+            "The Hatter says it is always six o'clock because of his quarrel with Time.",
+            "Alice is still seated at the table."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Politely suggest a game so everyone can enjoy the party",
+          "detourBrief": "Alice suggests they play a quick game of guessing the riddle together. The March Hare and Hatter agree, but the game gets muddled. Alice laughs and tries to keep the peace. The Dormouse, woken by the noise, grumbles and settles back down to finish its story.",
+          "mustPreserve": [
+            "Alice is still seated at the table and the tea party continues.",
+            "The Dormouse is the one telling the treacle-well story."
+          ]
+        }
+      ],
+      "characterOptions": {
+        "alice": [
+          {
+            "id": "alice-1",
+            "label": "Gently tell the Hatter that teasing is not kind",
+            "detourBrief": "Alice smiles and tells the Hatter kindly that personal remarks make people feel small. The Hatter goes quiet, surprised, then gives a small nod. Alice feels better and listens to the Dormouse. The story picks up where the sisters are drawing with treacle.",
+            "mustPreserve": [
+              "Alice does not get any wine at the table.",
+              "The Dormouse's story is still going on."
+            ]
+          },
+          {
+            "id": "alice-2",
+            "label": "Quietly lift the lid of the teapot to peek inside",
+            "detourBrief": "Alice leans over and peeks into the big teapot, hoping to find something helpful. It is only warm tea with a few crumbs. She shrugs and sits back. The Dormouse opens one eye, mumbles something about treacle, and starts again, describing the three sisters at the bottom of the well.",
+            "mustPreserve": [
+              "The Hatter's watch still says the wrong date.",
+              "Alice is still sitting at the table."
+            ]
+          }
+        ],
+        "hatter": [
+          {
+            "id": "hatter-1",
+            "label": "Offer Alice a clean cup of tea with a wink",
+            "detourBrief": "The Hatter pushes a clean cup toward Alice and winks, saying it is the finest tea in the wood. Alice takes it and sips politely. The Dormouse wakes, sees the cup, and sighs. It settles back and continues the story about the three sisters at the well.",
+            "mustPreserve": [
+              "The Hatter has been stuck at six o'clock since quarreling with Time.",
+              "The Dormouse continues its story about the sisters."
+            ]
+          },
+          {
+            "id": "hatter-2",
+            "label": "Ask Alice a silly riddle about a clock and a teapot",
+            "detourBrief": "The Hatter asks Alice what has hands but cannot clap, and a face but cannot see. Alice thinks, then guesses a clock, and the Hatter cheers that she is almost right. They laugh together, and the Dormouse grumbles in its sleep and goes back to telling its story.",
+            "mustPreserve": [
+              "The Hatter is still a riddle-loving hat-maker at the tea party.",
+              "Alice is still seated at the table."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp08",
+      "chapter": 8,
+      "anchorAfter": "c008p044",
+      "rejoinAt": "c008p046",
+      "prompt": "A strange grin is floating in the air above the croquet-ground. What should Alice do?",
+      "isIntro": false,
+      "availableCharacters": [
+        "alice",
+        "cheshire-cat"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Slip quietly behind the hedge to look for a way out",
+          "detourBrief": "Alice tiptoes behind a tall hedge, hoping to escape the Queen's notice. Peeking back, she sees the grin drifting after her, and she stops, curious. The grin settles into a clear shape, with its mouth ready to speak.",
+          "mustPreserve": [
+            "Alice stays in the Queen's garden and is not caught or harmed",
+            "The Cheshire Cat is still the one who speaks with Alice next"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Stay put and study the grinning face closely",
+          "detourBrief": "Alice holds her flamingo steady and watches the grin hang in the air. She notices it has no body, only a smile, and wonders why it looks so pleased. Slowly the eyes and face take shape, and the mouth is ready to talk.",
+          "mustPreserve": [
+            "The croquet game goes on, with hedgehogs as balls and flamingoes as mallets",
+            "The Cheshire Cat is still the one who speaks with Alice next"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Wave politely and call out a friendly hello",
+          "detourBrief": "Alice waves and says hello to the grin, feeling a little silly. The grin widens happily, as if pleased to be noticed. Its ears drift into view beside its face, and its mouth is ready for conversation.",
+          "mustPreserve": [
+            "Alice does not stop playing croquet for good",
+            "The Cheshire Cat is still the one who speaks with Alice next"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "alice": [
+          {
+            "id": "alice-1",
+            "label": "Ask the grin politely whether it is a friend",
+            "detourBrief": "Alice asks the grin politely if it is a friend. The grin wobbles, seems amused, and answers with a playful wink. Its face fills in slowly, and its mouth settles, ready to speak.",
+            "mustPreserve": [
+              "Alice is still in the croquet-ground with the Queen nearby",
+              "The Cheshire Cat is still the one who speaks with Alice next"
+            ]
+          },
+          {
+            "id": "alice-2",
+            "label": "Hold the flamingo tight and wait patiently",
+            "detourBrief": "Alice tucks her squirming flamingo under her arm and waits quietly. The grin drifts closer, and its eyes and ears appear one by one. At last the whole face is clear, with a mouth ready to talk.",
+            "mustPreserve": [
+              "The croquet game goes on, with hedgehogs as balls and flamingoes as mallets",
+              "The Cheshire Cat is still the one who speaks with Alice next"
+            ]
+          }
+        ],
+        "cheshire-cat": [
+          {
+            "id": "cheshire-cat-1",
+            "label": "Grin even wider to see Alice's puzzled reaction",
+            "detourBrief": "The Cat stretches its grin wider, enjoying how puzzled Alice looks. It drifts a little closer, pleased with itself. Then its eyes open, its face is complete, and its mouth is ready to speak.",
+            "mustPreserve": [
+              "The Cheshire Cat is a friendly, playful cat who talks with Alice",
+              "Alice is not beheaded in this detour"
+            ]
+          },
+          {
+            "id": "cheshire-cat-2",
+            "label": "Take its time, letting ears appear before speaking",
+            "detourBrief": "The Cat decides to take its time, letting its ears drift into view while Alice waits. It seems to enjoy the suspense and does not say a word yet. Once the head is fully formed, its mouth is ready to speak.",
+            "mustPreserve": [
+              "The Cheshire Cat appears and vanishes as it likes, and it is still in the garden",
+              "Alice is still in the croquet-ground with the Queen nearby"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp09",
+      "chapter": 9,
+      "anchorAfter": "c009p048",
+      "rejoinAt": "c009p052",
+      "prompt": "The Mock Turtle sits sobbing on a lonely rock. What should Alice do before he begins his story?",
+      "isIntro": false,
+      "availableCharacters": [
+        "alice"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Offer the Mock Turtle your handkerchief",
+          "detourBrief": "Alice offers her handkerchief. The Mock Turtle blows his nose loudly and thanks her. The Gryphon yawns and says the Mock Turtle always sobs before a story. The Mock Turtle sits up, ready to begin, and Alice and the Gryphon sit down beside him.",
+          "mustPreserve": [
+            "The Queen has gone off to see to her executions, and the Gryphon says nobody is really executed",
+            "The Mock Turtle is about to tell Alice the history of his school under the sea"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Ask the Gryphon to explain the Mock Turtle's sorrow",
+          "detourBrief": "Alice quietly asks the Gryphon why the Mock Turtle is so sad. The Gryphon scratches his head and admits the Mock Turtle really does miss his school days. He suggests they be patient and let the story come out slowly. The Mock Turtle nods, sniffles, and sits up, ready to begin.",
+          "mustPreserve": [
+            "The Queen has gone off to see to her executions, and the Gryphon says nobody is really executed",
+            "The Mock Turtle is about to tell Alice the history of his school under the sea"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Wander along the shore to find a quiet spot",
+          "detourBrief": "While the Gryphon and the Mock Turtle talk quietly, Alice wanders along the rocky shore. She finds a tidy pool where a small crab waves hello and scuttles away. She listens to the waves for a while. When she returns, the Mock Turtle has dried his eyes and is ready to begin his story.",
+          "mustPreserve": [
+            "The Queen has gone off to see to her executions, and the Gryphon says nobody is really executed",
+            "The Mock Turtle is about to tell Alice the history of his school under the sea"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "alice": [
+          {
+            "id": "alice-1",
+            "label": "Gently pat the Mock Turtle's shell and say hello",
+            "detourBrief": "Alice pats the Mock Turtle's shell softly. He sniffles and says nobody has been kind to him in ages. He thanks her and dries his eyes. The Gryphon grins and says it is time to hear the story, so Alice and the Gryphon sit down beside the Mock Turtle, who is ready to begin.",
+            "mustPreserve": [
+              "The Queen has gone off to see to her executions, and the Gryphon says nobody is really executed",
+              "The Mock Turtle is about to tell Alice the history of his school under the sea"
+            ]
+          },
+          {
+            "id": "alice-2",
+            "label": "Politely ask the Mock Turtle what his school was like",
+            "detourBrief": "Alice politely asks what his school under the sea was like. The Mock Turtle brightens a little and describes a sandy classroom full of fishy friends. He says he misses it, then remembers the story he needs to tell. The Gryphon nods, and they both sit down to listen closely.",
+            "mustPreserve": [
+              "The Queen has gone off to see to her executions, and the Gryphon says nobody is really executed",
+              "The Mock Turtle is about to tell Alice the history of his school under the sea"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp10",
+      "chapter": 10,
+      "anchorAfter": "c010p078",
+      "rejoinAt": "c010p081",
+      "prompt": "A cry says the trial is beginning. What should Alice do as the Gryphon pulls her away?",
+      "isIntro": false,
+      "availableCharacters": [
+        "alice"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Glance back at the singing Mock Turtle",
+          "detourBrief": "Alice turns to look back and sees the Mock Turtle and Gryphon still dancing sadly, the Mock Turtle wiping his eyes with a flapper. The Gryphon tugs her hand and they hurry on toward the distant cry while the song drifts behind them.",
+          "mustPreserve": [
+            "The Gryphon takes Alice by the hand and hurries her away.",
+            "The Mock Turtle's song is never finished."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Ask the Gryphon what kind of trial it is",
+          "detourBrief": "Alice pants out a question about the trial, but the Gryphon answers only with a gruff hurry-up. Its wings flap as it races past hedges, and Alice saves her breath for running. The song fades behind them as the cry grows louder.",
+          "mustPreserve": [
+            "The trial is heard only as a distant cry.",
+            "The Gryphon hurries Alice on without explaining."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Peek ahead to spot the trial's crowd",
+          "detourBrief": "Alice runs along the sea-shore and glimpses a far-off crowd of creatures gathering under a tree, though she cannot make out anything clearly yet. The Gryphon keeps a tight hold of her hand. The melancholy song drifts farther away on the breeze.",
+          "mustPreserve": [
+            "Alice has not yet seen the trial itself.",
+            "The Gryphon keeps hold of Alice's hand."
+          ]
+        }
+      ],
+      "characterOptions": {
+        "alice": [
+          {
+            "id": "alice-1",
+            "label": "Pull free and wave goodbye to the singers",
+            "detourBrief": "Alice tugs her hand free for a moment and waves to the Mock Turtle, who waves a flapper back with a sob. The Gryphon scoops her up again and they race on as the song grows faint behind them.",
+            "mustPreserve": [
+              "The Gryphon takes Alice by the hand and hurries her away.",
+              "The Mock Turtle's song is still going."
+            ]
+          },
+          {
+            "id": "alice-2",
+            "label": "Count the strange creatures that scuttle past",
+            "detourBrief": "Alice counts small crabs and a bored seal scuttling along the shingle as she runs. She wonders whether the trial will be as silly as the dance. The Gryphon keeps hurrying her along, and the faint song follows them.",
+            "mustPreserve": [
+              "Alice has not yet seen the trial.",
+              "The song continues unfinished behind them."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp11",
+      "chapter": 11,
+      "anchorAfter": "c011p029",
+      "rejoinAt": "c011p035",
+      "prompt": "Alice is growing again and the Dormouse is squeezed beside her. What should Alice do?",
+      "isIntro": false,
+      "availableCharacters": [
+        "alice",
+        "white-rabbit",
+        "hatter"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Shift politely to make room for the Dormouse",
+          "detourBrief": "Alice wiggles to the end of the bench and apologizes. The Dormouse grumbles that she is still too big, then shuffles over a little. Alice thanks him kindly, and he sulkily moves off across the court to sit on the far side while Alice settles down to watch the trial.",
+          "mustPreserve": [
+            "Alice keeps growing during the trial",
+            "The Dormouse is sleepy and sulky"
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Hold very still and count the tarts on the table",
+          "detourBrief": "Alice tries to stop growing by keeping perfectly still and thinking about the tarts. She counts them, notices a few crumbs, and decides not to touch any. Her head bumps the ceiling lightly, so she ducks down. The Dormouse huffs and crosses to the far side of the court, still grumbling.",
+          "mustPreserve": [
+            "Alice is still growing but has room in court",
+            "The tarts stay on the table untouched"
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Ask the King whether she may step out for air",
+          "detourBrief": "Alice raises her hand and politely asks the King if she may step out for some fresh air. The King waves a hand, too busy with his crown to answer properly, and says she may stay a while. Alice sits back down, feeling a bit shy, as the Dormouse grumbles and moves across to the other side of the court.",
+          "mustPreserve": [
+            "Alice stays in court for the trial",
+            "The King does not send her away"
+          ]
+        }
+      ],
+      "characterOptions": {
+        "alice": [
+          {
+            "id": "alice-1",
+            "label": "Count the tarts and wonder who will eat them",
+            "detourBrief": "Alice counts the tarts carefully, seven of them with jam, and wonders whether they will be served after the trial. She decides a fair trial is more important than a snack. She sits up straight, notices the Dormouse is still squeezing close, and watches him sulkily cross to the far side of the court.",
+            "mustPreserve": [
+              "The trial must finish before the food is served",
+              "Alice stays in court"
+            ]
+          },
+          {
+            "id": "alice-2",
+            "label": "Whisper a kind question to the jury about their slates",
+            "detourBrief": "Alice leans over and gently asks the jurors whether they need help spelling stupid. One juror smiles and thanks her, while Bill the Lizard looks sorry about his squeaky pencil. Alice goes back to her seat as the Dormouse grumbles and moves across the court to the far side.",
+            "mustPreserve": [
+              "Bill the Lizard lost his squeaky pencil earlier",
+              "Alice is still growing"
+            ]
+          }
+        ],
+        "white-rabbit": [
+          {
+            "id": "white-rabbit-1",
+            "label": "Check the pocket watch and worry about being late",
+            "detourBrief": "The White Rabbit pulls out his pocket watch, gasps that he is late for something important, and fumbles with the scroll. He takes a deep breath and reminds the court to keep quiet. The Dormouse, grumbling about the squeeze, shuffles across the court to sit on the far side.",
+            "mustPreserve": [
+              "The White Rabbit is always nervous and often late",
+              "The trial continues in the court"
+            ]
+          },
+          {
+            "id": "white-rabbit-2",
+            "label": "Blow the trumpet to ask for a little more room",
+            "detourBrief": "The White Rabbit gives three soft blasts on his trumpet and asks everyone to make a little space for the growing girl. The guards shift to one side and the crowd murmurs. The Dormouse, still sulky, moves off across the court to the far side as the Rabbit returns to the scroll.",
+            "mustPreserve": [
+              "The White Rabbit reads the accusation",
+              "Alice is still growing during the trial"
+            ]
+          }
+        ],
+        "hatter": [
+          {
+            "id": "hatter-1",
+            "label": "Nibble the bread-and-butter and mumble about tea",
+            "detourBrief": "The Hatter nervously nibbles his bread-and-butter and mumbles that his tea is getting cold. He glances at the Queen, then at Alice, who is squeezing close. He gives a small apology to the Dormouse, who grumbles and moves across the court to the far side, leaving the Hatter to stand on his shaky feet.",
+            "mustPreserve": [
+              "The Hatter is giving evidence as the first witness",
+              "The Queen is watching the Hatter closely"
+            ]
+          },
+          {
+            "id": "hatter-2",
+            "label": "Offer the Dormouse a crumb of bread-and-butter",
+            "detourBrief": "The Hatter quietly breaks off a tiny crumb of bread-and-butter and offers it to the sleepy Dormouse, who wakes just enough to nod. The Dormouse, still sulking about Alice's growing, gets up and moves off across the court to the far side, while the Hatter wipes his hands and waits to be called on again.",
+            "mustPreserve": [
+              "The Dormouse is sleepy and sulky",
+              "The Hatter still has to finish giving evidence"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cp12",
+      "chapter": 12,
+      "anchorAfter": "c012p048",
+      "rejoinAt": "c012p052",
+      "prompt": "The King thinks the verses might prove something, but Alice is sure they mean nothing. What should happen next?",
+      "isIntro": false,
+      "availableCharacters": [
+        "alice",
+        "white-rabbit"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "Let the King puzzle over the verses out loud",
+          "detourBrief": "The King squints at the verses and mumbles that some lines might be about tarts or a secret. He asks the jury to think hard. The jurymen scribble notes and frown, but nobody finds a clear answer. The King sighs, and the Knave stands quietly, waiting for the court to continue.",
+          "mustPreserve": [
+            "The Knave is still on trial and no verdict has been given yet.",
+            "The tarts remain on the table."
+          ]
+        },
+        {
+          "id": "p2",
+          "label": "Have the jury hunt for a hidden clue",
+          "detourBrief": "The jurymen pass the verses along and search each line for a hidden word or sign. They argue politely about the handwriting and the missing signature. One juror whispers that the paper is very odd. They find nothing certain, so they give up and go back to listening to the King.",
+          "mustPreserve": [
+            "The verses are still unsigned and the handwriting is still not the Knave's.",
+            "Alice has not been sentenced and remains in the court."
+          ]
+        },
+        {
+          "id": "p3",
+          "label": "Slip away to count the tarts on the table",
+          "detourBrief": "While the court is busy, Alice tiptoes to the table and counts the tarts with care. There are a few more than the King mentioned, which makes her think. She tucks the thought away and returns to her place just as the King clears his throat to speak again.",
+          "mustPreserve": [
+            "The Queen still has not been given the chance to pass sentence.",
+            "Alice's size is still changing and she remains in the court."
+          ]
+        }
+      ],
+      "characterOptions": {
+        "alice": [
+          {
+            "id": "alice-1",
+            "label": "Politely ask which line the King finds meaningful",
+            "detourBrief": "Alice curtsies and asks the King, very politely, which line he thinks proves something. He points to a line about tarts, but then admits he is not sure what it means. Alice nods thoughtfully. The King, a little flustered, smooths the paper and mutters that the verses are very puzzling.",
+            "mustPreserve": [
+              "The King remains in charge of the trial.",
+              "The Knave has not yet answered the charge."
+            ]
+          },
+          {
+            "id": "alice-2",
+            "label": "Count the tarts to test the King's idea",
+            "detourBrief": "Alice glances at the tarts on the table and counts them under her breath. The number does not match the King's sums, which makes her frown. She decides to say nothing yet and listens carefully as the King continues reading the verses to himself.",
+            "mustPreserve": [
+              "The tarts are still on the table.",
+              "Alice does not yet give her verdict on the verses."
+            ]
+          }
+        ],
+        "white-rabbit": [
+          {
+            "id": "white-rabbit-1",
+            "label": "Check the pocket watch and hurry the reading",
+            "detourBrief": "The White Rabbit pulls out his pocket watch, gasps, and says the reading must hurry. He begs the King to move on. The jury scribbles quickly, and the King agrees to go more quickly. The Rabbit smooths his waistcoat and looks relieved, ready for the next part of the trial.",
+            "mustPreserve": [
+              "The White Rabbit is still the one reading the verses.",
+              "The trial continues in the same court."
+            ]
+          },
+          {
+            "id": "white-rabbit-2",
+            "label": "Whisper a hint to the jury about the handwriting",
+            "detourBrief": "The White Rabbit leans toward the jury and whispers that the handwriting on the paper is odd. The jurymen nod and write a note on their slates. The King, busy muttering, does not notice. The Rabbit pushes his spectacles up and sits back down, waiting for the King to speak.",
+            "mustPreserve": [
+              "The verses were not written in the Knave's handwriting.",
+              "The King is still the one who decides how the trial goes."
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

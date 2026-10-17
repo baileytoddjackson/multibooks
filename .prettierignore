@@ -1,0 +1,7 @@
+.next
+node_modules
+content/raw
+content/books/**/chapters
+data
+playwright-report
+test-results
