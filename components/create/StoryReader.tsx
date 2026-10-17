@@ -20,6 +20,7 @@ import {
   wrapUpState,
   type ContinuationResult,
 } from "@/lib/cyo/story";
+import { track, wordsIn } from "@/lib/analytics/track";
 import { postSse } from "@/lib/http/sseClient";
 import { SLOW_DOWN_NOTE } from "@/lib/reader/useDetour";
 import { useReaderPrefs } from "@/lib/reader/usePrefs";
@@ -103,6 +104,11 @@ export function StoryReader({
   const continueStory = (choice: string | undefined, wantEnding = false, attempt = 0) => {
     const s = story;
     const last = lastSegment(s);
+    if (attempt === 0) {
+      // The segment the reader just finished counts as read.
+      track("words_read", { context: "cyo", words: Math.min(wordsIn(last.text), 5000) });
+      if (choice) track("choice_made", { context: "cyo", turn: turn(s) });
+    }
     const character = s.cast.find((c) => c.id === s.characterId);
     setLive({ state: "writing", choice, text: "" });
     requestAnimationFrame(() =>
@@ -130,7 +136,12 @@ export function StoryReader({
         else if (ev.type === "reset") setLive({ state: "writing", choice, text: (text = "") });
         else if (ev.type === "ready") {
           done = true;
-          save(appendSegment(s, choice, ev));
+          const next = appendSegment(s, choice, ev);
+          if (next.status === "done") {
+            track("story_finished", { genre: s.genre, turns: turn(next) });
+            track("words_read", { context: "cyo", words: Math.min(wordsIn(ev.story), 5000) });
+          }
+          save(next);
           setLive({ state: "idle" });
         } else if (ev.type === "denied" && ev.reason === "rate_limited" && attempt < 2) {
           // Too many new pages this minute: wait politely, then try again by itself.
@@ -142,9 +153,14 @@ export function StoryReader({
           );
         } else if (ev.type === "denied") {
           done = true;
+          track("generation_blocked", {
+            context: "cyo",
+            reason: ev.reason === "session_limit" ? "session_limit" : "daily_budget",
+          });
           setLive({ state: "resting" });
         } else {
           done = true;
+          track("error_shown", { context: "cyo", code: "continue_failed" });
           setLive({ state: "error", retry });
         }
       },
@@ -327,7 +343,10 @@ export function StoryReader({
                   <StyleSelector
                     heading="Before you choose… how do you want to play?"
                     characters={story.cast}
-                    onDone={(style, characterId) => save(setStoryStyle(story, style, characterId))}
+                    onDone={(style, characterId) => {
+                      track("style_chosen", { context: "cyo", style });
+                      save(setStoryStyle(story, style, characterId));
+                    }}
                   />
                 ) : wrap === "forced" ? (
                   <div className="text-center">
@@ -404,7 +423,10 @@ export function StoryReader({
               <div className="mt-4 flex justify-center">
                 <button
                   type="button"
-                  onClick={() => save(undoLastChoice(story))}
+                  onClick={() => {
+                    track("undo", { context: "cyo" });
+                    save(undoLastChoice(story));
+                  }}
                   className="min-h-11 rounded-full px-4 text-sm font-semibold ring-2 ring-[var(--reader-line)] hover:bg-[var(--reader-line)]"
                 >
                   ↺ Go back one choice

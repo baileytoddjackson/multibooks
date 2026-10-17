@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
+import { track } from "@/lib/analytics/track";
 import { getStore, notifyStoreChanged } from "@/lib/client-store";
 import { DETAILS_MAX, GENRES, SETTING_MAX, surpriseSetting, type GenreId } from "@/lib/cyo/genres";
 import { createStory, type OpeningResult } from "@/lib/cyo/story";
@@ -51,7 +52,24 @@ export function Stepper() {
   const settingId = useId();
   const detailsId = useId();
 
+  // Funnel: started → each step viewed/completed → story created.
+  const started = useRef(false);
+  useEffect(() => {
+    if (started.current) return;
+    started.current = true;
+    track("create_started", {});
+    track("stepper_step_viewed", { step: 1 });
+  }, []);
+
   const go = (n: number) => {
+    if (n > step) {
+      track("stepper_step_completed", {
+        step: step + 1,
+        ...(step === 0 && genre ? { genre } : {}),
+        ...(step === 1 ? { usedSurprise: recentSurprises.includes(setting) } : {}),
+      });
+      track("stepper_step_viewed", { step: n + 1 });
+    }
     setStep(n);
     requestAnimationFrame(() => headingRef.current?.focus());
   };
@@ -67,6 +85,7 @@ export function Stepper() {
 
   const start = async (attempt = 0) => {
     if (!genre) return;
+    if (attempt === 0) track("stepper_step_completed", { step: 3, skipped: !details.trim() });
     setNote(undefined);
     setPhase("writing");
     setStreamText("");
@@ -81,12 +100,14 @@ export function Stepper() {
         else if (ev.type === "reset") setStreamText((text = ""));
         else if (ev.type === "ready") {
           done = true;
+          track("create_completed", { genre });
           const story = createStory(newId(), input, ev);
           getStore().saveStory(story);
           notifyStoreChanged();
           router.replace(`/story/${story.id}`);
         } else if (ev.type === "redirect") {
           done = true;
+          track("cyo_redirected", { reason: ev.reason });
           setRedirect({
             message: REDIRECT_COPY[ev.reason] ?? REDIRECT_COPY.default,
             suggestions: ev.suggestions,
@@ -99,9 +120,17 @@ export function Stepper() {
           setTimeout(() => start(attempt + 1), Math.min(ev.retryAfterSec ?? 10, 30) * 1000);
         } else if (ev.type === "denied") {
           done = true;
+          track("generation_blocked", {
+            context: "cyo",
+            reason: ev.reason === "session_limit" ? "session_limit" : "daily_budget",
+          });
           setPhase("resting");
         } else if (ev.type === "error") {
           done = true;
+          track("error_shown", {
+            context: "cyo",
+            code: ev.code.replace(/[^a-z0-9_-]/g, "") || "error",
+          });
           setPhase("error");
         }
       });

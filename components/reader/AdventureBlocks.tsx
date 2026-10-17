@@ -9,6 +9,7 @@ import {
   type Resolution,
 } from "@/lib/engine/bookAdventure";
 import type { InteractionStyle } from "@/lib/client-store/types";
+import { track } from "@/lib/analytics/track";
 import { useDetour } from "@/lib/reader/useDetour";
 import type { AdventureOption, ChoicePoint } from "@/lib/schemas/adventure";
 import type { Character } from "@/lib/schemas/content";
@@ -19,7 +20,7 @@ import { StyleSelector } from "./StyleSelector";
 
 export interface AdventureActions {
   choose: (cp: ChoicePoint, option: AdventureOption) => void;
-  keepOriginal: (cpId: string) => void;
+  keepOriginal: (cpId: string, from?: "choice" | "detour" | "resting") => void;
   setStyle: (style: InteractionStyle, characterId?: string) => void;
   setDetourText: (cpId: string, segments: string[]) => void;
   undo: () => void;
@@ -94,7 +95,7 @@ function ChoiceBlock({
         cp={cp}
         view={view}
         onChoose={(o) => actions.choose(cp, o)}
-        onKeepOriginal={() => actions.keepOriginal(cp.id)}
+        onKeepOriginal={() => actions.keepOriginal(cp.id, "choice")}
       />
     </div>
   );
@@ -126,8 +127,15 @@ function DetourBlock({
 
   const { setDetourText } = actions;
   useEffect(() => {
-    if (status.state === "ready") setDetourText(resolution.cpId, status.segments);
-  }, [status, resolution.cpId, setDetourText]);
+    if (status.state === "ready") {
+      track("detour_served", { bookId, cpId: resolution.cpId, cached: status.cached });
+      setDetourText(resolution.cpId, status.segments);
+    } else if (status.state === "resting") {
+      track("generation_blocked", { context: "book", reason: status.reason });
+    } else if (status.state === "error") {
+      track("error_shown", { context: "book", code: "detour_failed" });
+    }
+  }, [status, resolution.cpId, setDetourText, bookId]);
 
   return (
     <DetourPassage
@@ -136,7 +144,9 @@ function DetourBlock({
       segments={resolution.segments}
       note={resolution.narratorFallbackNote}
       onRetry={retry}
-      onReturnToOriginal={() => actions.keepOriginal(resolution.cpId)}
+      onReturnToOriginal={() =>
+        actions.keepOriginal(resolution.cpId, status.state === "resting" ? "resting" : "detour")
+      }
       onUndo={actions.undo}
     />
   );

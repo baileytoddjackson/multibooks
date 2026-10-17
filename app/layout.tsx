@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Atkinson_Hyperlegible_Next, Fraunces, Literata } from "next/font/google";
+import { Heartbeat } from "@/components/ui/Heartbeat";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         {children}
+        <Heartbeat />
       </body>
     </html>
   );

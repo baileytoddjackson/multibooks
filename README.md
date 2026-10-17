@@ -3,9 +3,8 @@
 A choose-your-own-adventure reading app for middle schoolers (ages ~11–14). Read a classic as
 written, play it as an adventure that always rejoins the original, or create your own story.
 
-> Status: MVP in progress. Milestones 1–5 are done (dashboard, content pipeline, canon reader,
-> book adventures, character mode, Create Your Own). Next: rate limits and error polish,
-> instrumentation and admin stats, cache pre-warm and content review.
+> Status: MVP in progress. Milestones 1–7 are done. Next: cache pre-warm, the content review
+> export, and final polish.
 
 ## Quick start
 
@@ -109,6 +108,32 @@ approved detours and canon reading never do, so they keep working when a limit i
 Spend is estimated from the token usage the API reports for every call, including failed ones,
 using `lib/llm/pricing.ts`. IP addresses are never stored: rate limiting uses a salted hash that
 changes daily. At Haiku 5.5 prices, $5 a day covers roughly 7,000–10,000 new passages.
+
+## Research instrumentation and admin stats
+
+**Events.** The app records anonymous events defined in `lib/analytics/events.ts`:
+
+- books selected, reading mode chosen and interaction style chosen;
+- choices made, detours served (cached or new), returns to the original, undos;
+- words read, active time (a 30-second heartbeat while the page is visible);
+- the stepper funnel, stories created and finished, safety redirects, blocked generations,
+  errors and feedback clicks.
+
+Every field is an id, a number or a yes/no, so no free text, names or IPs are ever stored. Events
+are batched in the browser and sent with `sendBeacon` when a page is hidden.
+
+**Group codes.** A facilitator taps "Have a group code?" in the footer and enters a code such as
+`LIB-OCT20` or `MS-ENG-P3`. Every event from that device is then tagged with it, so pilot groups
+can be compared without collecting names.
+
+**Admin page.** `/admin/stats` is protected by `ADMIN_PASSWORD`. Sign-in uses a signed, httpOnly
+cookie (signed with `APP_SECRET`) that lasts 8 hours. The page shows sessions, active time, words
+read, choices, the detour cache hit rate, mode, style and book splits, the Create Your Own funnel,
+safety redirects, and token usage and cost by kind, day and book. Filter by time range and group
+code.
+
+**Feedback.** Set `NEXT_PUBLIC_FEEDBACK_URL` to your survey. If the URL contains `{sessionCode}`,
+it's replaced with the device's group code (for example a Google Forms pre-filled field).
 
 ## Prompts
 

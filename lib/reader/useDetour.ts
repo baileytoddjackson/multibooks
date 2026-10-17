@@ -6,7 +6,7 @@ export type DetourStatus =
   | { state: "idle" }
   | { state: "loading"; text: string; waitingForOthers: boolean; note?: string }
   | { state: "ready"; segments: string[]; cached: boolean }
-  | { state: "resting" }
+  | { state: "resting"; reason: "daily_budget" | "session_limit" }
   | { state: "error" };
 
 export interface DetourTarget {
@@ -122,7 +122,14 @@ export function useDetour(target: DetourTarget | null) {
             if (ctrl.signal.aborted) return;
             continue;
           }
-          setStatus(ev.type === "denied" ? { state: "resting" } : { state: "error" });
+          setStatus(
+            ev.type === "denied"
+              ? {
+                  state: "resting",
+                  reason: ev.reason === "session_limit" ? "session_limit" : "daily_budget",
+                }
+              : { state: "error" },
+          );
           return;
         }
       } catch {

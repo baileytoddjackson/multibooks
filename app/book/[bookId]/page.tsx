@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { CoverArt } from "@/components/dashboard/CoverArt";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 import { Logo } from "@/components/ui/Logo";
 import { SiteFooter } from "@/components/ui/SiteFooter";
 import { BOOKS, getBook, readingTimeLabel } from "@/lib/content/books";
@@ -65,7 +66,9 @@ async function BookDetails({ params }: { params: PageProps<"/book/[bookId]">["pa
         <h2 className="mt-8 mb-3 font-display text-xl font-semibold">How do you want to read?</h2>
         <ul className="flex flex-col gap-4">
           <li>
-            <Link
+            <TrackedLink
+              event="mode_chosen"
+              eventProps={{ bookId: book.id, mode: "canon" }}
               href={`/read/${book.id}?mode=canon`}
               className="flex flex-col gap-1 rounded-2xl bg-card p-5 ring-2 ring-line transition-colors hover:ring-teal"
               data-testid="mode-canon"
@@ -74,10 +77,12 @@ async function BookDetails({ params }: { params: PageProps<"/book/[bookId]">["pa
               <span className="text-ink-soft">
                 The original story, just as {book.author} wrote it.
               </span>
-            </Link>
+            </TrackedLink>
           </li>
           <li>
-            <Link
+            <TrackedLink
+              event="mode_chosen"
+              eventProps={{ bookId: book.id, mode: "adventure" }}
               href={`/read/${book.id}?mode=adventure`}
               className="flex flex-col gap-1 rounded-2xl bg-card p-5 ring-2 ring-coral/40 transition-colors hover:ring-coral-strong"
               data-testid="mode-adventure"
@@ -89,7 +94,7 @@ async function BookDetails({ params }: { params: PageProps<"/book/[bookId]">["pa
                 Start with the real opening, then make choices along the way. The story always finds
                 its way back to the book.
               </span>
-            </Link>
+            </TrackedLink>
           </li>
         </ul>
       </div>

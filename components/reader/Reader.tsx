@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { FeedbackLink } from "@/components/ui/FeedbackLink";
+import { TrackedLink } from "@/components/ui/TrackedLink";
+import { track, wordsIn } from "@/lib/analytics/track";
 import { getStore, notifyStoreChanged } from "@/lib/client-store";
 import type { InteractionStyle, ReadingMode } from "@/lib/client-store/types";
 import { castAvailableAt } from "@/lib/content/adventureMap";
@@ -126,16 +128,29 @@ export function Reader({ book, toc, chapter, map, cast }: ReaderProps) {
   );
 
   const actions: AdventureActions = {
-    choose: (cp: ChoicePoint, option: AdventureOption) =>
-      updateAdventure((s) => {
-        const name = cast.find((c) => c.id === s.characterId)?.name;
-        return choose(s, cp, option, choiceView(cp, s.style, s.characterId, name));
-      }),
-    keepOriginal: (cpId: string) => updateAdventure((s) => returnToOriginal(s, cpId)),
-    setStyle: (style: InteractionStyle, characterId?: string) =>
-      updateAdventure((s) => setStyle(s, style, characterId)),
+    choose: (cp: ChoicePoint, option: AdventureOption) => {
+      const name = cast.find((c) => c.id === adventure.characterId)?.name;
+      const view = choiceView(cp, adventure.style, adventure.characterId, name);
+      track("choice_made", {
+        context: "book",
+        bookId: book.id,
+        cpId: cp.id,
+        optionId: option.id,
+        perspective: view.perspective,
+      });
+      updateAdventure((s) => choose(s, cp, option, view));
+    },
+    keepOriginal: (cpId: string, from = "choice") => {
+      track("return_to_canon", { bookId: book.id, cpId, from });
+      updateAdventure((s) => returnToOriginal(s, cpId));
+    },
+    setStyle: (style: InteractionStyle, characterId?: string) => {
+      track("style_chosen", { context: "book", bookId: book.id, style, characterId });
+      updateAdventure((s) => setStyle(s, style, characterId));
+    },
     setDetourText: saveDetourText,
     undo: () => {
+      track("undo", { context: "book", bookId: book.id });
       const { state, cpId } = undo(adventure);
       updateAdventure(() => state);
       if (cpId) goToChoicePoint(cpId);
@@ -186,7 +201,21 @@ export function Reader({ book, toc, chapter, map, cast }: ReaderProps) {
 
   const goNext = () => {
     if (blocked) return;
-    addWordsRead(pageWords(chapter, page));
+    // Words actually shown on this page: canon paragraphs plus any detour text.
+    const words = layout
+      ? layout.blocks.reduce(
+          (n, b) =>
+            n +
+            (b.type === "canon"
+              ? wordsIn(...b.paragraphs.map((p) => p.text))
+              : b.type === "detour"
+                ? wordsIn(...b.resolution.segments)
+                : 0),
+          0,
+        )
+      : pageWords(chapter, page);
+    addWordsRead(words);
+    track("words_read", { context: "book", bookId: book.id, words: Math.min(words, 5000) });
     if (!isLastPage) setPage((p) => p + 1);
     else if (nextChapter) router.push(`/read/${book.id}/${nextChapter.index}?mode=${mode}&page=1`);
   };
@@ -276,13 +305,15 @@ export function Reader({ book, toc, chapter, map, cast }: ReaderProps) {
             />
           ) : (
             map && (
-              <Link
+              <TrackedLink
+                event="mode_chosen"
+                eventProps={{ bookId: book.id, mode: "adventure" }}
                 href={modeHref("adventure")}
                 className="flex min-h-11 min-w-11 items-center justify-center rounded-full px-3 font-semibold text-[var(--reader-accent)] hover:bg-[var(--reader-line)]"
               >
                 <span aria-hidden="true">✦</span>
                 <span className="sr-only">Play this as an adventure</span>
-              </Link>
+              </TrackedLink>
             )
           )}
           <ReaderControls prefs={prefs} onChange={setPrefs} />
@@ -359,12 +390,14 @@ export function Reader({ book, toc, chapter, map, cast }: ReaderProps) {
               <p className="mt-1 text-[var(--reader-muted)]">
                 Try this book as an adventure and make choices along the way.
               </p>
-              <Link
+              <TrackedLink
+                event="mode_chosen"
+                eventProps={{ bookId: book.id, mode: "adventure" }}
                 href={`/read/${book.id}/${chapter.index}?mode=adventure`}
                 className="mt-3 inline-flex min-h-11 items-center rounded-full bg-plum px-5 font-semibold text-white"
               >
                 Try it as an adventure ✦
-              </Link>
+              </TrackedLink>
             </aside>
           )}
         </article>

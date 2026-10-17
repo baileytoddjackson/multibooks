@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 import { difficultyLabel, lengthLabel, readingTimeLabel } from "@/lib/content/books";
 import type { BookMeta } from "@/lib/schemas/content";
 import { CoverArt } from "./CoverArt";
@@ -11,7 +12,9 @@ const DIFFICULTY_STYLE: Record<BookMeta["difficulty"], string> = {
 
 export function BookCard({ book }: { book: BookMeta }) {
   return (
-    <Link
+    <TrackedLink
+      event="book_selected"
+      eventProps={{ bookId: book.id }}
       href={`/book/${book.id}`}
       className="group flex flex-col overflow-hidden rounded-[var(--radius-card)] bg-card shadow-[var(--shadow-page)] ring-1 ring-line transition-transform hover:-translate-y-0.5 motion-reduce:hover:translate-y-0"
       data-testid={`book-card-${book.id}`}
@@ -39,7 +42,7 @@ export function BookCard({ book }: { book: BookMeta }) {
           </span>
         </div>
       </div>
-    </Link>
+    </TrackedLink>
   );
 }
 
