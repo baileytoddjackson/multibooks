@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { checkGenerationAllowed, recordGeneration } from "@/lib/budget/budget";
+import { guardGeneration, ipHashFor, recordGeneration } from "@/lib/budget/budget";
 import { GENRES, type GenreId } from "@/lib/cyo/genres";
 import { env } from "@/lib/env";
 import { sseResponse } from "@/lib/http/sse";
@@ -47,9 +47,12 @@ export async function POST(request: Request) {
       return;
     }
     const store = serverStore();
-    const allowed = await checkGenerationAllowed(store, b.sessionId);
+    const allowed = await guardGeneration(store, {
+      sessionId: b.sessionId,
+      ipHash: ipHashFor(request.headers),
+    });
     if (!allowed.ok) {
-      send({ type: "denied", reason: allowed.reason });
+      send({ type: "denied", reason: allowed.reason, retryAfterSec: allowed.retryAfterSec });
       return;
     }
     await recordGeneration(store, b.sessionId);

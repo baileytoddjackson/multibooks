@@ -21,18 +21,19 @@ import {
   type ContinuationResult,
 } from "@/lib/cyo/story";
 import { postSse } from "@/lib/http/sseClient";
+import { SLOW_DOWN_NOTE } from "@/lib/reader/useDetour";
 import { useReaderPrefs } from "@/lib/reader/usePrefs";
 
 type ContinueEvent =
   | { type: "delta"; text: string }
   | { type: "reset" }
   | ({ type: "ready" } & ContinuationResult)
-  | { type: "denied"; reason: string }
+  | { type: "denied"; reason: string; retryAfterSec?: number }
   | { type: "error"; code: string };
 
 type Live =
   | { state: "idle" }
-  | { state: "writing"; choice?: string; text: string }
+  | { state: "writing"; choice?: string; text: string; note?: string }
   | { state: "error"; retry: () => void }
   | { state: "resting" };
 
@@ -99,7 +100,7 @@ export function StoryReader({
     notifyStoreChanged();
   };
 
-  const continueStory = (choice: string | undefined, wantEnding = false) => {
+  const continueStory = (choice: string | undefined, wantEnding = false, attempt = 0) => {
     const s = story;
     const last = lastSegment(s);
     const character = s.cast.find((c) => c.id === s.characterId);
@@ -131,6 +132,14 @@ export function StoryReader({
           done = true;
           save(appendSegment(s, choice, ev));
           setLive({ state: "idle" });
+        } else if (ev.type === "denied" && ev.reason === "rate_limited" && attempt < 2) {
+          // Too many new pages this minute: wait politely, then try again by itself.
+          done = true;
+          setLive({ state: "writing", choice, text: "", note: SLOW_DOWN_NOTE });
+          setTimeout(
+            () => continueStory(choice, wantEnding, attempt + 1),
+            Math.min(ev.retryAfterSec ?? 10, 30) * 1000,
+          );
         } else if (ev.type === "denied") {
           done = true;
           setLive({ state: "resting" });
@@ -255,7 +264,7 @@ export function StoryReader({
                 )}
                 {live.text ? <Paragraphs text={live.text} /> : null}
                 <p role="status" className="mt-4 font-sans text-sm text-[var(--reader-muted)]">
-                  ✦ The story is being written…
+                  ✦ {live.note ?? "The story is being written…"}
                 </p>
               </div>
             )}

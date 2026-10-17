@@ -14,7 +14,9 @@ const EnvSchema = z.object({
   PER_SESSION_MAX_GENERATIONS: z.coerce.number().int().nonnegative().default(40),
   CYO_SOFT_TURN_CAP: z.coerce.number().int().positive().default(20),
   CYO_HARD_TURN_CAP: z.coerce.number().int().positive().default(25),
-  RATE_LIMIT_PER_MINUTE: z.coerce.number().int().positive().default(20),
+  // New generations per minute. Per IP is generous because a classroom shares one public IP.
+  RATE_LIMIT_SESSION_PER_MINUTE: z.coerce.number().int().positive().default(8),
+  RATE_LIMIT_IP_PER_MINUTE: z.coerce.number().int().positive().default(150),
   ADMIN_PASSWORD: z.string().optional(),
   APP_SECRET: z.string().default("dev-only-secret"),
 });

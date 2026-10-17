@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 export type DetourStatus =
   | { state: "idle" }
-  | { state: "loading"; text: string; waitingForOthers: boolean }
+  | { state: "loading"; text: string; waitingForOthers: boolean; note?: string }
   | { state: "ready"; segments: string[]; cached: boolean }
   | { state: "resting" }
   | { state: "error" };
@@ -18,13 +18,16 @@ export interface DetourTarget {
 }
 
 const POLL_MS = 1500;
+/** Friendly wait when the per-minute limit is hit (at most this many times per request). */
+const MAX_RATE_LIMIT_WAITS = 2;
+export const SLOW_DOWN_NOTE = "Lots of readers are adventuring right now. Your page is next…";
 const MAX_WAIT_MS = 45_000;
 
 type ServerEvent =
   | { type: "delta"; text: string }
   | { type: "ready"; segments: string[]; cached: boolean }
   | { type: "pending" }
-  | { type: "denied"; reason: string }
+  | { type: "denied"; reason: string; retryAfterSec?: number }
   | { type: "error"; code: string };
 
 /** Reads the server-sent events from POST /api/detour. */
@@ -83,6 +86,7 @@ export function useDetour(target: DetourTarget | null) {
     const ctrl = new AbortController();
     const started = Date.now();
     let text = "";
+    let rateLimitWaits = 0;
     setStatus({ state: "loading", text: "", waitingForOthers: false });
 
     (async () => {
@@ -99,6 +103,22 @@ export function useDetour(target: DetourTarget | null) {
           if (ev.type === "pending" && Date.now() - started < MAX_WAIT_MS) {
             setStatus({ state: "loading", text: "", waitingForOthers: true });
             await new Promise((r) => setTimeout(r, POLL_MS));
+            if (ctrl.signal.aborted) return;
+            continue;
+          }
+          if (
+            ev.type === "denied" &&
+            ev.reason === "rate_limited" &&
+            rateLimitWaits < MAX_RATE_LIMIT_WAITS
+          ) {
+            rateLimitWaits++;
+            setStatus({
+              state: "loading",
+              text: "",
+              waitingForOthers: false,
+              note: SLOW_DOWN_NOTE,
+            });
+            await new Promise((r) => setTimeout(r, Math.min(ev.retryAfterSec ?? 10, 30) * 1000));
             if (ctrl.signal.aborted) return;
             continue;
           }

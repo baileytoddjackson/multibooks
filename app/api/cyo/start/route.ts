@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { checkGenerationAllowed, recordGeneration } from "@/lib/budget/budget";
+import { guardGeneration, ipHashFor, recordGeneration } from "@/lib/budget/budget";
 import { DETAILS_MAX, GENRES, SETTING_MAX, suggestions, type GenreId } from "@/lib/cyo/genres";
 import { sseResponse } from "@/lib/http/sse";
 import { runGeneration } from "@/lib/llm/runGeneration";
@@ -39,6 +39,14 @@ export async function POST(request: Request) {
   const { genre, setting, details, sessionId } = parsed.data;
 
   return sseResponse(async (send) => {
+    // Budget and rate limits first: moderation is itself a paid call.
+    const store = serverStore();
+    const allowed = await guardGeneration(store, { sessionId, ipHash: ipHashFor(request.headers) });
+    if (!allowed.ok) {
+      send({ type: "denied", reason: allowed.reason, retryAfterSec: allowed.retryAfterSec });
+      return;
+    }
+
     const mod = await moderateStoryIdea(
       { setting, details },
       { sessionId, maxLengths: { setting: SETTING_MAX, details: DETAILS_MAX } },
@@ -46,13 +54,6 @@ export async function POST(request: Request) {
     if (!mod.ok) {
       if (mod.reason === "unavailable") send({ type: "error", code: "moderation_unavailable" });
       else send({ type: "redirect", reason: mod.reason, suggestions: suggestions(genre) });
-      return;
-    }
-
-    const store = serverStore();
-    const allowed = await checkGenerationAllowed(store, sessionId);
-    if (!allowed.ok) {
-      send({ type: "denied", reason: allowed.reason });
       return;
     }
     await recordGeneration(store, sessionId);

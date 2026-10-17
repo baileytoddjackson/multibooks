@@ -93,6 +93,23 @@ A 3-step stepper (genre → setting → optional details) starts a fully generat
 - **Length.** `CYO_SOFT_TURN_CAP` offers "Ready to write the ending?" and `CYO_HARD_TURN_CAP`
   forces the ending. Stories are saved on the device under My Stories.
 
+## Cost controls and limits
+
+Every new generation goes through `guardGeneration` (`lib/budget/budget.ts`). Cached detours,
+approved detours and canon reading never do, so they keep working when a limit is hit.
+
+| Setting                                   | Default     | What happens when it's reached                                                                                             |
+| ----------------------------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `DAILY_BUDGET_USD`                        | `5`         | All new generation pauses until midnight UTC; readers see "The story machine is resting" and can keep reading the original |
+| `PER_SESSION_MAX_GENERATIONS`             | `40`        | Same message, for that device only                                                                                         |
+| `RATE_LIMIT_SESSION_PER_MINUTE`           | `8`         | A short "Lots of readers are adventuring right now…" pause, then an automatic retry                                        |
+| `RATE_LIMIT_IP_PER_MINUTE`                | `150`       | Same. Kept generous because a whole classroom usually shares one public IP                                                 |
+| `CYO_SOFT_TURN_CAP` / `CYO_HARD_TURN_CAP` | `20` / `25` | "Ready to write the ending?" / the ending is written                                                                       |
+
+Spend is estimated from the token usage the API reports for every call, including failed ones,
+using `lib/llm/pricing.ts`. IP addresses are never stored: rate limiting uses a salted hash that
+changes daily. At Haiku 5.5 prices, $5 a day covers roughly 7,000–10,000 new passages.
+
 ## Prompts
 
 All runtime prompts live in `lib/prompts/`, each a documented function that returns

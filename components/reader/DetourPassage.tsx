@@ -43,9 +43,10 @@ export function DetourPassage({
         ) : (
           <WritingIndicator
             label={
-              status.waitingForOthers
+              status.note ??
+              (status.waitingForOthers
                 ? "Another reader is writing this part. Almost there…"
-                : undefined
+                : undefined)
             }
           />
         )}
@@ -59,6 +60,13 @@ export function DetourPassage({
         <p className="mt-1 text-[var(--reader-muted)]">
           New adventure paths will be back tomorrow. You can keep reading the original story now.
         </p>
+        <button
+          type="button"
+          onClick={onReturnToOriginal}
+          className="mt-3 min-h-11 rounded-full bg-teal px-5 font-semibold text-white"
+        >
+          Read the original instead
+        </button>
       </div>
     );
   } else if (status.state === "error") {

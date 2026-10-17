@@ -1,5 +1,5 @@
 import "server-only";
-import { checkGenerationAllowed, recordGeneration, type BudgetDenial } from "@/lib/budget/budget";
+import { guardGeneration, recordGeneration, type GuardDenial } from "@/lib/budget/budget";
 import {
   approvedKey,
   loadAdventureMap,
@@ -24,13 +24,15 @@ export interface DetourRequest {
   /** "narrator" or a character id. */
   perspective: string;
   sessionId: string;
+  /** Salted hash of the caller's IP, for rate limiting only. */
+  ipHash: string;
 }
 
 export type DetourOutcome =
   | { status: "ready"; payload: DetourPayload; cached: boolean; source: string }
   /** Someone else is generating this exact detour right now; poll again shortly. */
   | { status: "pending" }
-  | { status: "denied"; reason: BudgetDenial }
+  | { status: "denied"; reason: GuardDenial; retryAfterSec?: number }
   | { status: "invalid"; message: string }
   | { status: "failed" };
 
@@ -76,8 +78,10 @@ export async function getDetour(
   if (hit) return { status: "ready", payload: hit.payload, cached: true, source: hit.source };
 
   // 3. Budget, then the single-flight lock.
-  const allowed = await checkGenerationAllowed(store, req.sessionId);
-  if (!allowed.ok) return { status: "denied", reason: allowed.reason };
+  const allowed = await guardGeneration(store, { sessionId: req.sessionId, ipHash: req.ipHash });
+  if (!allowed.ok) {
+    return { status: "denied", reason: allowed.reason, retryAfterSec: allowed.retryAfterSec };
+  }
   if (!(await store.acquireLock(key, LOCK_TTL_MS))) return { status: "pending" };
 
   try {

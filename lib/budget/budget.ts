@@ -1,26 +1,48 @@
 import "server-only";
 import { env } from "@/lib/env";
 import { utcDay, type ServerStore } from "@/lib/server-store";
+import { checkRateLimit, clientIp, hashIp } from "./rateLimit";
+import { evaluateBudget, type GuardResult } from "./policy";
 
 /**
  * Cost guardrails for live generation. Cached content and canon reading never pass through here,
- * so they keep working when the cap is hit ("the story machine is resting").
+ * so they keep working when a cap is hit ("the story machine is resting").
  */
-export type BudgetDenial = "daily_budget" | "session_limit";
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
-export async function checkGenerationAllowed(
+function sessionBucket(sessionId: string, day = utcDay()) {
+  return `gen:${day}:${sessionId}`;
+}
+
+/** Salted, daily-rotating hash of the caller's IP (the raw IP is never stored). */
+export function ipHashFor(headers: Headers): string {
+  return hashIp(clientIp(headers), env().APP_SECRET, utcDay());
+}
+
+/**
+ * Runs every check a new generation needs, cheapest first: daily budget, per-session daily cap,
+ * then per-minute rate limits. Call right before generating (after cache lookups).
+ */
+export async function guardGeneration(
   store: ServerStore,
-  sessionId: string,
-): Promise<{ ok: true } | { ok: false; reason: BudgetDenial }> {
-  const { DAILY_BUDGET_USD, PER_SESSION_MAX_GENERATIONS } = env();
+  ids: { sessionId: string; ipHash: string },
+): Promise<GuardResult> {
+  const e = env();
   const [spent, sessionCount] = await Promise.all([
     store.getDailySpend(utcDay()),
-    store.getCounter(sessionBucket(sessionId)),
+    store.getCounter(sessionBucket(ids.sessionId)),
   ]);
-  if (spent >= DAILY_BUDGET_USD) return { ok: false, reason: "daily_budget" };
-  if (sessionCount >= PER_SESSION_MAX_GENERATIONS) return { ok: false, reason: "session_limit" };
+  const budget = evaluateBudget(
+    { spentTodayUsd: spent, sessionGenerationsToday: sessionCount },
+    { dailyBudgetUsd: e.DAILY_BUDGET_USD, perSessionMaxGenerations: e.PER_SESSION_MAX_GENERATIONS },
+  );
+  if (!budget.ok) return budget;
+  const rl = await checkRateLimit(store, ids, {
+    perSessionPerMinute: e.RATE_LIMIT_SESSION_PER_MINUTE,
+    perIpPerMinute: e.RATE_LIMIT_IP_PER_MINUTE,
+  });
+  if (!rl.ok) return { ok: false, reason: "rate_limited", retryAfterSec: rl.retryAfterSec };
   return { ok: true };
 }
 
@@ -29,6 +51,4 @@ export async function recordGeneration(store: ServerStore, sessionId: string): P
   await store.incrementCounter(sessionBucket(sessionId), DAY_MS);
 }
 
-function sessionBucket(sessionId: string) {
-  return `gen:${utcDay()}:${sessionId}`;
-}
+export type { GuardResult, GuardDenial } from "./policy";

@@ -7,13 +7,14 @@ import { getStore, notifyStoreChanged } from "@/lib/client-store";
 import { DETAILS_MAX, GENRES, SETTING_MAX, surpriseSetting, type GenreId } from "@/lib/cyo/genres";
 import { createStory, type OpeningResult } from "@/lib/cyo/story";
 import { postSse } from "@/lib/http/sseClient";
+import { SLOW_DOWN_NOTE } from "@/lib/reader/useDetour";
 
 type StartEvent =
   | { type: "delta"; text: string }
   | { type: "reset" }
   | ({ type: "ready" } & OpeningResult)
   | { type: "redirect"; reason: string; suggestions: string[] }
-  | { type: "denied"; reason: string }
+  | { type: "denied"; reason: string; retryAfterSec?: number }
   | { type: "error"; code: string };
 
 const STEPS = ["Pick a genre", "Choose a setting", "Add details"] as const;
@@ -62,8 +63,11 @@ export function Stepper() {
     setRecentSurprises((r) => [...r.slice(-10), pick]);
   };
 
-  const start = async () => {
+  const [note, setNote] = useState<string | undefined>();
+
+  const start = async (attempt = 0) => {
     if (!genre) return;
+    setNote(undefined);
     setPhase("writing");
     setStreamText("");
     setRedirect(null);
@@ -89,6 +93,10 @@ export function Stepper() {
           });
           setPhase("form");
           go(1);
+        } else if (ev.type === "denied" && ev.reason === "rate_limited" && attempt < 2) {
+          done = true;
+          setNote(SLOW_DOWN_NOTE);
+          setTimeout(() => start(attempt + 1), Math.min(ev.retryAfterSec ?? 10, 30) * 1000);
         } else if (ev.type === "denied") {
           done = true;
           setPhase("resting");
@@ -118,7 +126,7 @@ export function Stepper() {
                 ))}
               </div>
             ) : (
-              <p className="text-ink-soft">Gathering ideas, sharpening pencils…</p>
+              <p className="text-ink-soft">{note ?? "Gathering ideas, sharpening pencils…"}</p>
             )}
           </div>
         )}
@@ -129,7 +137,7 @@ export function Stepper() {
             <div className="mt-5 flex flex-wrap justify-center gap-3">
               <button
                 type="button"
-                onClick={start}
+                onClick={() => start()}
                 className="min-h-12 rounded-full bg-plum px-6 font-semibold text-white"
               >
                 Try again
@@ -352,7 +360,7 @@ export function Stepper() {
               {!details.trim() && (
                 <button
                   type="button"
-                  onClick={start}
+                  onClick={() => start()}
                   className="min-h-12 rounded-full px-5 font-semibold ring-2 ring-line"
                 >
                   Skip
@@ -360,7 +368,7 @@ export function Stepper() {
               )}
               <button
                 type="button"
-                onClick={start}
+                onClick={() => start()}
                 className="min-h-12 rounded-full bg-plum px-6 font-semibold text-white"
               >
                 Start my story ✦

@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { ipHashFor } from "@/lib/budget/budget";
 import { getDetour } from "@/lib/engine/detourService";
 
 /**
@@ -33,7 +34,10 @@ export async function POST(request: Request) {
       const send = (event: Record<string, unknown>) =>
         controller.enqueue(encoder.encode(`data: ${JSON.stringify(event)}\n\n`));
       try {
-        const outcome = await getDetour(parsed.data, (text) => send({ type: "delta", text }));
+        const outcome = await getDetour(
+          { ...parsed.data, ipHash: ipHashFor(request.headers) },
+          (text) => send({ type: "delta", text }),
+        );
         switch (outcome.status) {
           case "ready":
             send({
@@ -47,7 +51,7 @@ export async function POST(request: Request) {
             send({ type: "pending" });
             break;
           case "denied":
-            send({ type: "denied", reason: outcome.reason });
+            send({ type: "denied", reason: outcome.reason, retryAfterSec: outcome.retryAfterSec });
             break;
           case "invalid":
             send({ type: "error", code: "invalid" });
