@@ -65,7 +65,7 @@ export function CreateCard() {
         <p className="text-sm text-ink-soft">Written by you (and a little story magic)</p>
         <p className="text-base">Pick a world, make the choices, and see where your story goes.</p>
         <div className="mt-auto flex flex-wrap gap-2 pt-2 text-sm font-semibold">
-          <span className="rounded-full bg-[#FBE3DD] px-3 py-1 text-coral-strong">New story</span>
+          <span className="rounded-full bg-[#FBE3DD] px-3 py-1 text-[#A33522]">New story</span>
           <span className="rounded-full bg-paper-deep px-3 py-1 text-ink-soft">Any length</span>
         </div>
       </div>

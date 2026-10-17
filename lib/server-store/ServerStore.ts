@@ -52,6 +52,8 @@ export interface ServerStore {
     (CachedDetour & { bookId: string; cpId: string; optionId: string; perspective: string })[]
   >;
 
+  deleteDetour(cacheKey: string): Promise<void>;
+
   /** Returns true if this caller now holds the lock (no one else is generating this key). */
   acquireLock(cacheKey: string, ttlMs: number): Promise<boolean>;
   releaseLock(cacheKey: string): Promise<void>;

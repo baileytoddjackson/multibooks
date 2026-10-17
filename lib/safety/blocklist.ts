@@ -29,8 +29,6 @@ const TERMS: Record<Category, string[]> = {
     "xxx",
     "strip club",
     "stripper",
-    "make out",
-    "making out",
     "orgy",
     "fetish",
   ],
@@ -74,9 +72,7 @@ const TERMS: Record<Category, string[]> = {
     "cocaine",
     "heroin",
     "meth",
-    "weed",
     "marijuana",
-    "crack",
     "lsd",
     "vape",
     "vaping",
@@ -138,20 +134,19 @@ const COMPILED = Object.entries(TERMS).map(([category, words]) => ({
 }));
 
 /**
- * Words that are fine in kids' stories even though they appear above in other senses
- * (e.g. "crack" of thunder). Checked on the original text before blocking.
+ * Innocent phrases that contain a listed word, removed before matching ("Moby Dick", "root
+ * beer"). Words that are innocent far more often than not ("weed" as in seaweed, "crack" as in a
+ * door open a crack, "make out" as in hearing) are simply not listed; the model check still
+ * screens kid input for those meanings.
  */
-const SAFE_PHRASES = /\b(?:crack(?:ed|ing)? (?:of|open|the|a)|cracks? in|root beer|ginger beer)\b/i;
+const SAFE_PHRASES = /\b(?:moby dick|root beer|ginger beer)\b/g;
 
 export function findBlocked(text: string): Category | undefined {
-  const n = normalize(text);
+  const n = normalize(text).replace(SAFE_PHRASES, " ");
   // Also test with every repeated letter collapsed, so "fuuuck" matches while "kill" still can.
   const single = n.replace(/(.)\1+/g, "$1");
   for (const { category, re } of COMPILED) {
-    if (re.test(n) || re.test(single)) {
-      if (category === "drugs" && SAFE_PHRASES.test(text)) continue;
-      return category;
-    }
+    if (re.test(n) || re.test(single)) return category;
   }
   return undefined;
 }

@@ -12,6 +12,12 @@ describe("blocklist", () => {
       "The crack of thunder woke the whole village",
       "A pirate drinks root beer on the deck",
       "Assemble the crew and pass the compass",
+      // False alarms found in real generated detours:
+      "Far off, Moby Dick glided away across the swells",
+      "He muttered something that neither man could make out",
+      "It was probably only a bit of weed from the river",
+      "He pushed the heavy door open a crack and peered out",
+      "Only the fire spoke, crackling softly in the hearth",
     ]) {
       expect(findBlocked(ok), ok).toBeUndefined();
     }

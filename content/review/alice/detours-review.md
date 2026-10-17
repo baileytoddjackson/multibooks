@@ -1,0 +1,1840 @@
+# Detour review: Alice's Adventures in Wonderland
+
+Map version 1 · 90 detours · 0 approved · 0 rejected · 0 flagged · 0 not generated yet
+
+**How to review.** Read each detour below. In `detours-review.json` (same folder), set
+`"decision"` to `"approve"` or `"reject"` for each entry, and edit `"text"` if you want to change
+the wording (blank lines separate paragraphs). Then run `npm run cache:apply-review`.
+Approved text always overrides generated text. Rejected detours are removed from the cache
+and will be regenerated; to fix one yourself, edit its text and approve it instead.
+
+Entries marked ⚠ have something worth a closer look, such as a brief that says who lives or
+dies, which must match the original book.
+
+---
+
+## cp01 · Chapter 1: “The tiny golden key is out of reach on the glass table. What should Alice do?”
+
+> Original text just before the choice: … little nervous about this; “for it might end, you know,” said Alice to herself, “in my going out altogether, like a candle. I wonder what I should be like then?” And she tried to fancy what the flame of a candle is like after the candle is blown out, for she could not remember ever having seen such a thing.
+
+### Search the hall for something to stand on
+*Told by the narrator · ☐ pending · key `m1:cp01:p1:narrator`*
+
+*Brief:* Alice wanders the hall, checking under the lamps and along the walls. She finds only dust and a dropped feather, nothing tall enough to stand on. Puffing, she returns to the glass table, sits down, and starts thinking of another plan.
+
+Alice thought about it for a moment. Then she stood up and decided to search the hall for something to stand on.
+
+She walked slowly along the wall, peering under each of the tall lamps. The floor was covered in dust, and the lamps were far too high to reach.
+
+Near one corner she found a feather lying on the stone. It was long and grey, and it had fallen from nowhere she could see. It was not nearly tall enough to help her.
+
+She looked behind a row of small wooden stools, and then under a cloth that hung down from the wall. There was nothing there but more dust. Alice began to feel very small in more ways than one.
+
+At last she gave up her search. She was puffing hard and her ten inches of legs felt tired. She walked back to the glass table and sat down beside its shining leg.
+
+From there she could see the tiny golden key, bright and still, on the top of the table. It looked very far away. Alice rested her chin in her hands and began to think of another plan.
+
+### Listen for sounds coming from the garden
+*Told by the narrator · ☐ pending · key `m1:cp01:p2:narrator`*
+
+*Brief:* Alice presses her ear to the little door and hears faint splashing from the fountains and a bird singing. A cool breeze brushes her face and cheers her a little. She wipes her eyes, takes a breath, and decides to think before trying anything else.
+
+Alice stood still for a moment, thinking hard. The little door was still in front of her, and the garden was still on the other side. Perhaps she could find another way to the key, if she only listened first.
+
+She crept up to the little door and pressed her ear against the cold metal. At first she heard nothing at all. Then, very faintly, she heard splashing, as if water was dancing in fountains far away.
+
+A bird was singing too. Its song was sweet and clear, and it rose above the splashing like a thread of silver.
+
+A cool breeze came through the keyhole and brushed against her face. It was gentle and fresh, and it cheered her a little. Alice smiled, though her eyes were still wet.
+
+She wiped her eyes with the back of her small hand. Then she took a long, slow breath, the way she had seen her sister do before a hard lesson.
+
+“I must not give up so quickly,” she said to herself. “Crying will not bring the key any closer. I shall think before I try anything else.”
+
+She sat down on the cold floor and looked at the glass table. The golden key shone in the light, bright and tantalising, but still just out of reach.
+
+### Call out and wait for someone to help
+*Told by the narrator · ☐ pending · key `m1:cp01:p3:narrator`*
+
+*Brief:* Alice calls hello down the long hall. Only her own echo answers, and no one comes. Feeling lonely, she sits down by the table and decides she must solve this herself. She sniffs, straightens up, and looks around once more.
+
+Alice put her hands to her mouth and called out, “Hello! Is anyone there?”
+
+Her voice rolled down the long hall and came back to her as a faint echo. No one answered. No footsteps came, and no door creaked open.
+
+“Hello!” she called again, a little louder this time. Only the echo replied, sounding small and far away.
+
+Alice sat down slowly beside the glass table. The hall was very quiet, and she felt lonely. Her tiny feet dangled above the cold floor.
+
+She looked up at the key shining through the glass. It was so near, and yet so far. She thought about the garden beyond the little door, with its bright flowers and cool fountains.
+
+“Waiting will not help me,” she said at last, in a small voice. “I must think of something myself.”
+
+She sniffed hard, wiped her eyes on her sleeve, and stood up straight. Then she looked all around the hall once more, carefully, from one end to the other, for anything that might help her.
+
+### Give herself a firm, sensible talking-to
+*Told by Alice · ☐ pending · key `m1:cp01:alice-1:alice`*
+
+*Brief:* Alice tells herself sharply that crying will not fetch the key. She takes a deep breath, dries her eyes on her sleeve, and studies the slippery table legs carefully. She decides to test a careful plan before giving up.
+
+After a while, Alice saw that nothing more was going to happen. She decided to go into the garden at once. But when she reached the door, she found the little golden key was missing from her hand. She had left it on the glass table.
+
+She went back to the table and looked up. There was the key, shining plainly through the glass. It was far, far out of reach.
+
+Alice tried her best to climb one of the table legs. It was too slippery, and her hands kept sliding down. After a while she was tired out, and she sat down on the floor and began to cry.
+
+“Come, there’s no use in crying like that!” said Alice to herself, rather sharply. “Crying will not fetch the key, so stop this minute!”
+
+She took a deep breath and wiped her eyes on her sleeve. Then she stood up and looked at the table legs again, more carefully this time.
+
+“Now, think, Alice,” she said. “Glass is smooth, and smooth things are hard to climb. I must not be silly and rush at it.”
+
+She studied the table for a long moment. She began to plan a careful test, one step at a time, before she gave up on the key.
+
+### Picture the garden and keep hoping
+*Told by Alice · ☐ pending · key `m1:cp01:alice-2:alice`*
+
+*Brief:* Alice pictures the bright flowers and cool fountains beyond the little door, and a spark of courage returns. She sets her mind on finding a clever way up. She sniffs, squares her shoulders, and refuses to give up on the garden.
+
+After a while, Alice saw that nothing more was happening. She decided to go into the garden at once. But when she reached the little door, she remembered the golden key. She had left it on the glass table.
+
+She hurried back to the table and looked up. The key was there, shining through the glass, but far beyond her reach. She tried to climb one of the table legs. It was too slippery, and she slid back down every time.
+
+At last she was out of breath. She sat down on the floor and her eyes filled with tears.
+
+“Stop that crying this minute!” Alice said to herself, rather sharply. “You must not sit here sobbing.”
+
+Then she closed her eyes and pictured the garden beyond the little door. She saw bright flowers nodding in the sun. She heard cool fountains splashing over the stones. The picture gave her a spark of courage.
+
+Alice sniffed, wiped her cheeks, and squared her shoulders. “I will not give up on that garden,” she said firmly. “There must be a clever way up to that key.”
+
+She looked carefully around the hall, thinking hard. Her mind was busy with plans, and her hope was growing again.
+
+### Search the hall for something to stand on
+*Told by Alice · ☐ pending · key `m1:cp01:p1:alice`*
+
+*Brief:* Alice wanders the hall, checking under the lamps and along the walls. She finds only dust and a dropped feather, nothing tall enough to stand on. Puffing, she returns to the glass table, sits down, and starts thinking of another plan.
+
+Alice stood up and looked around the long hall once more. Perhaps there was something she had missed. Something tall enough to stand on, or at least a stool to climb.
+
+She hurried along the wall, peeping under each of the lamps. There was nothing under the first one but a little pile of dust. Under the second lamp she found a dropped feather, light and white, that tickled her nose when she touched it.
+
+“Dear me, what a dull hall this is,” said Alice with a sniff. “Not a chair, not a box, not even a footstool anywhere!”
+
+She walked the whole length of the wall and back again. Her small feet ached, and she puffed as she went. The doors were all still locked, and the floor was cold and smooth under her toes.
+
+At last she gave up and trudged back to the glass table. She sat down on the floor beside one of its legs and rested her chin on her hands. The little golden key still shone up at her through the glass, as far away as ever.
+
+“Now, Alice, you must think of another plan,” she said to herself in a serious voice. “Grown-up people always seem to have one. I shall try very hard to think of one too.”
+
+She frowned and tapped her foot, and she began to wonder what else might be useful in such a strange place.
+
+---
+
+## cp02 · Chapter 2: “The Mouse is silent and only winks. What should Alice do next?”
+
+> Original text just before the choice: … this must be the right way of speaking to a mouse: she had never done such a thing before, but she remembered having seen in her brother’s Latin Grammar, “A mouse—of a mouse—to a mouse—a mouse—O mouse!”) The Mouse looked at her rather inquisitively, and seemed to her to wink with one of its little eyes, but it said nothing.
+
+### Paddle gently toward the edge of the pool
+*Told by the narrator · ☐ pending · key `m1:cp02:p1:narrator`*
+
+*Brief:* Alice swims slowly along the edge of the pool, looking for a way out. Her feet touch something soft, and she sees the Mouse still watching her from the water with bright, patient eyes. Neither of them speaks. Alice stops to think about what to say next, and the Mouse waits beside her.
+
+Alice kept paddling, and the water was warm and salty on her lips. She decided that the mouse would not help her if she stayed still. So she swam slowly along the edge of the pool, looking for a way out.
+
+The pool was wide, and the edges were hard to see through the thick, damp air. Alice kicked gently and moved her arms in small strokes, the way she had learned at the seaside. Her skirt tugged at her legs, but she kept going.
+
+Then her feet touched something soft under the water. It was not a rock, and it was not a weed. Alice pulled her feet back and looked down, but she could see nothing clearly.
+
+When she looked up again, the Mouse was still there. It floated a little way off and watched her with bright, patient eyes. It did not swim away, and it did not speak.
+
+Alice opened her mouth, then closed it again. She did not know what to say next. Perhaps a mouse would only understand a few words, or perhaps none at all.
+
+So she stopped swimming and trod water beside the edge. She thought hard, and the Mouse waited beside her, as still as a small brown stone on the surface.
+
+### Offer the Rabbit's white glove as a small gift
+*Told by the narrator · ☐ pending · key `m1:cp02:p2:narrator`*
+
+*Brief:* Alice pulls the little white kid glove from her hand and holds it out across the water as a friendly gift. The Mouse looks at it for a long moment, then gives a small shake of its head and turns its face away. Alice feels a little silly, tucks the glove back, and wonders how to make a friend of a mouse.
+
+Alice looked down at the little white glove on her hand. It was the one she had picked up from the Rabbit’s house, and it was the only one she had. Still, it might be a kind thing to give.
+
+She pulled the glove off slowly, finger by finger. Then she held it out across the water, as politely as she could.
+
+“Would you like this?” she said softly. “It is a very nice glove, and it is quite clean.”
+
+The Mouse looked at the glove for a long moment. Its small eyes went from the glove to Alice and back again. Then it gave a slow shake of its head and turned its face away.
+
+Alice felt a little silly. Her cheeks grew warm, even though the pool was cold around her.
+
+“Well, I suppose it does not want a glove,” she said to herself. She tucked it back onto her hand and sighed.
+
+How did one make friends with a mouse, she wondered? It was not at all like making friends with the Dodo or the Lory. She had no idea what a mouse would want, and the Mouse was not saying a word.
+
+### Float quietly and watch the other creatures
+*Told by the narrator · ☐ pending · key `m1:cp02:p3:narrator`*
+
+*Brief:* Alice floats still and looks around the pool. Far off, a Duck and a Dodo are paddling in circles, and a Lory flutters above the water. Alice notices how crowded the pool is getting. The Mouse keeps its eyes on her, and Alice decides she must think of something polite to say.
+
+Alice decided to keep still for a while. She floated on her back and let the warm salty water hold her up. Her long hair spread out around her like seaweed.
+
+From where she lay, she could see the whole pool. Far off, a Duck and a Dodo were paddling round and round in slow circles. A Lory fluttered above the water, shaking its bright feathers.
+
+Alice noticed that the pool was growing more crowded. More birds and animals seemed to be drifting in from every side. Some of them looked tired and wet, and they were all talking at once.
+
+She turned her head and looked at the Mouse. It had not moved far away. Its small black eyes were still fixed on her, as if it were waiting for her to say something.
+
+Alice felt a little silly lying there in silence. She had not been very polite to the poor creature so far. She thought hard about what a proper young lady ought to say to a mouse in a pool.
+
+She took a breath and bit her lip. She knew she must think of something polite to say, and quickly.
+
+### Splash gently to show the Mouse she means no harm
+*Told by Alice · ☐ pending · key `m1:cp02:alice-1:alice`*
+
+*Brief:* Alice paddles softly so the water barely splashes, making sure the Mouse knows she is friendly. The Mouse's whiskers twitch, but it does not swim away. Alice whispers that she is sorry for being so loud and waits politely, hoping the Mouse will feel safe enough to speak.
+
+Alice decided she would not make any more noise. She moved her arms very slowly through the warm, salty water, so that hardly a drop splashed. She wanted the Mouse to see that she meant no harm.
+
+“I am a friend, not an enemy,” she thought. “I do hope it can see that.”
+
+The Mouse’s whiskers gave a little twitch. Its tiny round eyes stayed fixed on her, but it did not swim away. Alice felt a small flutter of hope.
+
+“I am sorry I was so loud before,” she whispered softly. “I did not mean to frighten you, Mouse.”
+
+She floated quietly and kept very still. Her chin rested just above the water, and her long hair drifted around her shoulders. It was strange to be so small in such a big pool.
+
+Alice wondered what she should say next. Her lessons had taught her many things, but none of them seemed to fit this moment. Perhaps a kind word would be best.
+
+She waited politely with her hands folded in the water. She hoped the Mouse would feel safe enough to speak to her at last.
+
+### Notice the Mouse's shining eyes and wait patiently
+*Told by Alice · ☐ pending · key `m1:cp02:alice-2:alice`*
+
+*Brief:* Alice sees that the Mouse's little eyes are not angry, only curious. She stays very still and waits, counting the ripples in the water. The Mouse blinks slowly, as if it is thinking hard about her. Alice decides that a clever mouse may need a little time before it talks.
+
+Alice decided not to speak again just yet. The Mouse was looking at her with its small bright eyes, and they did not seem angry at all. They seemed curious, and maybe a little careful.
+
+So Alice kept very still in the water. She let her arms float and her feet move only a little. She did not want to frighten the creature away.
+
+She began counting the ripples that spread out from her chin. One ripple, two ripples, three. The salty water rocked gently around her, and the air smelled faintly of the sea.
+
+The Mouse blinked slowly. Then it blinked again, as if it were thinking very hard about her. Alice wondered what it was thinking.
+
+“Perhaps it is only shy,” Alice thought to herself. “Or perhaps it is very clever, and clever creatures like to think before they speak. Papa always said good things take time.”
+
+Alice smiled a little, though no one could see it under the water. She decided she could be patient too. She had waited through long lessons before, and she could wait a little longer now.
+
+She kept her eyes on the Mouse and waited, counting one ripple more.
+
+### Paddle gently toward the edge of the pool
+*Told by Alice · ☐ pending · key `m1:cp02:p1:alice`*
+
+*Brief:* Alice swims slowly along the edge of the pool, looking for a way out. Her feet touch something soft, and she sees the Mouse still watching her from the water with bright, patient eyes. Neither of them speaks. Alice stops to think about what to say next, and the Mouse waits beside her.
+
+Alice decided that waiting would get her nowhere. She began to paddle gently toward the edge of the pool, keeping her chin above the salty water.
+
+Her skirt floated around her legs, and it made swimming harder than it should have been. She kicked slowly and tried not to splash.
+
+As she went, she glanced back over her shoulder. The Mouse was still there. It was watching her with bright, patient eyes, and it did not look away.
+
+“Well,” Alice thought, “it did wink at me. That must mean something, even if it is not talking.”
+
+Her feet brushed against something soft under the water. She stopped and felt about with her toes, but she could not tell what it was. It was probably only a bit of weed, she decided.
+
+Alice floated for a moment and tried to think of the right thing to say next. Her lessons had given her many useful sentences, but none of them seemed quite polite enough for a mouse.
+
+The Mouse did not hurry her. It stayed beside her in the water, quiet and still, as if it were waiting for her to find her words.
+
+Alice took a deep breath. She was not going to give up so easily, not when she had come so far already.
+
+---
+
+## cp03 · Chapter 3: “The Mouse has stormed off in a huff. What should Alice do before it disappears from sight?”
+
+> Original text just before the choice: “I shall do nothing of the sort,” said the Mouse, getting up and walking away. “You insult me by talking such nonsense!”
+
+### Run after the Mouse and say sorry
+*Told by the narrator · ☐ pending · key `m1:cp03:p1:narrator`*
+
+*Brief:* Alice hurries down the bank after the Mouse and apologises sincerely. The Mouse pauses, accepts her apology with a grumpy nod, but says it still will not finish the tale. It hurries into the long grass and is gone, and Alice returns to the damp bank.
+
+Alice did not want the Mouse to leave like this. She jumped up and ran down the bank after it, her wet skirts flapping around her legs.
+
+“Oh, please, I am so sorry!” she cried. “I did not mean to upset you. I was only trying to help, and I got the words all muddled.”
+
+The Mouse stopped and looked back at her. Its whiskers twitched, and its eyes were still cross, but it gave a small, grumpy nod.
+
+“Very well, I accept your apology,” it said stiffly. “But I still will not finish my tale. Not after all that nonsense about knots and tails!”
+
+Alice opened her mouth to say something more, but the Mouse had already turned away. It hurried off through the tall grass at the edge of the pool, quicker than before.
+
+In a moment the grass swayed, and then it was gone. Alice stood still for a while, looking at the place where it had been.
+
+Slowly she made her way back to the damp bank. The others were still sitting in their ring, waiting, and Alice felt very small and very sorry.
+
+### Call the others to help search for it
+*Told by the narrator · ☐ pending · key `m1:cp03:p2:narrator`*
+
+*Brief:* Alice calls the birds and animals to look for the Mouse along the bank. They search among the reeds and rushes for a while, but the Mouse has already gone too far to find. They give up and gather again in a sad, quiet ring, still hoping it might return.
+
+“Oh, please come back!” Alice cried again, but the Mouse did not turn around.
+
+Alice looked at the crowd of wet birds and animals. “We must go and fetch it back!” she said. “Everyone, come and help me look!”
+
+The Dodo nodded wisely, and the whole company scrambled up the bank at once. The Duck waddled, the Lory flapped, and the little Eaglets hopped over the wet grass. Alice led the way, peering into every corner.
+
+They searched among the reeds and the tall rushes for a long while. They called out softly, and they parted the stalks with their feet and wings. Alice even looked under a large toadstool, but there was no sign of the Mouse anywhere.
+
+At last the Dodo shook his head. “It has gone much too far for us to find now,” he said gently.
+
+Slowly, they all came back to the bank and settled into a sad, quiet ring. Nobody spoke for a while. Alice folded her hands in her lap and looked toward the water.
+
+Still, she hoped the Mouse might change its mind and come back to finish its tale. She kept her eyes on the reeds, and the others kept watching too.
+
+### Wait quietly and watch the water
+*Told by the narrator · ☐ pending · key `m1:cp03:p3:narrator`*
+
+*Brief:* Alice sits still on the bank and watches the ripples on the pool, thinking about what she said. A cool breeze passes and she tries to remember the Mouse's tale. Soon the Mouse's small figure disappears over a distant hill, and Alice sighs and turns back to the others.
+
+Alice did not follow the Mouse. She sat very still on the bank and watched the water instead.
+
+Small ripples spread across the pool, touching the reeds and the edges of the shore. Alice thought about what she had said. She had only wanted to help, but the words had come out all wrong.
+
+A cool breeze blew across the water and ruffled her damp hair. Alice shivered a little and tried to remember the Mouse’s tale. She could recall a bend, and a river, and something about a dog, but the rest was lost in a muddle.
+
+She looked up. The Mouse was still walking, its small grey shape growing smaller on the grass. Then it reached a distant hill and slipped over the top. Alice could see it no more.
+
+Alice let out a long sigh. She had been so eager to hear the story, and now it was gone. Slowly she turned her back on the empty hill and looked again at the ring of wet birds and animals on the bank.
+
+### Tell the Mouse your apology from the heart
+*Told by Alice · ☐ pending · key `m1:cp03:alice-1:alice`*
+
+*Brief:* Alice speaks gently to the Mouse, explaining she only mixed up the words by accident and feels truly sorry. The Mouse listens, looks a little less cross, but still says it is too upset to continue. It walks away slowly, and Alice watches it go with a small sigh.
+
+Alice felt terrible. She hurried after the Mouse and called out to it, her voice trembling a little.
+
+“Please wait! I truly did not mean to mix up the words. It was only an accident, I promise.”
+
+The Mouse stopped for a moment and looked back at her. Its whiskers twitched, and its angry face softened just a little.
+
+“I am very sorry,” Alice said again, and she meant every word. “I know I was careless. I should have listened more carefully.”
+
+The Mouse was quiet for a long time. Then it shook its small head.
+
+“I am still too upset to go on with my tale,” it said stiffly. “Perhaps another day.”
+
+Without another word, it turned and walked away along the bank. It moved slowly now, its tail trailing behind it over the wet grass.
+
+Alice watched it go. She let out a small sigh and folded her hands in her lap. She had so wanted to hear the rest of the story.
+
+How puzzling it all was, she thought. Saying sorry was not always enough to set things right.
+
+### Ask the Lory why the Mouse gets so cross
+*Told by Alice · ☐ pending · key `m1:cp03:alice-2:alice`*
+
+*Brief:* Alice turns to the Lory and asks, politely, why the Mouse is so easily offended. The Lory huffs and says it is not sure, only that the Mouse is very proud of its long history. Before they can talk more, the Mouse has gone out of sight, and the Lory sighs about it.
+
+“Ask the Lory,” Alice thought, turning to the bird with the bright feathers. “Perhaps it knows why the Mouse is so cross.”
+
+“Excuse me,” Alice said politely, “why does the Mouse get so easily offended?”
+
+The Lory ruffled its feathers and looked down its beak at her. “Well, I am not quite sure,” it said. “But the Mouse is very proud of its long history, and it does not like to be interrupted.”
+
+“Oh,” said Alice, thinking hard. “I did not know a history could be so important.”
+
+The Lory opened its mouth to say more, but Alice looked down the bank. The Mouse was already small and far away, a grey speck among the reeds.
+
+Alice gave a little sigh. She was sorry she had upset it, and sorrier still that it had not stayed to finish its tale. She had so wanted to hear the rest.
+
+The Lory watched the empty path and shook its head. “What a pity it wouldn’t stay!” it said with a sigh, quite as if it had known the Mouse all its life.
+
+### Run after the Mouse and say sorry
+*Told by Alice · ☐ pending · key `m1:cp03:p1:alice`*
+
+*Brief:* Alice hurries down the bank after the Mouse and apologises sincerely. The Mouse pauses, accepts her apology with a grumpy nod, but says it still will not finish the tale. It hurries into the long grass and is gone, and Alice returns to the damp bank.
+
+Alice did not wait to think. She picked up her skirts and hurried down the bank after the Mouse.
+
+“I’m so sorry!” she called out. “I didn’t mean to be rude. Truly I didn’t!”
+
+The Mouse stopped at the edge of the water and turned its small head. Its whiskers twitched, and its eyes were still cross.
+
+“Well,” it said stiffly, “I suppose you did not know any better.” It gave a short, grumpy nod. “I accept your apology. But I still will not finish my tale. Not now.”
+
+Alice felt her cheeks go hot. She wanted very much to hear the rest of the story, but she knew better than to argue.
+
+“Thank you for forgiving me,” she said politely.
+
+The Mouse did not answer. It turned around and scurried away through the wet grass. Its tail flicked once, and then the long blades closed behind it. In a moment it was gone.
+
+Alice stood still for a while, listening. She could hear nothing but the soft splash of the pool and the rustle of feathers behind her.
+
+Slowly, she walked back up the damp bank toward the others. Her shoes squelched with every step, and she felt very sorry for herself.
+
+---
+
+## cp04 · Chapter 4: “Alice is hungry and tiny, and a mushroom stands nearby. What should Alice do first?”
+
+> Original text just before the choice: … one of the leaves: “I should have liked teaching it tricks very much, if—if I’d only been the right size to do it! Oh dear! I’d nearly forgotten that I’ve got to grow up again! Let me see—how is it to be managed? I suppose I ought to eat or drink something or other; but the great question is, what?”
+
+### Search the grass for something safe to eat
+*Told by the narrator · ☐ pending · key `m1:cp04:p1:narrator`*
+
+*Brief:* Alice crouches among the grass and sniffs at berries and petals, deciding none look safe to taste. A rustle nearby makes her jump, but it is only a beetle. Curious, she wanders back toward the tall mushroom with the round top, wondering what might be up there, and stops at its stalk, ready to look.
+
+Alice looked all round her at the flowers and the blades of grass. She crouched down low among them, sniffing carefully at the berries and the soft petals. None of them looked safe to taste, and she did not want to make herself sicker than she already was.
+
+Suddenly something rustled in the grass beside her. Alice jumped back with a little cry, her heart beating fast. But it was only a small beetle, hurrying along its way with no thought of her at all.
+
+“Well, I am not going to be frightened by a beetle,” said Alice, brushing off her dress. She felt a little silly, but she was glad no one had seen her.
+
+She wandered back across the grass, toward the tall mushroom with the round top. It stood there as quiet as before. Alice wondered what might be up there, and whether it might hold something useful to help her.
+
+At last she came to the mushroom’s stalk, which was as thick as a tree trunk to her small eyes. She stopped beside it and took a deep breath. Then she stood very still, ready to take a look.
+
+### Listen carefully for sounds in the wood
+*Told by the narrator · ☐ pending · key `m1:cp04:p2:narrator`*
+
+*Brief:* Alice holds very still and listens. She hears birds, a far-off bark that fades away, and a soft humming that seems to come from somewhere near the mushroom. She decides humming is friendly and not frightening. Feeling braver, she tiptoes toward the mushroom, quietly parting the grass as she goes.
+
+Alice stood very still and held her breath. She wanted to hear what was going on around her in the wood.
+
+At first she heard only birds. They chirped and whistled in the branches over her head.
+
+Then, far away, the puppy barked once more. The sound grew fainter and fainter until it was gone.
+
+Alice waited. Then she heard something new, a soft humming. It seemed to come from somewhere near the mushroom.
+
+She thought about it carefully. A humming sound did not seem frightening. It sounded more like a friendly song, the kind a person might sing while working.
+
+Feeling a little braver, Alice tiptoed forward. She was careful not to make a sound. She parted the long grass gently with her hands as she went.
+
+The humming went on and on. Alice kept her eyes on the mushroom and moved one small step at a time.
+
+Her heart beat fast, but she kept walking. The mushroom was almost within reach now, and she wanted very much to see what was on the top of it.
+
+### Sit down and rest for a moment
+*Told by the narrator · ☐ pending · key `m1:cp04:p3:narrator`*
+
+*Brief:* Alice sits in the soft shade and thinks about the puppy, the cakes, and how strange her day has been. Her stomach rumbles, which reminds her she still needs to eat something. She stands up, brushes off her dress, and decides that the mushroom is the best place to look for an answer.
+
+Alice sat down in the soft shade of the buttercup and let out a long breath. Her legs felt tired, and her head was spinning from all that had happened.
+
+She thought about the puppy with its wagging tail and its great sleepy eyes. She thought about the cakes that had come flying out of the pebbles, and about the Rabbit’s little house. It had been a very strange day, even for Wonderland.
+
+Just then her stomach gave a loud rumble. Alice laughed a little and put her hand on it. “Well, I suppose I do need something to eat,” she said to herself. “But what?”
+
+She stood up and brushed the grass and bits of leaf from her dress. The sun was warm on her shoulders, and the air smelled sweet and green.
+
+Near her stood a large mushroom, rising up from the grass. It was just about as tall as she was, and perhaps a little taller. Alice had an idea. Mushrooms were often found in fairy stories, and surely this one might help her.
+
+“I will look at it closely,” Alice said bravely. “Then I will know what to do next.”
+
+She walked slowly toward the mushroom, her eyes fixed on its round, spotted cap.
+
+### Sniff the flowers before tasting anything
+*Told by Alice · ☐ pending · key `m1:cp04:alice-1:alice`*
+
+*Brief:* Alice bends over a patch of tiny flowers and sniffs them one by one. They smell sweet, but she remembers how the cakes changed her, so she does not taste them. She decides to walk slowly around the mushroom, looking for a safe spot, and finds a gap in the grass where she can see up to the top.
+
+The great question was still hanging in the air, and Alice did not know the answer. She looked all around her at the flowers and the grass. Nothing seemed right to eat or drink.
+
+A tiny patch of flowers grew near her feet. Alice bent down and sniffed them, one by one. They smelled sweet and fresh, like summer mornings in the garden at home.
+
+“Smelling is not the same as tasting,” Alice said to herself, sitting back on her heels. “Not after those cakes. Goodness knows what they might do to me next.”
+
+She did not touch a single petal. Instead she stood up and walked slowly around the mushroom, the way a careful traveller walks round a strange house. Her eyes searched the grass for a safe place.
+
+At last she found a gap between two tall blades of grass. Through it she could see a little way up the side of the mushroom. Alice held her breath and tiptoed closer, wondering what she might find.
+
+### Politely call out to whoever lives there
+*Told by Alice · ☐ pending · key `m1:cp04:alice-2:alice`*
+
+*Brief:* Alice clears her throat and says politely, Excuse me, is anyone there? Only a soft rustle answers her. She waits a moment, feeling a little silly but not afraid. Then she takes a deep breath, steps closer to the mushroom, and gets ready to peek over its edge.
+
+Alice wondered what she could eat or drink, but nothing nearby looked right. She looked all round the flowers and the blades of grass, and still she could not decide.
+
+The mushroom was about as tall as she was. She walked slowly around it, looking under it, on both sides, and behind it. Then she thought she might as well see what was on the top.
+
+Before she climbed up, Alice cleared her throat. “Excuse me,” she said politely. “Is anyone there?”
+
+Only a soft rustle answered her, like wind moving through dry leaves.
+
+Alice waited a moment, feeling a little silly. Still, she was not afraid. Her mother had always said that good manners cost nothing, and she believed it.
+
+She took a deep breath. Then she stepped closer to the mushroom, stood very still, and got ready to peek over its edge.
+
+### Search the grass for something safe to eat
+*Told by Alice · ☐ pending · key `m1:cp04:p1:alice`*
+
+*Brief:* Alice crouches among the grass and sniffs at berries and petals, deciding none look safe to taste. A rustle nearby makes her jump, but it is only a beetle. Curious, she wanders back toward the tall mushroom with the round top, wondering what might be up there, and stops at its stalk, ready to look.
+
+Alice crouched down among the grass and looked carefully at everything around her. There were tiny red berries, pale petals, and little green seeds scattered between the blades. She sniffed at each one, but none of them seemed safe to taste.
+
+“I really do not know which of these is a proper thing to eat,” she said to herself with a sigh. “Mother always said I must never swallow anything I have not been given first.”
+
+Suddenly the grass rustled right beside her. Alice jumped back with a little squeak and held her breath. A small beetle came crawling out, shining like a green jewel, and it hurried away without a single glance at her.
+
+“Well, that was only a beetle,” Alice said, feeling rather silly. “I must not be so easily frightened.”
+
+She wandered back slowly toward the tall mushroom. Its top was round and wide, and she wondered what might be hiding up there. Perhaps there was something useful to find, or perhaps there was nothing at all.
+
+Alice stopped at the thick stalk and put one hand on it. She took a deep breath and got ready to look.
+
+---
+
+## cp05 · Chapter 5: “The mushroom is perfectly round, so which side is which? What should Alice try first?”
+
+> Original text just before the choice: Alice remained looking thoughtfully at the mushroom for a minute, trying to make out which were the two sides of it; and as it was perfectly round, she found this a very difficult question. However, at last she stretched her arms round it as far as they would go, and broke off a bit of the edge with each hand.
+
+### Sniff each torn edge before taking any bite
+*Told by the narrator · ☐ pending · key `m1:cp05:p1:narrator`*
+
+*Brief:* Alice leans close and sniffs both torn edges. One smells sweet and one smells like damp earth, but neither tells her which side is which. Deciding to trust her luck, she nibbles the right-hand piece. A sudden jolt sends her chin banging against her foot, and she begins to shrink fast.
+
+Alice leaned close and sniffed at the two torn edges, one after the other. The piece in her left hand smelled sweet, like honey and flowers. The piece in her right hand smelled like damp earth after rain.
+
+“Well, that tells me nothing about which side is which,” she said with a sigh. “A mushroom is round, so one side is no different from the next.”
+
+She thought hard for a moment. Then she decided that she would have to trust her luck.
+
+“Here goes,” said Alice, and she nibbled a small bite from the right-hand piece.
+
+At once something happened. Her head seemed to shoot downward, and before she could stop herself, her chin came down with a bump right against her foot.
+
+“Oh dear,” said Alice in surprise. “What a strange thing to happen!”
+
+She could feel herself growing smaller, and she knew that she had to act quickly. The mushroom beside her seemed to grow taller and taller as she shrank.
+
+### Tie a grass stalk to one piece to mark it
+*Told by the narrator · ☐ pending · key `m1:cp05:p2:narrator`*
+
+*Brief:* Alice pulls a long grass stalk and ties it around the left-hand piece so she can tell the pieces apart. Then she gets muddled about which knot means which side. Hoping for the best, she nibbles the right-hand piece. Her chin jolts against her foot, and she starts shrinking quickly.
+
+Alice looked at the two pieces in her hands and frowned. They looked exactly the same. There was no way to tell them apart by sight.
+
+Then she had a clever thought. Near her feet grew a long, thin stalk of grass. She pulled it free and tied it carefully around the left-hand piece.
+
+“There,” she said proudly. “Now I shall always know which one is which.”
+
+But as she studied her knot, she was not sure. Was this the knot for the left side, or for the right? She turned the piece over and over, and the grass stalk slipped about. Her head began to spin with the question.
+
+“Well, I cannot be certain,” Alice said with a sigh. “I shall simply hope for the best.”
+
+She lifted the right-hand piece to her lips and took a small nibble. For a moment nothing happened at all.
+
+Then, without any warning, something bumped hard beneath her chin. Alice looked down in surprise. Her chin had struck her foot! She could hardly believe it.
+
+And she could feel herself growing smaller, and smaller still, very quickly indeed.
+
+### Work out the puzzle aloud, rule by rule
+*Told by the narrator · ☐ pending · key `m1:cp05:p3:narrator`*
+
+*Brief:* Alice repeats the Caterpillar's words aloud, one side taller and one side shorter, and tries to reason which bit must be which. She decides the right-hand piece must be the first to try. The bite gives a sudden blow under her chin as her foot meets it, and she begins shrinking rapidly.
+
+Alice stood still and tried to think clearly. “One side makes you taller,” she said slowly, “and the other side makes you shorter. So one bit must be the tall bit, and the other must be the short bit.”
+
+She looked at the two pieces in her hands. They looked exactly alike, and that was no help at all.
+
+“Well, I shall just have to guess,” she said with a sigh. “Guessing is better than sitting here doing nothing.”
+
+She thought hard once more. The right-hand piece was closer to her, so it seemed the sensible one to try first. Alice decided that was the rule she would follow.
+
+She lifted the bit to her lips and gave it a small nibble, very carefully. For a moment nothing happened at all.
+
+Then, all at once, something dreadful occurred. Alice felt a sharp knock under her chin, as though something had struck her hard. When she looked down, she saw that her foot was right there, pressed up against her face.
+
+She was growing smaller, and she was doing it very fast. The grass and the mushroom seemed to swell up around her as she shrank.
+
+### Trust the Caterpillar and test the right-hand piece first
+*Told by Alice · ☐ pending · key `m1:cp05:alice-1:alice`*
+
+*Brief:* Alice remembers the Caterpillar's advice and decides to test the right-hand piece first. She nibbles it carefully, and the bite makes her chin strike her foot with a jolt. She feels herself shrinking quickly and notices it is getting very hard to think clearly.
+
+Alice thought hard about what the Caterpillar had said. One side would make her grow taller, and the other would make her shrink. She decided to trust it and test the right-hand piece first.
+
+“Very well,” she said bravely. “I will try the right-hand bit, and see what happens.”
+
+She lifted the piece carefully to her mouth and took a small nibble. Her eyes went wide with surprise.
+
+All at once, something struck her hard under the chin. It was a jolt, quick and sharp, and it knocked her head down. Her chin had come down onto her own foot!
+
+“Oh dear, what has happened to me?” Alice cried, though her voice sounded small and far away.
+
+She could feel herself getting smaller, and smaller still. The room of the mushroom seemed to stretch up around her. Her thoughts felt slow and fuzzy, like a sleepy cat’s.
+
+“I must keep my wits about me,” she told herself. “Think, Alice, think. The Caterpillar said the other side would help. I must find it, and quickly.”
+
+It was getting very hard to think clearly. The grass around her looked as tall as trees.
+
+### Stop to grumble about the Caterpillar's unhelpful answers
+*Told by Alice · ☐ pending · key `m1:cp05:alice-2:alice`*
+
+*Brief:* Alice sits on the grass, annoyed that the Caterpillar gave such short, puzzling answers. While fidgeting, she accidentally bites the right-hand piece. A jolt sends her chin banging onto her foot, and she feels herself shrinking fast, with no time to waste.
+
+Alice sat down on the soft grass and frowned. The Caterpillar had been most unhelpful. It had given her two short sentences and then crawled off without a single kind word.
+
+“It is very rude to leave a question half answered,” she thought crossly. “Lessons at school never taught me how to talk to caterpillars.”
+
+She picked at the grass and tried to think. The mushroom sat beside her, round and pale, and its two pieces lay in her lap. Her hands were fidgeting, and her thoughts were busy with a dozen puzzles at once.
+
+Without quite meaning to, she lifted the right-hand piece and gave it a small nibble. It tasted a little like cool apple and a little like pepper.
+
+Then something odd happened. Her head seemed to jerk upward all at once. Her chin came down hard, and it struck her foot with a sharp little bump.
+
+“Oh dear,” said Alice, blinking in surprise. “Whatever is happening to me now?”
+
+She could feel herself growing smaller, and quickly too. There was no time to sit and wonder about it. She held the mushroom tightly and looked at her two pieces with great care.
+
+### Sniff each torn edge before taking any bite
+*Told by Alice · ☐ pending · key `m1:cp05:p1:alice`*
+
+*Brief:* Alice leans close and sniffs both torn edges. One smells sweet and one smells like damp earth, but neither tells her which side is which. Deciding to trust her luck, she nibbles the right-hand piece. A sudden jolt sends her chin banging against her foot, and she begins to shrink fast.
+
+Alice bent down close to the mushroom and sniffed the torn edge in her right hand. It smelled sweet, like honey left out in the sun.
+
+She sniffed the edge in her left hand next. This one smelled like damp earth after rain. “Well, that is no help at all,” she said with a small sigh. “Both of them smell perfectly ordinary, and neither one tells me which side is which.”
+
+She turned the mushroom slowly in her fingers. It was round all the way around, and there was not a mark to show her where one side began. “I suppose I shall just have to guess,” Alice said bravely. “Guessing is better than sitting here all day.”
+
+She lifted the right-hand piece to her mouth and took a very small nibble. For a moment nothing happened at all.
+
+Then, without any warning, something struck her hard under the chin. Alice gave a gasp. Her chin had bumped right down against her foot!
+
+“Oh dear, oh dear,” she thought, staring down at her toes. “What a dreadful thing to happen. And I can feel myself getting smaller already.”
+
+She clutched the mushroom tightly and tried to think clearly. Her heart was beating quickly, but she knew she must not panic.
+
+---
+
+## cp06 · Chapter 6: “The Cheshire Cat is back on a branch, asking a strange question. What should Alice do?”
+
+> Original text just before the choice: … said to live. “I’ve seen hatters before,” she said to herself; “the March Hare will be much the most interesting, and perhaps as this is May it won’t be raving mad—at least not so mad as it was in March.” As she said this, she looked up, and there was the Cat again, sitting on a branch of a tree.
+
+### Ask the Cat whether the Hatter is kinder
+*Told by the narrator · ☐ pending · key `m1:cp06:p1:narrator`*
+
+*Brief:* Alice asks the Cat if the Hatter is kinder than the March Hare. The Cat grins and says both are mad in different ways, then fades slowly until only its grin hangs in the air. Alice shrugs and keeps walking toward the fur-roofed house, which soon comes into view.
+
+“Is the Hatter kinder than the March Hare?” Alice asked, looking up at the Cat.
+
+The Cat’s grin grew wider. “Oh, they are both quite mad,” it said. “Only in different ways.”
+
+“That is not a very helpful answer,” said Alice, feeling a little cross.
+
+“Most answers here are not,” replied the Cat.
+
+Then the Cat began to fade. It started at the tips of its ears and moved slowly down its body. Its tail went last of all. Only the grin was left, floating in the air above the branch.
+
+Alice looked at it for a while. The grin did not move, and it did not speak.
+
+“Well, I suppose I shall have to find out for myself,” she said with a shrug.
+
+She turned away from the tree and kept walking. The path wound between tall grass and odd little flowers. Her heart beat a little faster with every step.
+
+Soon she saw a house ahead of her, larger than the others she had passed. Its roof looked soft and shaggy, and its chimneys stood up like ears.
+
+### Walk on quietly without answering the Cat
+*Told by the narrator · ☐ pending · key `m1:cp06:p2:narrator`*
+
+*Brief:* Alice decides not to answer the Cat and keeps her eyes on the path. Behind her a soft giggle drifts through the trees, and far off she hears the Cat ask about pigs and figs. She finds a small wooden sign with an arrow, follows it, and soon sees the large house of the March Hare ahead.
+
+Alice decided not to answer the Cat. It had asked her one question too many already, and she did not want to hear another. She fixed her eyes on the path and kept walking.
+
+Behind her, a soft giggle drifted through the trees. It sounded like it came from very far away, and then it stopped.
+
+From somewhere ahead, or perhaps from nowhere at all, she heard the Cat’s thin voice. “Pig or fig?” it asked, as if the question had been hanging in the air for ages. Alice pressed her lips together and did not turn around.
+
+Soon she came to a small wooden sign nailed to a post. It had a painted arrow pointing down a narrow track. Someone had written words on it, but the letters were faded, so she could not read them clearly.
+
+She followed the arrow along the track. The trees grew thinner, and the air grew warmer. Then, between the leaves, she saw a building that was far too large to be an ordinary house. It was the home of the March Hare, and it stood in the sunlight ahead of her.
+
+### Sit down on a mossy stone to think
+*Told by the narrator · ☐ pending · key `m1:cp06:p3:narrator`*
+
+*Brief:* Alice sits on a mossy stone to think about the pig-baby and hopes it is happy in the wood. She wonders whether a sensible plan would help her meet the March Hare politely. A breeze carries the smell of tea from the distant house, so she stands up, brushes off her dress, and walks on toward it.
+
+Alice sat down on a mossy stone and gave her thoughts a chance to settle. The Cat’s grin had faded away, and so had the Cat. She could not stop thinking about the little creature from the kitchen.
+
+I hope the pig is happy in the wood, she thought. It will be much better off there than in a cook’s kitchen full of pepper and flying plates.
+
+Alice tried to make a sensible plan. Perhaps she could knock politely, bow, and ask the March Hare a clear question. Surely that would be the proper way to begin a visit, even in such a strange land.
+
+But her plans felt wobbly, like the mushroom had been. She did not know what the Hare would say, or whether he would say anything sensible at all.
+
+Then a breeze came drifting through the trees. It carried a warm, sweet smell of tea from somewhere up ahead.
+
+Alice stood up, brushed the dust from her dress, and took a deep breath. Her heart beat a little faster. She began to walk on toward the smell of tea and the house beyond the trees.
+
+### Call out to the Cat and ask what it means
+*Told by Alice · ☐ pending · key `m1:cp06:alice-1:alice`*
+
+*Brief:* Alice calls up to the branch and asks the Cat what it meant by pig or fig. The Cat only says that she will find out soon enough, and its voice echoes away. Alice huffs, decides it is hopeless, and walks on through the trees until the March Hare's house comes into view.
+
+“Pig, or fig?” Alice repeated, looking up at the branch. What could the Cat possibly mean by that? She cupped her hands around her mouth and called up into the leaves.
+
+“What did you mean by pig or fig? Please tell me!”
+
+The Cat did not answer at once. Then a voice drifted down through the branches, faint and lazy. “You will find out soon enough.”
+
+Alice frowned. “That is no answer at all!” she said crossly. “Riddles, riddles, and nothing but riddles. It is quite hopeless.”
+
+She waited a moment longer, but the tree was silent. Only a faint echo seemed to answer her, rolling away between the trunks until it was gone.
+
+“Well, I shall not stand here waiting for a cat to make up its mind,” Alice said, tossing her head. She tucked her skirt up and set off through the trees.
+
+The path wound on and on. Alice counted the trees as she passed them, and she tried to remember her multiplication tables to keep her thoughts busy. Seven times eight, she thought, was fifty-six. Or was it fifty-four? She was not sure.
+
+At last the trees opened out, and she saw a house ahead. Its windows were bright, and there was something strange about it. Alice stopped and stared, hardly believing her eyes.
+
+She was almost sure she had found the right place at last.
+
+### Check the trees for other strange signs
+*Told by Alice · ☐ pending · key `m1:cp06:alice-2:alice`*
+
+*Brief:* Alice looks carefully at the trees and spots a tiny door at the base of one, which she politely decides not to open. She notes a few mushrooms and a teapot-shaped stump. Feeling curious but sensible, she continues along the path, and soon the house of the March Hare appears through the leaves.
+
+Alice looked at the branch, and then she looked at the trees around it. Something about them seemed odd, so she decided to look very carefully.
+
+“Perhaps there are more strange things hiding here,” she thought. “I must be sensible and not rush about.”
+
+At the foot of one tree she saw a tiny door, no higher than her knee. It had a small brass handle, shining in the sun. Alice bent down and studied it for a moment.
+
+“I really should not open it,” she said politely to the door. “It would not be proper to go poking into someone’s house without asking.”
+
+Nearby, a few spotted mushrooms grew in a ring. Beyond them stood an old stump shaped just like a teapot, with a little spout poking out. Alice shook her head in wonder.
+
+“How puzzling everything is here! Trees with doors and teapots that grow in the wood,” she murmured. “I do wish my lessons had told me about such things.”
+
+She did not want to stay too long among such odd sights. Holding her skirt neatly, she turned her back on the stump and walked on along the path. The Cat did not come back, and the trees grew thinner ahead. Soon, through the leaves, she caught sight of a house with strange shapes on its roof.
+
+### Ask the Cat whether the Hatter is kinder
+*Told by Alice · ☐ pending · key `m1:cp06:p1:alice`*
+
+*Brief:* Alice asks the Cat if the Hatter is kinder than the March Hare. The Cat grins and says both are mad in different ways, then fades slowly until only its grin hangs in the air. Alice shrugs and keeps walking toward the fur-roofed house, which soon comes into view.
+
+“Is the Hatter kinder than the March Hare?” asked Alice, looking up at the grinning face in the branches.
+
+“Oh, they are both mad,” said the Cat, its voice lazy and calm. “But they are mad in different ways, you see.”
+
+“That is not a very helpful answer,” Alice said, folding her arms. She felt a little cross. Nobody in Wonderland ever gave a plain answer to a plain question.
+
+The Cat did not reply. Its body began to fade, slowly and patiently, until only the wide grin was left hanging in the air above the branch.
+
+“Well, I suppose I shall have to find out for myself,” Alice said with a shrug.
+
+She turned and kept walking along the path. The grass was long and damp under her feet. Birds chattered somewhere over her head, and the air smelled sweet and a little strange.
+
+Soon she could see a house through the trees. It had tall chimneys, and she thought they looked rather like ears. She could not be sure yet, but it seemed the right place to find the March Hare.
+
+Alice took a deep breath. Her heart beat faster, and she wondered what sort of welcome she would get there.
+
+### Grin wider and hide in the leaves for a while
+*Told by the Cheshire Cat · ☐ pending · key `m1:cp06:cheshire-cat-1:cheshire-cat`*
+
+*Brief:* The Cat's grin spreads wider as it slips into the leaves and hides there, peeking out now and then. Its tail twitches from behind a branch, and it giggles quietly to itself. Once Alice is a few steps on, the Cat lets her go and settles back to watch the path ahead.
+
+Alice’s question hung in the air, and the Cat thought about it for a long while. It did not answer. Instead, its grin grew wider, wider, until it seemed to fill the whole branch.
+
+“Did you say pig, or fig?” the Cat asked again, in its soft, lazy voice.
+
+Alice did not reply. She simply turned and walked on along the path, shaking her head.
+
+The Cat was delighted. It slipped off the branch and into the thick green leaves, moving so quietly that not one twig shook. Only the grin stayed in view, floating among the leaves like a little moon.
+
+From behind a branch, a tail began to twitch. It swished back and forth, like a question mark that had not yet decided what to ask.
+
+The Cat giggled quietly to itself. “Oh, dear me,” it murmured. “She is quite sure she is right. How very sensible of her.”
+
+Alice took a few more steps. She did not look back, but she could feel the grin watching her.
+
+The Cat let her go. It settled back among the leaves, its tail curled neatly, and turned its grin toward the path ahead. There was still a great deal of Wonderland to see, and the Cat did not mind waiting to see what it would do next.
+
+### Fade slowly, leaving only the grin to tease her
+*Told by the Cheshire Cat · ☐ pending · key `m1:cp06:cheshire-cat-2:cheshire-cat`*
+
+*Brief:* The Cat begins to fade slowly, starting with its tail, and leaves only its grin hanging in the air. The grin seems to say a few words about hatters and hares before it too disappears. Alice is left alone on the path, and she walks on toward the house with fur on its roof.
+
+The Cat began to fade, slowly, just as it had done before. First its tail went thin and faint, like smoke over a fire. Then its back legs were gone, and then its body, bit by bit.
+
+Only the grin was left, hanging in the air above the branch. It was wide and bright, and it seemed very pleased with itself.
+
+“Hatters are mad, you know,” the grin said in a soft voice. “And hares are madder still. Or perhaps it is the other way round. Which do you think?”
+
+Alice opened her mouth to answer, but the grin only blinked at her. Then it too faded, slowly, until nothing was left but the empty branch and a soft, sleepy breeze.
+
+Alice was alone on the path. She looked at the branch for a long moment, then gave a small sigh and shook her head.
+
+“Cats are very odd,” she said to herself. “But I suppose I must go on.”
+
+So she walked on along the path, past the tall grass and the quiet trees. Ahead of her she could see a house with fur growing on its roof, and she began to walk toward it.
+
+### Ask the Cat whether the Hatter is kinder
+*Told by the Cheshire Cat · ☐ pending · key `m1:cp06:p1:cheshire-cat`*
+
+*Brief:* Alice asks the Cat if the Hatter is kinder than the March Hare. The Cat grins and says both are mad in different ways, then fades slowly until only its grin hangs in the air. Alice shrugs and keeps walking toward the fur-roofed house, which soon comes into view.
+
+The Cat’s grin hung in the air, wide and calm, while Alice stared at it. Its eyes were gone, and so was its tail. Only the grin was left.
+
+Alice took a deep breath. She had seen many odd things today, but this was the oddest of all. “Tell me something,” she said. “Is the Hatter kinder than the March Hare?”
+
+The grin seemed to widen. “Kinder?” came a soft voice from somewhere in the air. “Oh, they are both mad, my dear. They are only mad in different ways. Which one would you rather be mad with?”
+
+Alice frowned. It was not a clear answer, but she was getting used to answers like that. “Neither, I think,” she said slowly.
+
+“Then you have chosen well,” said the voice, and the grin began to fade. It faded slowly, like the last light of a candle. At last there was nothing left at all.
+
+Alice shrugged and walked on along the path. She did not look back. The March Hare was still somewhere ahead, and she had a great deal to think about.
+
+Soon the trees opened up, and she saw a house. It had chimneys shaped like ears, and its roof looked thick and furry. Alice slowed her steps and looked at it carefully.
+
+---
+
+## cp07 · Chapter 7: “The tea party has gotten muddled and a bit rude, and the Dormouse's story is getting stranger. What should Alice do?”
+
+> Original text just before the choice: … spoke, and the Dormouse followed him: the March Hare moved into the Dormouse’s place, and Alice rather unwillingly took the place of the March Hare. The Hatter was the only one who got any advantage from the change: and Alice was a good deal worse off than before, as the March Hare had just upset the milk-jug into his plate.
+
+### Ask the Dormouse to slow down and explain the treacle well
+*Told by the narrator · ☐ pending · key `m1:cp07:p1:narrator`*
+
+*Brief:* Alice asks the Dormouse kindly to explain the well slowly. The Dormouse blinks, thinks hard, and admits the well is only a story it made up. The Hatter mutters about stories, but the Dormouse sleepily promises to keep going about the three sisters and their drawings.
+
+Alice did not wish to offend the Dormouse again, so she spoke very gently. “Please, could you explain the treacle-well? I am a little lost.”
+
+The Dormouse opened one eye and looked at her for a long moment. Then it blinked, and its small face wrinkled as it thought very hard.
+
+“Well,” it said slowly, “I am not sure there is a treacle-well at all. I think I made it up as I went along.”
+
+Alice felt a little surprised. She had been trying so hard to follow the story, and now it seemed to have no firm ground beneath it.
+
+“You can make up stories about anything you like,” muttered the Hatter, dipping his cup into the teapot. “Especially stupid ones.”
+
+“Do not listen to him,” said the Dormouse, yawning wide. “I will keep going. Elsie, Lacie and Tillie were the three sisters, and they were learning to draw.”
+
+Alice nodded politely and folded her hands in her lap. She hoped the story would make a little more sense this time.
+
+The March Hare looked up from his plate with a grin, but he said nothing. The sleepy voice of the Dormouse drifted on over the table, soft and slow, as the afternoon light crept across the cups.
+
+### Count the teacups to see how long the party has lasted
+*Told by the narrator · ☐ pending · key `m1:cp07:p2:narrator`*
+
+*Brief:* Alice counts the cups piled on the table and finds dozens, all dirty. She wonders aloud how long they have been moving around. The Hatter insists it is always six o'clock. Alice gives up counting, and the Dormouse yawns and begins its story again.
+
+Alice decided that counting something might help her think clearly. She looked along the table at the cups, and her eyes grew wide. There were cups everywhere, piled high and set out in long rows. There were dozens of them, and every single one was dirty.
+
+“How long have we been sitting here?” Alice asked, half to herself. “And how many times have we moved around the table? It must be ages.”
+
+“It is always six o’clock,” the Hatter said, sipping from his cup with a grumpy frown. “It is always teatime, and we never have time to wash the cups.”
+
+“But that doesn’t make any sense at all,” Alice said. “Surely the clock must say something different by now.”
+
+The Hatter only shook his head and muttered something about Time. Alice gave up on counting. The numbers kept slipping out of her head, and the cups kept piling up.
+
+The Dormouse gave a long, sleepy yawn. It shut its eyes for a moment, then opened them again. Then it began its story once more, as if nobody had said a word.
+
+### Politely suggest a game so everyone can enjoy the party
+*Told by the narrator · ☐ pending · key `m1:cp07:p3:narrator`*
+
+*Brief:* Alice suggests they play a quick game of guessing the riddle together. The March Hare and Hatter agree, but the game gets muddled. Alice laughs and tries to keep the peace. The Dormouse, woken by the noise, grumbles and settles back down to finish its story.
+
+Alice thought hard about the treacle-well, but the answer made no sense to her at all. She tried one more polite question, hoping for a clear answer this time.
+
+“Could you please tell me how they stood inside the well?” she asked.
+
+“Oh, we play a game about that,” said the March Hare cheerfully. “Let us all guess the answer together. It will be splendid fun!”
+
+“Yes, a riddle game!” cried the Hatter, clapping his hands. “I shall ask first. Why is a raven like a writing-desk?”
+
+“I think I can guess that one,” Alice said, smiling. “Let me think.”
+
+But the March Hare began to shout his own guess at the same time. The Hatter argued that the answer had changed. The teapot was knocked over, and everyone spoke at once.
+
+Alice began to laugh. It was all so silly that she could not stop herself.
+
+“Please, let us keep the peace,” she said, wiping her eyes. “One at a time, if you don’t mind.”
+
+The noise woke the Dormouse with a start. It blinked at the table, looked very cross, and gave a long, grumpy sigh.
+
+“Are you still making that dreadful racket?” it muttered. Then it curled up again and settled down to finish its story.
+
+### Gently tell the Hatter that teasing is not kind
+*Told by Alice · ☐ pending · key `m1:cp07:alice-1:alice`*
+
+*Brief:* Alice smiles and tells the Hatter kindly that personal remarks make people feel small. The Hatter goes quiet, surprised, then gives a small nod. Alice feels better and listens to the Dormouse. The story picks up where the sisters are drawing with treacle.
+
+Alice took a small breath and smiled at the Hatter. She did not want to be cross, and she did not want to be rude either.
+
+“Excuse me,” she said kindly, “but I think personal remarks make people feel very small. Please don’t call the Dormouse stupid.”
+
+The Hatter opened his mouth, then closed it again. He looked surprised, as though no one had ever spoken to him like that before. For a moment he said nothing at all.
+
+Then he gave a small nod and picked up his teacup. “Well, perhaps I was a little rude,” he mumbled, and he looked down at the table.
+
+Alice felt much better. Her cheeks were warm, but her heart felt light. She turned politely to the Dormouse, who was blinking slowly and looking rather sleepy.
+
+“Please go on,” she said softly. “I would really like to hear the rest of the story.”
+
+The Dormouse yawned a wide yawn and nodded. Alice sat very still and listened with all her attention. She thought the three little sisters must be very busy indeed, drawing treacle out of a well, and she wondered how on earth they managed it.
+
+### Quietly lift the lid of the teapot to peek inside
+*Told by Alice · ☐ pending · key `m1:cp07:alice-2:alice`*
+
+*Brief:* Alice leans over and peeks into the big teapot, hoping to find something helpful. It is only warm tea with a few crumbs. She shrugs and sits back. The Dormouse opens one eye, mumbles something about treacle, and starts again, describing the three sisters at the bottom of the well.
+
+Alice did not wish to offend the Dormouse again, so she began very cautiously. “But I don’t understand. Where did they draw the treacle from?”
+
+“You can draw water out of a water-well,” said the Hatter. “So I should think you could draw treacle out of a treacle-well. Eh, stupid?”
+
+Alice pressed her lips together. She did not want to be rude, but she did not like being called stupid either. Her eyes drifted to the great teapot in the middle of the table.
+
+The Hatter and the Hare were busy arguing about the butter in their watches, so nobody was looking at her. Quietly, Alice lifted the lid and peeked inside. She hoped to find something helpful, perhaps a clue or a sensible answer.
+
+It was only warm tea with a few soggy crumbs floating on top. “Well, how puzzling,” Alice thought with a small sigh. She put the lid back and sat up straight again.
+
+Just then the Dormouse opened one eye and mumbled something about treacle. Alice had no idea what he meant. Before she could ask, he yawned widely and began again.
+
+This answer so confused poor Alice, that she let the Dormouse go on for some time without interrupting it.
+
+### Ask the Dormouse to slow down and explain the treacle well
+*Told by Alice · ☐ pending · key `m1:cp07:p1:alice`*
+
+*Brief:* Alice asks the Dormouse kindly to explain the well slowly. The Dormouse blinks, thinks hard, and admits the well is only a story it made up. The Hatter mutters about stories, but the Dormouse sleepily promises to keep going about the three sisters and their drawings.
+
+Alice did not wish to make the Dormouse cross again, so she spoke as gently as she could. “Excuse me, Dormouse, could you explain the treacle-well slowly, please? I am quite lost.”
+
+The Dormouse blinked its small eyes. It frowned and thought very hard, the way a person does when a sum will not come right. Alice waited politely, tapping her foot under the table.
+
+“Well,” said the Dormouse at last, in a small, sleepy voice, “I suppose there is no well at all. I made it up as I went along.”
+
+“Made it up!” Alice cried. Then she remembered her promise and lowered her voice. “But it was such a good story.”
+
+“Stories are for telling, not for drawing from,” muttered the Hatter, dipping his cup into the teapot. “Everyone knows that.”
+
+Alice did not think that made any sense at all. Her lessons at school had never covered treacle-wells, and she did not know what a sensible answer would look like here.
+
+The Dormouse yawned a very large yawn. “I will keep going,” it said drowsily. “Those three sisters were learning to draw. I promise I shall tell you all about it.”
+
+Alice sat back and folded her hands. Perhaps, she thought, this strange tea party might turn out more interesting after all.
+
+### Offer Alice a clean cup of tea with a wink
+*Told by the Hatter · ☐ pending · key `m1:cp07:hatter-1:hatter`*
+
+*Brief:* The Hatter pushes a clean cup toward Alice and winks, saying it is the finest tea in the wood. Alice takes it and sips politely. The Dormouse wakes, sees the cup, and sighs. It settles back and continues the story about the three sisters at the well.
+
+The Hatter pushed a clean cup across the table toward Alice. Then he gave her a big, slow wink.
+
+“Finest tea in the whole wood,” he whispered loudly. “Brewed this very morning. Well, this morning-ish. Time has been rather stingy with mornings lately.”
+
+Alice looked at the cup. It was not very clean, but it was certainly cleaner than the one the March Hare was using. She took it and sipped politely.
+
+The Hatter beamed at her. “Splendid! Now you are part of the party. Parties do not have rules, you know. Only teapots.”
+
+He glanced at the clock on the table. It still said six. It had said six for a very long time, and the Hatter seemed determined that it always would.
+
+Beside him, the Dormouse gave a loud snore and then jerked awake. Its small eyes blinked at the new cup in Alice’s hand. It let out a long, sad sigh.
+
+“Oh, a clean cup,” it mumbled. “Nobody ever gives me a clean cup.”
+
+The Hatter patted its back kindly. Alice set her cup down and folded her hands. She was curious to hear the rest of the story, even if it made very little sense.
+
+The Dormouse settled back against the teapot. It tucked its paws under its chin and sighed once more. Then it cleared its throat and began again about the three sisters at the well.
+
+### Ask Alice a silly riddle about a clock and a teapot
+*Told by the Hatter · ☐ pending · key `m1:cp07:hatter-2:hatter`*
+
+*Brief:* The Hatter asks Alice what has hands but cannot clap, and a face but cannot see. Alice thinks, then guesses a clock, and the Hatter cheers that she is almost right. They laugh together, and the Dormouse grumbles in its sleep and goes back to telling its story.
+
+Alice was still thinking about the treacle-well when the Hatter leaned forward with a sudden grin. He tapped the table with one long finger. “Now, Alice, I have a riddle for you. What has hands but cannot clap, and a face but cannot see?”
+
+Alice looked at the Hatter. She looked at the March Hare, who was busy with the spilled milk. Nobody seemed to be helping her, so she thought very hard.
+
+“Hands,” she said slowly. “And a face. But no eyes. Hmm.”
+
+The Hatter waited, bouncing a little on his stool. Time, he said, was not very good at waiting, but he was.
+
+“Is it a clock?” Alice asked at last.
+
+“A clock!” cried the Hatter, clapping his hands. “Why, you are almost right! Almost, mind you. That is nearly as good as a teapot.”
+
+Alice laughed, and the March Hare laughed too, with a snort that splashed a little milk. Even the Hatter giggled behind his teacup. For a moment the tea party felt almost friendly.
+
+Then the Dormouse gave a loud snore. It muttered something about treacle in its sleep, and its tiny paws twitched. The Hatter wiped his eyes and sighed.
+
+“Carry on, dormouse,” he said kindly. “Do go on with your story.”
+
+The Dormouse yawned, opened one sleepy eye, and began again.
+
+Alice settled back in her chair and listened. She wondered what the three sisters would draw next.
+
+### Ask the Dormouse to slow down and explain the treacle well
+*Told by the Hatter · ☐ pending · key `m1:cp07:p1:hatter`*
+
+*Brief:* Alice asks the Dormouse kindly to explain the well slowly. The Dormouse blinks, thinks hard, and admits the well is only a story it made up. The Hatter mutters about stories, but the Dormouse sleepily promises to keep going about the three sisters and their drawings.
+
+The Hatter had never been asked a question so politely before, and it made him feel strange. He turned his teacup round and round on its saucer, glancing at the clock that said six and never moved.
+
+Alice asked again, very gently. She asked the Dormouse to go slowly, so she could follow every word about the well.
+
+The Dormouse blinked its small eyes. It frowned, thought very hard, and then let out a long, sleepy sigh.
+
+“Well, it is only a story,” it admitted at last. “I made the well up. I don’t think there is any treacle well at all.”
+
+“Stories!” the Hatter muttered into his cup. “Everything at this table is a story, if you ask me. Even the butter, and it is always melting.”
+
+The Dormouse stretched and gave a small, drowsy smile. “Never mind. I shall go on with the three sisters all the same. Elsie, Lacie and Tillie were fond of drawing, and I promised to finish.”
+
+It shut one eye, then the other, and settled itself on the cushion to begin again.
+
+---
+
+## cp08 · Chapter 8: “A strange grin is floating in the air above the croquet-ground. What should Alice do?”
+
+> Original text just before the choice: Alice began to feel very uneasy: to be sure, she had not as yet had any dispute with the Queen, but she knew that it might happen any minute, “and then,” thought she, “what would become of me? They’re dreadfully fond of beheading people here; the great wonder is, that there’s any one left alive!”
+
+### Slip quietly behind the hedge to look for a way out
+*Told by the narrator · ☐ pending · key `m1:cp08:p1:narrator`*
+
+*Brief:* Alice tiptoes behind a tall hedge, hoping to escape the Queen's notice. Peeking back, she sees the grin drifting after her, and she stops, curious. The grin settles into a clear shape, with its mouth ready to speak.
+
+Alice looked about for a way out of the garden. If she could slip off unseen, perhaps the Queen would forget all about her.
+
+She crept on tiptoe toward a tall hedge at the edge of the ground. The leaves rustled softly as she pushed behind them. Nobody shouted, and nobody called for her head.
+
+Alice peeked back through a gap in the green branches. Something odd was drifting after her through the air. It was a wide, thin grin, hanging with nothing around it.
+
+She stopped and held her breath. Her heart beat fast, but she was too curious to run.
+
+Slowly the grin grew clearer. Eyes appeared above it, then the faint outline of a head. Last of all, the mouth came into view, ready to speak.
+
+Alice stood very still behind the hedge. She wondered what the strange creature would say next.
+
+### Stay put and study the grinning face closely
+*Told by the narrator · ☐ pending · key `m1:cp08:p2:narrator`*
+
+*Brief:* Alice holds her flamingo steady and watches the grin hang in the air. She notices it has no body, only a smile, and wonders why it looks so pleased. Slowly the eyes and face take shape, and the mouth is ready to talk.
+
+Alice kept her grip on the flamingo and did not move. She was looking about for a way to escape, but the grin in the air made her stop and stare.
+
+The grin hung above the croquet-ground all by itself. There was no body under it, no legs, and no tail. It was only a smile, wide and bright, floating in the still air.
+
+Alice thought it looked very pleased with itself. She wondered what it could be thinking, and why it was so happy when everyone else was so cross.
+
+Slowly, bit by bit, the rest of the face began to appear. First came a pair of eyes, large and round and full of mischief. Then a little nose showed itself, and then the ears.
+
+Alice held her breath and waited. The flamingo lay quiet under her arm, and even the hedgehog stayed still for once.
+
+At last the mouth was ready. It seemed to be getting ready to say something, and Alice waited to hear what it would be.
+
+### Wave politely and call out a friendly hello
+*Told by the narrator · ☐ pending · key `m1:cp08:p3:narrator`*
+
+*Brief:* Alice waves and says hello to the grin, feeling a little silly. The grin widens happily, as if pleased to be noticed. Its ears drift into view beside its face, and its mouth is ready for conversation.
+
+Alice was looking about for some way to escape. She wondered if she could slip away without anyone seeing her.
+
+Then she noticed a strange sight in the air above the croquet-ground. At first it puzzled her very much. She looked at it for a minute or two.
+
+It was a grin, and nothing else! There was no face under it, only the wide, curving smile hanging in the air like a moon.
+
+Alice felt a little silly, but her mother had taught her good manners. So she gave a polite wave and called out, “Hello there!”
+
+The grin widened happily, as if it were pleased to be noticed. Slowly, two ears drifted into view beside it, then the rest of a face.
+
+Alice thought, “Now I shall have somebody to talk to.” She stood still with her flamingo tucked under one arm, waiting to see what would happen next.
+
+The creature’s mouth was ready for conversation. It seemed to be in no hurry at all.
+
+### Ask the grin politely whether it is a friend
+*Told by Alice · ☐ pending · key `m1:cp08:alice-1:alice`*
+
+*Brief:* Alice asks the grin politely if it is a friend. The grin wobbles, seems amused, and answers with a playful wink. Its face fills in slowly, and its mouth settles, ready to speak.
+
+Alice looked up at the grin, and her heart gave a small jump. It hung in the air above the croquet-ground, bright and wide, with nothing much behind it yet.
+
+“Excuse me,” said Alice politely, holding the flamingo a little tighter. “Are you a friend? I should very much like to have a friend here.”
+
+The grin wobbled from side to side, like a leaf on a breeze. Alice thought it looked amused, and she was not sure whether that was a good sign or a bad one.
+
+Then the grin winked at her, slowly and cleverly, as if they shared a secret.
+
+“Oh,” said Alice, feeling a little better. “Well, that is something.”
+
+Bit by bit, the rest of the face came floating out of the air. First there was a pair of eyes, then a pointed nose, then a set of whiskers. The face filled in slowly, like a picture being painted by an invisible hand.
+
+Alice kept very still. She glanced nervously across the ground toward the Queen, who was still stamping and shouting. She hoped nobody had noticed her talking to the air.
+
+At last the mouth settled into place, wide and ready. It looked as though it had a great deal to say, and Alice waited with her breath held, the flamingo’s head still peeking out under her arm.
+
+### Hold the flamingo tight and wait patiently
+*Told by Alice · ☐ pending · key `m1:cp08:alice-2:alice`*
+
+*Brief:* Alice tucks her squirming flamingo under her arm and waits quietly. The grin drifts closer, and its eyes and ears appear one by one. At last the whole face is clear, with a mouth ready to talk.
+
+Alice held on to her flamingo and decided not to move. If she ran, the Queen might notice her. Staying still seemed the safer choice.
+
+The flamingo gave a wriggle, and she tucked it more firmly under her arm. “Please keep still,” she whispered. “I can’t play properly if you won’t behave.”
+
+High above the croquet-ground, the grin hung in the air. It did not seem to belong to anyone. Alice watched it closely and kept her breath quiet.
+
+Slowly, something else began to appear. First came a pair of eyes, bright and curious, floating just above the grin. Then two ears rose up beside them, like the tips of a little pointed hat.
+
+“Oh, how strange,” Alice thought. “It is like a picture being painted in the air, one piece at a time.”
+
+She waited patiently while the rest of the face grew clearer. The fur looked soft, and the eyes were thoughtful. At last the whole head was there, and the mouth was ready to speak.
+
+Alice felt a little more hopeful. At least this creature seemed interested in her, and not in shouting about heads.
+
+### Slip quietly behind the hedge to look for a way out
+*Told by Alice · ☐ pending · key `m1:cp08:p1:alice`*
+
+*Brief:* Alice tiptoes behind a tall hedge, hoping to escape the Queen's notice. Peeking back, she sees the grin drifting after her, and she stops, curious. The grin settles into a clear shape, with its mouth ready to speak.
+
+Alice looked about for a way out of the garden. She wondered if she could slip off without anyone seeing her.
+
+Then she noticed something odd in the air above the croquet-ground. It was a grin, floating all by itself, with no face around it.
+
+“That is very strange,” Alice thought. “A grin without a cat!”
+
+She did not want the Queen to notice her, so she tiptoed away. She crept quietly behind a tall hedge, holding her breath and listening hard for shouts.
+
+All was quiet for a moment. Then Alice peeked back over the hedge, and her heart gave a small jump.
+
+The grin was drifting after her through the air, slowly and politely, as if it had all the time in the world.
+
+Alice stopped and stood very still. She was frightened, but she was also very curious. She had never seen a grin travel by itself before.
+
+Little by little, the grin settled into a clear shape. Alice could see the curve of a smile, and then a pair of bright eyes above it.
+
+Its mouth opened, ready to speak. Alice folded her hands and waited, as she had been taught to do when someone wished to talk.
+
+### Grin even wider to see Alice's puzzled reaction
+*Told by the Cheshire Cat · ☐ pending · key `m1:cp08:cheshire-cat-1:cheshire-cat`*
+
+*Brief:* The Cat stretches its grin wider, enjoying how puzzled Alice looks. It drifts a little closer, pleased with itself. Then its eyes open, its face is complete, and its mouth is ready to speak.
+
+The Cheshire Cat watched the small girl struggle with her flamingo. It thought her face looked wonderfully puzzled, and that pleased it very much.
+
+So the Cat stretched its grin a little wider. It was a slow, lazy stretch, the sort a cat gives after a long nap in the sun.
+
+The grin drifted closer to Alice, just above the croquet-ground. It did not hurry. Nothing in Wonderland ever seemed to hurry, the Cat thought, except the Queen, and she hurried only in her temper.
+
+Alice stopped and stared up at the grin. Her mouth opened and closed, and the Cat found this very entertaining indeed.
+
+Then, slowly, the rest of the Cat appeared. First came two sleepy eyes, half-closed and gleaming. Next came the stripes along its fur, and then its ears and whiskers, one by one.
+
+The Cat settled itself comfortably in the air, its tail curling lazily behind it. It was quite pleased with its own appearance.
+
+It opened its mouth, ready to speak. There was no hurry in it at all. A cat with a grin like this always had time to be clever.
+
+It wondered what the girl would say first, and whether she would be as curious as it hoped.
+
+### Take its time, letting ears appear before speaking
+*Told by the Cheshire Cat · ☐ pending · key `m1:cp08:cheshire-cat-2:cheshire-cat`*
+
+*Brief:* The Cat decides to take its time, letting its ears drift into view while Alice waits. It seems to enjoy the suspense and does not say a word yet. Once the head is fully formed, its mouth is ready to speak.
+
+The Cat watched the small girl looking about the garden. She was searching for a way out, and Cat found this very amusing.
+
+Cat had grinned for a long while already. The grin was the first part of it to appear, and it was the part Cat liked best.
+
+Cat thought it would be pleasant to wait. Alice had come looking for someone to talk to, and Cat would make her wait a little longer. Waiting was a fine thing to do, Cat decided.
+
+So the ears came first. They drifted slowly into view above the grin, one and then the other, like two pale leaves turning in a breeze. Cat let them stay there, perfectly still, and said nothing at all.
+
+Below, the Queen was shouting again. Somewhere a hedgehog was rolling away, and a flamingo was craning its neck. None of it seemed urgent to Cat. Everything in this garden moved in a hurry, and Cat did not.
+
+Alice stood with her mallet and waited, her eyes fixed on the grin. Cat could see she was growing impatient, and that pleased Cat very much.
+
+At last the rest of the head was settled in its place, with whiskers, eyes, and a neat little nose. Cat felt quite ready now. The mouth was in position, and it was time to speak.
+
+Cat did not hurry even then.
+
+### Slip quietly behind the hedge to look for a way out
+*Told by the Cheshire Cat · ☐ pending · key `m1:cp08:p1:cheshire-cat`*
+
+*Brief:* Alice tiptoes behind a tall hedge, hoping to escape the Queen's notice. Peeking back, she sees the grin drifting after her, and she stops, curious. The grin settles into a clear shape, with its mouth ready to speak.
+
+Alice looked about for a way out of the garden. She wanted to get away before the Queen noticed her.
+
+She crept along the path and slipped quietly behind a tall hedge. The leaves were thick, and no one could see her there.
+
+Then she peeked back over the hedge and saw something odd. A grin was drifting after her through the air, all by itself. There was no face under it, only the wide smile.
+
+Alice stopped. She was frightened, but she was also curious. She had never seen a grin walk about on its own before.
+
+The grin drifted closer and slowly settled into a shape. Soon there were eyes above it, and whiskers, and a clear outline of a cat. Its mouth was ready to speak.
+
+Alice held her breath and waited to see what it would say.
+
+---
+
+## cp09 · Chapter 9: “The Mock Turtle sits sobbing on a lonely rock. What should Alice do before he begins his story?”
+
+> Original text just before the choice: … on a little ledge of rock, and, as they came nearer, Alice could hear him sighing as if his heart would break. She pitied him deeply. “What is his sorrow?” she asked the Gryphon, and the Gryphon answered, very nearly in the same words as before, “It’s all his fancy, that: he hasn’t got no sorrow, you know. Come on!”
+
+### Offer the Mock Turtle your handkerchief
+*Told by the narrator · ☐ pending · key `m1:cp09:p1:narrator`*
+
+*Brief:* Alice offers her handkerchief. The Mock Turtle blows his nose loudly and thanks her. The Gryphon yawns and says the Mock Turtle always sobs before a story. The Mock Turtle sits up, ready to begin, and Alice and the Gryphon sit down beside him.
+
+Alice felt sorry for the poor Mock Turtle. She reached into her pocket and pulled out her handkerchief. It was a small one, but it was clean and neatly folded.
+
+“Here, you may use this,” she said gently, holding it out to him.
+
+The Mock Turtle looked at the handkerchief for a long moment. Then he took it and blew his nose so loudly that the rock seemed to shake. Alice tried not to laugh.
+
+“Thank you, my dear,” said the Mock Turtle, wiping his large eyes. “That is very kind of you. I am feeling a little better now.”
+
+The Gryphon gave a huge yawn and stretched his great wings. “He always sobs before a story,” it said. “You will get used to it. Come on, let us sit down.”
+
+The Mock Turtle folded the handkerchief carefully and tucked it under his flipper. Then he sat up very straight, as if he were about to give a speech at school.
+
+Alice and the Gryphon sat down on the warm stone beside him. Alice smoothed her dress and turned to look at the Mock Turtle. She was curious to hear what he would say next.
+
+### Ask the Gryphon to explain the Mock Turtle's sorrow
+*Told by the narrator · ☐ pending · key `m1:cp09:p2:narrator`*
+
+*Brief:* Alice quietly asks the Gryphon why the Mock Turtle is so sad. The Gryphon scratches his head and admits the Mock Turtle really does miss his school days. He suggests they be patient and let the story come out slowly. The Mock Turtle nods, sniffles, and sits up, ready to begin.
+
+Alice leaned close to the Gryphon and whispered, so the Mock Turtle would not hear. “Why is he so sad?”
+
+The Gryphon scratched his head with one great claw. He looked at the Mock Turtle for a long moment, and then he sighed too.
+
+“Well, he really does miss his school days,” the Gryphon said quietly. “He has no real sorrow, not the kind you mean. But he feels it very much all the same.”
+
+Alice thought about that. It seemed a strange sort of sadness, but she did not want to be rude about it.
+
+“Be patient,” the Gryphon went on. “His story comes out slowly, like a clock that needs winding. Do not hurry him.”
+
+The Mock Turtle heard his name spoken and gave a loud sniff. He wiped his large eyes with a flipper. Then he sat up straight on his rock, looking very serious and very ready.
+
+He cleared his throat with a sound like a distant drum. Alice folded her hands in her lap and got ready to listen.
+
+The Gryphon gave a small nod toward the Mock Turtle, as if to say that the moment had come. Alice looked at the sad creature and waited for his first words.
+
+### Wander along the shore to find a quiet spot
+*Told by the narrator · ☐ pending · key `m1:cp09:p3:narrator`*
+
+*Brief:* While the Gryphon and the Mock Turtle talk quietly, Alice wanders along the rocky shore. She finds a tidy pool where a small crab waves hello and scuttles away. She listens to the waves for a while. When she returns, the Mock Turtle has dried his eyes and is ready to begin his story.
+
+Alice did not want to sit still while the Mock Turtle gathered his thoughts. So she quietly stood up and wandered along the rocky shore, away from the ledge.
+
+The Gryphon was already talking in a low voice to the Mock Turtle, and Alice did not try to hear. The sea was calm and blue, and the stones were warm under her feet.
+
+Soon she came to a tidy little pool, lined with pale sand and bright shells. Something moved at the edge of the water. It was a small crab, and it lifted one claw as if to say hello. Then it scuttled sideways under a rock and was gone.
+
+Alice smiled and sat down on a flat stone. She listened to the waves rolling in and out, slow and steady, like someone breathing in their sleep. For a while she forgot about queens and executions altogether.
+
+At last she remembered her new friends and stood up. She walked back along the shore, a little faster now.
+
+When she reached the ledge, the Mock Turtle had dried his eyes. He sat up straight and looked almost ready. The Gryphon gave a small nod, as if to say that the story was about to begin.
+
+Alice found a place to sit, folded her hands in her lap, and waited to hear what he would say.
+
+### Gently pat the Mock Turtle's shell and say hello
+*Told by Alice · ☐ pending · key `m1:cp09:alice-1:alice`*
+
+*Brief:* Alice pats the Mock Turtle's shell softly. He sniffles and says nobody has been kind to him in ages. He thanks her and dries his eyes. The Gryphon grins and says it is time to hear the story, so Alice and the Gryphon sit down beside the Mock Turtle, who is ready to begin.
+
+Alice felt sorry for the poor Mock Turtle. She stepped closer to him, very quietly, so she would not startle him.
+
+She reached out and patted his shell gently with her hand. “Hello,” she said softly. “I hope you are not too unhappy.”
+
+The Mock Turtle gave a loud sniff. Then he sniffled again and wiped one great eye with his flipper. “Nobody has been kind to me in ages,” he said in a wobbly voice. “Not for ages and ages.”
+
+Alice smiled kindly at him. “I am sorry to hear that,” she said. “You are very welcome to my kindness.”
+
+“Thank you, my dear,” said the Mock Turtle. He dried his eyes and tried very hard to stop sniffing. He managed a small, wet smile.
+
+The Gryphon gave a big grin and stretched its great wings. “Now it is time to hear the story,” it said cheerfully. “Come on!”
+
+Alice thought that the Gryphon said “come on” more than anyone she had ever met. Still, she was curious to hear what the Mock Turtle would say.
+
+So Alice and the Gryphon sat down in the sand beside him. The Mock Turtle cleared his throat and got ready to begin his tale.
+
+### Politely ask the Mock Turtle what his school was like
+*Told by Alice · ☐ pending · key `m1:cp09:alice-2:alice`*
+
+*Brief:* Alice politely asks what his school under the sea was like. The Mock Turtle brightens a little and describes a sandy classroom full of fishy friends. He says he misses it, then remembers the story he needs to tell. The Gryphon nods, and they both sit down to listen closely.
+
+Alice did not want to wait in silence any longer. She stepped closer to the poor Mock Turtle and spoke as politely as she could.
+
+“Excuse me, sir,” she said, “what was your school like? I should very much like to hear about it.”
+
+The Mock Turtle lifted his big, wet eyes. For a moment he looked surprised, and then he sniffed and sat up a little straighter.
+
+“School?” he said softly. “Oh, it was a fine school. We went down to it every day, you know, under the sea.”
+
+He gave a small sigh, but it was not quite so heavy as before. “The classroom had a floor of white sand. There were fishes everywhere, and they were all my dearest friends. I do miss them.”
+
+Alice smiled at him. She thought it sounded like a lovely place to learn.
+
+Then the Mock Turtle gave himself a little shake. “But I must not chatter about old times,” he said. “I have a history to tell you, and I must tell it properly.”
+
+The Gryphon nodded wisely, as if this were very sensible. Alice nodded too.
+
+They both sat down on the warm grass, and Alice folded her hands in her lap. She fixed her eyes on the Mock Turtle and got ready to listen very closely.
+
+### Offer the Mock Turtle your handkerchief
+*Told by Alice · ☐ pending · key `m1:cp09:p1:alice`*
+
+*Brief:* Alice offers her handkerchief. The Mock Turtle blows his nose loudly and thanks her. The Gryphon yawns and says the Mock Turtle always sobs before a story. The Mock Turtle sits up, ready to begin, and Alice and the Gryphon sit down beside him.
+
+Alice felt sorry for the poor Mock Turtle. She reached into her pocket and pulled out her handkerchief. It was a little damp, but it was the only one she had.
+
+“Here,” she said gently, holding it out to him. “Please don’t cry any more. I am sure things will feel better soon.”
+
+The Mock Turtle looked at the handkerchief for a long moment. Then he took it in his big flipper and blew his nose so loudly that the rock seemed to shake. Alice jumped back in surprise.
+
+“Thank you very much,” said the Mock Turtle, in his deep, hollow voice. “You are very kind to a sad creature like me.”
+
+The Gryphon gave a great yawn and stretched its long claws. “He always sobs like that before a story,” it said with a sleepy grin. “It is part of the fun, you know.”
+
+Alice thought this was a very strange sort of fun. Still, she did not want to be rude, so she said nothing.
+
+The Mock Turtle sat up straight and wiped his eyes with the back of his flipper. He looked ready at last to begin.
+
+Alice and the Gryphon sat down on the warm grass beside him.
+
+---
+
+## cp10 · Chapter 10: “A cry says the trial is beginning. What should Alice do as the Gryphon pulls her away?”
+
+> Original text just before the choice: “Chorus again!” cried the Gryphon, and the Mock Turtle had just begun to repeat it, when a cry of “The trial’s beginning!” was heard in the distance.
+
+### Glance back at the singing Mock Turtle
+*Told by the narrator · ☐ pending · key `m1:cp10:p1:narrator`*
+
+*Brief:* Alice turns to look back and sees the Mock Turtle and Gryphon still dancing sadly, the Mock Turtle wiping his eyes with a flapper. The Gryphon tugs her hand and they hurry on toward the distant cry while the song drifts behind them.
+
+Alice could not help herself. She turned round for one last look at the Mock Turtle and the Gryphon.
+
+The two creatures were still at the water’s edge, moving slowly in their sad little dance. The Mock Turtle wiped his eyes with one of his flippers. Big tears rolled down his long face and dropped into the sand.
+
+“Wait, please, just a moment!” Alice called out.
+
+But the Gryphon only tugged at her hand. Its claws were strong, and it did not let go. “There is no time to stare,” it said. “The trial is waiting, and we must hurry.”
+
+So Alice turned away and ran. Her feet slapped against the damp sand, and her hair blew back from her face. The cry of the trial grew louder ahead of them.
+
+Behind her, the song drifted on the sea breeze. It sounded thinner and fainter with every step. Alice could still hear the sad voice of the Mock Turtle, rising and falling over the waves.
+
+She wondered what sort of trial it could be. She wondered, too, whether she would ever hear the end of that song.
+
+### Ask the Gryphon what kind of trial it is
+*Told by the narrator · ☐ pending · key `m1:cp10:p2:narrator`*
+
+*Brief:* Alice pants out a question about the trial, but the Gryphon answers only with a gruff hurry-up. Its wings flap as it races past hedges, and Alice saves her breath for running. The song fades behind them as the cry grows louder.
+
+Alice had no breath to spare, but she had a question burning in her mind. “What kind of trial is it?” she panted, her feet slapping the path behind her.
+
+The Gryphon did not slow down. “Come on!” it called gruffly, and it tugged her hand harder.
+
+Alice tried again, but the words came out in short gasps. The Gryphon only shouted “Come on!” once more and ran faster than before.
+
+Its great wings flapped and fluttered as it raced past the hedges. Alice could hear the rustle of feathers beside her ear. She saved her breath for running, and she held tight to the Gryphon’s paw.
+
+Behind them, the song of the Mock Turtle grew fainter and fainter. The sad tune drifted away on the sea breeze, like a voice in a dream.
+
+All the while, the cry of the trial grew louder and closer. Alice felt her heart beat fast, and she hurried on after the Gryphon, wondering what waited for her at the end of the path.
+
+### Peek ahead to spot the trial's crowd
+*Told by the narrator · ☐ pending · key `m1:cp10:p3:narrator`*
+
+*Brief:* Alice runs along the sea-shore and glimpses a far-off crowd of creatures gathering under a tree, though she cannot make out anything clearly yet. The Gryphon keeps a tight hold of her hand. The melancholy song drifts farther away on the breeze.
+
+Alice did not wait for the Gryphon to answer. She lifted her skirts and ran along the sea-shore beside it, her feet slipping on the wet sand.
+
+The Gryphon held her hand tightly. Its grip was firm and strong, and Alice could not have pulled free even if she had tried.
+
+Alice squinted ahead. Far off, under a tall tree, she saw a crowd gathering. Dark shapes moved to and fro, and there was a sound of many voices, but she could not tell who they were or what they were doing.
+
+“Is that the trial?” she asked, out of breath.
+
+The Gryphon only tightened its hold and ran faster. Its long legs covered the sand in great bounds.
+
+Behind them, the sad song of the Mock Turtle drifted away on the breeze. Each line grew thinner and fainter, until Alice could hardly hear the words over the sound of the waves and her own rushing breath.
+
+### Pull free and wave goodbye to the singers
+*Told by Alice · ☐ pending · key `m1:cp10:alice-1:alice`*
+
+*Brief:* Alice tugs her hand free for a moment and waves to the Mock Turtle, who waves a flapper back with a sob. The Gryphon scoops her up again and they race on as the song grows faint behind them.
+
+Alice wriggled her hand free for a moment. She turned and looked back at the Mock Turtle. He was still standing on the sand, his big sad eyes full of tears.
+
+Alice waved to him as hard as she could. “Goodbye!” she called. “Thank you for the song!”
+
+The Mock Turtle lifted one flapper and waved it slowly. Then he gave a long, soggy sob, and Alice felt a little sorry for him.
+
+Before she could wave again, the Gryphon swooped back. It scooped her up as if she weighed nothing at all. “No time for goodbyes!” it cried. “The trial will not wait!”
+
+Alice held on tight. The Gryphon ran with long, wild strides, and the sea-breeze rushed past her ears. How puzzling this all was, she thought. Who would be on trial, and for what?
+
+Behind them, the song grew fainter and fainter. Alice could still hear the Mock Turtle’s sad voice, rising and falling over the waves.
+
+### Count the strange creatures that scuttle past
+*Told by Alice · ☐ pending · key `m1:cp10:alice-2:alice`*
+
+*Brief:* Alice counts small crabs and a bored seal scuttling along the shingle as she runs. She wonders whether the trial will be as silly as the dance. The Gryphon keeps hurrying her along, and the faint song follows them.
+
+Alice counted as she ran. One small crab scuttled past her feet. Then another crab hurried sideways across the shingle, and a bored seal flopped along behind them.
+
+“One, two, three,” Alice whispered to herself. “And a seal makes four. Or is it five? I can never remember.”
+
+The Gryphon did not slow down. It kept hold of her hand and pulled her along the stony beach as if the trial might start without them.
+
+Alice wondered what a trial under the sea could be like. Would it be as silly as the Lobster Quadrille? She hoped it would be a little more sensible. Surely a court ought to have some rules that made sense.
+
+“Is the trial very far?” she asked, a little out of breath.
+
+“Come on!” said the Gryphon again, and it ran even faster.
+
+Behind them, the Mock Turtle’s song drifted over the waves. The words grew fainter and fainter as the breeze carried them away. Alice could still hear the tune, sad and slow, as she bounced along beside her strange companion.
+
+She counted one more crab, then gave up and simply ran.
+
+### Glance back at the singing Mock Turtle
+*Told by Alice · ☐ pending · key `m1:cp10:p1:alice`*
+
+*Brief:* Alice turns to look back and sees the Mock Turtle and Gryphon still dancing sadly, the Mock Turtle wiping his eyes with a flapper. The Gryphon tugs her hand and they hurry on toward the distant cry while the song drifts behind them.
+
+Alice could not help turning her head to look back. The Mock Turtle was still standing by the sea, and the Gryphon was still dancing slowly beside him. Tears ran down the Mock Turtle’s long face. He wiped his eyes with one of his flappers, and he did not seem to notice that the song had stopped being fun.
+
+“Oh dear, he looks so very sad,” Alice thought. “I do hope he will be all right.”
+
+Then the Gryphon gave a sharp tug on her hand. Alice nearly tripped over her own feet. Her dress flapped around her knees as she ran.
+
+“Come on, come on!” the Gryphon called, and it went faster and faster over the sand.
+
+“But what trial is it?” Alice panted. She was out of breath, and her side had started to ache. “Who is being tried, and for what?”
+
+The Gryphon only said, “Come on!” once more. It did not even slow down to answer her properly.
+
+Alice clutched at her skirt and kept running. Behind them, the sad song drifted on the breeze. Each line sounded fainter than the last, as if the sea itself were carrying it away.
+
+She thought of the Mock Turtle’s voice, choked with sobs, and felt a little sorry she could not stay to hear the end.
+
+---
+
+## cp11 · Chapter 11: “Alice is growing again and the Dormouse is squeezed beside her. What should Alice do?”
+
+> Original text just before the choice: … this moment Alice felt a very curious sensation, which puzzled her a good deal until she made out what it was: she was beginning to grow larger again, and she thought at first she would get up and leave the court; but on second thoughts she decided to remain where she was as long as there was room for her.
+
+### Shift politely to make room for the Dormouse
+*Told by the narrator · ☐ pending · key `m1:cp11:p1:narrator`*
+
+*Brief:* Alice wiggles to the end of the bench and apologizes. The Dormouse grumbles that she is still too big, then shuffles over a little. Alice thanks him kindly, and he sulkily moves off across the court to sit on the far side while Alice settles down to watch the trial.
+
+Alice felt the Dormouse pressing harder against her side. She wiggled along the bench until she reached the very end of it. “I’m sorry,” she said politely. “I didn’t mean to take up so much room.”
+
+“I wish you wouldn’t squeeze so,” the Dormouse grumbled. “You are still far too big for this bench.”
+
+“I can’t help growing,” Alice said, feeling a little embarrassed. “I’m doing my very best to stay small.”
+
+The Dormouse huffed and rubbed his whiskers. Then, very slowly, he shuffled over a little to make space for her. It was not much room, but Alice was grateful all the same.
+
+“Thank you very much,” she said kindly. “That is much more comfortable for both of us.”
+
+The Dormouse did not answer. He looked sulky and cross, and his eyes were half closed with sleep. After a moment he climbed down from the bench and trotted away across the court. He settled himself on the far side, as far from Alice as he could get.
+
+Alice smoothed her skirt and turned back to the table. She was still growing, slowly but surely, and she had to sit very carefully. Still, she was determined to see the whole trial. She fixed her eyes on the King and the Queen, and she waited to hear what would happen next.
+
+### Hold very still and count the tarts on the table
+*Told by the narrator · ☐ pending · key `m1:cp11:p2:narrator`*
+
+*Brief:* Alice tries to stop growing by keeping perfectly still and thinking about the tarts. She counts them, notices a few crumbs, and decides not to touch any. Her head bumps the ceiling lightly, so she ducks down. The Dormouse huffs and crosses to the far side of the court, still grumbling.
+
+Alice pressed her lips together and held very still. If she stopped moving, perhaps she would stop growing too. She fixed her eyes on the table and began to count the tarts.
+
+There were a great many of them, arranged in neat rows. She counted them slowly, one by one, so that she would not lose her place. Some had jam on top, and some had little crumbs scattered around their edges.
+
+Alice wanted a tart very badly. But she kept her hands folded in her lap and did not touch a single one. It would not be polite, and the King might think she was stealing too.
+
+Then her head gave a small bump against the ceiling of the court. She let out a little gasp and quickly ducked down low in her seat. The ceiling was not very high, and she was becoming much too large for it.
+
+The Dormouse gave a loud huff. He looked at Alice over his shoulder, his whiskers twitching with annoyance. Then he hopped down from his seat and stamped across the court to the far side.
+
+He muttered crossly to himself the whole way. Alice watched him go, still crouched low, and tried very hard to keep still.
+
+### Ask the King whether she may step out for air
+*Told by the narrator · ☐ pending · key `m1:cp11:p3:narrator`*
+
+*Brief:* Alice raises her hand and politely asks the King if she may step out for some fresh air. The King waves a hand, too busy with his crown to answer properly, and says she may stay a while. Alice sits back down, feeling a bit shy, as the Dormouse grumbles and moves across to the other side of the court.
+
+Alice lifted her hand, feeling rather shy about it. She wanted to ask the King something important before she grew any bigger.
+
+“Please, may I step out for a little fresh air?” she asked as politely as she could.
+
+The King looked up from the crown on his head. He was busy fixing it straight, and he did not seem to hear her properly. He waved one hand in the air.
+
+“Yes, yes, you may stay a while,” he said vaguely. “Stay as long as you like. Only do sit still.”
+
+Alice was not sure whether she had been given permission or not. Still, she did not want to make a fuss in such a grand place. She sat back down on the bench, her cheeks feeling warm.
+
+The Dormouse gave a loud, grumpy sigh. He pushed himself up from his seat and muttered something Alice could not quite hear. Then he moved away, crossing over to the other side of the court where there was more room.
+
+Alice tucked her hands in her lap and tried to take up as little space as she could. The jury went on scribbling on their slates, and the court stayed very quiet.
+
+### Count the tarts and wonder who will eat them
+*Told by Alice · ☐ pending · key `m1:cp11:alice-1:alice`*
+
+*Brief:* Alice counts the tarts carefully, seven of them with jam, and wonders whether they will be served after the trial. She decides a fair trial is more important than a snack. She sits up straight, notices the Dormouse is still squeezing close, and watches him sulkily cross to the far side of the court.
+
+Alice looked down at the table, where the tarts sat in a neat row. She began to count them carefully, one by one. There were seven, and each one had a little jam on top.
+
+She wondered whether anyone would eat them once the trial was over. Perhaps the King would have one, or the Queen. Perhaps nobody would get any at all.
+
+Then Alice gave a small shake of her head. A snack was a pleasant thing, but a fair trial was far more important. The poor Knave was in chains, and somebody ought to see that he was treated fairly.
+
+“Besides,” she said to herself, “I am not hungry at the moment. I am only curious.”
+
+She sat up very straight and tried to make herself small. It was hard, because she was growing bigger every minute. Her elbow pressed against the table, and her knee bumped the bench.
+
+The Dormouse was still squeezing close beside her. He wriggled and sighed, and he looked at her with a cross little face. Alice gave him a polite smile, though she felt a little annoyed.
+
+At last the Dormouse gave a loud huff. He stood up, shook out his whiskers, and marched sulkily across to the far side of the court. Alice watched him go, and she was glad to have a little more room.
+
+### Whisper a kind question to the jury about their slates
+*Told by Alice · ☐ pending · key `m1:cp11:alice-2:alice`*
+
+*Brief:* Alice leans over and gently asks the jurors whether they need help spelling stupid. One juror smiles and thanks her, while Bill the Lizard looks sorry about his squeaky pencil. Alice goes back to her seat as the Dormouse grumbles and moves across the court to the far side.
+
+Alice felt herself growing, and the Dormouse was squashed so tightly against her that he could hardly move. She did not want to be rude, so she thought of something helpful to do instead.
+
+She leaned over, very carefully, and whispered to the jury. “Excuse me,” she said softly. “Do you need any help with your spelling? I can show you how to write the hard words.”
+
+One of the jurors looked up from his slate and gave her a small, grateful smile. “Thank you, miss,” he whispered back. “That is kind of you.”
+
+Bill the Lizard sat nearby, looking very sorry. He glanced at his squeaky pencil, which Alice still held in her hand, and he gave a small sigh. Alice felt a little guilty about it, but she did not say so.
+
+Just then the Dormouse gave a loud grumble. He got up, rubbed his eyes, and shuffled off across the court. He settled himself on the far side, where there was more room.
+
+Alice sat back in her place. She was still growing, and her knees bumped against the table. “How puzzling all these changes are!” she thought. “I wonder how big I shall be by the end of this trial.”
+
+### Shift politely to make room for the Dormouse
+*Told by Alice · ☐ pending · key `m1:cp11:p1:alice`*
+
+*Brief:* Alice wiggles to the end of the bench and apologizes. The Dormouse grumbles that she is still too big, then shuffles over a little. Alice thanks him kindly, and he sulkily moves off across the court to sit on the far side while Alice settles down to watch the trial.
+
+Alice felt the Dormouse pressing against her side. She looked down at him and wished she had more room. “Oh dear, I am so sorry,” she said, wiggling carefully toward the end of the bench.
+
+“I am still too big for this bench,” the Dormouse grumbled, rubbing his small nose. “Everyone squeezes me.”
+
+“I did not mean to squeeze you,” Alice said kindly. “I am growing, and I cannot stop it just now.”
+
+The Dormouse gave a long, sleepy sigh. Then he shuffled over a little, though he did not look pleased about it.
+
+“Thank you very much,” said Alice politely. “That is much better.”
+
+The Dormouse did not answer. He only sniffed, got up slowly, and crossed over to the far side of the court. He sat down there with a huff, folding his paws in his lap.
+
+Alice smoothed her skirt and sat up straight. She was still growing, and her head nearly touched the roof of the courtroom. How puzzling it all was! Still, she had a good view now, and she wanted to see the trial properly.
+
+She looked toward the King and the Queen, and then toward the Hatter, who was fidgeting at his teacup. Alice wondered what would happen next. She folded her hands and waited to see what the witness would say.
+
+### Check the pocket watch and worry about being late
+*Told by the White Rabbit · ☐ pending · key `m1:cp11:white-rabbit-1:white-rabbit`*
+
+*Brief:* The White Rabbit pulls out his pocket watch, gasps that he is late for something important, and fumbles with the scroll. He takes a deep breath and reminds the court to keep quiet. The Dormouse, grumbling about the squeeze, shuffles across the court to sit on the far side.
+
+The White Rabbit clutched his fan and glanced down at his waistcoat pocket. Out came the gold watch, and he stared at its face in horror.
+
+“Oh dear! Oh dear! I shall be far too late!” he whispered to himself. “The Duchess will never forgive me, and the Queen will have my head!”
+
+He shook the watch, then held it close to his nose. The hands had not moved in the way he hoped.
+
+He fumbled with the long scroll in his paws, nearly dropping it on the floor. His ears drooped and his whiskers trembled. He turned toward the King and gave a small, polite bow.
+
+“Your Majesty, pardon me, but the court must keep quiet,” he said, in a voice that squeaked a little. “Quiet, please. Quiet for the trial!”
+
+He took a long, deep breath and tried to look calm. Then he slipped the watch back into his pocket with a shaky hand.
+
+Near Alice, the Dormouse was grumbling loudly about the squeeze. He pushed himself up from his seat, shook out his fur, and shuffled across the court to the far side, where there was more room to sit.
+
+The White Rabbit watched him go and gave a worried sniff. Everything had to go exactly right, he thought, or the whole trial would be ruined.
+
+### Blow the trumpet to ask for a little more room
+*Told by the White Rabbit · ☐ pending · key `m1:cp11:white-rabbit-2:white-rabbit`*
+
+*Brief:* The White Rabbit gives three soft blasts on his trumpet and asks everyone to make a little space for the growing girl. The guards shift to one side and the crowd murmurs. The Dormouse, still sulky, moves off across the court to the far side as the Rabbit returns to the scroll.
+
+Oh dear! Oh dear! This is most irregular! The White Rabbit clutched his fan and glanced at his pocket watch. He had been so busy with the scroll that he had hardly noticed the crowd pressing in.
+
+The girl beside the Dormouse was growing fast. Her elbow knocked against the little fellow, and he squeaked in complaint. The Rabbit cleared his throat. Something had to be done, and quickly.
+
+He lifted his trumpet to his lips and gave three soft blasts, as he had been told a herald should. Then he bowed very low toward the thrones. “Your Majesties, if you please,” he said, his voice trembling. “Might everyone kindly make a little space for the young lady?”
+
+The guards shuffled to one side. The crowd murmured and pushed back in a wave of whispers. The Rabbit wrung his paws. He hoped nobody would be cross with him for speaking out of turn.
+
+The Dormouse was not pleased at all. He sniffed loudly, got up in a huff, and marched off across the court to the far side. He did not look back once.
+
+The Rabbit gave a small sigh of relief. He smoothed his waistcoat and unrolled the scroll again. Tick, tock, went his watch. He must not be late for anything else today. He read on in his most careful voice, keeping one eye on the Queen.
+
+### Shift politely to make room for the Dormouse
+*Told by the White Rabbit · ☐ pending · key `m1:cp11:p1:white-rabbit`*
+
+*Brief:* Alice wiggles to the end of the bench and apologizes. The Dormouse grumbles that she is still too big, then shuffles over a little. Alice thanks him kindly, and he sulkily moves off across the court to sit on the far side while Alice settles down to watch the trial.
+
+The White Rabbit stood by the table, clutching his fan and glancing anxiously at his watch. Oh dear! Oh dear! The trial was dragging on, and he was sure something terrible would happen if it ran any later.
+
+Then he noticed Alice, who was squashed up against the Dormouse. The poor little creature was wriggling and muttering. How very improper, thought the Rabbit, for anyone to take up so much room in a court of law!
+
+Alice shuffled to the very end of the bench. “I am so sorry,” she said politely. “I cannot help growing, you see.”
+
+The Dormouse grumbled. “You are still far too big,” he said crossly. But he slid over a little all the same.
+
+“Thank you so much,” said Alice kindly.
+
+The Dormouse gave a huff. He got up without another word and made his way across the court to the far side. The Rabbit let out a small sigh of relief, though he did not approve of anyone leaving the court without permission.
+
+Alice settled down neatly, folding her hands in her lap, ready to watch the trial.
+
+The Rabbit checked his watch once more. He would have to read the next name soon, and he hoped the proceedings would move faster. Then his eyes drifted to the Queen, who had not stopped staring at the Hatter, and he shivered from the tip of his whiskers to his tail.
+
+### Nibble the bread-and-butter and mumble about tea
+*Told by the Hatter · ☐ pending · key `m1:cp11:hatter-1:hatter`*
+
+*Brief:* The Hatter nervously nibbles his bread-and-butter and mumbles that his tea is getting cold. He glances at the Queen, then at Alice, who is squeezing close. He gives a small apology to the Dormouse, who grumbles and moves across the court to the far side, leaving the Hatter to stand on his shaky feet.
+
+The Hatter gave a nervous little cough. He lifted his bread-and-butter and took a small, shaky nibble, as if it might bite back.
+
+“My tea is getting cold,” he mumbled, to nobody in particular. “Cold as Time’s temper. And Time never lets me have a second cup.”
+
+He glanced at the Queen. Her eyes were still fixed on him, sharp and unblinking. He glanced at Alice next. She was pressing closer and closer, so that he could feel her elbow against his arm.
+
+“Oh dear, oh dear,” he said. “Is that a riddle? I think it might be a riddle. Why is a crowded bench like a teacup? I do not know. I never do.”
+
+Then he turned toward the Dormouse, who was blinking at him with a grumpy look.
+
+“Sorry, sleepy fellow,” the Hatter said quickly. “I did not mean to squash you. Truly I did not.”
+
+The Dormouse huffed and gave a long, offended sigh. He scrambled to his feet and marched across the court to the far side, where he flopped down again with his back turned.
+
+The Hatter stood alone in the middle of the court. His knees wobbled under him. He was not at all sure that he could hold himself up for much longer.
+
+### Offer the Dormouse a crumb of bread-and-butter
+*Told by the Hatter · ☐ pending · key `m1:cp11:hatter-2:hatter`*
+
+*Brief:* The Hatter quietly breaks off a tiny crumb of bread-and-butter and offers it to the sleepy Dormouse, who wakes just enough to nod. The Dormouse, still sulking about Alice's growing, gets up and moves off across the court to the far side, while the Hatter wipes his hands and waits to be called on again.
+
+The Hatter watched the Dormouse with his big, worried eyes. The poor creature was nearly asleep again, his head drooping over the edge of the bench.
+
+The Hatter thought hard. A crumb, he decided, was the very thing for a sleepy fellow. Time had not moved on since six o’clock, so there was always time for a small kindness.
+
+He pinched off a tiny crumb of bread-and-butter, so small it could hardly be seen. He held it out to the Dormouse with a shaky hand.
+
+“Bread-and-butter? Hungry, are you?” the Hatter whispered. “Why is a crumb like a clock? Neither one of them is ever quite finished!”
+
+The Dormouse opened one eye. He blinked, nodded once, and seemed to wake just enough to notice the crumb. Then his face went stiff again, and he looked cross.
+
+“I am not growing at all,” he muttered, glaring at Alice. “Not in that ridiculous fashion, anyway.”
+
+He rose slowly from his place and shuffled away across the court to the far side, where there was more room. He did not look back.
+
+The Hatter wiped his sticky fingers on his coat. He sat up straight and tried to look like a proper witness. His knees were knocking together, and he was not sure what he was supposed to say next.
+
+He waited, twisting his hat in his hands, for someone to call on him again.
+
+### Shift politely to make room for the Dormouse
+*Told by the Hatter · ☐ pending · key `m1:cp11:p1:hatter`*
+
+*Brief:* Alice wiggles to the end of the bench and apologizes. The Dormouse grumbles that she is still too big, then shuffles over a little. Alice thanks him kindly, and he sulkily moves off across the court to sit on the far side while Alice settles down to watch the trial.
+
+The Hatter’s eyes stayed fixed on his teacup, but he could still feel Alice pressing against him. Her elbow was almost in his ear. He wished Time would hurry up and let him go.
+
+Alice did not like to be a nuisance. She wiggled along the bench until she reached the very end. “I’m so sorry,” she said politely. “I didn’t mean to squash anyone.”
+
+The Dormouse opened one sleepy eye. He grumbled a little into his whiskers. “You are still far too big,” he said. “Much too big for a bench like this.”
+
+“I can’t help being big,” Alice said. “But I will try to be smaller.”
+
+The Dormouse sighed and shuffled over, just a little. It was not much, but it was something. Alice thanked him kindly for making room.
+
+The Hatter looked at the Dormouse, then at the Queen, then at the clock that never moved. Nobody had ever been polite to him in a courtroom before. It was all very strange.
+
+The Dormouse gave a long, sulky yawn. He climbed down from the bench and went off across the court. He flopped down on the far side, with his back to everyone.
+
+Alice smoothed her skirt and settled down to watch the trial. She hoped the Knave would have a fair chance. The Hatter gave a nervous cough and tried to think of something to say.
+
+---
+
+## cp12 · Chapter 12: “The King thinks the verses might prove something, but Alice is sure they mean nothing. What should happen next?”
+
+> Original text just before the choice: “If any one of them can explain it,” said Alice, (she had grown so large in the last few minutes that she wasn’t a bit afraid of interrupting him,) “I’ll give him sixpence. I don’t believe there’s an atom of meaning in it.”
+
+### Let the King puzzle over the verses out loud
+*Told by the narrator · ☐ pending · key `m1:cp12:p1:narrator`*
+
+*Brief:* The King squints at the verses and mumbles that some lines might be about tarts or a secret. He asks the jury to think hard. The jurymen scribble notes and frown, but nobody finds a clear answer. The King sighs, and the Knave stands quietly, waiting for the court to continue.
+
+The King squinted at the paper and mumbled to himself. He tilted his head, first one way and then the other, as if the words might turn into sense if he looked long enough.
+
+“Perhaps some of these lines are about the tarts,” he murmured. “Or perhaps they are a secret. Yes, a secret kept between two people.”
+
+He turned to the jury box and waved the paper at them. “You there! Think hard about this. Think very hard.”
+
+The jurymen bent over their slates. They scribbled notes, rubbed out their words, and scribbled again. Some of them frowned so deeply that their faces looked like crumpled paper. Bill the Lizard, who had no pencil now, only sat and stared at the ceiling.
+
+Nobody found a clear answer. The verses stayed as puzzling as before.
+
+The King let out a long, unhappy sigh. He folded the paper slowly and placed it on his knee.
+
+Across the courtroom, the Knave stood quietly in his chains. He did not complain or argue. He only waited, patient and still, for the court to go on with its business.
+
+The tarts sat on the table where they had always been, and nobody looked at them at all.
+
+### Have the jury hunt for a hidden clue
+*Told by the narrator · ☐ pending · key `m1:cp12:p2:narrator`*
+
+*Brief:* The jurymen pass the verses along and search each line for a hidden word or sign. They argue politely about the handwriting and the missing signature. One juror whispers that the paper is very odd. They find nothing certain, so they give up and go back to listening to the King.
+
+The jurymen looked at one another with worried faces. Then they began to pass the verses around the box, one to the next, as if someone might find a secret hidden inside them.
+
+The first juror squinted at the first line. The second juror held the paper up to the candle and tilted it from side to side. Nobody could see a hidden word or a secret sign.
+
+“The handwriting is not the Knave’s,” said one juror, very politely. “I am quite sure of that.”
+
+“Yes, but who signed it?” said another. “There is no name at the bottom at all.”
+
+“That is true,” said the first juror. “It is very odd. Very odd indeed.”
+
+A small juror leaned close to his neighbour and whispered behind his hand. “I think this paper is the strangest thing I have ever held.”
+
+In the end they found nothing certain. They looked at one another, shrugged, and laid the verses down on the table. Then they sat up straight and turned back to the King, waiting for whatever he would say next.
+
+### Slip away to count the tarts on the table
+*Told by the narrator · ☐ pending · key `m1:cp12:p3:narrator`*
+
+*Brief:* While the court is busy, Alice tiptoes to the table and counts the tarts with care. There are a few more than the King mentioned, which makes her think. She tucks the thought away and returns to her place just as the King clears his throat to speak again.
+
+While the King frowns over his paper, Alice slips quietly away from the jury-box. Nobody seems to notice her small steps across the floor of the court.
+
+She tiptoes to the long table where the tarts sit in their dishes. She bends down and begins to count them, one by one, with great care.
+
+There are a few more tarts than the King mentioned. Alice frowns and taps her finger against her chin. Something about that does not seem right.
+
+She tucks the thought away in her mind, the way she would hide a secret in her pocket. She does not say a word about it to anyone.
+
+Just as she reaches her place again, the King clears his throat loudly. Alice stands very still, her heart beating a little faster. The court turns its eyes back toward the old man and his paper of verses.
+
+The King smooths the page on his knee and squints at it with one eye. He begins to mutter softly to himself, as if the words held a puzzle he meant to solve.
+
+### Politely ask which line the King finds meaningful
+*Told by Alice · ☐ pending · key `m1:cp12:alice-1:alice`*
+
+*Brief:* Alice curtsies and asks the King, very politely, which line he thinks proves something. He points to a line about tarts, but then admits he is not sure what it means. Alice nods thoughtfully. The King, a little flustered, smooths the paper and mutters that the verses are very puzzling.
+
+Alice dropped a little curtsy and spoke as politely as she could. “Please, your Majesty, which line is it that you think proves something?”
+
+The King looked up from the paper. He seemed pleased to be asked. He ran his finger down the page, slowly, as if he were counting.
+
+“Here,” he said at last, pointing with a trembling finger. “This line about tarts. It must mean something about the tarts.”
+
+Alice nodded and looked thoughtfully at the verses. She had read many puzzling things that day, but this was the strangest. She wondered whether the King had read them before himself.
+
+“And what does the line mean, please?” she asked gently.
+
+The King opened his mouth, then closed it again. His cheeks went pink. He glanced at the Queen, then at the jury, then down at the paper once more.
+
+“Well,” he said, smoothing the page flat on his knee, “it is very puzzling. Very puzzling indeed. Most puzzling.”
+
+Alice thought that was not quite an answer, but she did not say so. She was growing larger all the time, and she felt quite brave. Still, she did not want to be rude to a king, even one who was muttering to himself. She folded her hands and waited to see what he would say next.
+
+### Count the tarts to test the King's idea
+*Told by Alice · ☐ pending · key `m1:cp12:alice-2:alice`*
+
+*Brief:* Alice glances at the tarts on the table and counts them under her breath. The number does not match the King's sums, which makes her frown. She decides to say nothing yet and listens carefully as the King continues reading the verses to himself.
+
+Alice glanced at the tarts on the table. They looked warm and sweet, and she wondered how many there were. Perhaps the King’s sums could be tested after all.
+
+She began to count under her breath, pointing with one finger. “One, two, three, four,” she whispered. “Five, six...”
+
+She counted again to be sure. The number did not match the King’s sums, and Alice frowned. Something was not right, and she did not know what it was.
+
+She pressed her lips together. Her lessons at school had taught her to be careful before speaking. Mrs. Wilson had always said a good guess is not the same as a good answer. So she decided to say nothing yet.
+
+Instead, she stood very still and listened. The King was murmuring over the verses on his knee, turning the paper this way and that. His crown sat a little crooked on his head.
+
+Alice watched him closely. She was curious to see what he would find next. Perhaps he would find something that made sense, or perhaps he would find nothing at all.
+
+The court was quiet except for the King’s soft voice. Alice kept her eyes on the paper and her hands folded in her lap, waiting patiently to hear more.
+
+### Let the King puzzle over the verses out loud
+*Told by Alice · ☐ pending · key `m1:cp12:p1:alice`*
+
+*Brief:* The King squints at the verses and mumbles that some lines might be about tarts or a secret. He asks the jury to think hard. The jurymen scribble notes and frown, but nobody finds a clear answer. The King sighs, and the Knave stands quietly, waiting for the court to continue.
+
+The King squinted at the paper and tilted his head, as if the words might move if he looked at them from a new angle. “Hmm, let me see,” he mumbled. “Perhaps this line is about tarts. Or perhaps it is a secret.”
+
+He turned to the jury. “Think hard, all of you! Somebody must know what it means.”
+
+The jurymen scribbled quickly on their slates. Some frowned. Some scratched their heads with their pencils. Alice watched them and wondered if anyone would ever find a clear answer.
+
+Nobody did. The jurymen only looked at one another and shrugged.
+
+The King let out a long, unhappy sigh. He smoothed the paper on his knee and read it again, moving his lips as he went.
+
+Across the court, the Knave stood quietly in his chains. He did not complain. He only waited, his cardboard face calm, for the trial to go on.
+
+Alice tapped her foot. The tarts sat on the table, untouched, and she could not help glancing at them. She still wanted her dinner, but she also wanted to hear what the King would say next.
+
+### Check the pocket watch and hurry the reading
+*Told by the White Rabbit · ☐ pending · key `m1:cp12:white-rabbit-1:white-rabbit`*
+
+*Brief:* The White Rabbit pulls out his pocket watch, gasps, and says the reading must hurry. He begs the King to move on. The jury scribbles quickly, and the King agrees to go more quickly. The Rabbit smooths his waistcoat and looks relieved, ready for the next part of the trial.
+
+The White Rabbit stood very still beside the witness box. He felt his heart jump. Then he pulled out his pocket watch and stared at it.
+
+“Oh dear! Oh dear! It is later than I thought!” he whispered. “I shall be far too late!”
+
+He clutched the paper of verses and hurried forward. His little fan shook in his paw. He bowed low to the King, then bowed again to the Queen, just to be safe.
+
+“Your Majesty, I beg you,” he said quickly. “Might we please hurry the reading? The trial is taking far too long, and the Queen does not like to wait.”
+
+The jury heard him and began to scribble on their slates as fast as they could. Their pencils squeaked and scratched across the slates.
+
+The King looked at the Rabbit and gave a nod. “Yes, yes, we shall go more quickly,” he said. “Quickly, quickly, by all means.”
+
+The Rabbit smoothed the front of his waistcoat with both paws. He let out a long, relieved breath. Everything was in order again, and he felt a little better.
+
+He lifted the paper once more, ready to read the next part of the verses aloud. He glanced at his watch one last time and nodded to himself. Now the trial could go on.
+
+### Whisper a hint to the jury about the handwriting
+*Told by the White Rabbit · ☐ pending · key `m1:cp12:white-rabbit-2:white-rabbit`*
+
+*Brief:* The White Rabbit leans toward the jury and whispers that the handwriting on the paper is odd. The jurymen nod and write a note on their slates. The King, busy muttering, does not notice. The Rabbit pushes his spectacles up and sits back down, waiting for the King to speak.
+
+The White Rabbit clutched his fan and stared at the paper on the King’s knee. Oh dear! Oh dear! Something about those verses was not right.
+
+He hurried to the jury-box, stepping carefully over the scattered slates. He bent low and whispered to the nearest juryman. “The handwriting, sir. It is not the Knave’s. Look at the loops on the letters.”
+
+The jurymen nodded. Several of them scratched quickly on their slates, their pencils squeaking.
+
+The Rabbit straightened his waistcoat and checked his pocket watch. He had no right to speak to the jury without leave. He knew that. A herald must not give advice to a court. Yet he could not help himself.
+
+The King was far too busy to notice anything. He was muttering over the verses, tapping his crown and frowning at the words.
+
+The White Rabbit pushed his spectacles up his nose with one trembling paw. Then he slipped back to his place beside the table. He sat very straight and folded his hands. Respectfully, he waited for His Majesty to speak again.
+
+He did not look at Alice. He did not dare. Instead, he kept his eyes fixed on the King, as a good herald should.
+
+### Let the King puzzle over the verses out loud
+*Told by the White Rabbit · ☐ pending · key `m1:cp12:p1:white-rabbit`*
+
+*Brief:* The King squints at the verses and mumbles that some lines might be about tarts or a secret. He asks the jury to think hard. The jurymen scribble notes and frown, but nobody finds a clear answer. The King sighs, and the Knave stands quietly, waiting for the court to continue.
+
+The King squinted at the paper, holding it close to his nose. He mumbled to himself, his lips moving slowly over each line.
+
+“Tarts, perhaps,” he muttered. “Yes, I think some of these lines are about tarts. Or perhaps a secret. Hmm, a secret is very hard to read.”
+
+The White Rabbit stood up straight beside the King, clutching his pocket watch. He glanced at it and gave a small, worried cough. Oh dear, oh dear, the trial was taking so long! He did not dare say so out loud to His Majesty.
+
+“Gentlemen of the jury,” said the King, waving the paper. “Please think very hard about these verses. Tell me what they mean.”
+
+The jurymen bent over their slates. They scribbled notes, frowned, and scratched their heads. Some of them tapped their pencils on the wood. Still, nobody found a clear answer.
+
+The King sighed deeply and let the paper fall onto his knee. He looked at the Knave, who stood quietly in his chains, waiting. The Knave did not say a word. The court was very still, and the smell of the tarts drifted across the table.
+
+The White Rabbit wiped his brow with his fan. He hoped the King would soon remember what came next.
+
+“Well,” said the King slowly, “we shall have to see.”

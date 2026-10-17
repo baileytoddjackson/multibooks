@@ -144,6 +144,10 @@ export class LibsqlStore implements ServerStore {
     }));
   }
 
+  async deleteDetour(cacheKey: string): Promise<void> {
+    await this.exec(`DELETE FROM detours WHERE cache_key = ?`, [cacheKey]);
+  }
+
   async acquireLock(cacheKey: string, ttlMs: number): Promise<boolean> {
     const now = Date.now();
     // Inserts a new lock, or takes over an expired one; a live lock leaves rowsAffected at 0.

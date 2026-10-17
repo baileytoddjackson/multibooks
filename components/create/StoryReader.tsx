@@ -184,7 +184,7 @@ export function StoryReader({
       data-font-size={prefs.fontSize}
       className="flex min-h-dvh flex-col bg-[var(--reader-bg)] text-[var(--reader-text)]"
     >
-      <header className="sticky top-0 z-20 bg-[var(--reader-bg)]/95 backdrop-blur">
+      <header className="sticky top-0 z-20 bg-[var(--reader-bg)]">
         <div className="mx-auto flex max-w-5xl items-center gap-1 px-2 py-1 sm:px-4">
           <Link
             href="/"

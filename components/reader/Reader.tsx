@@ -271,7 +271,7 @@ export function Reader({ book, toc, chapter, map, cast }: ReaderProps) {
       data-font-size={prefs.fontSize}
       className="flex min-h-dvh flex-col bg-[var(--reader-bg)] text-[var(--reader-text)] transition-colors"
     >
-      <header className="sticky top-0 z-20 bg-[var(--reader-bg)]/95 backdrop-blur">
+      <header className="sticky top-0 z-20 bg-[var(--reader-bg)]">
         <div className="mx-auto flex max-w-5xl items-center gap-1 px-2 py-1 sm:px-4">
           <Link
             href="/"
@@ -405,7 +405,7 @@ export function Reader({ book, toc, chapter, map, cast }: ReaderProps) {
 
       <nav
         aria-label="Page navigation"
-        className="sticky bottom-0 z-10 bg-[var(--reader-bg)]/95 pb-[env(safe-area-inset-bottom)] backdrop-blur"
+        className="sticky bottom-0 z-10 bg-[var(--reader-bg)] pb-[env(safe-area-inset-bottom)] backdrop-blur"
       >
         <div className="mx-auto flex max-w-[48rem] items-center justify-between gap-3 px-3 py-3">
           <button

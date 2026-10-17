@@ -3,8 +3,7 @@
 A choose-your-own-adventure reading app for middle schoolers (ages ~11–14). Read a classic as
 written, play it as an adventure that always rejoins the original, or create your own story.
 
-> Status: MVP in progress. Milestones 1–7 are done. Next: cache pre-warm, the content review
-> export, and final polish.
+> Status: MVP complete (milestones 1–8). See "Before the pilot" below.
 
 ## Quick start
 
@@ -18,12 +17,12 @@ Requires Node 20.9+.
 
 ## Scripts
 
-| Command                                 | What it does                                                                                                                    |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `npm run dev` / `build` / `start`       | Next.js dev server, production build, production server                                                                         |
-| `npm run lint` / `typecheck` / `format` | ESLint, `tsc --noEmit`, Prettier                                                                                                |
-| `npm test`                              | Unit tests (Vitest), including validation of all committed content                                                              |
-| `npm run test:e2e`                      | Playwright smoke tests at 390px (iPhone), 820px (iPad) and 1280px. The first run needs `npx playwright install chromium webkit` |
+| Command                                 | What it does                                                                                                                                                                   |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `npm run dev` / `build` / `start`       | Next.js dev server, production build, production server                                                                                                                        |
+| `npm run lint` / `typecheck` / `format` | ESLint, `tsc --noEmit`, Prettier                                                                                                                                               |
+| `npm test`                              | Unit tests (Vitest), including validation of all committed content                                                                                                             |
+| `npm run test:e2e`                      | Playwright tests at 390px (iPhone), 820px (iPad) and 1280px, plus axe accessibility scans and a $0-budget server. The first run needs `npx playwright install chromium webkit` |
 
 ## Content pipeline
 
@@ -92,6 +91,28 @@ A 3-step stepper (genre → setting → optional details) starts a fully generat
 - **Length.** `CYO_SOFT_TURN_CAP` offers "Ready to write the ending?" and `CYO_HARD_TURN_CAP`
   forces the ending. Stories are saved on the device under My Stories.
 
+## Pre-warming and reviewing book detours
+
+Every detour a reader can reach (about 400 across the three books) can be generated ahead of time
+and reviewed by a person before a pilot.
+
+```bash
+npm run cache:prewarm -- --dry-run     # how many are missing, and the estimated cost (about $0.08 for all)
+npm run cache:prewarm                  # generate them through the Batch API into the shared cache
+npm run cache:export-review            # write content/review/<book>/detours-review.md and .json
+# read the .md; in the .json set "decision" to "approve" or "reject", and edit "text" if needed
+npm run cache:apply-review             # approvals → approved.json (commit it); rejections leave the cache
+```
+
+- **Approved text always wins.** It overrides the cache at runtime and survives prompt-version
+  bumps, because `approved.json` is keyed by map version, choice point, option and perspective.
+- **Rejected detours** are deleted from the cache and regenerate on the next request or pre-warm.
+  To fix one yourself, edit its text and approve it instead.
+- **Flags.** Entries marked ⚠ have a brief that says who lives or dies, or text that hits the
+  blocklist. Check those against the book first.
+- **Production.** These scripts write to `DATABASE_URL`. To pre-warm production, run them locally
+  with `DATABASE_URL` and `DATABASE_AUTH_TOKEN` set to your Turso database.
+
 ## Cost controls and limits
 
 Every new generation goes through `guardGeneration` (`lib/budget/budget.ts`). Cached detours,
@@ -153,6 +174,48 @@ After changing a detour prompt, bump `PROMPT_VERSION` in `lib/prompts/version.ts
 detours regenerate. `npx tsx --env-file-if-exists=.env.local scripts/analyze-detour-prompts.ts`
 reports the size of every possible detour prompt for free (it uses token counting, not
 generation).
+
+## Deploying (Vercel + Turso)
+
+1. **Database (Turso).** Install the Turso CLI and run:
+   ```bash
+   turso db create multibooks
+   turso db show multibooks --url        # → DATABASE_URL (libsql://…)
+   turso db tokens create multibooks     # → DATABASE_AUTH_TOKEN
+   ```
+   Tables are created automatically on first use.
+2. **Vercel.** Import the repository and set these environment variables (Production and Preview):
+
+   | Variable                                                    | Value                                                                     |
+   | ----------------------------------------------------------- | ------------------------------------------------------------------------- |
+   | `ANTHROPIC_API_KEY`                                         | A key from console.anthropic.com (set a monthly spend limit there too)    |
+   | `LLM_PROVIDER`                                              | `anthropic`                                                               |
+   | `MODEL_RUNTIME`, `MODEL_OFFLINE`                            | `claude-haiku-5-5`                                                        |
+   | `DATABASE_URL`, `DATABASE_AUTH_TOKEN`                       | From step 1                                                               |
+   | `DAILY_BUDGET_USD`, `PER_SESSION_MAX_GENERATIONS`           | e.g. `5`, `40`                                                            |
+   | `RATE_LIMIT_SESSION_PER_MINUTE`, `RATE_LIMIT_IP_PER_MINUTE` | `8`, `150`                                                                |
+   | `CYO_SOFT_TURN_CAP`, `CYO_HARD_TURN_CAP`                    | `20`, `25`                                                                |
+   | `ADMIN_PASSWORD`                                            | A strong password for `/admin/stats`                                      |
+   | `APP_SECRET`                                                | A long random string, e.g. `openssl rand -base64 32`                      |
+   | `NEXT_PUBLIC_FEEDBACK_URL`                                  | Your survey link (rebuild after changing it: it's baked in at build time) |
+
+3. **Deploy.** Book content is read from the deployment's files (`outputFileTracingIncludes` in
+   `next.config.ts`), and detours stream over normal serverless functions.
+4. **Pre-warm production** from your machine with the Turso variables set (see above).
+
+## Before the pilot
+
+- [ ] Rotate the Anthropic API key, and set a monthly spend limit in the Console.
+- [ ] Set `ADMIN_PASSWORD` and `APP_SECRET`. The admin page warns while the default is in use.
+- [ ] `npm run cache:prewarm`, then export, review and apply (above). Commit `approved.json`.
+- [ ] Review `EXCLUDED_CHAPTERS` in `lib/content/adventureMap.ts` and the character profiles in
+      `content/books/*/characters.json`.
+- [ ] Decide on `DAILY_BUDGET_USD`. At Haiku 5.5 prices, $5 covers roughly 7,000–10,000 new
+      passages.
+- [ ] Set `NEXT_PUBLIC_FEEDBACK_URL`, and give each group a code (e.g. `LIB-OCT20`, `MS-ENG-P3`) to
+      enter under "Have a group code?".
+- [ ] Try it on an iPad: one book in each mode, plus a Create Your Own story.
+- [ ] Run `npm test` and `npm run test:e2e`.
 
 ## Project layout
 
