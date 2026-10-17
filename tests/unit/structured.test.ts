@@ -55,3 +55,15 @@ describe("detour text clean-up", () => {
     expect(splitSegments("Short one.\n\nShort two.")).toHaveLength(1);
   });
 });
+
+import { cleanGeneratedText } from "@/lib/text/clean";
+
+describe("cleanGeneratedText", () => {
+  it("removes stray non-Latin characters but keeps accents and punctuation", () => {
+    expect(cleanGeneratedText("Slip through the door and探 explore")).toBe(
+      "Slip through the door and explore",
+    );
+    expect(cleanGeneratedText("Café — naïve, 3 o'clock!")).toBe("Café — naïve, 3 o’clock!");
+    expect(cleanGeneratedText("Hello 世界 .")).toBe("Hello.");
+  });
+});

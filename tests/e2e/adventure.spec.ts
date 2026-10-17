@@ -1,8 +1,8 @@
 import { expect, test, type Page } from "@playwright/test";
 
 /** Turns pages until the first choice appears (the intro choice is somewhere in chapter 1). */
-async function readToFirstChoice(page: Page) {
-  await page.goto("/read/alice/1?mode=adventure");
+async function readToFirstChoice(page: Page, opts: { navigate?: boolean } = {}) {
+  if (opts.navigate !== false) await page.goto("/read/alice/1?mode=adventure");
   await expect(page).toHaveURL(/page=1/);
   for (let i = 0; i < 6; i++) {
     const choice = page.getByText("how do you want to play?", { exact: false });
@@ -17,7 +17,8 @@ test("book → adventure: style, choice, detour, rejoin, undo", async ({ page })
   await page.getByTestId("mode-adventure").click();
   await expect(page).toHaveURL(/mode=adventure/);
 
-  await readToFirstChoice(page);
+  // Already on the reader: don't start a second navigation to the same URL.
+  await readToFirstChoice(page, { navigate: false });
   // The page can't be turned until a choice is made.
   await expect(page.getByRole("button", { name: /Next (page|chapter)/ })).toBeDisabled();
 

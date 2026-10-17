@@ -3,8 +3,9 @@
 A choose-your-own-adventure reading app for middle schoolers (ages ~11–14). Read a classic as
 written, play it as an adventure that always rejoins the original, or create your own story.
 
-> Status: MVP in progress. Milestones 1–3 are done (dashboard, content pipeline, canon reader,
-> book adventures). Next: character-mode polish, Create Your Own, safety, admin stats.
+> Status: MVP in progress. Milestones 1–5 are done (dashboard, content pipeline, canon reader,
+> book adventures, character mode, Create Your Own). Next: rate limits and error polish,
+> instrumentation and admin stats, cache pre-warm and content review.
 
 ## Quick start
 
@@ -74,14 +75,55 @@ All of these accept `--book alice|odyssey|moby-dick`.
 3. Run `content:fetch`, `content:chunk`, `content:summaries` and `content:validate` with
    `--book <id>`.
 
+## Create Your Own
+
+A 3-step stepper (genre → setting → optional details) starts a fully generated story.
+
+- **Surprise Me is free.** It picks from `content/surprise-settings.json`: 8 genres × 52
+  hand-written, kid-safe settings. Edit that file to add or change ideas.
+- **Safety on the only free-text fields.** In order: length limits (120 and 280 characters), a
+  personal-information filter (`lib/safety/piiPatterns.ts`), a word blocklist
+  (`lib/safety/blocklist.ts`), then a cheap Claude check (`lib/prompts/moderation.ts`). Ideas that
+  fail get a friendly redirect with Surprise Me suggestions, never an error.
+- **Generated text is checked as it streams.** Text is released one sentence at a time after
+  passing the blocklist. If something trips it, the reader never sees it and one stricter retry
+  runs.
+- **Compact state.** Each turn sends only a running summary (120 words or fewer) and the last
+  segment, so cost per turn stays flat (about $0.0006 with Haiku 5.5).
+- **Length.** `CYO_SOFT_TURN_CAP` offers "Ready to write the ending?" and `CYO_HARD_TURN_CAP`
+  forces the ending. Stories are saved on the device under My Stories.
+
+## Prompts
+
+All runtime prompts live in `lib/prompts/`, each a documented function that returns
+`{system, user, schema, maxTokens, mock}`:
+
+| File                                    | Used for                                                |
+| --------------------------------------- | ------------------------------------------------------- |
+| `shared.ts`                             | Safety and reading-level rules included in every prompt |
+| `detour.ts` + `characterPerspective.ts` | Book adventure detours (canon-anchored)                 |
+| `cyoOpening.ts` / `cyoContinuation.ts`  | Create Your Own                                         |
+| `choices.ts`                            | Rules for generated choices                             |
+| `moderation.ts`                         | The stepper input check                                 |
+| `offline.ts`                            | Summaries and adventure maps (content scripts)          |
+
+After changing a detour prompt, bump `PROMPT_VERSION` in `lib/prompts/version.ts` so cached
+detours regenerate. `npx tsx --env-file-if-exists=.env.local scripts/analyze-detour-prompts.ts`
+reports the size of every possible detour prompt for free (it uses token counting, not
+generation).
+
 ## Project layout
 
 ```
-app/              routes (dashboard, /book/[id], /read/[id]/[chapter])
+app/              routes (dashboard, /book/[id], /read/[id]/[chapter], /create, /story/[id], api/)
 components/       dashboard, reader, ui
 content/books/    committed book content (JSON)
 lib/content/      chunking, loading and validation of book content
 lib/client-store/ localStorage persistence behind the ProgressStore interface
+lib/cyo/          Create Your Own genres, Surprise Me and story state
+lib/engine/       book adventure state machine, detour cache key and service
+lib/safety/       blocklist, personal-info filter, moderation
+lib/server-store/ libSQL storage (detour cache, locks, usage, events)
 lib/llm/          model provider types, structured-output parsing, pricing
 lib/prompts/      prompt templates (offline ones now; runtime ones in Milestone 3)
 lib/reader/       reader progress math and preferences

@@ -4,9 +4,14 @@ import { useId, useState } from "react";
 import type { InteractionStyle } from "@/lib/client-store/types";
 import type { Character } from "@/lib/schemas/content";
 
+/** Anyone the reader can play: a book's curated cast member or a Create Your Own character. */
+export type PlayableCharacter = Pick<Character, "id" | "name" | "oneLine"> & {
+  alsoKnownAs?: string[];
+};
+
 /** An alternative name worth showing, e.g. "Ulysses (Odysseus)"; skips "the White Rabbit (White Rabbit)". */
-function otherName(c: Character): string | undefined {
-  return c.alsoKnownAs.find((n) => !c.name.toLowerCase().includes(n.toLowerCase()));
+function otherName(c: PlayableCharacter): string | undefined {
+  return c.alsoKnownAs?.find((n) => !c.name.toLowerCase().includes(n.toLowerCase()));
 }
 
 const STYLES: { value: InteractionStyle; title: string; blurb: string }[] = [
@@ -26,7 +31,7 @@ export function StyleSelector({
   onDone,
   heading = "Before you choose… how do you want to play?",
 }: {
-  characters: Character[];
+  characters: PlayableCharacter[];
   initialStyle?: InteractionStyle;
   initialCharacterId?: string;
   onDone: (style: InteractionStyle, characterId?: string) => void;

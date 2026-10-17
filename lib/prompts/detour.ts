@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { cleanGeneratedText } from "@/lib/text/clean";
 import { smartQuotes } from "@/lib/text/smartQuotes";
 import type { AdventureOption, ChoicePoint } from "@/lib/schemas/adventure";
 import type { BookMeta, Chapter, Character } from "@/lib/schemas/content";
@@ -124,7 +125,7 @@ ${firstWords(chapter.paragraphs[r]?.text ?? "", 90)}
 
 /** Splits a detour into 1-2 reader segments at a paragraph boundary. */
 export function splitSegments(story: string): string[] {
-  const paras = smartQuotes(story)
+  const paras = cleanGeneratedText(story)
     .split(/\n\s*\n/)
     .map((p) => p.trim())
     .filter(Boolean);

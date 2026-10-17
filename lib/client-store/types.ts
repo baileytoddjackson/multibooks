@@ -34,6 +34,17 @@ export interface CyoSegment {
   text: string;
   /** Label of the choice that led to this segment, if any. */
   choiceMade?: string;
+  /** Running summary after this segment (kept per segment so undo restores it exactly). */
+  summary: string;
+  /** Choices offered after this segment (empty = "Keep reading" or the end). */
+  choices: string[];
+  isEnding?: boolean;
+}
+
+export interface CyoCastMember {
+  id: string;
+  name: string;
+  oneLine: string;
 }
 
 export interface CyoStory {
@@ -42,15 +53,11 @@ export interface CyoStory {
   genre: string;
   setting: string;
   details?: string;
-  /** Short running summary passed to the model instead of full history. */
-  summary: string;
   segments: CyoSegment[];
-  pendingChoices: string[];
+  cast: CyoCastMember[];
   style?: InteractionStyle;
   characterId?: string;
-  castSuggestions?: string[];
-  turn: number;
-  status: "active" | "ending" | "done";
+  status: "active" | "done";
   createdAt: number;
   updatedAt: number;
 }

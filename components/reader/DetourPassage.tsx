@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { smartQuotes } from "@/lib/text/smartQuotes";
+import { cleanGeneratedText as smartQuotes } from "@/lib/text/clean";
 import type { DetourStatus } from "@/lib/reader/useDetour";
 
 /**
