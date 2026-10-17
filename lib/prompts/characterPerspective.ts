@@ -15,7 +15,7 @@ export function perspectiveInstructions(character: Character | undefined): strin
   const person =
     character.pov === "first"
       ? `Write in FIRST person as ${character.name}, exactly as the book's narrator.`
-      : `Write in close THIRD person, following ${character.name}: what they see, think and feel.`;
+      : `Write in close THIRD person, following ${character.name}: what they see, think and feel. Keep the original's tense (past tense for these books).`;
   return `Perspective: ${names}.
 ${person}
 Who they are: ${character.profile}

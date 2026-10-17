@@ -27,8 +27,24 @@ export async function generateMetadata(
   return { title: entry ? `${chapterLabel(entry)} · ${book.shortTitle}` : book.title };
 }
 
-export default async function ReadChapterPage(props: PageProps<"/read/[bookId]/[chapter]">) {
-  const { bookId, chapter: chapterParam } = await props.params;
+/**
+ * The shell (skeleton) renders instantly; params and content are read inside Suspense so
+ * navigating between chapters never blocks on URL data.
+ */
+export default function ReadChapterPage(props: PageProps<"/read/[bookId]/[chapter]">) {
+  return (
+    <Suspense fallback={<ReaderSkeleton title="" />}>
+      <ChapterReader params={props.params} />
+    </Suspense>
+  );
+}
+
+async function ChapterReader({
+  params,
+}: {
+  params: PageProps<"/read/[bookId]/[chapter]">["params"];
+}) {
+  const { bookId, chapter: chapterParam } = await params;
   const book = getBook(bookId);
   const index = Number(chapterParam);
   if (!book || !Number.isInteger(index)) notFound();

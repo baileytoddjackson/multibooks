@@ -54,7 +54,7 @@ test("be a character: pick a character and see their options", async ({ page }) 
   await readToFirstChoice(page);
   await page.getByRole("radio", { name: /Be a character/ }).click();
   await page
-    .getByRole("radiogroup", { name: "Choose a character" })
+    .getByRole("group", { name: "Who do you want to be?" })
     .getByRole("radio")
     .first()
     .click();
@@ -76,4 +76,22 @@ test("adventure progress survives a reload", async ({ page }) => {
   await page.reload();
   await expect(page.getByTestId("detour")).toBeVisible();
   await expect(page.getByText("The original story continues")).toBeVisible();
+});
+
+test("style picker works from the keyboard (one tab stop, arrow keys move)", async ({
+  page,
+  browserName,
+}) => {
+  test.skip(
+    browserName === "webkit",
+    "WebKit doesn't Tab to form controls by default (a macOS setting)",
+  );
+  await readToFirstChoice(page);
+  const direct = page.getByRole("radio", { name: /Direct the story/ });
+  await direct.focus();
+  await page.keyboard.press("Space");
+  await expect(direct).toBeChecked();
+  await page.keyboard.press("ArrowRight");
+  await expect(page.getByRole("radio", { name: /Be a character/ })).toBeChecked();
+  await expect(page.getByRole("group", { name: "Who do you want to be?" })).toBeVisible();
 });

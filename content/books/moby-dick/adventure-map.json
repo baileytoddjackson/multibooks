@@ -1,6 +1,6 @@
 {
   "bookId": "moby-dick",
-  "version": 1,
+  "version": 3,
   "generatedBy": "claude-haiku-5-5",
   "choicePoints": [
     {
@@ -1561,9 +1561,10 @@
         {
           "id": "p1",
           "label": "Watch the wreckage from the high mast",
-          "detourBrief": "From the mast-head you see the broken boats scattered across the foam. Stubb's voice carries over the water, shouting for help and laughing shakily. Flask bobs like an empty bottle. The whale slides away to leeward, trailing lines, and the sea grows calm enough for the ship's boat to be lowered. Everyone is alive and waiting.",
+          "detourBrief": "From the mast-head you see the broken boats scattered across the foam. Stubb shouts for help, laughing shakily, and Flask bobs like an empty bottle. The whale slides away to leeward, trailing lines, and the sea grows calm enough for the ship to come to the rescue. Leave who has been rescued for the original to tell.",
           "mustPreserve": [
-            "Every crew survives the wreck",
+            "Ahab is in the sea among the wreckage, not on the ship",
+            "The Parsee goes missing in this wreck; the original reveals it",
             "Moby Dick is not killed in this chase"
           ]
         },
@@ -1572,6 +1573,7 @@
           "label": "Follow the whale's trail in a spare boat",
           "detourBrief": "A lookout spots a distant spout, and the narrator steers closer to study the whale's wake. The White Whale shows only a dark shadow beneath the water before diving out of sight. No one is harmed, and the boat turns back toward the wreckage, where the rescue boat is already on its way.",
           "mustPreserve": [
+            "Ahab is in the sea among the wreckage, not on the ship",
             "The whale escapes for now",
             "The ship remains the rescuers' home base"
           ]
@@ -1581,6 +1583,7 @@
           "label": "Count the crew and hold steady",
           "detourBrief": "Ahab's men call their names across the water, one by one. Each voice answers, though some are bruised and gasping. Everyone is accounted for except the Parsee, whose absence weighs heavily on the crew. The whale turns away to leeward, and the rescue boat draws near to lift the sailors aboard.",
           "mustPreserve": [
+            "Ahab is in the sea among the wreckage, not on the ship",
             "The Parsee is missing and not yet found",
             "The crew is rescued in the same order as the original"
           ]
@@ -1593,6 +1596,7 @@
             "label": "Grip the broken lance and shout orders",
             "detourBrief": "Ahab hauls himself up on the shivered lance, roaring commands over the water. His voice cuts through the foam, and the men turn toward his call. He will not admit fear, though his wooden leg throbs. As the whale glides off, he orders the ship's boats to come about and gather the sailors from the sea.",
             "mustPreserve": [
+              "Ahab is in the sea among the wreckage, not on the ship",
               "Ahab's ivory leg is snapped during this wreck",
               "The whale is not killed today"
             ]
@@ -1602,6 +1606,7 @@
             "label": "Watch the whale with a cold, steady eye",
             "detourBrief": "Ahab stares at the White Whale as it slides leeward, trailing tangled lines. For a moment he thinks the whale turns its head toward him, as if it knows him. He mutters a vow to return at dawn, then sends word down to the water for the men to be picked up before dusk.",
             "mustPreserve": [
+              "Ahab is in the sea among the wreckage, not on the ship",
               "Moby Dick escapes this encounter",
               "Ahab stays captain of the Pequod"
             ]
@@ -1613,6 +1618,7 @@
             "label": "Hurry to lower the rescue boat",
             "detourBrief": "Starbuck orders the spare boat lowered at once and takes the oars himself. He pulls through the floating planks and oars, lifting Stubb and Flask from the cold water one by one. Every man is coughing but breathing. He counts the crew twice, then turns the boat back toward the ship with steady strokes.",
             "mustPreserve": [
+              "Ahab is in the sea among the wreckage, not on the ship",
               "Stubb and Flask survive the wreck",
               "The rescue happens before the chase continues"
             ]
@@ -1622,6 +1628,7 @@
             "label": "Plead quietly with Ahab to turn back",
             "detourBrief": "Starbuck leans close to Ahab and begs him to call off the chase before more men drown. Ahab grumbles but gives no final answer. Starbuck gazes at the white wake and prays silently. He sends the crew to pull the wrecked men aboard first, and promises they will speak again once everyone is safe.",
             "mustPreserve": [
+              "Ahab is in the sea among the wreckage, not on the ship",
               "Ahab does not agree to stop the chase here",
               "Starbuck stays first mate on the ship"
             ]

@@ -218,3 +218,29 @@ export function validateMap(
   }
   return errors;
 }
+
+/** Words that suggest a brief decides someone's fate (only the original may do that). */
+const FATE_CLAIM =
+  /\b(alive|survive[sd]?|survivors?|unharmed|unhurt|no one is (?:hurt|harmed|lost)|everyone is (?:safe|fine|accounted)|all (?:safe|saved)|dies|died|dead|killed|drowns?|drowned|rescued safely)\b/i;
+
+/**
+ * Flags option briefs or must-preserve facts that claim who lives, dies or is safe, for human
+ * review. Not an error: some are correct (e.g. "The Parsee is missing"), but each is worth a look,
+ * because a wrong claim here becomes a wrong detour for every reader.
+ */
+export function fateClaims(map: AdventureMap): string[] {
+  const out: string[] = [];
+  for (const cp of map.choicePoints) {
+    const options = [...cp.plotOptions, ...Object.values(cp.characterOptions).flat()];
+    for (const o of options) {
+      for (const text of [o.detourBrief, ...o.mustPreserve]) {
+        const m = FATE_CLAIM.exec(text);
+        if (m)
+          out.push(
+            `${cp.id}/${o.id}: "${m[0]}" in "${text.slice(0, 80)}${text.length > 80 ? "…" : ""}"`,
+          );
+      }
+    }
+  }
+  return out;
+}

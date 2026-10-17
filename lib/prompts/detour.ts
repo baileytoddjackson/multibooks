@@ -38,7 +38,10 @@ resumes at a fixed paragraph. So the detour must:
 4. Never change the plot, any character's fate, or facts listed under "must not change".
 5. End so the resuming original paragraph follows naturally: no cliffhanger that the original
    ignores, no new characters or objects the original would contradict.
-6. Be 150-250 words. Do not start with the option label or a summary of the choice.
+6. Never decide anyone's fate. Do not say who survives, is rescued, hurt, lost or found unless
+   the original text you were given already says so; leave it open for the original to tell.
+7. Use the same tense as the original passage (usually past tense), even from a character's view.
+8. Be 150-250 words. Do not start with the option label or a summary of the choice.
 
 Return only the JSON object.`;
 

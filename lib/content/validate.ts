@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { validateMap } from "@/lib/content/adventureMap";
+import { fateClaims, validateMap } from "@/lib/content/adventureMap";
 import { AdventureMapSchema } from "@/lib/schemas/adventure";
 import {
   BookMetaSchema,
@@ -16,6 +16,8 @@ export interface ValidationReport {
   bookId: string;
   errors: string[];
   warnings: string[];
+  /** Items for human review, shown with --verbose (e.g. fate claims in adventure briefs). */
+  review: string[];
 }
 
 function readJson(file: string): unknown {
@@ -47,7 +49,7 @@ function check<T>(
 /** Validates every committed content file for one book. Synchronous and fs-only for CI/tests. */
 export function validateBook(booksDir: string, bookId: string): ValidationReport {
   const dir = path.join(booksDir, bookId);
-  const report: ValidationReport = { bookId, errors: [], warnings: [] };
+  const report: ValidationReport = { bookId, errors: [], warnings: [], review: [] };
 
   check("meta", path.join(dir, "meta.json"), BookMetaSchema, report);
   const toc: Toc | undefined = check("toc", path.join(dir, "toc.json"), TocSchema, report);
@@ -108,6 +110,13 @@ export function validateBook(booksDir: string, bookId: string): ValidationReport
     const map = check("adventure map", mapFile, AdventureMapSchema, report);
     if (map) {
       validateMap(map, chapters, cast.characters).forEach((e) => report.errors.push(`map: ${e}`));
+      const claims = fateClaims(map);
+      report.review.push(...claims.map((c) => `fate claim ${c}`));
+      if (claims.length) {
+        report.warnings.push(
+          `map: ${claims.length} briefs mention who lives/dies/is safe; check them against the book (--verbose)`,
+        );
+      }
       if (map.generatedBy === "placeholder") {
         report.warnings.push("adventure map is a placeholder (run content:maps with an API key)");
       }

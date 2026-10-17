@@ -9,14 +9,22 @@ export function generateStaticParams() {
 }
 
 /** Entry point from the dashboard: sends the reader to where they left off (or chapter 1). */
-export default async function ReadBookPage(props: PageProps<"/read/[bookId]">) {
-  const { bookId } = await props.params;
+export default function ReadBookPage(props: PageProps<"/read/[bookId]">) {
+  return (
+    <Suspense fallback={<ReaderSkeleton title="" />}>
+      <Resume params={props.params} />
+    </Suspense>
+  );
+}
+
+async function Resume({ params }: { params: PageProps<"/read/[bookId]">["params"] }) {
+  const { bookId } = await params;
   const book = getBook(bookId);
   if (!book) notFound();
   return (
-    <Suspense fallback={<ReaderSkeleton title={book.shortTitle} />}>
+    <>
       <ResumeRedirect bookId={book.id} />
       <ReaderSkeleton title={book.shortTitle} />
-    </Suspense>
+    </>
   );
 }
