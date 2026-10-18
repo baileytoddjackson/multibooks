@@ -94,7 +94,8 @@ A 3-step stepper (genre → setting → optional details) starts a fully generat
 ## Pre-warming and reviewing book detours
 
 Every detour a reader can reach (about 400 across the three books) can be generated ahead of time
-and reviewed by a person before a pilot.
+and, optionally, reviewed by a person before a pilot. Review is not required: detours nobody has
+reviewed are served as generated, and approved ones override them.
 
 ```bash
 npm run cache:prewarm -- --dry-run     # how many are missing, and the estimated cost (about $0.08 for all)
@@ -207,7 +208,9 @@ generation).
 
 - [ ] Rotate the Anthropic API key, and set a monthly spend limit in the Console.
 - [ ] Set `ADMIN_PASSWORD` and `APP_SECRET`. The admin page warns while the default is in use.
-- [ ] `npm run cache:prewarm`, then export, review and apply (above). Commit `approved.json`.
+- [ ] `npm run cache:prewarm` against the production database.
+- [ ] Optional: export, review and apply detours (above), starting with the ⚠ flagged ones in
+      Moby-Dick. Commit `approved.json` if you approve or edit any.
 - [ ] Review `EXCLUDED_CHAPTERS` in `lib/content/adventureMap.ts` and the character profiles in
       `content/books/*/characters.json`.
 - [ ] Decide on `DAILY_BUDGET_USD`. At Haiku 5.5 prices, $5 covers roughly 7,000–10,000 new
