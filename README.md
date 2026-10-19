@@ -200,9 +200,12 @@ generation).
    | `APP_SECRET`                                                | A long random string, e.g. `openssl rand -base64 32`                      |
    | `NEXT_PUBLIC_FEEDBACK_URL`                                  | Your survey link (rebuild after changing it: it's baked in at build time) |
 
-3. **Deploy.** Book content is read from the deployment's files (`outputFileTracingIncludes` in
+3. **Region.** `vercel.json` runs the server code in `pdx1` (Portland), next to a Supabase
+   project in US West (Oregon). If your Supabase project is elsewhere, change it to the nearest
+   [Vercel region](https://vercel.com/docs/edge-network/regions).
+4. **Deploy.** Book content is read from the deployment's files (`outputFileTracingIncludes` in
    `next.config.ts`), and detours stream over normal serverless functions.
-4. **Pre-warm production** from your machine with `DATABASE_URL` set to the Supabase string:
+5. **Pre-warm production** from your machine with `DATABASE_URL` set to the Supabase string:
    `npm run cache:prewarm` (about $0.08 for all ~400 book detours).
 
 ## Before the pilot
