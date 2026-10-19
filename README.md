@@ -112,7 +112,7 @@ npm run cache:apply-review             # approvals → approved.json (commit it)
 - **Flags.** Entries marked ⚠ have a brief that says who lives or dies, or text that hits the
   blocklist. Check those against the book first.
 - **Production.** These scripts write to `DATABASE_URL`. To pre-warm production, run them locally
-  with `DATABASE_URL` and `DATABASE_AUTH_TOKEN` set to your Turso database.
+  with `DATABASE_URL` set to your Supabase connection string.
 
 ## Cost controls and limits
 
@@ -176,15 +176,15 @@ detours regenerate. `npx tsx --env-file-if-exists=.env.local scripts/analyze-det
 reports the size of every possible detour prompt for free (it uses token counting, not
 generation).
 
-## Deploying (Vercel + Turso)
+## Deploying (Vercel + Supabase)
 
-1. **Database (Turso).** Install the Turso CLI and run:
-   ```bash
-   turso db create multibooks
-   turso db show multibooks --url        # → DATABASE_URL (libsql://…)
-   turso db tokens create multibooks     # → DATABASE_AUTH_TOKEN
-   ```
-   Tables are created automatically on first use.
+1. **Database (Supabase).** Create a project. In **Connect**, copy the **Transaction pooler**
+   connection string (port `6543`) and fill in your database password. That's `DATABASE_URL`.
+   - Tables are created automatically on first use, in the `public` schema with Row Level
+     Security on and no policies. Supabase's public REST and GraphQL APIs can't read them; only
+     the app's direct connection can.
+   - Storage is chosen from the URL: `postgres://` / `postgresql://` → Postgres, `file:` →
+     SQLite, `libsql://` → Turso. Local development and the tests use SQLite.
 2. **Vercel.** Import the repository and set these environment variables (Production and Preview):
 
    | Variable                                                    | Value                                                                     |
@@ -192,7 +192,7 @@ generation).
    | `ANTHROPIC_API_KEY`                                         | A key from console.anthropic.com (set a monthly spend limit there too)    |
    | `LLM_PROVIDER`                                              | `anthropic`                                                               |
    | `MODEL_RUNTIME`, `MODEL_OFFLINE`                            | `claude-haiku-5-5`                                                        |
-   | `DATABASE_URL`, `DATABASE_AUTH_TOKEN`                       | From step 1                                                               |
+   | `DATABASE_URL`                                              | The Supabase transaction pooler string from step 1                        |
    | `DAILY_BUDGET_USD`, `PER_SESSION_MAX_GENERATIONS`           | e.g. `5`, `40`                                                            |
    | `RATE_LIMIT_SESSION_PER_MINUTE`, `RATE_LIMIT_IP_PER_MINUTE` | `8`, `150`                                                                |
    | `CYO_SOFT_TURN_CAP`, `CYO_HARD_TURN_CAP`                    | `20`, `25`                                                                |
@@ -202,7 +202,8 @@ generation).
 
 3. **Deploy.** Book content is read from the deployment's files (`outputFileTracingIncludes` in
    `next.config.ts`), and detours stream over normal serverless functions.
-4. **Pre-warm production** from your machine with the Turso variables set (see above).
+4. **Pre-warm production** from your machine with `DATABASE_URL` set to the Supabase string:
+   `npm run cache:prewarm` (about $0.08 for all ~400 book detours).
 
 ## Before the pilot
 
@@ -231,7 +232,7 @@ lib/client-store/ localStorage persistence behind the ProgressStore interface
 lib/cyo/          Create Your Own genres, Surprise Me and story state
 lib/engine/       book adventure state machine, detour cache key and service
 lib/safety/       blocklist, personal-info filter, moderation
-lib/server-store/ libSQL storage (detour cache, locks, usage, events)
+lib/server-store/ shared SQL storage (detour cache, locks, usage, events) for SQLite and Postgres
 lib/llm/          model provider types, structured-output parsing, pricing
 lib/prompts/      prompt templates (offline ones now; runtime ones in Milestone 3)
 lib/reader/       reader progress math and preferences

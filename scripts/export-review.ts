@@ -16,7 +16,7 @@ import { buildReviewEntries, reviewKey, type ReviewEntry } from "../lib/engine/r
 import { detourCacheKey } from "../lib/engine/cacheKey";
 import { AdventureMapSchema } from "../lib/schemas/adventure";
 import { BookMetaSchema, CharactersSchema, ChapterSchema } from "../lib/schemas/content";
-import { LibsqlStore } from "../lib/server-store/libsqlStore";
+import { createStore } from "../lib/server-store/create";
 import { bookDir, booksFromArgs, readJson, ROOT, writeJson } from "./lib/paths";
 
 async function readOr<T>(file: string, fallback: T): Promise<T> {
@@ -33,7 +33,7 @@ function lastWords(text: string, n: number) {
 }
 
 async function main() {
-  const store = LibsqlStore.fromUrl(
+  const store = createStore(
     process.env.DATABASE_URL || "file:./data/local.db",
     process.env.DATABASE_AUTH_TOKEN || undefined,
   );

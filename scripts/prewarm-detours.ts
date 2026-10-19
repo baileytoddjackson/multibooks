@@ -26,7 +26,7 @@ import {
   SummariesSchema,
   type Chapter,
 } from "../lib/schemas/content";
-import { LibsqlStore } from "../lib/server-store/libsqlStore";
+import { createStore } from "../lib/server-store/create";
 import { isMockMode, runBatch } from "./lib/batch";
 import { bookDir, booksFromArgs, readJson, ROOT } from "./lib/paths";
 
@@ -43,7 +43,7 @@ async function loadApproved(bookId: string): Promise<Record<string, unknown>> {
 }
 
 async function main() {
-  const store = LibsqlStore.fromUrl(
+  const store = createStore(
     process.env.DATABASE_URL || "file:./data/local.db",
     process.env.DATABASE_AUTH_TOKEN || undefined,
   );

@@ -11,6 +11,21 @@ export interface StatsFilter {
 }
 
 type Row = Record<string, unknown>;
+
+/** JSON field access on events.props_json in the store's SQL dialect. */
+function jsonFields(dialect: ServerStore["dialect"]) {
+  const pg = dialect === "postgres";
+  return {
+    text: (f: string) =>
+      pg ? `(props_json::jsonb ->> '${f}')` : `json_extract(props_json, '$.${f}')`,
+    num: (f: string) =>
+      pg ? `(props_json::jsonb ->> '${f}')::numeric` : `json_extract(props_json, '$.${f}')`,
+    bool: (f: string) =>
+      pg
+        ? `COALESCE((props_json::jsonb ->> '${f}')::boolean, false)`
+        : `json_extract(props_json, '$.${f}')`,
+  };
+}
 const num = (v: unknown) => (v == null ? 0 : Number(v));
 
 /** WHERE clause + args for the events table. */
@@ -80,11 +95,12 @@ export interface Stats {
 
 export async function getStats(store: ServerStore, f: StatsFilter, today: string): Promise<Stats> {
   const q = (sql: string, args: (string | number)[]) => store.query<Row>(sql, args);
+  const j = jsonFields(store.dialect);
   const ev = (extra = "") => eventWhere(f, extra);
   const groupCount = async (type: string, field: string): Promise<Breakdown[]> => {
     const w = ev("type = ?");
     const rows = await q(
-      `SELECT json_extract(props_json, '$.${field}') AS label, COUNT(*) AS value FROM events
+      `SELECT ${j.text(field)} AS label, COUNT(*) AS value FROM events
        WHERE ${w.sql} GROUP BY label ORDER BY value DESC`,
       [...w.args, type],
     );
@@ -115,13 +131,13 @@ export async function getStats(store: ServerStore, f: StatsFilter, today: string
   const [beats] = await q(`SELECT COUNT(*) AS n FROM events WHERE ${hb.sql}`, hb.args);
   const wr = ev("type = 'words_read'");
   const [words] = await q(
-    `SELECT SUM(json_extract(props_json, '$.words')) AS n FROM events WHERE ${wr.sql}`,
+    `SELECT SUM(${j.num("words")}) AS n FROM events WHERE ${wr.sql}`,
     wr.args,
   );
 
   const ch = ev("type = 'choice_made'");
   const choiceRows = await q(
-    `SELECT json_extract(props_json, '$.context') AS c, COUNT(*) AS n FROM events WHERE ${ch.sql} GROUP BY c`,
+    `SELECT ${j.text("context")} AS c, COUNT(*) AS n FROM events WHERE ${ch.sql} GROUP BY c`,
     ch.args,
   );
   const choices = { book: 0, cyo: 0 };
@@ -129,7 +145,7 @@ export async function getStats(store: ServerStore, f: StatsFilter, today: string
 
   const ds = ev("type = 'detour_served'");
   const [det] = await q(
-    `SELECT COUNT(*) AS served, SUM(CASE WHEN json_extract(props_json, '$.cached') THEN 1 ELSE 0 END) AS cached
+    `SELECT COUNT(*) AS served, SUM(CASE WHEN ${j.bool("cached")} THEN 1 ELSE 0 END) AS cached
      FROM events WHERE ${ds.sql}`,
     ds.args,
   );
@@ -140,31 +156,27 @@ export async function getStats(store: ServerStore, f: StatsFilter, today: string
     { label: "Opened the stepper", value: await distinctSessions("type = 'create_started'") },
     {
       label: "Saw step 2 (setting)",
-      value: await distinctSessions(
-        "type = 'stepper_step_viewed' AND json_extract(props_json, '$.step') = 2",
-      ),
+      value: await distinctSessions(`type = 'stepper_step_viewed' AND ${j.num("step")} = 2`),
     },
     {
       label: "Saw step 3 (details)",
-      value: await distinctSessions(
-        "type = 'stepper_step_viewed' AND json_extract(props_json, '$.step') = 3",
-      ),
+      value: await distinctSessions(`type = 'stepper_step_viewed' AND ${j.num("step")} = 3`),
     },
     { label: "Story created", value: await distinctSessions("type = 'create_completed'") },
     { label: "Story finished", value: await distinctSessions("type = 'story_finished'") },
   ];
 
-  const step2 = ev("type = 'stepper_step_completed' AND json_extract(props_json, '$.step') = 2");
+  const step2 = ev(`type = 'stepper_step_completed' AND ${j.num("step")} = 2`);
   const [surprise] = await q(
-    `SELECT COUNT(*) AS n, SUM(CASE WHEN json_extract(props_json, '$.usedSurprise') THEN 1 ELSE 0 END) AS s
+    `SELECT COUNT(*) AS n, SUM(CASE WHEN ${j.bool("usedSurprise")} THEN 1 ELSE 0 END) AS s
      FROM events WHERE ${step2.sql}`,
     step2.args,
   );
 
-  const step1 = ev("type = 'stepper_step_completed' AND json_extract(props_json, '$.step') = 1");
+  const step1 = ev(`type = 'stepper_step_completed' AND ${j.num("step")} = 1`);
   const genres = (
     await q(
-      `SELECT json_extract(props_json, '$.genre') AS label, COUNT(*) AS value FROM events
+      `SELECT ${j.text("genre")} AS label, COUNT(*) AS value FROM events
        WHERE ${step1.sql} GROUP BY label ORDER BY value DESC`,
       step1.args,
     )
@@ -174,7 +186,7 @@ export async function getStats(store: ServerStore, f: StatsFilter, today: string
   const codes = (
     await q(
       `SELECT session_code AS code, COUNT(DISTINCT session_id) AS sessions,
-         SUM(CASE WHEN type = 'words_read' THEN json_extract(props_json, '$.words') ELSE 0 END) AS words
+         SUM(CASE WHEN type = 'words_read' THEN ${j.num("words")} ELSE 0 END) AS words
        FROM events WHERE ${codeW.sql} GROUP BY session_code ORDER BY sessions DESC`,
       codeW.args,
     )

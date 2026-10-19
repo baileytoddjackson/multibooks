@@ -1,18 +1,7 @@
-import fs from "node:fs";
-import os from "node:os";
-import path from "node:path";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { LibsqlStore } from "@/lib/server-store/libsqlStore";
-import { utcDay } from "@/lib/server-store/ServerStore";
-
-let dir: string;
-let store: LibsqlStore;
-
-beforeEach(() => {
-  dir = fs.mkdtempSync(path.join(os.tmpdir(), "multibooks-store-"));
-  store = LibsqlStore.fromUrl(`file:${path.join(dir, "test.db")}`);
-});
-afterEach(() => fs.rmSync(dir, { recursive: true, force: true }));
+import { utcDay, type ServerStore } from "@/lib/server-store/ServerStore";
+import { toPositional } from "@/lib/server-store/postgresStore";
+import { BACKENDS } from "./storeBackends";
 
 const detour = {
   cacheKey: "k1",
@@ -25,7 +14,14 @@ const detour = {
   createdAt: 1,
 };
 
-describe("LibsqlStore", () => {
+describe.each(BACKENDS)("ServerStore on $name", ({ make }) => {
+  let store: ServerStore;
+  let cleanup: () => Promise<void>;
+  beforeEach(async () => {
+    ({ store, cleanup } = await make());
+  });
+  afterEach(async () => cleanup());
+
   it("stores and returns detours, updating on conflict", async () => {
     expect(await store.getDetour("k1")).toBeUndefined();
     await store.putDetour(detour);
@@ -92,5 +88,11 @@ describe("LibsqlStore", () => {
     ]);
     const rows = await store.query<{ type: string }>("SELECT type FROM events ORDER BY ts");
     expect(rows.map((r) => r.type)).toEqual(["book_selected", "mode_chosen"]);
+  });
+});
+
+describe("toPositional", () => {
+  it("numbers placeholders for Postgres", () => {
+    expect(toPositional("a = ? AND b IN (?, ?)")).toBe("a = $1 AND b IN ($2, $3)");
   });
 });

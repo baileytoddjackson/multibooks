@@ -1,6 +1,6 @@
 import "server-only";
 import { env } from "@/lib/env";
-import { LibsqlStore } from "./libsqlStore";
+import { createStore } from "./create";
 import type { ServerStore } from "./ServerStore";
 
 let store: ServerStore | undefined;
@@ -9,7 +9,7 @@ let store: ServerStore | undefined;
 export function serverStore(): ServerStore {
   if (!store) {
     const { DATABASE_URL, DATABASE_AUTH_TOKEN } = env();
-    store = LibsqlStore.fromUrl(DATABASE_URL, DATABASE_AUTH_TOKEN);
+    store = createStore(DATABASE_URL, DATABASE_AUTH_TOKEN);
   }
   return store;
 }

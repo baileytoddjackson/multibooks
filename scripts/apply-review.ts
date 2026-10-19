@@ -13,11 +13,11 @@ import path from "node:path";
 import { detourCacheKey } from "../lib/engine/cacheKey";
 import { applyReview, type ReviewEntry } from "../lib/engine/review";
 import { splitSegments } from "../lib/prompts/detour";
-import { LibsqlStore } from "../lib/server-store/libsqlStore";
+import { createStore } from "../lib/server-store/create";
 import { booksFromArgs, ROOT, writeJson } from "./lib/paths";
 
 async function main() {
-  const store = LibsqlStore.fromUrl(
+  const store = createStore(
     process.env.DATABASE_URL || "file:./data/local.db",
     process.env.DATABASE_AUTH_TOKEN || undefined,
   );

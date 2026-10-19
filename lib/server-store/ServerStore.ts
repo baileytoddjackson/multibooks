@@ -41,7 +41,12 @@ export interface AnalyticsEvent {
   ts: number;
 }
 
+export type SqlDialect = "sqlite" | "postgres";
+
 export interface ServerStore {
+  /** Which SQL dialect `query` speaks (the admin stats SQL adapts to it). */
+  readonly dialect: SqlDialect;
+
   getDetour(cacheKey: string): Promise<CachedDetour | undefined>;
   putDetour(
     d: CachedDetour & { bookId: string; cpId: string; optionId: string; perspective: string },
