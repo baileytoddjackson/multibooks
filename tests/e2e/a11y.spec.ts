@@ -78,6 +78,21 @@ test("Create Your Own stepper and story", async ({ page }) => {
   await expectAccessible(page, "story page");
 });
 
+test("library (empty and with stories)", async ({ page, context, baseURL }) => {
+  await page.goto("/library");
+  await expect(page.getByText("Nothing here yet")).toBeVisible();
+  await expectAccessible(page, "empty library");
+  const now = Date.now();
+  await context.request.put(`${baseURL}/api/me/books/odyssey`, {
+    data: { bookId: "odyssey", position: "c001p001", fraction: 0.1, wordsRead: 1, updatedAt: now },
+  });
+  await page.reload();
+  await expect(page.getByTestId("library-entry")).toHaveCount(1);
+  await expectAccessible(page, "library");
+  await page.getByRole("button", { name: /^Remove / }).click();
+  await expectAccessible(page, "library delete confirmation");
+});
+
 test("sign-in and sign-up", async ({ page }) => {
   await page.goto("/login");
   await expectAccessible(page, "sign-in");

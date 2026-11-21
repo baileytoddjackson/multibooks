@@ -11,6 +11,7 @@ function section(path: string) {
   if (path.startsWith("/read/")) return "read" as const;
   if (path.startsWith("/create")) return "create" as const;
   if (path.startsWith("/story/")) return "story" as const;
+  if (path.startsWith("/library")) return "library" as const;
   return "other" as const;
 }
 

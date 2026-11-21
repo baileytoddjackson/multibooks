@@ -120,6 +120,20 @@ Like Create Your Own, the server is stateless: the browser sends the saved conte
 request, and the server length-limits and blocklist-checks it before use. Adventures aren't shared
 between readers, so every page counts against the budget and rate limits.
 
+## My library
+
+`/library` lists everything a reader has saved: books they're reading as written, their
+adventures, and their Create Your Own stories (`lib/library/entries.ts`).
+
+- **Find:** search by title or book (ignoring case and accents), sort by most recent, title or
+  book, and filter by book and by kind. Filters live in the URL, so they survive a reload and
+  going back from a story.
+- **Each entry shows** its kind, source book or genre, progress (% read, or pages so far /
+  finished) and when it was last updated, with Resume, Rename (stories) and Delete (asks first;
+  for a book read as written it forgets the reader's place).
+- The home page keeps "Continue reading" and "My Stories" rows with the six most recent of each,
+  linking to the full library.
+
 ## Create Your Own
 
 A 3-step stepper (genre → setting → optional details) starts a fully generated story.

@@ -34,7 +34,7 @@ export const EventSchemas = {
     words: z.number().int().min(0).max(5000),
   }),
   session_heartbeat: z.object({
-    path: z.enum(["dashboard", "book", "read", "create", "story", "other"]),
+    path: z.enum(["dashboard", "book", "read", "create", "story", "library", "other"]),
   }),
   create_started: z.object({}),
   stepper_step_viewed: z.object({ step: z.number().int().min(1).max(3) }),

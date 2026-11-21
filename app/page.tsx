@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BookCard, CreateCard } from "@/components/dashboard/BookCard";
 import { SavedRows } from "@/components/dashboard/SavedRows";
 import { AccountMenu } from "@/components/ui/AccountMenu";
@@ -11,7 +12,15 @@ export default function Dashboard() {
       <header className="px-4 pt-6 sm:px-8">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
           <Logo />
-          <AccountMenu />
+          <div className="flex items-center gap-2">
+            <Link
+              href="/library"
+              className="inline-flex min-h-11 items-center rounded-full px-4 font-semibold hover:bg-paper-deep"
+            >
+              My library
+            </Link>
+            <AccountMenu />
+          </div>
         </div>
       </header>
 
