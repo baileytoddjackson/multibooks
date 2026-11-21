@@ -1,9 +1,9 @@
 import { expect, test } from "./fixtures";
 
-test("dashboard shows the three books and Create Your Own", async ({ page }) => {
+test("dashboard shows the four books and Create Your Own", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toContainText("Pick a book");
-  for (const id of ["alice", "odyssey", "moby-dick"]) {
+  for (const id of ["alice", "odyssey", "moby-dick", "sherlock"]) {
     await expect(page.getByTestId(`book-card-${id}`)).toBeVisible();
   }
   await expect(page.getByTestId("create-card")).toBeVisible();

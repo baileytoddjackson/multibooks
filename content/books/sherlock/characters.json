@@ -1,0 +1,54 @@
+{
+  "bookId": "sherlock",
+  "characters": [
+    {
+      "id": "holmes",
+      "name": "Sherlock Holmes",
+      "alsoKnownAs": [
+        "Holmes"
+      ],
+      "oneLine": "A brilliant London detective who solves mysteries by noticing tiny details.",
+      "profile": "Sherlock Holmes is a consulting detective at 221B Baker Street in London. He reads people from the smallest clues (a scuff on a boot, a stain on a sleeve) and reasons his way to the truth. He is calm, confident, sometimes restless when there is no case, and fond of disguises and dramatic reveals. He respects cleverness wherever he finds it, even in an opponent.",
+      "voiceNotes": "Crisp, precise, a little teasing (\"You see, but you do not observe.\"). Explains deductions step by step once the puzzle is solved. Never cruel; impatient with dull thinking.",
+      "firstAppearsChapter": 1,
+      "pov": "third"
+    },
+    {
+      "id": "watson",
+      "name": "Dr. Watson",
+      "alsoKnownAs": [
+        "Watson",
+        "John Watson"
+      ],
+      "oneLine": "Holmes's loyal friend, a doctor who tells every story.",
+      "profile": "Dr. John Watson is a doctor and Holmes's closest friend. He narrates the cases. He is brave, warm-hearted and practical, and often amazed by Holmes's deductions. He notices people's feelings more than clues, which sometimes helps where Holmes's logic does not.",
+      "voiceNotes": "First person, friendly and admiring, a storyteller's voice (\"I had called upon my friend…\"). Honest about what he missed. Simpler sentences than the original.",
+      "firstAppearsChapter": 1,
+      "pov": "first"
+    },
+    {
+      "id": "irene-adler",
+      "name": "Irene Adler",
+      "alsoKnownAs": [
+        "the woman"
+      ],
+      "oneLine": "A quick-witted opera singer who outsmarts even Holmes.",
+      "profile": "Irene Adler is a famous singer living in London. In A Scandal in Bohemia, a king hires Holmes to recover a photograph from her. She sees through Holmes's disguise and slips away first, leaving him a polite note. Ever after, Holmes calls her \"the woman\" out of respect for her cleverness.",
+      "voiceNotes": "Cool, confident and playful; always one step ahead; polite even when winning.",
+      "firstAppearsChapter": 1,
+      "pov": "third"
+    },
+    {
+      "id": "lestrade",
+      "name": "Inspector Lestrade",
+      "alsoKnownAs": [
+        "Lestrade"
+      ],
+      "oneLine": "A hard-working Scotland Yard detective who often guesses wrong.",
+      "profile": "Inspector Lestrade is an official police detective from Scotland Yard. He is energetic and determined but tends to jump to the obvious answer. He asks for Holmes's help, grumbles about his methods, and is quietly impressed when Holmes turns out to be right.",
+      "voiceNotes": "Brisk, practical, a little proud (\"Facts, Mr. Holmes, facts!\"). Never stupid, just too quick to decide.",
+      "firstAppearsChapter": 4,
+      "pov": "third"
+    }
+  ]
+}

@@ -7,6 +7,8 @@ import { TrackedLink } from "@/components/ui/TrackedLink";
 import { Logo } from "@/components/ui/Logo";
 import { SiteFooter } from "@/components/ui/SiteFooter";
 import { BOOKS, getBook, readingTimeLabel } from "@/lib/content/books";
+import { loadAdventureMap, loadSummaries } from "@/lib/content/load";
+import { adventureAvailable } from "@/lib/engine/bookAdventure";
 
 export function generateStaticParams() {
   return BOOKS.map((b) => ({ bookId: b.id }));
@@ -44,6 +46,8 @@ async function BookDetails({ params }: { params: PageProps<"/book/[bookId]">["pa
   const { bookId } = await params;
   const book = getBook(bookId);
   if (!book) notFound();
+  const [map, summaries] = await Promise.all([loadAdventureMap(book.id), loadSummaries(book.id)]);
+  const canAdventure = adventureAvailable(map, summaries);
   return (
     <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-[2fr_3fr] md:items-start">
       <CoverArt
@@ -80,21 +84,35 @@ async function BookDetails({ params }: { params: PageProps<"/book/[bookId]">["pa
             </TrackedLink>
           </li>
           <li>
-            <TrackedLink
-              event="mode_chosen"
-              eventProps={{ bookId: book.id, mode: "adventure" }}
-              href={`/read/${book.id}?mode=adventure`}
-              className="flex flex-col gap-1 rounded-2xl bg-card p-5 ring-2 ring-coral/40 transition-colors hover:ring-coral-strong"
-              data-testid="mode-adventure"
-            >
-              <span className="font-display text-xl font-semibold">
-                Adventure Mode <span aria-hidden="true">✦</span>
-              </span>
-              <span className="text-ink-soft">
-                Start with the real opening, then make a choice and the story becomes yours: a new
-                adventure that follows the book loosely, shaped by every choice you make.
-              </span>
-            </TrackedLink>
+            {canAdventure ? (
+              <TrackedLink
+                event="mode_chosen"
+                eventProps={{ bookId: book.id, mode: "adventure" }}
+                href={`/read/${book.id}?mode=adventure`}
+                className="flex flex-col gap-1 rounded-2xl bg-card p-5 ring-2 ring-coral/40 transition-colors hover:ring-coral-strong"
+                data-testid="mode-adventure"
+              >
+                <span className="font-display text-xl font-semibold">
+                  Adventure Mode <span aria-hidden="true">✦</span>
+                </span>
+                <span className="text-ink-soft">
+                  Start with the real opening, then make a choice and the story becomes yours: a new
+                  adventure that follows the book loosely, shaped by every choice you make.
+                </span>
+              </TrackedLink>
+            ) : (
+              <div
+                className="flex flex-col gap-1 rounded-2xl bg-paper-deep p-5 ring-2 ring-line"
+                data-testid="mode-adventure-soon"
+              >
+                <span className="font-display text-xl font-semibold">
+                  Adventure Mode <span aria-hidden="true">✦</span>
+                </span>
+                <span className="text-ink-soft">
+                  Coming soon for this book. For now, enjoy the original story!
+                </span>
+              </div>
+            )}
           </li>
         </ul>
       </div>

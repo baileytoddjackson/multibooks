@@ -10,9 +10,28 @@ import type { InteractionStyle } from "@/lib/client-store/types";
  * never returns to the original text. Reading as written never shows the choice.
  */
 
-/** The book's entry choice point: the intro one, or the first if none is marked. */
+/**
+ * The book's entry choice point: the intro one, or the first if none is marked. A placeholder map
+ * (written without an API key) has no entry: its choices aren't fit to show readers.
+ */
 export function entryChoicePoint(map: AdventureMap | undefined): ChoicePoint | undefined {
-  return map?.choicePoints.find((cp) => cp.isIntro) ?? map?.choicePoints[0];
+  if (!map || map.generatedBy === "placeholder") return undefined;
+  return map.choicePoints.find((cp) => cp.isIntro) ?? map.choicePoints[0];
+}
+
+/**
+ * Whether Adventure Mode is ready for a book: a real entry choice, and real summaries (the
+ * adventure's premise and storyline come from them). Placeholders mean "not yet".
+ */
+export function adventureAvailable(
+  map: AdventureMap | undefined,
+  summaries: { chapters: { generatedBy: string }[] } | undefined,
+): boolean {
+  return (
+    !!entryChoicePoint(map) &&
+    !!summaries?.chapters.length &&
+    summaries.chapters.every((c) => c.generatedBy !== "placeholder")
+  );
 }
 
 export interface ChoiceView {

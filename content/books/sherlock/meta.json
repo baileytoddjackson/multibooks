@@ -1,0 +1,16 @@
+{
+  "id": "sherlock",
+  "title": "The Adventures of Sherlock Holmes",
+  "shortTitle": "Sherlock Holmes",
+  "author": "Arthur Conan Doyle",
+  "gutenbergId": 1661,
+  "hook": "Twelve baffling cases, one brilliant detective, and a doctor who writes it all down.",
+  "difficulty": "medium",
+  "length": "medium",
+  "estMinutes": 704,
+  "cover": {
+    "from": "#2E3B32",
+    "to": "#9A5B34",
+    "motif": "magnifier"
+  }
+}

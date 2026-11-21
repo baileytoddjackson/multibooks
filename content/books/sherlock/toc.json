@@ -1,0 +1,90 @@
+{
+  "bookId": "sherlock",
+  "totalWords": 105642,
+  "chapters": [
+    {
+      "index": 1,
+      "title": "A Scandal in Bohemia",
+      "wordCount": 8621,
+      "pages": 11,
+      "wordsBefore": 0
+    },
+    {
+      "index": 2,
+      "title": "The Red-Headed League",
+      "wordCount": 9265,
+      "pages": 12,
+      "wordsBefore": 8621
+    },
+    {
+      "index": 3,
+      "title": "A Case of Identity",
+      "wordCount": 7026,
+      "pages": 10,
+      "wordsBefore": 17886
+    },
+    {
+      "index": 4,
+      "title": "The Boscombe Valley Mystery",
+      "wordCount": 9706,
+      "pages": 14,
+      "wordsBefore": 24912
+    },
+    {
+      "index": 5,
+      "title": "The Five Orange Pips",
+      "wordCount": 7418,
+      "pages": 10,
+      "wordsBefore": 34618
+    },
+    {
+      "index": 6,
+      "title": "The Man with the Twisted Lip",
+      "wordCount": 9295,
+      "pages": 12,
+      "wordsBefore": 42036
+    },
+    {
+      "index": 7,
+      "title": "The Adventure of the Blue Carbuncle",
+      "wordCount": 7915,
+      "pages": 11,
+      "wordsBefore": 51331
+    },
+    {
+      "index": 8,
+      "title": "The Adventure of the Speckled Band",
+      "wordCount": 9901,
+      "pages": 13,
+      "wordsBefore": 59246
+    },
+    {
+      "index": 9,
+      "title": "The Adventure of the Engineer’s Thumb",
+      "wordCount": 8436,
+      "pages": 11,
+      "wordsBefore": 69147
+    },
+    {
+      "index": 10,
+      "title": "The Adventure of the Noble Bachelor",
+      "wordCount": 8185,
+      "pages": 11,
+      "wordsBefore": 77583
+    },
+    {
+      "index": 11,
+      "title": "The Adventure of the Beryl Coronet",
+      "wordCount": 9802,
+      "pages": 13,
+      "wordsBefore": 85768
+    },
+    {
+      "index": 12,
+      "title": "The Adventure of the Copper Beeches",
+      "wordCount": 10072,
+      "pages": 13,
+      "wordsBefore": 95570
+    }
+  ]
+}

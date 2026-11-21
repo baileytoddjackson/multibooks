@@ -9,6 +9,7 @@ export const BOOK_SOURCES = {
   alice: { gutenbergId: 11 },
   odyssey: { gutenbergId: 1727 },
   "moby-dick": { gutenbergId: 2701 },
+  sherlock: { gutenbergId: 1661 },
 } as const;
 
 export type ScriptBookId = keyof typeof BOOK_SOURCES;

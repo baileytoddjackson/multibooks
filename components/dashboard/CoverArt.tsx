@@ -64,6 +64,15 @@ const MOTIFS: Record<Motif, React.ReactNode> = {
       <path d="M50 172 q 20 -12 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0" opacity="0.5" />
     </>
   ),
+  magnifier: (
+    <>
+      <circle cx="132" cy="92" r="40" />
+      <circle cx="132" cy="92" r="31" opacity="0.5" strokeWidth="2" />
+      <path d="M161 121 L204 164" strokeWidth="9" />
+      <path d="M116 78 q 8 -10 22 -10" opacity="0.7" strokeWidth="3" />
+      <path d="M40 174 h 40 M96 174 h 24 M228 174 h 34" opacity="0.5" strokeDasharray="2 10" />
+    </>
+  ),
   quill: (
     <>
       <path d="M118 150 C 140 110, 170 70, 210 46 C 200 90, 168 124, 126 146" />

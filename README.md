@@ -62,7 +62,7 @@ npm run content:maps           # the Adventure Mode entry choice via the Batch A
 npm run content:validate       # check everything (also runs in `npm test`)
 ```
 
-All of these accept `--book alice|odyssey|moby-dick`.
+All of these accept `--book alice|odyssey|moby-dick|sherlock`.
 
 - **Summaries need `ANTHROPIC_API_KEY`** in `.env.local`. Without a key, the script writes
   placeholder summaries (marked `generatedBy: "placeholder"`) so the rest of the app still works.
@@ -80,11 +80,12 @@ All of these accept `--book alice|odyssey|moby-dick`.
 - **Paragraph ids** (`c003p017`) are stable anchors used by adventure maps. If you change the
   cleaning rules, re-run `content:validate`.
 
-| Book                             | Source                                 | Notes                                                                     |
-| -------------------------------- | -------------------------------------- | ------------------------------------------------------------------------- |
-| Alice's Adventures in Wonderland | Gutenberg #11                          | Poems keep their line breaks                                              |
-| The Odyssey                      | Gutenberg #1727 (Samuel Butler, prose) | Uses Roman names (Ulysses, Minerva). Prefaces and footnotes are stripped  |
-| Moby-Dick                        | Gutenberg #2701                        | Etymology and Extracts front matter skipped; Epilogue kept as chapter 136 |
+| Book                              | Source                                 | Notes                                                                     |
+| --------------------------------- | -------------------------------------- | ------------------------------------------------------------------------- |
+| Alice's Adventures in Wonderland  | Gutenberg #11                          | Poems keep their line breaks                                              |
+| The Odyssey                       | Gutenberg #1727 (Samuel Butler, prose) | Uses Roman names (Ulysses, Minerva). Prefaces and footnotes are stripped  |
+| Moby-Dick                         | Gutenberg #2701                        | Etymology and Extracts front matter skipped; Epilogue kept as chapter 136 |
+| The Adventures of Sherlock Holmes | Gutenberg #1661                        | Each of the 12 stories is a chapter; numbered parts become scene breaks   |
 
 ### Adding a book
 
@@ -93,7 +94,10 @@ All of these accept `--book alice|odyssey|moby-dick`.
 2. Create `content/books/<id>/meta.json` and `characters.json`, register the meta in
    `lib/content/books.ts`, and add the id to `BookIdSchema` in `lib/schemas/content.ts`.
 3. Run `content:fetch`, `content:chunk`, `content:summaries`, `content:maps` and
-   `content:validate` with `--book <id>`.
+   `content:validate` with `--book <id>`. (`content:fetch` falls back to Gutenberg's official
+   PGLAF mirror if the main site is down.)
+4. Until summaries and the adventure map come from the model (not placeholders), the book reads
+   as written and its Adventure Mode shows "Coming soon".
 
 ## Adventure Mode
 

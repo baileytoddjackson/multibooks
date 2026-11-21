@@ -16,6 +16,7 @@ export const CHOICE_POINT_CAPS: Record<string, number> = {
   alice: 1,
   odyssey: 1,
   "moby-dick": 1,
+  sherlock: 1,
 };
 
 /** How far after the choice its scene may end in the original (checked, never shown). */
@@ -24,7 +25,8 @@ export const MAX_SKIPPED_PARAGRAPHS = 6;
 export const MIN_INTRO_WORDS = 800;
 
 /**
- * Chapters that never get a choice point (they're still readable as written). Hand-curated from
+ * Chapters that never get a choice point, and that Adventure Mode's storyline outline leaves out
+ * (they're still readable as written). Hand-curated from
  * the content notes in summaries.json, because keyword matching can't tell the Queen's comic
  * "Off with her head!" from the Odyssey's genuinely graphic Book XXII. Review before the pilot.
  */
@@ -40,6 +42,10 @@ export const EXCLUDED_CHAPTERS: Record<string, Record<number, string>> = {
     66: "Graphic shark gore",
     70: "Severed whale head",
     112: "Suicidal longing",
+  },
+  sherlock: {
+    5: "The Ku Klux Klan as the villains, and murders",
+    6: "An opium den",
   },
 };
 

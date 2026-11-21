@@ -2,7 +2,7 @@ import { z } from "zod";
 
 /** Static, committed book content. Every JSON file under content/books is validated against these. */
 
-export const BookIdSchema = z.enum(["alice", "odyssey", "moby-dick"]);
+export const BookIdSchema = z.enum(["alice", "odyssey", "moby-dick", "sherlock"]);
 export type BookId = z.infer<typeof BookIdSchema>;
 
 const HexColor = z.string().regex(/^#[0-9A-Fa-f]{6}$/);
@@ -22,7 +22,7 @@ export const BookMetaSchema = z.object({
   cover: z.object({
     from: HexColor,
     to: HexColor,
-    motif: z.enum(["watch", "sail", "whale"]),
+    motif: z.enum(["watch", "sail", "whale", "magnifier"]),
   }),
 });
 export type BookMeta = z.infer<typeof BookMetaSchema>;

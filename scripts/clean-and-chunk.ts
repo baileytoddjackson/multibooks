@@ -80,6 +80,20 @@ const EXTRACTORS: Record<ScriptBookId, (body: string) => RawChapter[]> = {
     });
   },
 
+  sherlock(body) {
+    // The contents list is indented; story headings ("I. A SCANDAL IN BOHEMIA") start at column 0.
+    // Some stories are split into numbered parts ("I.", "II." on their own line): those become
+    // scene breaks (a leading one, right under the heading, is dropped by buildChapter).
+    return splitByHeadings(body, /^[IVX]+\. [A-Z].+$/m).map(({ heading, text }) => ({
+      // Hyphenated words keep both capitals, as in the book's contents ("The Red-Headed League").
+      title: titleCase(heading.replace(/^[IVX]+\. /, "")).replace(
+        /-(\p{Ll})/gu,
+        (_, c: string) => `-${c.toUpperCase()}`,
+      ),
+      body: text.replace(/^[ \t]*[IVX]+\.[ \t]*$/gm, "* * *"),
+    }));
+  },
+
   "moby-dick"(body) {
     // The contents list repeats every heading at column 0, so start at the *second* "CHAPTER 1.".
     // Etymology / Extracts front matter is intentionally skipped for this audience.

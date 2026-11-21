@@ -1,14 +1,15 @@
 import aliceMeta from "@/content/books/alice/meta.json";
 import odysseyMeta from "@/content/books/odyssey/meta.json";
 import mobyDickMeta from "@/content/books/moby-dick/meta.json";
+import sherlockMeta from "@/content/books/sherlock/meta.json";
 import { BookMetaSchema, type BookId, type BookMeta } from "@/lib/schemas/content";
 
 /**
  * Book registry. Content is static JSON bundled at build time — never fetched at runtime.
  * To add a book: add its folder under content/books, import its meta here, and extend BookIdSchema.
  */
-export const BOOKS: readonly BookMeta[] = [aliceMeta, odysseyMeta, mobyDickMeta].map((m) =>
-  BookMetaSchema.parse(m),
+export const BOOKS: readonly BookMeta[] = [aliceMeta, odysseyMeta, mobyDickMeta, sherlockMeta].map(
+  (m) => BookMetaSchema.parse(m),
 );
 
 export function getBook(id: string): BookMeta | undefined {

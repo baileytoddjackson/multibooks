@@ -65,3 +65,34 @@ test("contents dialog jumps to a chapter", async ({ page }) => {
   await expect(page).toHaveURL(/\/read\/moby-dick\/28/);
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Ahab");
 });
+
+test("Sherlock Holmes reads as written, story by story", async ({ page }) => {
+  await page.goto("/");
+  await page.getByTestId("book-card-sherlock").click();
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText(
+    "The Adventures of Sherlock Holmes",
+  );
+  await page.getByTestId("mode-canon").click();
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("A Scandal in Bohemia");
+  await expect(page.getByText(/To Sherlock Holmes she is always/)).toBeVisible();
+
+  // Each story is a chapter in the contents.
+  await page.getByRole("button", { name: /Contents/ }).click();
+  await expect(page.getByRole("link", { name: /The Red-Headed League/ })).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: /The Adventure of the Copper Beeches/ }),
+  ).toBeVisible();
+});
+
+test("Adventure Mode waits for a book's real content instead of showing placeholders", async ({
+  page,
+}) => {
+  // Sherlock's summaries and entry choice are placeholders until content:summaries and
+  // content:maps run with an API key; then this test should be updated.
+  await page.goto("/book/sherlock");
+  await expect(page.getByTestId("mode-adventure-soon")).toContainText("Coming soon");
+  await expect(page.getByTestId("mode-adventure")).toHaveCount(0);
+  await page.goto("/read/sherlock/1?mode=adventure");
+  await expect(page.getByText("Adventures for this book are still being written")).toBeVisible();
+  await expect(page.getByTestId("choice-prompt")).toHaveCount(0);
+});

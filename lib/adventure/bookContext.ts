@@ -1,6 +1,8 @@
 import "server-only";
+import { EXCLUDED_CHAPTERS } from "@/lib/content/adventureMap";
 import { getBook } from "@/lib/content/books";
 import { loadAdventureMap, loadCharacters, loadSummaries } from "@/lib/content/load";
+import { adventureAvailable, entryChoicePoint } from "@/lib/engine/bookAdventure";
 import type { ChoicePoint } from "@/lib/schemas/adventure";
 import type { BookMeta, Character, Summaries } from "@/lib/schemas/content";
 import { buildOutline, type Beat } from "./outline";
@@ -24,13 +26,21 @@ export async function loadAdventureBook(bookId: string): Promise<AdventureBookCo
     loadSummaries(book.id),
     loadCharacters(book.id),
   ]);
-  const entry = map?.choicePoints.find((cp) => cp.isIntro) ?? map?.choicePoints[0];
-  if (!entry) return undefined;
+  const entry = entryChoicePoint(map);
+  if (!entry || !adventureAvailable(map, summaries)) return undefined;
   return {
     book,
     summaries,
     cast: characters.characters,
     entry,
-    outline: buildOutline(summaries, entry.chapter),
+    // Chapters flagged for mature content never steer an adventure.
+    outline: buildOutline(
+      {
+        chapters: summaries.chapters.filter(
+          (c) => !(c.index in (EXCLUDED_CHAPTERS[book.id] ?? {})),
+        ),
+      },
+      entry.chapter,
+    ),
   };
 }

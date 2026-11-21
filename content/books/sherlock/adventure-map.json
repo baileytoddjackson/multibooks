@@ -1,0 +1,84 @@
+{
+  "bookId": "sherlock",
+  "version": 1,
+  "generatedBy": "placeholder",
+  "choicePoints": [
+    {
+      "id": "cp01",
+      "chapter": 1,
+      "anchorAfter": "c001p010",
+      "rejoinAt": "c001p012",
+      "prompt": "[Placeholder] What would you like to do next?",
+      "isIntro": true,
+      "availableCharacters": [
+        "holmes",
+        "watson",
+        "irene-adler"
+      ],
+      "plotOptions": [
+        {
+          "id": "p1",
+          "label": "[Placeholder] Try path 1",
+          "detourBrief": "Placeholder detour 1: a short side moment that leads back to the original text.",
+          "mustPreserve": []
+        },
+        {
+          "id": "p2",
+          "label": "[Placeholder] Try path 2",
+          "detourBrief": "Placeholder detour 2: a short side moment that leads back to the original text.",
+          "mustPreserve": []
+        },
+        {
+          "id": "p3",
+          "label": "[Placeholder] Try path 3",
+          "detourBrief": "Placeholder detour 3: a short side moment that leads back to the original text.",
+          "mustPreserve": []
+        }
+      ],
+      "characterOptions": {
+        "holmes": [
+          {
+            "id": "holmes-1",
+            "label": "[Placeholder] Try path 1",
+            "detourBrief": "Placeholder detour 1: a short side moment that leads back to the original text.",
+            "mustPreserve": []
+          },
+          {
+            "id": "holmes-2",
+            "label": "[Placeholder] Try path 2",
+            "detourBrief": "Placeholder detour 2: a short side moment that leads back to the original text.",
+            "mustPreserve": []
+          }
+        ],
+        "watson": [
+          {
+            "id": "watson-1",
+            "label": "[Placeholder] Try path 1",
+            "detourBrief": "Placeholder detour 1: a short side moment that leads back to the original text.",
+            "mustPreserve": []
+          },
+          {
+            "id": "watson-2",
+            "label": "[Placeholder] Try path 2",
+            "detourBrief": "Placeholder detour 2: a short side moment that leads back to the original text.",
+            "mustPreserve": []
+          }
+        ],
+        "irene-adler": [
+          {
+            "id": "irene-adler-1",
+            "label": "[Placeholder] Try path 1",
+            "detourBrief": "Placeholder detour 1: a short side moment that leads back to the original text.",
+            "mustPreserve": []
+          },
+          {
+            "id": "irene-adler-2",
+            "label": "[Placeholder] Try path 2",
+            "detourBrief": "Placeholder detour 2: a short side moment that leads back to the original text.",
+            "mustPreserve": []
+          }
+        ]
+      }
+    }
+  ]
+}
