@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./fixtures";
 
 test("dashboard shows the three books and Create Your Own", async ({ page }) => {
   await page.goto("/");
@@ -11,24 +11,20 @@ test("dashboard shows the three books and Create Your Own", async ({ page }) => 
   await expect(page.getByRole("heading", { name: "Continue reading" })).toHaveCount(0);
 });
 
-test("saved progress appears in Continue reading", async ({ page }) => {
+test("saved progress appears in Continue reading", async ({ page, context, baseURL }) => {
+  // Progress is saved to the account, so seed it through the API.
+  const res = await context.request.put(`${baseURL}/api/me/books/odyssey`, {
+    data: {
+      bookId: "odyssey",
+      mode: "canon",
+      position: "c001p004",
+      fraction: 0.3,
+      wordsRead: 500,
+      updatedAt: Date.now(),
+    },
+  });
+  expect(res.status()).toBe(204);
   await page.goto("/");
-  await page.evaluate(() =>
-    localStorage.setItem(
-      "multibooks:v1:books",
-      JSON.stringify({
-        odyssey: {
-          bookId: "odyssey",
-          mode: "canon",
-          position: "c01p004",
-          fraction: 0.3,
-          wordsRead: 500,
-          updatedAt: Date.now(),
-        },
-      }),
-    ),
-  );
-  await page.reload();
   await expect(page.getByRole("heading", { name: "Continue reading" })).toBeVisible();
   await expect(page.getByRole("progressbar", { name: "The Odyssey progress" })).toBeVisible();
 });

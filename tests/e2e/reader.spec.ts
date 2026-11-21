@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./fixtures";
 
 test("dashboard → book → read as written opens chapter 1", async ({ page }) => {
   await page.goto("/");

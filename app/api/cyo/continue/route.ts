@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { currentUser, unauthorized } from "@/lib/auth/session";
 import { guardGeneration, ipHashFor, recordGeneration } from "@/lib/budget/budget";
 import { GENRES, type GenreId } from "@/lib/cyo/genres";
 import { env } from "@/lib/env";
@@ -31,6 +32,8 @@ const BodySchema = z.object({
 });
 
 export async function POST(request: Request) {
+  const user = await currentUser();
+  if (!user) return unauthorized();
   const parsed = BodySchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success)
     return Response.json({ type: "error", code: "bad_request" }, { status: 400 });
@@ -48,14 +51,14 @@ export async function POST(request: Request) {
     }
     const store = serverStore();
     const allowed = await guardGeneration(store, {
-      sessionId: b.sessionId,
+      sessionId: user.id,
       ipHash: ipHashFor(request.headers),
     });
     if (!allowed.ok) {
       send({ type: "denied", reason: allowed.reason, retryAfterSec: allowed.retryAfterSec });
       return;
     }
-    await recordGeneration(store, b.sessionId);
+    await recordGeneration(store, user.id);
 
     // The hard cap always forces an ending, whatever the client asks for.
     const phase = b.wantEnding || b.turn >= CYO_HARD_TURN_CAP ? "ending" : "continue";

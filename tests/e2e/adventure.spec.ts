@@ -1,4 +1,4 @@
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test, type Page } from "./fixtures";
 
 /** Turns pages until the first choice appears (the intro choice is somewhere in chapter 1). */
 async function readToFirstChoice(page: Page, opts: { navigate?: boolean } = {}) {

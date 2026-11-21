@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { currentUser, unauthorized } from "@/lib/auth/session";
 import { ipHashFor } from "@/lib/budget/budget";
 import { getDetour } from "@/lib/engine/detourService";
 
@@ -23,6 +24,8 @@ const BodySchema = z.object({
 });
 
 export async function POST(request: Request) {
+  const user = await currentUser();
+  if (!user) return unauthorized();
   const parsed = BodySchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) {
     return Response.json({ type: "error", code: "bad_request" }, { status: 400 });
@@ -35,7 +38,7 @@ export async function POST(request: Request) {
         controller.enqueue(encoder.encode(`data: ${JSON.stringify(event)}\n\n`));
       try {
         const outcome = await getDetour(
-          { ...parsed.data, ipHash: ipHashFor(request.headers) },
+          { ...parsed.data, userId: user.id, ipHash: ipHashFor(request.headers) },
           (text) => send({ type: "delta", text }),
         );
         switch (outcome.status) {

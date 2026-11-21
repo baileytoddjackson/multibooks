@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./fixtures";
 
 test("reader activity shows up in password-protected admin stats", async ({ page }) => {
   // Tag this device with a group code, then do a little reading.
@@ -71,4 +71,35 @@ test("admin pages are not reachable without signing in", async ({ request }) => 
   const html = await res.text();
   expect(html).toContain("Admin password");
   expect(html).not.toContain("Headline numbers");
+  // Password resets need the admin cookie too.
+  const reset = await request.post("/admin/reset-password", {
+    form: { email: "anyone@example.com", password: "taken-over-123" },
+    maxRedirects: 0,
+  });
+  expect(reset.headers().location).toMatch(/\/admin\/stats$/);
+});
+
+test("an admin can reset a reader's password, which signs them out", async ({
+  page,
+  account,
+  browser,
+  baseURL,
+}) => {
+  await page.goto("/admin/stats");
+  await page.getByLabel("Admin password").fill("test-admin");
+  await page.getByRole("button", { name: "Sign in" }).click();
+  await page.getByLabel("Reader's email").fill(account.email);
+  await page.getByLabel("New password").fill("brand-new-pass");
+  await page.getByRole("button", { name: "Reset password" }).click();
+  await expect(page.getByText("Password changed.")).toBeVisible();
+
+  // The reader's old session no longer works…
+  expect((await page.request.get("/api/me")).status()).toBe(401);
+  // …the old password is rejected and the new one works.
+  const fresh = await browser.newContext({ baseURL });
+  const login = (password: string) =>
+    fresh.request.post("/api/auth/login", { data: { email: account.email, password } });
+  expect((await login(account.password)).status()).toBe(401);
+  expect((await login("brand-new-pass")).ok()).toBe(true);
+  await fresh.close();
 });

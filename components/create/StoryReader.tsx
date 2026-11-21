@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { ReaderControls } from "@/components/reader/ReaderControls";
 import { StyleSelector } from "@/components/reader/StyleSelector";
 import { FeedbackLink } from "@/components/ui/FeedbackLink";
-import { getStore, notifyStoreChanged, useStoreVersion } from "@/lib/client-store";
+import { getStore, notifyStoreChanged, useStoreStatus, useStoreVersion } from "@/lib/client-store";
 import type { CyoStory } from "@/lib/client-store/types";
 import { genreLabel } from "@/lib/cyo/genres";
 import {
@@ -57,7 +57,8 @@ export function StoryReader({
   softCap: number;
   hardCap: number;
 }) {
-  const version = useStoreVersion();
+  useStoreVersion(); // re-render on changes
+  const status = useStoreStatus();
   const [prefs, setPrefs] = useReaderPrefs();
   const [live, setLive] = useState<Live>({ state: "idle" });
   const [dismissedWrapUpAt, setDismissedWrapUpAt] = useState(-1);
@@ -66,7 +67,7 @@ export function StoryReader({
   const newSegmentRef = useRef<HTMLDivElement>(null);
   const prevCount = useRef(0);
 
-  const story = version >= 0 ? getStore().getStory(storyId) : undefined;
+  const story = status === "ready" ? getStore().getStory(storyId) : undefined;
   const count = story?.segments.length ?? 0;
 
   // When a new segment lands, bring its start into view and move focus there for screen readers.
@@ -78,14 +79,12 @@ export function StoryReader({
     prevCount.current = count;
   }, [count]);
 
-  if (version < 0) return <div className="min-h-dvh bg-paper" aria-busy="true" />;
+  if (status === "loading") return <div className="min-h-dvh bg-paper" aria-busy="true" />;
   if (!story) {
     return (
       <main id="main" className="mx-auto max-w-md px-4 py-16 text-center">
         <p className="font-display text-2xl font-semibold">We couldn&apos;t find that story.</p>
-        <p className="mt-2 text-ink-soft">
-          Stories are saved on this device. Want to start a new one?
-        </p>
+        <p className="mt-2 text-ink-soft">It may have been deleted. Want to start a new one?</p>
         <Link
           href="/create"
           className="mt-5 inline-flex min-h-12 items-center rounded-full bg-plum px-6 font-semibold text-white"

@@ -1,14 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { getStore, useStoreVersion } from "@/lib/client-store";
+import { getStore, useStoreStatus, useStoreVersion } from "@/lib/client-store";
 import { getBook } from "@/lib/content/books";
 import { CoverArt } from "./CoverArt";
 
-/** "Continue reading" and "My Stories" rows, read from the client store after hydration. */
+/** "Continue reading" and "My Stories" rows, once the reader's saved data has loaded. */
 export function SavedRows() {
-  const version = useStoreVersion();
-  if (version < 0) return null; // server render / pre-hydration: nothing saved to show yet
+  useStoreVersion(); // re-render on changes
+  const status = useStoreStatus();
+  if (status !== "ready") return null; // server render, or still loading the reader's library
 
   const store = getStore();
   const progress = store.listBookProgress();

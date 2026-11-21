@@ -1,13 +1,23 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
-import type { ProgressStore } from "./ProgressStore";
-import { createMemoryStorage, LocalStorageProgressStore } from "./localStorageStore";
+import { useEffect, useSyncExternalStore } from "react";
+import { httpRemote } from "./remote";
+import { createMemoryStorage, SyncedProgressStore, type StoreStatus } from "./syncedStore";
 
-let store: ProgressStore | undefined;
+let store: SyncedProgressStore | undefined;
 
-/** The app-wide client store. Falls back to memory when localStorage is unavailable. */
-export function getStore(): ProgressStore {
+function signInAgain() {
+  const here = window.location.pathname + window.location.search;
+  // A full load on purpose: the in-memory store must not outlive the session.
+  // eslint-disable-next-line @next/next/no-location-assign-relative-destination
+  window.location.assign(`/login?next=${encodeURIComponent(here)}`);
+}
+
+/**
+ * The app-wide client store: account data from the server, device data in localStorage (or
+ * memory when localStorage is unavailable).
+ */
+export function getStore(): SyncedProgressStore {
   if (!store) {
     let storage;
     try {
@@ -16,7 +26,16 @@ export function getStore(): ProgressStore {
     } catch {
       storage = createMemoryStorage();
     }
-    store = new LocalStorageProgressStore(storage);
+    store = new SyncedProgressStore(storage, httpRemote, {
+      onChange: notifyStoreChanged,
+      onSignedOut: signInAgain,
+    });
+    const s = store;
+    // Send queued writes before the page goes away.
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden") void s.flush(true);
+    });
+    window.addEventListener("pagehide", () => void s.flush(true));
   }
   return store;
 }
@@ -32,6 +51,7 @@ export function notifyStoreChanged() {
 
 function subscribe(listener: () => void) {
   listeners.add(listener);
+  // Device settings (group code, preferences) changed in another tab.
   const onStorage = () => notifyStoreChanged();
   window.addEventListener("storage", onStorage);
   return () => {
@@ -43,6 +63,8 @@ function subscribe(listener: () => void) {
 /**
  * Returns a monotonically increasing version that bumps whenever the store changes.
  * Returns -1 during SSR/hydration so callers can render a neutral placeholder.
+ * Device data (session, prefs) is readable as soon as this is >= 0; account data needs
+ * `useStoreStatus() === "ready"`.
  */
 export function useStoreVersion(): number {
   return useSyncExternalStore(
@@ -52,5 +74,29 @@ export function useStoreVersion(): number {
   );
 }
 
+/** Starts loading the account's saved data and reports when it's ready. */
+export function useStoreStatus(): StoreStatus {
+  useEffect(() => {
+    void getStore().load();
+  }, []);
+  return useSyncExternalStore(
+    subscribe,
+    () => getStore().status(),
+    () => "loading",
+  );
+}
+
+/** Saves anything pending, ends the session and goes to the sign-in page. */
+export async function signOut(): Promise<void> {
+  await getStore()
+    .flush(false)
+    .catch(() => undefined);
+  await fetch("/api/auth/logout", { method: "POST" }).catch(() => undefined);
+  // A full load on purpose: drops this account's data from memory.
+  // eslint-disable-next-line @next/next/no-location-assign-relative-destination
+  window.location.assign("/login");
+}
+
 export type { ProgressStore } from "./ProgressStore";
+export type { StoreStatus } from "./syncedStore";
 export * from "./types";

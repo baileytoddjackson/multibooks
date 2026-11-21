@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { currentUser, unauthorized } from "@/lib/auth/session";
 import { guardGeneration, ipHashFor, recordGeneration } from "@/lib/budget/budget";
 import { DETAILS_MAX, GENRES, SETTING_MAX, suggestions, type GenreId } from "@/lib/cyo/genres";
 import { sseResponse } from "@/lib/http/sse";
@@ -33,6 +34,8 @@ const BodySchema = z.object({
 });
 
 export async function POST(request: Request) {
+  const user = await currentUser();
+  if (!user) return unauthorized();
   const parsed = BodySchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success)
     return Response.json({ type: "error", code: "bad_request" }, { status: 400 });
@@ -41,7 +44,10 @@ export async function POST(request: Request) {
   return sseResponse(async (send) => {
     // Budget and rate limits first: moderation is itself a paid call.
     const store = serverStore();
-    const allowed = await guardGeneration(store, { sessionId, ipHash: ipHashFor(request.headers) });
+    const allowed = await guardGeneration(store, {
+      sessionId: user.id,
+      ipHash: ipHashFor(request.headers),
+    });
     if (!allowed.ok) {
       send({ type: "denied", reason: allowed.reason, retryAfterSec: allowed.retryAfterSec });
       return;
@@ -56,7 +62,7 @@ export async function POST(request: Request) {
       else send({ type: "redirect", reason: mod.reason, suggestions: suggestions(genre) });
       return;
     }
-    await recordGeneration(store, sessionId);
+    await recordGeneration(store, user.id);
 
     const r = await runGeneration(buildCyoOpeningPrompt({ genre, setting, details }), {
       sessionId,

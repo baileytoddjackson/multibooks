@@ -1,5 +1,6 @@
 import { BookCard, CreateCard } from "@/components/dashboard/BookCard";
 import { SavedRows } from "@/components/dashboard/SavedRows";
+import { AccountMenu } from "@/components/ui/AccountMenu";
 import { Logo } from "@/components/ui/Logo";
 import { SiteFooter } from "@/components/ui/SiteFooter";
 import { BOOKS } from "@/lib/content/books";
@@ -8,8 +9,9 @@ export default function Dashboard() {
   return (
     <>
       <header className="px-4 pt-6 sm:px-8">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
           <Logo />
+          <AccountMenu />
         </div>
       </header>
 

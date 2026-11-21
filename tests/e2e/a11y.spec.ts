@@ -1,5 +1,5 @@
 import AxeBuilder from "@axe-core/playwright";
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test, type Page } from "./fixtures";
 
 /** Scans a page against WCAG 2.1 A/AA and fails on any violation, listing what and where. */
 async function expectAccessible(page: Page, name: string) {
@@ -76,6 +76,15 @@ test("Create Your Own stepper and story", async ({ page }) => {
   await page.getByRole("button", { name: "Skip" }).click();
   await expect(page).toHaveURL(/\/story\//, { timeout: 15_000 });
   await expectAccessible(page, "story page");
+});
+
+test("sign-in and sign-up", async ({ page }) => {
+  await page.goto("/login");
+  await expectAccessible(page, "sign-in");
+  await page.goto("/signup?code=E2E-CODE");
+  await expectAccessible(page, "sign-up");
+  await page.getByRole("button", { name: "Create account" }).click();
+  await expectAccessible(page, "sign-up with an error");
 });
 
 test("admin sign-in", async ({ page }) => {

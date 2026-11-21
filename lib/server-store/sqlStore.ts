@@ -2,9 +2,13 @@ import type {
   AnalyticsEvent,
   CachedDetour,
   DetourPayload,
+  SavedKind,
+  SavedRecord,
   ServerStore,
+  SessionUser,
   SqlDialect,
   UsageRecord,
+  UserRecord,
 } from "./ServerStore";
 import { utcDay } from "./ServerStore";
 
@@ -190,6 +194,120 @@ export class SqlStore implements ServerStore {
         args: [e.ts, e.sessionId, e.sessionCode ?? null, e.type, JSON.stringify(e.props)],
       })),
     );
+  }
+
+  /* ── Accounts ── */
+
+  async createUser(u: UserRecord): Promise<boolean> {
+    const r = await this.exec(
+      `INSERT INTO users (id, email, password_hash, created_at) VALUES (?, ?, ?, ?)
+       ON CONFLICT(email) DO NOTHING`,
+      [u.id, u.email, u.passwordHash, u.createdAt],
+    );
+    return r.rowsAffected === 1;
+  }
+
+  async getUserByEmail(email: string): Promise<UserRecord | undefined> {
+    const r = await this.exec(
+      `SELECT id, email, password_hash, created_at FROM users WHERE email = ?`,
+      [email],
+    );
+    const row = r.rows[0];
+    if (!row) return undefined;
+    return {
+      id: String(row.id),
+      email: String(row.email),
+      passwordHash: String(row.password_hash),
+      createdAt: Number(row.created_at),
+    };
+  }
+
+  async setPasswordHash(userId: string, passwordHash: string): Promise<void> {
+    await this.exec(`UPDATE users SET password_hash = ? WHERE id = ?`, [passwordHash, userId]);
+  }
+
+  async countUsers(): Promise<number> {
+    const r = await this.exec(`SELECT COUNT(*) AS n FROM users`);
+    return Number(r.rows[0]?.n ?? 0);
+  }
+
+  async createSession(s: { tokenHash: string; userId: string; expiresAt: number }): Promise<void> {
+    const now = Date.now();
+    await this.ready;
+    await this.db.batch([
+      // Housekeeping: drop expired sessions whenever someone signs in.
+      { sql: `DELETE FROM auth_sessions WHERE expires_at < ?`, args: [now] },
+      {
+        sql: `INSERT INTO auth_sessions (token_hash, user_id, expires_at, created_at) VALUES (?, ?, ?, ?)`,
+        args: [s.tokenHash, s.userId, s.expiresAt, now],
+      },
+    ]);
+  }
+
+  async getSessionUser(tokenHash: string): Promise<SessionUser | undefined> {
+    const r = await this.exec(
+      `SELECT u.id, u.email FROM auth_sessions s JOIN users u ON u.id = s.user_id
+       WHERE s.token_hash = ? AND s.expires_at > ?`,
+      [tokenHash, Date.now()],
+    );
+    const row = r.rows[0];
+    return row ? { id: String(row.id), email: String(row.email) } : undefined;
+  }
+
+  async deleteSession(tokenHash: string): Promise<void> {
+    await this.exec(`DELETE FROM auth_sessions WHERE token_hash = ?`, [tokenHash]);
+  }
+
+  async deleteUserSessions(userId: string): Promise<void> {
+    await this.exec(`DELETE FROM auth_sessions WHERE user_id = ?`, [userId]);
+  }
+
+  /* ── Saved reading and stories ── */
+
+  async listSaved(userId: string): Promise<SavedRecord[]> {
+    const r = await this.exec(
+      `SELECT kind, id, book_id, title, data_json, created_at, updated_at FROM stories
+       WHERE user_id = ? ORDER BY updated_at DESC`,
+      [userId],
+    );
+    return r.rows.map((row) => ({
+      kind: row.kind as SavedKind,
+      id: String(row.id),
+      bookId: row.book_id == null ? undefined : String(row.book_id),
+      title: row.title == null ? undefined : String(row.title),
+      data: JSON.parse(String(row.data_json)) as unknown,
+      createdAt: Number(row.created_at),
+      updatedAt: Number(row.updated_at),
+    }));
+  }
+
+  async putSaved(userId: string, s: SavedRecord): Promise<boolean> {
+    const r = await this.exec(
+      `INSERT INTO stories (user_id, kind, id, book_id, title, data_json, created_at, updated_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+       ON CONFLICT(user_id, kind, id) DO UPDATE SET book_id = excluded.book_id,
+         title = excluded.title, data_json = excluded.data_json, updated_at = excluded.updated_at
+       WHERE stories.updated_at <= excluded.updated_at`,
+      [
+        userId,
+        s.kind,
+        s.id,
+        s.bookId ?? null,
+        s.title ?? null,
+        JSON.stringify(s.data),
+        s.createdAt,
+        s.updatedAt,
+      ],
+    );
+    return r.rowsAffected === 1;
+  }
+
+  async deleteSaved(userId: string, kind: SavedKind, id: string): Promise<void> {
+    await this.exec(`DELETE FROM stories WHERE user_id = ? AND kind = ? AND id = ?`, [
+      userId,
+      kind,
+      id,
+    ]);
   }
 
   async query<T = Record<string, unknown>>(sql: string, args: SqlArg[] = []): Promise<T[]> {

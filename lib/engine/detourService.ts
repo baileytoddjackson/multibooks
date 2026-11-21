@@ -23,7 +23,10 @@ export interface DetourRequest {
   optionId: string;
   /** "narrator" or a character id. */
   perspective: string;
+  /** Anonymous device id, for usage logs only (never linked to the account). */
   sessionId: string;
+  /** Signed-in reader: generation limits are counted per account. */
+  userId: string;
   /** Salted hash of the caller's IP, for rate limiting only. */
   ipHash: string;
 }
@@ -78,7 +81,7 @@ export async function getDetour(
   if (hit) return { status: "ready", payload: hit.payload, cached: true, source: hit.source };
 
   // 3. Budget, then the single-flight lock.
-  const allowed = await guardGeneration(store, { sessionId: req.sessionId, ipHash: req.ipHash });
+  const allowed = await guardGeneration(store, { sessionId: req.userId, ipHash: req.ipHash });
   if (!allowed.ok) {
     return { status: "denied", reason: allowed.reason, retryAfterSec: allowed.retryAfterSec };
   }
@@ -111,7 +114,7 @@ export async function getDetour(
       character,
     });
 
-    await recordGeneration(store, req.sessionId);
+    await recordGeneration(store, req.userId);
     const result = await generateWithRetry(prompt, onText, async (r, ok) => {
       await store.logUsage({
         sessionId: req.sessionId,

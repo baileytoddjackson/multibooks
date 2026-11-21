@@ -21,6 +21,9 @@ export function ipHashFor(headers: Headers): string {
 }
 
 /**
+ * `sessionId` here is the per-reader limit key: the signed-in user's id. (Usage logs and
+ * analytics keep the anonymous device id instead, so research data isn't tied to accounts.)
+ *
  * Runs every check a new generation needs, cheapest first: daily budget, per-session daily cap,
  * then per-minute rate limits. Call right before generating (after cache lookups).
  */

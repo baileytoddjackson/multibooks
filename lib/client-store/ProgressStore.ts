@@ -2,8 +2,8 @@ import type { BookId } from "@/lib/schemas/content";
 import type { BookProgress, CyoStory, ReaderPrefs, Session } from "./types";
 
 /**
- * Client persistence boundary. The MVP stores everything in localStorage under an anonymous
- * session id; a database-backed implementation can replace it without touching UI code.
+ * Client persistence boundary. Book progress and stories belong to the signed-in account (see
+ * syncedStore.ts); the anonymous analytics session and reader preferences stay on the device.
  */
 export interface ProgressStore {
   getSession(): Session;

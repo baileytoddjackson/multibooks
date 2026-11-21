@@ -10,19 +10,44 @@ written, play it as an adventure that always rejoins the original, or create you
 ```bash
 npm install
 cp .env.example .env.local     # works as-is with LLM_PROVIDER=mock (no API key, no cost)
-npm run dev                    # http://localhost:3000
+# set SIGNUP_ACCESS_CODE in .env.local, e.g. SIGNUP_ACCESS_CODE=LOCAL
+npm run dev                    # http://localhost:3000/signup?code=LOCAL
 ```
 
 Requires Node 20.9+.
 
+## Accounts and invites
+
+Every page needs a signed-in account. Accounts are email + password, and creating one needs the
+shared access code.
+
+- **Invite link:** `https://<your-site>/signup?code=<SIGNUP_ACCESS_CODE>`. The link fills in the
+  code, which is then removed from the address bar. The code is checked on the server, ignoring
+  case.
+- **Rotating the code:** change `SIGNUP_ACCESS_CODE` and redeploy. Existing accounts keep working;
+  old invite links stop working. With no code set, sign-up is closed.
+- **Forgotten passwords:** there's no email reset yet. An admin can set a new password under
+  Accounts on `/admin/stats`, which also signs that reader out everywhere.
+- **Sessions** last 30 days: a random token in an httpOnly cookie, stored hashed in
+  `auth_sessions`. Passwords are hashed with scrypt. Sign-in and sign-up are limited to
+  `AUTH_ATTEMPTS_PER_MINUTE` (default 20) per IP.
+- **How pages are protected:** `proxy.ts` sends anyone without a session cookie to `/login` (or
+  returns 401 for APIs). Each API route then checks the session against the database
+  (`currentUser()` in `lib/auth/session.ts`).
+- **What's saved to the account:** reading progress and stories, in the `stories` table, so they
+  follow the reader to any device. Text size, theme and the group code stay on the device.
+- **Research data stays anonymous.** Events and usage logs keep using a random id that lives only
+  on the device and is never stored with the account. Generation limits
+  (`PER_SESSION_MAX_GENERATIONS`, rate limits) are counted per account.
+
 ## Scripts
 
-| Command                                 | What it does                                                                                                                                                                   |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `npm run dev` / `build` / `start`       | Next.js dev server, production build, production server                                                                                                                        |
-| `npm run lint` / `typecheck` / `format` | ESLint, `tsc --noEmit`, Prettier                                                                                                                                               |
-| `npm test`                              | Unit tests (Vitest), including validation of all committed content                                                                                                             |
-| `npm run test:e2e`                      | Playwright tests at 390px (iPhone), 820px (iPad) and 1280px, plus axe accessibility scans and a $0-budget server. The first run needs `npx playwright install chromium webkit` |
+| Command                                 | What it does                                                                                                                                                                                                                                 |
+| --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `npm run dev` / `build` / `start`       | Next.js dev server, production build, production server                                                                                                                                                                                      |
+| `npm run lint` / `typecheck` / `format` | ESLint, `tsc --noEmit`, Prettier                                                                                                                                                                                                             |
+| `npm test`                              | Unit tests (Vitest), including validation of all committed content                                                                                                                                                                           |
+| `npm run test:e2e`                      | Playwright tests at 390px (iPhone), 820px (iPad) and 1280px, plus axe accessibility scans and a $0-budget server. Each test signs up its own account (`tests/e2e/fixtures.ts`). The first run needs `npx playwright install chromium webkit` |
 
 ## Content pipeline
 
@@ -89,7 +114,7 @@ A 3-step stepper (genre → setting → optional details) starts a fully generat
 - **Compact state.** Each turn sends only a running summary (120 words or fewer) and the last
   segment, so cost per turn stays flat (about $0.0006 with Haiku 5.5).
 - **Length.** `CYO_SOFT_TURN_CAP` offers "Ready to write the ending?" and `CYO_HARD_TURN_CAP`
-  forces the ending. Stories are saved on the device under My Stories.
+  forces the ending. Stories are saved to the reader's account under My Stories.
 
 ## Pre-warming and reviewing book detours
 
@@ -198,6 +223,7 @@ generation).
    | `CYO_SOFT_TURN_CAP`, `CYO_HARD_TURN_CAP`                    | `20`, `25`                                                                |
    | `ADMIN_PASSWORD`                                            | A strong password for `/admin/stats`                                      |
    | `APP_SECRET`                                                | A long random string, e.g. `openssl rand -base64 32`                      |
+   | `SIGNUP_ACCESS_CODE`                                        | The shared code in invite links (see "Accounts and invites")              |
    | `NEXT_PUBLIC_FEEDBACK_URL`                                  | Your survey link (rebuild after changing it: it's baked in at build time) |
 
 3. **Region.** `vercel.json` runs the server code in `pdx1` (Portland), next to a Supabase
@@ -212,6 +238,7 @@ generation).
 
 - [ ] Rotate the Anthropic API key, and set a monthly spend limit in the Console.
 - [ ] Set `ADMIN_PASSWORD` and `APP_SECRET`. The admin page warns while the default is in use.
+- [ ] Set `SIGNUP_ACCESS_CODE` and send testers `https://<your-site>/signup?code=<code>`.
 - [ ] `npm run cache:prewarm` against the production database.
 - [ ] Optional: export, review and apply detours (above), starting with the ⚠ flagged ones in
       Moby-Dick. Commit `approved.json` if you approve or edit any.
@@ -231,7 +258,8 @@ app/              routes (dashboard, /book/[id], /read/[id]/[chapter], /create, 
 components/       dashboard, reader, ui
 content/books/    committed book content (JSON)
 lib/content/      chunking, loading and validation of book content
-lib/client-store/ localStorage persistence behind the ProgressStore interface
+lib/auth/         accounts, sessions, access code, password hashing
+lib/client-store/ client store: account data synced with /api/me, device data in localStorage
 lib/cyo/          Create Your Own genres, Surprise Me and story state
 lib/engine/       book adventure state machine, detour cache key and service
 lib/safety/       blocklist, personal-info filter, moderation

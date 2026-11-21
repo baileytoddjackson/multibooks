@@ -19,6 +19,10 @@ const EnvSchema = z.object({
   RATE_LIMIT_IP_PER_MINUTE: z.coerce.number().int().positive().default(150),
   ADMIN_PASSWORD: z.string().optional(),
   APP_SECRET: z.string().default("dev-only-secret"),
+  // Shared code required to create an account. Unset = sign-up is closed.
+  SIGNUP_ACCESS_CODE: z.string().optional(),
+  // Sign-in/sign-up attempts per minute per IP (a classroom may share one IP).
+  AUTH_ATTEMPTS_PER_MINUTE: z.coerce.number().int().positive().default(20),
 });
 
 export type Env = z.infer<typeof EnvSchema>;
@@ -32,6 +36,7 @@ export function env(): Env {
     ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY || undefined,
     DATABASE_AUTH_TOKEN: process.env.DATABASE_AUTH_TOKEN || undefined,
     ADMIN_PASSWORD: process.env.ADMIN_PASSWORD || undefined,
+    SIGNUP_ACCESS_CODE: process.env.SIGNUP_ACCESS_CODE || undefined,
   });
   return cached;
 }

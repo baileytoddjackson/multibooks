@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./fixtures";
 
 test("stepper → story: genre, Surprise Me, skip details, play, undo, My Stories", async ({
   page,

@@ -8,7 +8,17 @@ import { SqlStore, type Executor, type SqlArg } from "./sqlStore";
  * Supabase's auto-generated REST/GraphQL APIs (anon and authenticated keys) can't read or write
  * them. The app connects directly as the database owner, which RLS doesn't restrict.
  */
-const TABLES = ["detours", "generation_locks", "llm_usage", "daily_spend", "counters", "events"];
+const TABLES = [
+  "detours",
+  "generation_locks",
+  "llm_usage",
+  "daily_spend",
+  "counters",
+  "events",
+  "users",
+  "auth_sessions",
+  "stories",
+];
 
 const MIGRATIONS = [
   `CREATE TABLE IF NOT EXISTS detours (
@@ -63,6 +73,31 @@ const MIGRATIONS = [
    )`,
   `CREATE INDEX IF NOT EXISTS events_type_ts ON events(type, ts)`,
   `CREATE INDEX IF NOT EXISTS events_session ON events(session_id)`,
+  `CREATE TABLE IF NOT EXISTS users (
+     id TEXT PRIMARY KEY,
+     email TEXT NOT NULL UNIQUE,
+     password_hash TEXT NOT NULL,
+     created_at BIGINT NOT NULL
+   )`,
+  `CREATE TABLE IF NOT EXISTS auth_sessions (
+     token_hash TEXT PRIMARY KEY,
+     user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+     expires_at BIGINT NOT NULL,
+     created_at BIGINT NOT NULL
+   )`,
+  `CREATE INDEX IF NOT EXISTS auth_sessions_user ON auth_sessions(user_id)`,
+  `CREATE TABLE IF NOT EXISTS stories (
+     user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+     kind TEXT NOT NULL,
+     id TEXT NOT NULL,
+     book_id TEXT,
+     title TEXT,
+     data_json TEXT NOT NULL,
+     created_at BIGINT NOT NULL,
+     updated_at BIGINT NOT NULL,
+     PRIMARY KEY (user_id, kind, id)
+   )`,
+  `CREATE INDEX IF NOT EXISTS stories_user_updated ON stories(user_id, updated_at)`,
   // Keep Supabase's public APIs out: RLS on, no policies.
   ...TABLES.map((t) => `ALTER TABLE ${t} ENABLE ROW LEVEL SECURITY`),
 ];

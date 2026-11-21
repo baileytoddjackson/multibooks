@@ -330,6 +330,72 @@ async function Gate({ searchParams }: { searchParams: PageProps<"/admin/stats">[
           empty="No group codes used yet"
         />
       </Panel>
+
+      <AccountsPanel
+        users={await store.countUsers()}
+        reset={sp.reset}
+        signupOpen={!!e.SIGNUP_ACCESS_CODE}
+      />
     </div>
+  );
+}
+
+const RESET_MESSAGES: Record<string, string> = {
+  ok: "Password changed. That reader has been signed out everywhere.",
+  missing: "No account uses that email.",
+  weak: "Use a password of at least 8 characters.",
+};
+
+/** Account count and a password reset (there's no email-based reset yet). */
+function AccountsPanel({
+  users,
+  reset,
+  signupOpen,
+}: {
+  users: number;
+  reset: string | string[] | undefined;
+  signupOpen: boolean;
+}) {
+  const message = typeof reset === "string" ? RESET_MESSAGES[reset] : undefined;
+  return (
+    <Panel
+      title="Accounts"
+      note={`${int(users)} account${users === 1 ? "" : "s"} · sign-up ${signupOpen ? "open with the access code" : "closed (SIGNUP_ACCESS_CODE isn't set)"}`}
+    >
+      <form method="post" action="/admin/reset-password" className="flex flex-wrap items-end gap-3">
+        <label className="flex flex-col text-sm font-semibold">
+          Reader&apos;s email
+          <input
+            name="email"
+            type="email"
+            required
+            autoComplete="off"
+            className="mt-1 min-h-11 rounded-xl border-2 border-line bg-card px-3"
+          />
+        </label>
+        <label className="flex flex-col text-sm font-semibold">
+          New password
+          <input
+            name="password"
+            type="text"
+            required
+            minLength={8}
+            autoComplete="off"
+            className="mt-1 min-h-11 rounded-xl border-2 border-line bg-card px-3"
+          />
+        </label>
+        <button
+          type="submit"
+          className="min-h-11 rounded-full bg-ink px-5 font-semibold text-paper"
+        >
+          Reset password
+        </button>
+      </form>
+      {message && (
+        <p role="status" className="mt-3 text-sm">
+          {message}
+        </p>
+      )}
+    </Panel>
   );
 }

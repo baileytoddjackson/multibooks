@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { Reader } from "@/components/reader/Reader";
 import { ReaderSkeleton } from "@/components/reader/ReaderSkeleton";
+import { StoreGate } from "@/components/ui/StoreGate";
 import { BOOKS, getBook } from "@/lib/content/books";
 import { loadAdventureMap, loadChapter, loadCharacters, loadToc } from "@/lib/content/load";
 import { chapterLabel } from "@/lib/reader/labels";
@@ -59,7 +60,9 @@ async function ChapterReader({
 
   return (
     <Suspense fallback={<ReaderSkeleton title={book.shortTitle} />}>
-      <Reader book={book} toc={toc} chapter={chapter} map={map} cast={cast.characters} />
+      <StoreGate fallback={<ReaderSkeleton title={book.shortTitle} />}>
+        <Reader book={book} toc={toc} chapter={chapter} map={map} cast={cast.characters} />
+      </StoreGate>
     </Suspense>
   );
 }

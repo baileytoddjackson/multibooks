@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./fixtures";
 
 /**
  * Runs against a server with DAILY_BUDGET_USD=0: live generation is off, but the app must

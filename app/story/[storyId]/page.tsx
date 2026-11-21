@@ -5,7 +5,7 @@ import { env } from "@/lib/env";
 
 export const metadata: Metadata = { title: "My story" };
 
-/** Created stories live on the device (localStorage), so the page itself is a client shell. */
+/** Stories are loaded by the client store (from the reader's account), so this is a client shell. */
 export default function StoryPage(props: PageProps<"/story/[storyId]">) {
   return (
     <Suspense fallback={<div className="min-h-dvh bg-paper" aria-busy="true" />}>

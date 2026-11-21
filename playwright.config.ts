@@ -4,7 +4,13 @@ const PORT = 3100;
 /** Second server with the daily budget at $0, to test the "story machine is resting" state. */
 const BUDGET_OFF_PORT = 3101;
 
-const baseEnv = { LLM_PROVIDER: "mock", ADMIN_PASSWORD: "test-admin" };
+const baseEnv = {
+  LLM_PROVIDER: "mock",
+  ADMIN_PASSWORD: "test-admin",
+  // Every test signs up its own account (tests/e2e/fixtures.ts), all from one IP.
+  SIGNUP_ACCESS_CODE: "E2E-CODE",
+  AUTH_ATTEMPTS_PER_MINUTE: "100000",
+};
 
 export default defineConfig({
   testDir: "tests/e2e",
