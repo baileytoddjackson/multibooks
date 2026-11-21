@@ -17,10 +17,7 @@
     "content:chunk": "tsx --env-file-if-exists=.env.local scripts/clean-and-chunk.ts",
     "content:summaries": "tsx --env-file-if-exists=.env.local scripts/gen-summaries.ts",
     "content:maps": "tsx --env-file-if-exists=.env.local scripts/gen-adventure-map.ts",
-    "content:validate": "tsx --env-file-if-exists=.env.local scripts/validate-content.ts",
-    "cache:prewarm": "tsx --env-file-if-exists=.env.local scripts/prewarm-detours.ts",
-    "cache:export-review": "tsx --env-file-if-exists=.env.local scripts/export-review.ts",
-    "cache:apply-review": "tsx --env-file-if-exists=.env.local scripts/apply-review.ts"
+    "content:validate": "tsx --env-file-if-exists=.env.local scripts/validate-content.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.135.0",

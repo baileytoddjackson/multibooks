@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { getStore, useStoreStatus, useStoreVersion } from "@/lib/client-store";
+import { isAdventure } from "@/lib/client-store/types";
 import { getBook } from "@/lib/content/books";
+import { genreLabel } from "@/lib/cyo/genres";
 import { CoverArt } from "./CoverArt";
 
 /** "Continue reading" and "My Stories" rows, once the reader's saved data has loaded. */
@@ -30,7 +32,7 @@ export function SavedRows() {
               return (
                 <li key={p.bookId} className="w-72 shrink-0 snap-start">
                   <Link
-                    href={`/read/${p.bookId}?mode=${p.mode}`}
+                    href={`/read/${p.bookId}?mode=canon`}
                     className="flex items-center gap-3 rounded-2xl bg-card p-3 ring-1 ring-line"
                   >
                     <CoverArt
@@ -42,9 +44,7 @@ export function SavedRows() {
                     />
                     <span className="flex min-w-0 flex-col">
                       <span className="truncate font-semibold">{book.shortTitle}</span>
-                      <span className="text-sm text-ink-soft">
-                        {p.mode === "adventure" ? "Adventure" : "As written"} · {pct}%
-                      </span>
+                      <span className="text-sm text-ink-soft">As written · {pct}%</span>
                       <span
                         className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-paper-deep"
                         role="progressbar"
@@ -77,8 +77,11 @@ export function SavedRows() {
                   className="flex min-h-20 flex-col justify-center rounded-2xl bg-card p-4 ring-1 ring-line"
                 >
                   <span className="truncate font-display text-lg font-semibold">{s.title}</span>
-                  <span className="text-sm text-ink-soft capitalize">
-                    {s.genre} · {s.status === "done" ? "Finished" : `${s.segments.length} pages`}
+                  <span className="text-sm text-ink-soft">
+                    {isAdventure(s)
+                      ? `Adventure · ${getBook(s.bookId)?.shortTitle ?? ""}`
+                      : genreLabel(s.genre)}{" "}
+                    · {s.status === "done" ? "Finished" : `${s.segments.length} pages`}
                   </span>
                 </Link>
               </li>

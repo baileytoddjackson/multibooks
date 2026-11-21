@@ -2,25 +2,14 @@
 
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FeedbackLink } from "@/components/ui/FeedbackLink";
 import { TrackedLink } from "@/components/ui/TrackedLink";
 import { track, wordsIn } from "@/lib/analytics/track";
 import { getStore, notifyStoreChanged } from "@/lib/client-store";
-import type { InteractionStyle, ReadingMode } from "@/lib/client-store/types";
-import { castAvailableAt } from "@/lib/content/adventureMap";
-import {
-  choiceView,
-  choose,
-  EMPTY_ADVENTURE,
-  layoutPage,
-  locateChoicePoint,
-  returnToOriginal,
-  setDetourText,
-  setStyle,
-  undo,
-  type AdventureState,
-} from "@/lib/engine/bookAdventure";
+import type { ReadingMode } from "@/lib/client-store/types";
+import { newAdventure } from "@/lib/adventure/newAdventure";
+import { entryChoicePoint, layoutEntryPage } from "@/lib/engine/bookAdventure";
 import { chapterLabel, chapterName } from "@/lib/reader/labels";
 import {
   bookFraction,
@@ -30,10 +19,9 @@ import {
   pageWords,
 } from "@/lib/reader/progress";
 import { useReaderPrefs } from "@/lib/reader/usePrefs";
-import type { AdventureMap, AdventureOption, ChoicePoint } from "@/lib/schemas/adventure";
+import type { AdventureMap } from "@/lib/schemas/adventure";
 import type { BookMeta, Chapter, Character, Toc } from "@/lib/schemas/content";
-import { AdventureBlocks, type AdventureActions } from "./AdventureBlocks";
-import { AdventureSettings } from "./AdventureSettings";
+import { AdventureBlocks, type EntryChoice } from "./AdventureBlocks";
 import { ChapterNav } from "./ChapterNav";
 import { Passage } from "./Passage";
 import { ReaderControls } from "./ReaderControls";
@@ -42,7 +30,7 @@ export interface ReaderProps {
   book: BookMeta;
   toc: Toc;
   chapter: Chapter;
-  /** The book's adventure map, if it has one (otherwise adventure mode reads as canon). */
+  /** The book's adventure map, if it has one (its entry choice is where adventures begin). */
   map?: AdventureMap;
   cast: Character[];
 }
@@ -51,15 +39,10 @@ function readMode(v: string | null): ReadingMode {
   return v === "adventure" ? "adventure" : "canon";
 }
 
-function loadAdventure(bookId: BookMeta["id"]): AdventureState {
-  const saved = getStore().getBookProgress(bookId)?.adventure;
-  // Older saves used a different shape; start fresh rather than crash.
-  return saved && Array.isArray(saved.history) ? saved : EMPTY_ADVENTURE;
-}
-
 /**
- * Shared book reader. Canon mode shows the original text page by page; adventure mode layers
- * choice points and generated detours on top of the same pages, always rejoining the original.
+ * Shared book reader. "As written" shows the original text page by page and saves the reader's
+ * place. Adventure Mode shows the real opening up to the book's entry choice; choosing there
+ * starts a new Adventure Mode story (/story/[id]) that never returns to the original text.
  *
  * Renders client-side only (it sits under a Suspense boundary and reads search params),
  * so it can read saved progress synchronously on first render without a hydration flash.
@@ -75,86 +58,49 @@ export function Reader({ book, toc, chapter, map, cast }: ReaderProps) {
   const [page, setPage] = useState(() => {
     const fromUrl = Number(params.get("page"));
     if (Number.isInteger(fromUrl) && fromUrl >= 1 && fromUrl <= pages) return fromUrl - 1;
-    const saved = getStore().getBookProgress(book.id);
+    // An adventure always starts from the top of its opening chapter.
+    const saved = mode === "canon" ? getStore().getBookProgress(book.id) : undefined;
     return saved?.position.startsWith(`c${String(chapter.index).padStart(3, "0")}`)
       ? pageForParagraph(chapter, saved.position)
       : 0;
   });
 
   const entryIdx = toc.chapters.findIndex((c) => c.index === chapter.index);
-  const entry = toc.chapters[entryIdx];
+  const tocEntry = toc.chapters[entryIdx];
   const prevChapter = toc.chapters[entryIdx - 1];
   const nextChapter = toc.chapters[entryIdx + 1];
   const isLastPage = page === pages - 1;
   const fraction = bookFraction(toc, chapter, page);
   const pct = Math.round(fraction * 100);
 
-  // ── Adventure state ──────────────────────────────────────────────────────────────────
-  const adventureOn = mode === "adventure" && !!map;
-  const [adventure, setAdventureState] = useState<AdventureState>(() => loadAdventure(book.id));
-  const updateAdventure = useCallback(
-    (next: (s: AdventureState) => AdventureState) => {
-      setAdventureState((prev) => {
-        const s = next(prev);
-        const store = getStore();
-        const p = store.getBookProgress(book.id);
-        if (p) store.saveBookProgress({ ...p, adventure: s, updatedAt: Date.now() });
-        return s;
-      });
-    },
-    [book.id],
-  );
+  // ── Adventure Mode: the opening, up to the entry choice ─────────────────────────────
+  const entry = entryChoicePoint(map);
+  const adventureOn = mode === "adventure" && !!entry;
   const { start, end } = pageRange(chapter, page);
-  const layout = adventureOn ? layoutPage(chapter, { start, end }, map, adventure) : undefined;
+  const layout = adventureOn ? layoutEntryPage(chapter, { start, end }, entry) : undefined;
   const blocked = layout?.blocked ?? false;
 
-  const goToChoicePoint = (cpId: string) => {
-    const loc = locateChoicePoint(map, cpId);
-    if (!loc) return;
-    if (loc.chapter === chapter.index) {
-      setPage(pageForParagraph(chapter, loc.paragraphId));
-      return;
+  // Adventures always begin at the entry chapter.
+  useEffect(() => {
+    if (adventureOn && entry && entry.chapter !== chapter.index) {
+      router.replace(`/read/${book.id}/${entry.chapter}?mode=adventure`);
     }
-    const store = getStore();
-    const p = store.getBookProgress(book.id);
-    if (p) store.saveBookProgress({ ...p, position: loc.paragraphId, updatedAt: Date.now() });
-    router.push(`/read/${book.id}/${loc.chapter}?mode=adventure`);
-  };
+  }, [adventureOn, entry, chapter.index, book.id, router]);
 
-  // Must stay stable: DetourBlock calls it from an effect when text arrives.
-  const saveDetourText = useCallback(
-    (cpId: string, segments: string[]) => updateAdventure((s) => setDetourText(s, cpId, segments)),
-    [updateAdventure],
-  );
-
-  const actions: AdventureActions = {
-    choose: (cp: ChoicePoint, option: AdventureOption) => {
-      const name = cast.find((c) => c.id === adventure.characterId)?.name;
-      const view = choiceView(cp, adventure.style, adventure.characterId, name);
-      track("choice_made", {
-        context: "book",
-        bookId: book.id,
-        cpId: cp.id,
-        optionId: option.id,
-        perspective: view.perspective,
-      });
-      updateAdventure((s) => choose(s, cp, option, view));
-    },
-    keepOriginal: (cpId: string, from = "choice") => {
-      track("return_to_canon", { bookId: book.id, cpId, from });
-      updateAdventure((s) => returnToOriginal(s, cpId));
-    },
-    setStyle: (style: InteractionStyle, characterId?: string) => {
-      track("style_chosen", { context: "book", bookId: book.id, style, characterId });
-      updateAdventure((s) => setStyle(s, style, characterId));
-    },
-    setDetourText: saveDetourText,
-    undo: () => {
-      track("undo", { context: "book", bookId: book.id });
-      const { state, cpId } = undo(adventure);
-      updateAdventure(() => state);
-      if (cpId) goToChoicePoint(cpId);
-    },
+  const startAdventure = ({ option, view, style, characterId }: EntryChoice) => {
+    if (!entry) return;
+    const story = newAdventure({ book, entry, cast, option, view, style, characterId });
+    track("choice_made", {
+      context: "book",
+      bookId: book.id,
+      cpId: entry.id,
+      optionId: option.id,
+      perspective: view.perspective,
+    });
+    track("adventure_started", { bookId: book.id, optionId: option.id, style });
+    getStore().saveStory(story);
+    notifyStoreChanged();
+    router.push(`/story/${story.id}`);
   };
 
   const pageRef = useRef<HTMLElement>(null);
@@ -164,19 +110,22 @@ export function Reader({ book, toc, chapter, map, cast }: ReaderProps) {
 
   // Persist progress and keep ?page in the URL (shareable, survives refresh).
   useEffect(() => {
-    const { start } = pageRange(chapter, page);
-    const store = getStore();
-    const prev = store.getBookProgress(book.id);
-    store.saveBookProgress({
-      bookId: book.id,
-      mode,
-      position: chapter.paragraphs[start].id,
-      fraction,
-      adventure: prev?.adventure,
-      wordsRead: prev?.wordsRead ?? 0,
-      updatedAt: Date.now(),
-    });
-    notifyStoreChanged();
+    // On the way to the adventure's opening chapter: leave the URL to the redirect.
+    if (adventureOn && entry && entry.chapter !== chapter.index) return;
+    // Only reading as written has a place to save; an adventure's opening isn't progress.
+    if (mode === "canon") {
+      const { start } = pageRange(chapter, page);
+      const store = getStore();
+      const prev = store.getBookProgress(book.id);
+      store.saveBookProgress({
+        bookId: book.id,
+        position: chapter.paragraphs[start].id,
+        fraction,
+        wordsRead: prev?.wordsRead ?? 0,
+        updatedAt: Date.now(),
+      });
+      notifyStoreChanged();
+    }
 
     const url = new URLSearchParams(params.toString());
     url.set("page", String(page + 1));
@@ -194,6 +143,7 @@ export function Reader({ book, toc, chapter, map, cast }: ReaderProps) {
 
   // Plain functions: the React Compiler memoizes these automatically.
   const addWordsRead = (n: number) => {
+    if (mode !== "canon") return;
     const store = getStore();
     const p = store.getBookProgress(book.id);
     if (p) store.saveBookProgress({ ...p, wordsRead: p.wordsRead + n });
@@ -201,16 +151,10 @@ export function Reader({ book, toc, chapter, map, cast }: ReaderProps) {
 
   const goNext = () => {
     if (blocked) return;
-    // Words actually shown on this page: canon paragraphs plus any detour text.
+    // Words actually shown on this page.
     const words = layout
       ? layout.blocks.reduce(
-          (n, b) =>
-            n +
-            (b.type === "canon"
-              ? wordsIn(...b.paragraphs.map((p) => p.text))
-              : b.type === "detour"
-                ? wordsIn(...b.resolution.segments)
-                : 0),
+          (n, b) => n + (b.type === "canon" ? wordsIn(...b.paragraphs.map((p) => p.text)) : 0),
           0,
         )
       : pageWords(chapter, page);
@@ -259,11 +203,13 @@ export function Reader({ book, toc, chapter, map, cast }: ReaderProps) {
     if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.5) (dx < 0 ? goNext : goPrev)();
   };
 
-  const label = chapterLabel(entry);
-  const name = chapterName(entry);
-  const showNudge = mode === "canon" && !!map && isLastPage && chapter.index === 1;
+  const label = chapterLabel(tocEntry);
+  const name = chapterName(tocEntry);
+  const showNudge = mode === "canon" && !!entry && isLastPage && chapter.index === 1;
   const modeHref = (m: ReadingMode) =>
-    `/read/${book.id}/${chapter.index}?mode=${m}&page=${page + 1}`;
+    m === "adventure"
+      ? `/read/${book.id}/${entry?.chapter ?? 1}?mode=adventure`
+      : `/read/${book.id}/${chapter.index}?mode=canon&page=${page + 1}`;
 
   return (
     <div
@@ -286,25 +232,26 @@ export function Reader({ book, toc, chapter, map, cast }: ReaderProps) {
               {mode === "adventure" ? "Adventure" : "As written"} · {label}
             </p>
           </div>
-          <ChapterNav
-            toc={toc}
-            bookId={book.id}
-            current={chapter.index}
-            mode={mode}
-            chapterLabel={(i) => chapterLabel(toc.chapters.find((c) => c.index === i)!)}
-          />
-          {adventureOn ? (
-            <AdventureSettings
-              style={adventure.style}
-              characterId={adventure.characterId}
-              characters={castAvailableAt(cast, chapter.index)}
-              canUndo={adventure.history.length > 0}
-              onChangeStyle={actions.setStyle}
-              onUndo={actions.undo}
-              originalHref={modeHref("canon")}
+          {!adventureOn && (
+            <ChapterNav
+              toc={toc}
+              bookId={book.id}
+              current={chapter.index}
+              mode={mode}
+              chapterLabel={(i) => chapterLabel(toc.chapters.find((c) => c.index === i)!)}
             />
+          )}
+          {adventureOn ? (
+            <TrackedLink
+              event="mode_chosen"
+              eventProps={{ bookId: book.id, mode: "canon" }}
+              href={modeHref("canon")}
+              className="flex min-h-11 items-center justify-center rounded-full px-3 text-sm font-semibold hover:bg-[var(--reader-line)]"
+            >
+              As written
+            </TrackedLink>
           ) : (
-            map && (
+            entry && (
               <TrackedLink
                 event="mode_chosen"
                 eventProps={{ bookId: book.id, mode: "adventure" }}
@@ -334,10 +281,9 @@ export function Reader({ book, toc, chapter, map, cast }: ReaderProps) {
         </div>
       </header>
 
-      {mode === "adventure" && !map && (
+      {mode === "adventure" && !entry && (
         <p className="mx-auto mt-4 max-w-[48rem] rounded-xl bg-[var(--reader-page)] px-4 py-3 text-center text-sm text-[var(--reader-muted)] ring-1 ring-[var(--reader-line)]">
-          Adventure choices for this book are still being written. For now, enjoy the original
-          story!
+          Adventures for this book are still being written. For now, enjoy the original story!
         </p>
       )}
 
@@ -370,11 +316,12 @@ export function Reader({ book, toc, chapter, map, cast }: ReaderProps) {
             {layout ? (
               <AdventureBlocks
                 blocks={layout.blocks}
-                state={adventure}
                 cast={cast}
-                bookId={book.id}
-                sessionId={getStore().getSession().anonId}
-                actions={actions}
+                onStart={startAdventure}
+                onKeepOriginal={() => {
+                  track("mode_chosen", { bookId: book.id, mode: "canon" });
+                  router.push(modeHref("canon"));
+                }}
               />
             ) : (
               <Passage paragraphs={chapter.paragraphs.slice(start, end)} />
@@ -393,7 +340,7 @@ export function Reader({ book, toc, chapter, map, cast }: ReaderProps) {
               <TrackedLink
                 event="mode_chosen"
                 eventProps={{ bookId: book.id, mode: "adventure" }}
-                href={`/read/${book.id}/${chapter.index}?mode=adventure`}
+                href={modeHref("adventure")}
                 className="mt-3 inline-flex min-h-11 items-center rounded-full bg-plum px-5 font-semibold text-white"
               >
                 Try it as an adventure ✦
@@ -440,7 +387,7 @@ export function Reader({ book, toc, chapter, map, cast }: ReaderProps) {
         </div>
         {blocked && (
           <p id="blocked-hint" className="pb-1 text-center text-sm text-[var(--reader-muted)]">
-            Make a choice above to keep reading.
+            Make a choice above to start your adventure.
           </p>
         )}
         <div className="flex justify-center pb-1">

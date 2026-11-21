@@ -40,19 +40,13 @@ describe("outputFormat", () => {
   });
 });
 
-import { smartQuotes, splitSegments } from "@/lib/prompts/detour";
+import { smartQuotes } from "@/lib/text/smartQuotes";
 
-describe("detour text clean-up", () => {
+describe("generated text clean-up", () => {
   it("curls quotes and apostrophes like the original texts", () => {
     expect(smartQuotes(`"Well, it's late," she said. 'Oh!'`)).toBe(
       "“Well, it’s late,” she said. ‘Oh!’",
     );
-  });
-
-  it("splits long detours into two segments at a paragraph break", () => {
-    const para = Array(60).fill("word").join(" ");
-    expect(splitSegments([para, para, para, para].join("\n\n"))).toHaveLength(2);
-    expect(splitSegments("Short one.\n\nShort two.")).toHaveLength(1);
   });
 });
 

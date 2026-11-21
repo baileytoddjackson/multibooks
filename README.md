@@ -1,7 +1,7 @@
 # MultiBooks
 
 A choose-your-own-adventure reading app for middle schoolers (ages ~11–14). Read a classic as
-written, play it as an adventure that always rejoins the original, or create your own story.
+written, turn it into your own adventure (Adventure Mode), or create a story from scratch.
 
 > Status: MVP complete (milestones 1–8). See "Before the pilot" below.
 
@@ -58,7 +58,7 @@ them at runtime.
 npm run content:fetch          # download raw texts to content/raw (gitignored)
 npm run content:chunk          # clean, split chapters/paragraphs/pages → content/books/<id>/chapters + toc.json
 npm run content:summaries      # chapter summaries + synopsis via the Batch API → summaries.json
-npm run content:maps           # adventure choice points via the Batch API → adventure-map.json
+npm run content:maps           # the Adventure Mode entry choice via the Batch API → adventure-map.json
 npm run content:validate       # check everything (also runs in `npm test`)
 ```
 
@@ -72,14 +72,11 @@ All of these accept `--book alice|odyssey|moby-dick`.
   API differences live in `lib/llm/models.ts`; prices for the budget cap are in `lib/llm/pricing.ts`.
 - **Characters** (`content/books/<id>/characters.json`) are a hand-curated cast of four per book.
   `firstAppearsChapter` stops readers picking a character before they're in the story.
-- **Adventure maps** place one choice point per selected chapter (caps: Alice 12, Odyssey 16,
-  Moby-Dick 20). Essay chapters and a hand-curated list of mature chapters
-  (`EXCLUDED_CHAPTERS` in `lib/content/adventureMap.ts`) never get choices. Re-running bumps the
-  map version, which retires cached detours for that book. Batch results are cached by request
-  hash in `data/batches/`, so a re-run after a code fix only pays for changed requests.
-- **Detours** are generated on first request, then served from the shared cache (the `detours`
-  table) to every later reader. If many readers request the same new detour at once, one
-  generates it and the rest wait for it.
+- **Adventure maps** hold each book's entry choice: one choice point in the opening chapter, where
+  Adventure Mode leaves the original text (see "Adventure Mode" below). Batch results are cached
+  by request hash in `data/batches/`, so a re-run after a code fix only pays for changed requests.
+- **Summaries** also drive Adventure Mode: the synopsis is the premise, and the chapters' key
+  events become the loose storyline an adventure follows.
 - **Paragraph ids** (`c003p017`) are stable anchors used by adventure maps. If you change the
   cleaning rules, re-run `content:validate`.
 
@@ -95,8 +92,33 @@ All of these accept `--book alice|odyssey|moby-dick`.
    format in `scripts/clean-and-chunk.ts`.
 2. Create `content/books/<id>/meta.json` and `characters.json`, register the meta in
    `lib/content/books.ts`, and add the id to `BookIdSchema` in `lib/schemas/content.ts`.
-3. Run `content:fetch`, `content:chunk`, `content:summaries` and `content:validate` with
-   `--book <id>`.
+3. Run `content:fetch`, `content:chunk`, `content:summaries`, `content:maps` and
+   `content:validate` with `--book <id>`.
+
+## Adventure Mode
+
+Every book can be read two ways: **as written**, or as an **adventure**.
+
+1. The reader reads the book's real opening until its entry choice (`adventure-map.json`), picks
+   how to play (direct the story, be a character, or both), and makes a choice. The choice says
+   up front that it's one-way.
+2. That creates an Adventure Mode story (saved to the account like Create Your Own stories) and
+   opens it at `/story/[id]`. From here on every page is generated, and nothing leads back to the
+   original text. Undo works within the adventure, but never past its first page.
+3. Each page's prompt (`lib/prompts/adventure.ts`) puts **the adventure first**: a running summary
+   (150 words or fewer), up to 12 established facts, every choice made, and the last two pages, all
+   saved with the story so it can be resumed any time. **The book is the premise**: its synopsis,
+   cast, the author's voice, and one "beat" of its storyline as a loose guide
+   (`lib/adventure/outline.ts` groups the chapters after the opening into up to 12 beats, paced
+   across `ADVENTURE_SOFT_TURN_CAP` pages). The prompt tells the model to borrow the book's big
+   moments when they fit and follow the adventure when they don't.
+4. `ADVENTURE_SOFT_TURN_CAP` (24) offers "Ready to write the ending?" and
+   `ADVENTURE_HARD_TURN_CAP` (30) forces it. A page costs about $0.001 with Haiku 5.5, so a full
+   adventure is roughly $0.03.
+
+Like Create Your Own, the server is stateless: the browser sends the saved context with each
+request, and the server length-limits and blocklist-checks it before use. Adventures aren't shared
+between readers, so every page counts against the budget and rate limits.
 
 ## Create Your Own
 
@@ -116,41 +138,19 @@ A 3-step stepper (genre → setting → optional details) starts a fully generat
 - **Length.** `CYO_SOFT_TURN_CAP` offers "Ready to write the ending?" and `CYO_HARD_TURN_CAP`
   forces the ending. Stories are saved to the reader's account under My Stories.
 
-## Pre-warming and reviewing book detours
-
-Every detour a reader can reach (about 400 across the three books) can be generated ahead of time
-and, optionally, reviewed by a person before a pilot. Review is not required: detours nobody has
-reviewed are served as generated, and approved ones override them.
-
-```bash
-npm run cache:prewarm -- --dry-run     # how many are missing, and the estimated cost (about $0.08 for all)
-npm run cache:prewarm                  # generate them through the Batch API into the shared cache
-npm run cache:export-review            # write content/review/<book>/detours-review.md and .json
-# read the .md; in the .json set "decision" to "approve" or "reject", and edit "text" if needed
-npm run cache:apply-review             # approvals → approved.json (commit it); rejections leave the cache
-```
-
-- **Approved text always wins.** It overrides the cache at runtime and survives prompt-version
-  bumps, because `approved.json` is keyed by map version, choice point, option and perspective.
-- **Rejected detours** are deleted from the cache and regenerate on the next request or pre-warm.
-  To fix one yourself, edit its text and approve it instead.
-- **Flags.** Entries marked ⚠ have a brief that says who lives or dies, or text that hits the
-  blocklist. Check those against the book first.
-- **Production.** These scripts write to `DATABASE_URL`. To pre-warm production, run them locally
-  with `DATABASE_URL` set to your Supabase connection string.
-
 ## Cost controls and limits
 
-Every new generation goes through `guardGeneration` (`lib/budget/budget.ts`). Cached detours,
-approved detours and canon reading never do, so they keep working when a limit is hit.
+Every new generation goes through `guardGeneration` (`lib/budget/budget.ts`). Reading as written
+never does, so it keeps working when a limit is hit.
 
-| Setting                                   | Default     | What happens when it's reached                                                                                             |
-| ----------------------------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `DAILY_BUDGET_USD`                        | `5`         | All new generation pauses until midnight UTC; readers see "The story machine is resting" and can keep reading the original |
-| `PER_SESSION_MAX_GENERATIONS`             | `40`        | Same message, for that device only                                                                                         |
-| `RATE_LIMIT_SESSION_PER_MINUTE`           | `8`         | A short "Lots of readers are adventuring right now…" pause, then an automatic retry                                        |
-| `RATE_LIMIT_IP_PER_MINUTE`                | `150`       | Same. Kept generous because a whole classroom usually shares one public IP                                                 |
-| `CYO_SOFT_TURN_CAP` / `CYO_HARD_TURN_CAP` | `20` / `25` | "Ready to write the ending?" / the ending is written                                                                       |
+| Setting                                               | Default     | What happens when it's reached                                                                                             |
+| ----------------------------------------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `DAILY_BUDGET_USD`                                    | `5`         | All new generation pauses until midnight UTC; readers see "The story machine is resting" and can keep reading the original |
+| `PER_SESSION_MAX_GENERATIONS`                         | `40`        | Same message, for that account only                                                                                        |
+| `RATE_LIMIT_SESSION_PER_MINUTE`                       | `8`         | A short "Lots of readers are adventuring right now…" pause, then an automatic retry                                        |
+| `RATE_LIMIT_IP_PER_MINUTE`                            | `150`       | Same. Kept generous because a whole classroom usually shares one public IP                                                 |
+| `CYO_SOFT_TURN_CAP` / `CYO_HARD_TURN_CAP`             | `20` / `25` | "Ready to write the ending?" / the ending is written                                                                       |
+| `ADVENTURE_SOFT_TURN_CAP` / `ADVENTURE_HARD_TURN_CAP` | `24` / `30` | The same, for Adventure Mode                                                                                               |
 
 Spend is estimated from the token usage the API reports for every call, including failed ones,
 using `lib/llm/pricing.ts`. IP addresses are never stored: rate limiting uses a salted hash that
@@ -161,7 +161,7 @@ changes daily. At Haiku 5.5 prices, $5 a day covers roughly 7,000–10,000 new p
 **Events.** The app records anonymous events defined in `lib/analytics/events.ts`:
 
 - books selected, reading mode chosen and interaction style chosen;
-- choices made, detours served (cached or new), returns to the original, undos;
+- choices made, adventures started and finished, undos;
 - words read, active time (a 30-second heartbeat while the page is visible);
 - the stepper funnel, stories created and finished, safety redirects, blocked generations,
   errors and feedback clicks.
@@ -175,7 +175,7 @@ can be compared without collecting names.
 
 **Admin page.** `/admin/stats` is protected by `ADMIN_PASSWORD`. Sign-in uses a signed, httpOnly
 cookie (signed with `APP_SECRET`) that lasts 8 hours. The page shows sessions, active time, words
-read, choices, the detour cache hit rate, mode, style and book splits, the Create Your Own funnel,
+read, choices, adventures started and finished, mode, style and book splits, the Create Your Own funnel,
 safety redirects, and token usage and cost by kind, day and book. Filter by time range and group
 code.
 
@@ -187,19 +187,14 @@ it's replaced with the device's group code (for example a Google Forms pre-fille
 All runtime prompts live in `lib/prompts/`, each a documented function that returns
 `{system, user, schema, maxTokens, mock}`:
 
-| File                                    | Used for                                                |
-| --------------------------------------- | ------------------------------------------------------- |
-| `shared.ts`                             | Safety and reading-level rules included in every prompt |
-| `detour.ts` + `characterPerspective.ts` | Book adventure detours (canon-anchored)                 |
-| `cyoOpening.ts` / `cyoContinuation.ts`  | Create Your Own                                         |
-| `choices.ts`                            | Rules for generated choices                             |
-| `moderation.ts`                         | The stepper input check                                 |
-| `offline.ts`                            | Summaries and adventure maps (content scripts)          |
-
-After changing a detour prompt, bump `PROMPT_VERSION` in `lib/prompts/version.ts` so cached
-detours regenerate. `npx tsx --env-file-if-exists=.env.local scripts/analyze-detour-prompts.ts`
-reports the size of every possible detour prompt for free (it uses token counting, not
-generation).
+| File                                       | Used for                                                |
+| ------------------------------------------ | ------------------------------------------------------- |
+| `shared.ts`                                | Safety and reading-level rules included in every prompt |
+| `adventure.ts` + `characterPerspective.ts` | Adventure Mode (opening and each page after)            |
+| `cyoOpening.ts` / `cyoContinuation.ts`     | Create Your Own                                         |
+| `choices.ts`                               | Rules for generated choices                             |
+| `moderation.ts`                            | The stepper input check                                 |
+| `offline.ts`                               | Summaries and adventure maps (content scripts)          |
 
 ## Deploying (Vercel + Supabase)
 
@@ -230,20 +225,15 @@ generation).
    project in US West (Oregon). If your Supabase project is elsewhere, change it to the nearest
    [Vercel region](https://vercel.com/docs/edge-network/regions).
 4. **Deploy.** Book content is read from the deployment's files (`outputFileTracingIncludes` in
-   `next.config.ts`), and detours stream over normal serverless functions.
-5. **Pre-warm production** from your machine with `DATABASE_URL` set to the Supabase string:
-   `npm run cache:prewarm` (about $0.08 for all ~400 book detours).
+   `next.config.ts`), and generated pages stream over normal serverless functions.
 
 ## Before the pilot
 
 - [ ] Rotate the Anthropic API key, and set a monthly spend limit in the Console.
 - [ ] Set `ADMIN_PASSWORD` and `APP_SECRET`. The admin page warns while the default is in use.
 - [ ] Set `SIGNUP_ACCESS_CODE` and send testers `https://<your-site>/signup?code=<code>`.
-- [ ] `npm run cache:prewarm` against the production database.
-- [ ] Optional: export, review and apply detours (above), starting with the ⚠ flagged ones in
-      Moby-Dick. Commit `approved.json` if you approve or edit any.
-- [ ] Review `EXCLUDED_CHAPTERS` in `lib/content/adventureMap.ts` and the character profiles in
-      `content/books/*/characters.json`.
+- [ ] Review each book's entry choice (`content/books/*/adventure-map.json`) and the character
+      profiles in `content/books/*/characters.json`.
 - [ ] Decide on `DAILY_BUDGET_USD`. At Haiku 5.5 prices, $5 covers roughly 7,000–10,000 new
       passages.
 - [ ] Set `NEXT_PUBLIC_FEEDBACK_URL`, and give each group a code (e.g. `LIB-OCT20`, `MS-ENG-P3`) to
@@ -260,12 +250,13 @@ content/books/    committed book content (JSON)
 lib/content/      chunking, loading and validation of book content
 lib/auth/         accounts, sessions, access code, password hashing
 lib/client-store/ client store: account data synced with /api/me, device data in localStorage
-lib/cyo/          Create Your Own genres, Surprise Me and story state
-lib/engine/       book adventure state machine, detour cache key and service
+lib/adventure/    Adventure Mode: book context, storyline outline, new-adventure records
+lib/cyo/          Create Your Own genres, Surprise Me, and story state (shared with adventures)
+lib/engine/       where Adventure Mode leaves a book (entry choice, page layout)
 lib/safety/       blocklist, personal-info filter, moderation
-lib/server-store/ shared SQL storage (detour cache, locks, usage, events) for SQLite and Postgres
+lib/server-store/ shared SQL storage (accounts, stories, usage, events) for SQLite and Postgres
 lib/llm/          model provider types, structured-output parsing, pricing
-lib/prompts/      prompt templates (offline ones now; runtime ones in Milestone 3)
+lib/prompts/      prompt templates (runtime and offline)
 lib/reader/       reader progress math and preferences
 scripts/          offline content scripts
 tests/            unit (Vitest) and e2e (Playwright)

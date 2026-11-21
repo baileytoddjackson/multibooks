@@ -2,9 +2,9 @@ import { z } from "zod";
 import { BookIdSchema } from "./content";
 
 /**
- * Adventure maps (content/books/<id>/adventure-map.json) define where choices appear in a book
- * and how each option's short detour rejoins the original text. Generated once offline by
- * scripts/gen-adventure-map.ts, validated, reviewed and committed.
+ * Adventure maps (content/books/<id>/adventure-map.json) define the entry choice: where Adventure
+ * Mode leaves a book's original text, and the options that start an adventure. Generated once
+ * offline by scripts/gen-adventure-map.ts, validated, reviewed and committed.
  */
 
 const ParagraphIdSchema = z.string().regex(/^c\d{3}p\d{3}$/);
@@ -14,9 +14,9 @@ export const OptionSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
   /** Shown on the choice button. Short, active, kid-friendly. */
   label: z.string().min(3).max(90),
-  /** What happens in the detour (instructions for the writer prompt, never shown). */
+  /** Where this option leads: guidance for the adventure's first page (never shown). */
   detourBrief: z.string().min(10).max(500),
-  /** Canon facts the detour must not contradict. */
+  /** World and character facts the adventure keeps. */
   mustPreserve: z.array(z.string()).default([]),
 });
 export type AdventureOption = z.infer<typeof OptionSchema>;
@@ -26,7 +26,7 @@ export const ChoicePointSchema = z.object({
   chapter: z.number().int().positive(),
   /** The choice appears right after this canon paragraph. */
   anchorAfter: ParagraphIdSchema,
-  /** After the detour, the original text resumes at this paragraph. */
+  /** Where this scene ends in the original (checked when generating; never shown). */
   rejoinAt: ParagraphIdSchema,
   /** In-story question, e.g. "Alice sees a little door. What should she do?" */
   prompt: z.string().min(5).max(200),
@@ -43,7 +43,7 @@ export type ChoicePoint = z.infer<typeof ChoicePointSchema>;
 
 export const AdventureMapSchema = z.object({
   bookId: BookIdSchema,
-  /** Bump when choice points change; part of the detour cache key. */
+  /** Bumped each time the map is regenerated. */
   version: z.number().int().positive(),
   generatedBy: z.string(),
   choicePoints: z.array(ChoicePointSchema).min(1),

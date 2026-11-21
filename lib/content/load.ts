@@ -2,7 +2,6 @@ import "server-only";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { cacheLife } from "next/cache";
-import { z } from "zod";
 import { AdventureMapSchema, type AdventureMap } from "@/lib/schemas/adventure";
 import {
   ChapterSchema,
@@ -20,21 +19,6 @@ import {
  * client JS) and cached for the life of the deployment, since content only changes on deploy.
  */
 const BOOKS_DIR = path.join(process.cwd(), "content/books");
-
-const ApprovedDetoursSchema = z.record(
-  z.string(),
-  z.object({ segments: z.array(z.string()).min(1) }),
-);
-export type ApprovedDetours = z.infer<typeof ApprovedDetoursSchema>;
-
-export function approvedKey(
-  mapVersion: number,
-  cpId: string,
-  optionId: string,
-  perspective: string,
-) {
-  return `m${mapVersion}:${cpId}:${optionId}:${perspective}`;
-}
 
 async function readJson(...parts: string[]): Promise<unknown> {
   return JSON.parse(await fs.readFile(path.join(BOOKS_DIR, ...parts), "utf8"));
@@ -76,20 +60,5 @@ export async function loadAdventureMap(bookId: string): Promise<AdventureMap | u
     return AdventureMapSchema.parse(await readJson(bookId, "adventure-map.json"));
   } catch {
     return undefined;
-  }
-}
-
-/**
- * Hand-approved/edited detours from content/review/<bookId>/approved.json. They override generated
- * text and survive prompt-version bumps. Keys: "m<mapVersion>:<cpId>:<optionId>:<perspective>".
- */
-export async function loadApprovedDetours(bookId: string): Promise<ApprovedDetours> {
-  "use cache";
-  cacheLife("max");
-  try {
-    const file = path.join(process.cwd(), "content/review", bookId, "approved.json");
-    return ApprovedDetoursSchema.parse(JSON.parse(await fs.readFile(file, "utf8")));
-  } catch {
-    return {};
   }
 }

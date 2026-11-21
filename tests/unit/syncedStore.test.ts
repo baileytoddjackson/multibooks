@@ -14,7 +14,6 @@ const progress = (
   fraction = 0.1,
 ): BookProgress => ({
   bookId,
-  mode: "canon",
   position: "c001p001",
   fraction,
   wordsRead: 100,
@@ -151,12 +150,18 @@ describe("SyncedProgressStore: account data", () => {
   it("flush sends pending writes immediately", async () => {
     const { remote, puts } = fakeRemote();
     const store = makeStore(remote);
-    store.saveStory(story("s1"));
+    store.saveBookProgress(progress("alice", 1));
     await store.flush();
+    expect(puts.map((p) => p.id)).toEqual(["alice"]);
+    expect(remote.put).toHaveBeenCalledWith("book", "alice", expect.anything());
+  });
+
+  it("saves stories without waiting for more changes", async () => {
+    const { remote, puts } = fakeRemote();
+    const store = makeStore(remote, { writeDelayMs: 10_000 });
+    store.saveStory(story("s1"));
+    await vi.advanceTimersByTimeAsync(0);
     expect(puts.map((p) => p.id)).toEqual(["s1"]);
-    expect(remote.put).toHaveBeenCalledWith("create", "s1", expect.anything(), {
-      keepalive: true,
-    });
   });
 
   it("retries a failed write, but not a rejected one", async () => {
@@ -164,9 +169,11 @@ describe("SyncedProgressStore: account data", () => {
     const store = makeStore(remote);
     remote.failNext = new TypeError("network down");
     store.saveStory(story("s1"));
-    await vi.advanceTimersByTimeAsync(150);
+    // Stories save straight away; the failed attempt retries after retryDelayMs (100 here).
+    await vi.advanceTimersByTimeAsync(50);
+    expect(remote.put).toHaveBeenCalledTimes(1);
     expect(puts).toHaveLength(0);
-    await vi.advanceTimersByTimeAsync(150);
+    await vi.advanceTimersByTimeAsync(100);
     expect(puts).toHaveLength(1);
 
     const errors = vi.spyOn(console, "error").mockImplementation(() => undefined);
@@ -189,6 +196,65 @@ describe("SyncedProgressStore: account data", () => {
     expect(puts).toHaveLength(0);
     expect(removes.map((r) => r.id)).toEqual(["s2", "s1"]);
     expect(store.listStories()).toEqual([]);
+  });
+
+  it("re-sends changes the server never confirmed after the next load (outbox)", async () => {
+    const storage = createMemoryStorage();
+    const lost = fakeRemote({ stories: [story("s1", 1)] });
+    // The page closes before the write lands: put never resolves.
+    lost.remote.put = vi.fn(() => new Promise<void>(() => undefined));
+    const first = new SyncedProgressStore(storage, lost.remote, { writeDelayMs: 100 });
+    await first.load();
+    first.saveStory({ ...story("s1", 5), title: "Newer" });
+    await vi.advanceTimersByTimeAsync(10);
+
+    // Next page load: the server still has the old copy.
+    const next = fakeRemote({ stories: [story("s1", 1)] });
+    const second = new SyncedProgressStore(storage, next.remote, { writeDelayMs: 100 });
+    await second.load();
+    expect(second.getStory("s1")?.title).toBe("Newer");
+    await vi.advanceTimersByTimeAsync(10);
+    expect(next.puts.map((p) => p.id)).toEqual(["s1"]);
+
+    // Confirmed now, so a third load has nothing to replay.
+    const third = fakeRemote({ stories: [{ ...story("s1", 5), title: "Newer" }] });
+    const store3 = new SyncedProgressStore(storage, third.remote, { writeDelayMs: 100 });
+    await store3.load();
+    await vi.advanceTimersByTimeAsync(10);
+    expect(third.puts).toHaveLength(0);
+  });
+
+  it("never replays one account's changes into another account", async () => {
+    const storage = createMemoryStorage();
+    const a = fakeRemote();
+    a.remote.put = vi.fn(() => new Promise<void>(() => undefined));
+    const storeA = new SyncedProgressStore(storage, a.remote, { writeDelayMs: 100 });
+    await storeA.load();
+    storeA.saveStory(story("private"));
+
+    const b = fakeRemote();
+    b.remote.load = vi.fn(async () => ({
+      user: { email: "someone-else@example.com" },
+      books: [],
+      stories: [],
+    }));
+    const storeB = new SyncedProgressStore(storage, b.remote, { writeDelayMs: 100 });
+    await storeB.load();
+    await vi.advanceTimersByTimeAsync(10);
+    expect(storeB.getStory("private")).toBeUndefined();
+    expect(b.puts).toHaveLength(0);
+  });
+
+  it("clearOutbox leaves nothing of the account on the device", async () => {
+    const storage = createMemoryStorage();
+    const { remote } = fakeRemote();
+    remote.put = vi.fn(() => new Promise<void>(() => undefined));
+    const store = new SyncedProgressStore(storage, remote, { writeDelayMs: 100 });
+    await store.load();
+    store.saveStory(story("s1"));
+    expect(storage.getItem("multibooks:v1:outbox")).toContain("s1");
+    store.clearOutbox();
+    expect(storage.getItem("multibooks:v1:outbox")).toBeNull();
   });
 
   it("reports a signed-out session", async () => {

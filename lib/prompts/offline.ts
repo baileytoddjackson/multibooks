@@ -42,19 +42,16 @@ export function synopsisUser(
 
 /* ── Adventure maps ──────────────────────────────────────────────────────────────────────── */
 
-export const ADVENTURE_MAP_SYSTEM = `You design one choice point for a "choose your own adventure" layer on top of
-a classic book, for readers aged 11-14. The reader reads the ORIGINAL text, reaches your choice,
-reads a short generated detour (150-250 words), and then the ORIGINAL text resumes. The detour is a
-brief side-path: it can show a consequence, a different angle, or a small moment the author skipped,
-but it must NOT change the plot, any character's fate, or the ending. The original must be able to
-pick up again at the rejoin paragraph as if nothing contradicted it.
+export const ADVENTURE_MAP_SYSTEM = `You design the choice where a classic book turns into the reader's own adventure,
+for readers aged 11-14. The reader reads the ORIGINAL opening, reaches your choice, and from then on
+the story is generated: a new adventure in the book's world, with its characters, that loosely
+follows the book's storyline but grows from the reader's choices. It never returns to the original.
 
 Pick the moment:
 - anchorAfter: a paragraph id at a natural pause where a reader would enjoy making a choice
   (a decision, a strange sight, a moment of suspense). Not in the middle of a quoted conversation.
-- rejoinAt: the paragraph id where the original resumes, 1-6 paragraphs after anchorAfter. The
-  paragraphs in between are replaced by the detour, so the detour must cover what they cover.
-  Choose a rejoin paragraph that reads naturally after a detour (e.g. starts a new beat).
+- rejoinAt: the paragraph id where this scene ends in the original, 1-6 paragraphs after
+  anchorAfter (used to check the scene; the reader never sees past anchorAfter).
 
 Write the choice:
 - prompt: an in-story question in plain words, at most 25 words, e.g. "The little door is locked.
@@ -63,9 +60,10 @@ Write the choice:
   different. Labels start with a verb, at most 12 words, no spoilers.
 - characterOptions: for each listed character who is actually present in this scene, exactly 2
   options written as what THAT character might do or notice. Only use the character ids given.
-- detourBrief for every option: at most 60 words describing what happens, and how it ends so the
-  original text can resume at rejoinAt.
-- mustPreserve: 1-3 facts from the original the detour must not change.
+- detourBrief for every option: at most 60 words describing where this choice leads: how the
+  adventure's first page could go, and how it starts to change the story.
+- mustPreserve: 1-3 facts about the world or characters the adventure should keep (who they are,
+  how the world works), not plot events.
 
 Safety for this age group:
 - No graphic violence, gore, cruelty, romance beyond the original, or scary content beyond the

@@ -88,11 +88,11 @@ async function BookDetails({ params }: { params: PageProps<"/book/[bookId]">["pa
               data-testid="mode-adventure"
             >
               <span className="font-display text-xl font-semibold">
-                Play the adventure <span aria-hidden="true">✦</span>
+                Adventure Mode <span aria-hidden="true">✦</span>
               </span>
               <span className="text-ink-soft">
-                Start with the real opening, then make choices along the way. The story always finds
-                its way back to the book.
+                Start with the real opening, then make a choice and the story becomes yours: a new
+                adventure that follows the book loosely, shaped by every choice you make.
               </span>
             </TrackedLink>
           </li>

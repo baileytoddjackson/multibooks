@@ -1,9 +1,9 @@
 import { currentUser, unauthorized } from "@/lib/auth/session";
-import type { BookProgress, CyoStory } from "@/lib/client-store/types";
+import type { BookProgress, Story } from "@/lib/client-store/types";
 import { serverStore } from "@/lib/server-store";
 
 /**
- * GET /api/me → {user: {email}, books: BookProgress[], stories: CyoStory[]}
+ * GET /api/me → {user: {email}, books: BookProgress[], stories: Story[]}
  * Everything the signed-in reader has saved, loaded once per page load by the client store.
  */
 export async function GET() {
@@ -14,7 +14,7 @@ export async function GET() {
     {
       user: { email: user.email },
       books: saved.filter((s) => s.kind === "book").map((s) => s.data as BookProgress),
-      stories: saved.filter((s) => s.kind === "create").map((s) => s.data as CyoStory),
+      stories: saved.filter((s) => s.kind === "story").map((s) => s.data as Story),
     },
     { headers: { "Cache-Control": "private, no-store" } },
   );

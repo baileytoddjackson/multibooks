@@ -13,8 +13,10 @@ export function ResumeRedirect({ bookId }: { bookId: BookId }) {
 
   useEffect(() => {
     if (status !== "ready") return;
-    const saved = getStore().getBookProgress(bookId);
-    const mode = params.get("mode") ?? saved?.mode ?? "canon";
+    // Reading as written resumes where the reader left off; an adventure starts at the opening
+    // (the reader corrects the chapter if the book's entry choice is later).
+    const mode = params.get("mode") === "adventure" ? "adventure" : "canon";
+    const saved = mode === "canon" ? getStore().getBookProgress(bookId) : undefined;
     const chapter = (saved && parseParagraphId(saved.position)?.chapter) || 1;
     router.replace(`/read/${bookId}/${chapter}?mode=${mode}`);
   }, [bookId, params, router, status]);

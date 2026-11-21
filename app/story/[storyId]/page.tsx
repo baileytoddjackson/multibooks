@@ -5,6 +5,8 @@ import { env } from "@/lib/env";
 
 export const metadata: Metadata = { title: "My story" };
 
+/** Create Your Own and Adventure Mode stories both open here. */
+
 /** Stories are loaded by the client store (from the reader's account), so this is a client shell. */
 export default function StoryPage(props: PageProps<"/story/[storyId]">) {
   return (
@@ -16,6 +18,14 @@ export default function StoryPage(props: PageProps<"/story/[storyId]">) {
 
 async function Story({ params }: { params: PageProps<"/story/[storyId]">["params"] }) {
   const { storyId } = await params;
-  const { CYO_SOFT_TURN_CAP, CYO_HARD_TURN_CAP } = env();
-  return <StoryReader storyId={storyId} softCap={CYO_SOFT_TURN_CAP} hardCap={CYO_HARD_TURN_CAP} />;
+  const e = env();
+  return (
+    <StoryReader
+      storyId={storyId}
+      caps={{
+        cyo: { soft: e.CYO_SOFT_TURN_CAP, hard: e.CYO_HARD_TURN_CAP },
+        adventure: { soft: e.ADVENTURE_SOFT_TURN_CAP, hard: e.ADVENTURE_HARD_TURN_CAP },
+      }}
+    />
+  );
 }

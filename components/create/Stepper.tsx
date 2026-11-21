@@ -8,7 +8,7 @@ import { getStore, notifyStoreChanged } from "@/lib/client-store";
 import { DETAILS_MAX, GENRES, SETTING_MAX, surpriseSetting, type GenreId } from "@/lib/cyo/genres";
 import { createStory, type OpeningResult } from "@/lib/cyo/story";
 import { postSse } from "@/lib/http/sseClient";
-import { SLOW_DOWN_NOTE } from "@/lib/reader/useDetour";
+import { SLOW_DOWN_NOTE } from "@/lib/reader/notes";
 
 type StartEvent =
   | { type: "delta"; text: string }

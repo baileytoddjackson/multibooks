@@ -6,7 +6,8 @@ import { ReaderControls } from "@/components/reader/ReaderControls";
 import { StyleSelector } from "@/components/reader/StyleSelector";
 import { FeedbackLink } from "@/components/ui/FeedbackLink";
 import { getStore, notifyStoreChanged, useStoreStatus, useStoreVersion } from "@/lib/client-store";
-import type { CyoStory } from "@/lib/client-store/types";
+import { isAdventure, type Story } from "@/lib/client-store/types";
+import { getBook } from "@/lib/content/books";
 import { genreLabel } from "@/lib/cyo/genres";
 import {
   appendSegment,
@@ -22,21 +23,37 @@ import {
 } from "@/lib/cyo/story";
 import { track, wordsIn } from "@/lib/analytics/track";
 import { postSse } from "@/lib/http/sseClient";
-import { SLOW_DOWN_NOTE } from "@/lib/reader/useDetour";
+import { SLOW_DOWN_NOTE } from "@/lib/reader/notes";
 import { useReaderPrefs } from "@/lib/reader/usePrefs";
 
 type ContinueEvent =
   | { type: "delta"; text: string }
   | { type: "reset" }
-  | ({ type: "ready" } & ContinuationResult)
+  | ({ type: "ready"; title?: string } & ContinuationResult)
   | { type: "denied"; reason: string; retryAfterSec?: number }
   | { type: "error"; code: string };
+
+export interface TurnCaps {
+  soft: number;
+  hard: number;
+}
 
 type Live =
   | { state: "idle" }
   | { state: "writing"; choice?: string; text: string; note?: string }
   | { state: "error"; retry: () => void }
   | { state: "resting" };
+
+/** Calls `onStart` once, when first shown (survives React's dev-mode double effects). */
+function StartOnMount({ onStart }: { onStart: () => void }) {
+  const started = useRef(false);
+  useEffect(() => {
+    if (started.current) return;
+    started.current = true;
+    onStart();
+  });
+  return null;
+}
 
 function Paragraphs({ text }: { text: string }) {
   return (
@@ -48,14 +65,16 @@ function Paragraphs({ text }: { text: string }) {
   );
 }
 
+/**
+ * Reads and continues a generated story: a Create Your Own story, or an Adventure Mode story
+ * (which grows out of a book and never returns to its original text).
+ */
 export function StoryReader({
   storyId,
-  softCap,
-  hardCap,
+  caps,
 }: {
   storyId: string;
-  softCap: number;
-  hardCap: number;
+  caps: { cyo: TurnCaps; adventure: TurnCaps };
 }) {
   useStoreVersion(); // re-render on changes
   const status = useStoreStatus();
@@ -69,6 +88,9 @@ export function StoryReader({
 
   const story = status === "ready" ? getStore().getStory(storyId) : undefined;
   const count = story?.segments.length ?? 0;
+  const adventure = story && isAdventure(story) ? story : undefined;
+  const book = adventure ? getBook(adventure.bookId) : undefined;
+  const context = adventure ? "adventure" : "cyo";
 
   // When a new segment lands, bring its start into view and move focus there for screen readers.
   useEffect(() => {
@@ -95,71 +117,54 @@ export function StoryReader({
     );
   }
 
-  const save = (next: CyoStory) => {
+  const save = (next: Story) => {
     getStore().saveStory(next);
     notifyStoreChanged();
   };
 
-  const continueStory = (choice: string | undefined, wantEnding = false, attempt = 0) => {
-    const s = story;
-    const last = lastSegment(s);
-    if (attempt === 0) {
-      // The segment the reader just finished counts as read.
-      track("words_read", { context: "cyo", words: Math.min(wordsIn(last.text), 5000) });
-      if (choice) track("choice_made", { context: "cyo", turn: turn(s) });
-    }
-    const character = s.cast.find((c) => c.id === s.characterId);
+  /** Streams one new page from `url`, then hands the finished result to `onReady`. */
+  const generate = (opts: {
+    url: string;
+    body: Record<string, unknown>;
+    choice?: string;
+    onReady: (ev: Extract<ContinueEvent, { type: "ready" }>) => void;
+    /** Starts the same request again (after a rate-limit wait, or from "Try again"). */
+    again: (attempt: number) => void;
+    attempt: number;
+  }) => {
+    const { choice, attempt } = opts;
     setLive({ state: "writing", choice, text: "" });
     requestAnimationFrame(() =>
       endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }),
     );
     let text = "";
     let done = false;
-    const retry = () => continueStory(choice, wantEnding);
+    const retry = () => opts.again(0);
     postSse<ContinueEvent>(
-      "/api/cyo/continue",
-      {
-        genre: s.genre,
-        summary: last.summary,
-        lastSegment: last.text,
-        choice,
-        style: s.style,
-        character: character ? { name: character.name, oneLine: character.oneLine } : undefined,
-        mustOfferChoices: mustOfferChoices(s),
-        wantEnding,
-        turn: turn(s) + 1,
-        sessionId: getStore().getSession().anonId,
-      },
+      opts.url,
+      { ...opts.body, sessionId: getStore().getSession().anonId },
       (ev) => {
         if (ev.type === "delta") setLive({ state: "writing", choice, text: (text += ev.text) });
         else if (ev.type === "reset") setLive({ state: "writing", choice, text: (text = "") });
         else if (ev.type === "ready") {
           done = true;
-          const next = appendSegment(s, choice, ev);
-          if (next.status === "done") {
-            track("story_finished", { genre: s.genre, turns: turn(next) });
-            track("words_read", { context: "cyo", words: Math.min(wordsIn(ev.story), 5000) });
-          }
-          save(next);
+          opts.onReady(ev);
           setLive({ state: "idle" });
         } else if (ev.type === "denied" && ev.reason === "rate_limited" && attempt < 2) {
           // Too many new pages this minute: wait politely, then try again by itself.
           done = true;
           setLive({ state: "writing", choice, text: "", note: SLOW_DOWN_NOTE });
-          setTimeout(
-            () => continueStory(choice, wantEnding, attempt + 1),
-            Math.min(ev.retryAfterSec ?? 10, 30) * 1000,
-          );
+          setTimeout(() => opts.again(attempt + 1), Math.min(ev.retryAfterSec ?? 10, 30) * 1000);
         } else if (ev.type === "denied") {
           done = true;
           track("generation_blocked", {
-            context: "cyo",
+            context,
             reason: ev.reason === "session_limit" ? "session_limit" : "daily_budget",
           });
           setLive({ state: "resting" });
         } else {
           done = true;
-          track("error_shown", { context: "cyo", code: "continue_failed" });
+          track("error_shown", { context, code: "continue_failed" });
           setLive({ state: "error", retry });
         }
       },
@@ -170,8 +175,91 @@ export function StoryReader({
       .catch(() => setLive({ state: "error", retry }));
   };
 
-  const last = lastSegment(story);
-  const wrap = wrapUpState(story, softCap, hardCap);
+  /** Adventure Mode: the first page, where the story leaves the book. */
+  function writeOpening(attempt = 0) {
+    if (!adventure) return;
+    const a = adventure;
+    generate({
+      url: "/api/adventure/start",
+      body: {
+        bookId: a.bookId,
+        optionId: a.branch.optionId,
+        style: a.style ?? "direct",
+        characterId: a.characterId,
+      },
+      choice: a.branch.choice,
+      attempt,
+      again: writeOpening,
+      onReady: (ev) => {
+        const next = appendSegment(a, a.branch.choice, { ...ev, isEnding: false });
+        save(ev.title ? { ...next, title: ev.title } : next);
+      },
+    });
+  }
+
+  const continueStory = (choice: string | undefined, wantEnding = false, attempt = 0) => {
+    const s = story;
+    const last = lastSegment(s);
+    if (attempt === 0) {
+      // The segment the reader just finished counts as read.
+      track("words_read", {
+        context,
+        bookId: adventure?.bookId,
+        words: Math.min(wordsIn(last.text), 5000),
+      });
+      if (choice) track("choice_made", { context, bookId: adventure?.bookId, turn: turn(s) });
+    }
+    const character = s.cast.find((c) => c.id === s.characterId);
+    const common = { choice, style: s.style, mustOfferChoices: mustOfferChoices(s), wantEnding };
+    const body = isAdventure(s)
+      ? {
+          ...common,
+          bookId: s.bookId,
+          summary: last.summary,
+          facts: last.facts ?? [],
+          choicesSoFar: s.segments.flatMap((seg) => (seg.choiceMade ? [seg.choiceMade] : [])),
+          recentPages: s.segments.slice(-2).map((seg) => seg.text),
+          characterId: s.characterId,
+          turn: turn(s) + 1,
+        }
+      : {
+          ...common,
+          genre: s.genre,
+          summary: last.summary,
+          lastSegment: last.text,
+          character: character ? { name: character.name, oneLine: character.oneLine } : undefined,
+          turn: turn(s) + 1,
+        };
+    generate({
+      url: isAdventure(s) ? "/api/adventure/continue" : "/api/cyo/continue",
+      body,
+      choice,
+      attempt,
+      again: (n) => continueStory(choice, wantEnding, n),
+      onReady: (ev) => {
+        const next = appendSegment(s, choice, ev);
+        if (next.status === "done") {
+          if (isAdventure(next)) {
+            track("adventure_finished", { bookId: next.bookId, turns: turn(next) });
+          } else {
+            track("story_finished", { genre: next.genre, turns: turn(next) });
+          }
+          track("words_read", {
+            context,
+            bookId: adventure?.bookId,
+            words: Math.min(wordsIn(ev.story), 5000),
+          });
+        }
+        save(next);
+      },
+    });
+  };
+
+  // An adventure is saved the moment the reader leaves the book; its first page is written here.
+  const needsOpening = !!adventure && count === 0;
+  const cap = adventure ? caps.adventure : caps.cyo;
+  const last = count > 0 ? lastSegment(story) : undefined;
+  const wrap = wrapUpState(story, cap.soft, cap.hard);
   const busy = live.state === "writing";
   const ended = story.status === "done";
   const needsStyle = !story.style && !ended;
@@ -195,7 +283,9 @@ export function StoryReader({
           <div className="min-w-0 flex-1 text-center">
             <p className="truncate font-display font-semibold">{story.title}</p>
             <p className="truncate text-sm text-[var(--reader-muted)]">
-              My story · {genreLabel(story.genre)} · Part {turn(story)}
+              {isAdventure(story)
+                ? `Adventure · ${book?.shortTitle ?? "Book"} · Page ${Math.max(turn(story), 1)}`
+                : `My story · ${genreLabel(story.genre)} · Part ${turn(story)}`}
             </p>
           </div>
           <ReaderControls prefs={prefs} onChange={setPrefs} />
@@ -206,7 +296,7 @@ export function StoryReader({
         <article className="paper-grain mx-auto max-w-[48rem] rounded-[var(--radius-card)] bg-[var(--reader-page)] px-5 py-8 shadow-[var(--shadow-page)] ring-1 ring-[var(--reader-line)] sm:px-14 sm:py-14">
           <header className="mb-8 text-center">
             <p className="text-xs font-semibold tracking-[0.2em] text-[var(--reader-accent)] uppercase">
-              ✦ A story by you
+              {adventure ? `✦ An adventure from ${book?.title ?? "a classic"}` : "✦ A story by you"}
             </p>
             {editingTitle ? (
               <form
@@ -261,7 +351,7 @@ export function StoryReader({
                 tabIndex={-1}
                 className="focus-visible:outline-none"
               >
-                {i > 0 && (
+                {(i > 0 || seg.choiceMade) && (
                   <p className="my-6 text-center font-sans text-sm text-[var(--reader-muted)] italic">
                     {seg.choiceMade ? `You chose: ${seg.choiceMade}` : "⁂"}
                   </p>
@@ -285,6 +375,7 @@ export function StoryReader({
             )}
           </div>
 
+          {needsOpening && live.state === "idle" && <StartOnMount onStart={writeOpening} />}
           <div ref={endRef} className="mt-10 font-sans">
             {live.state === "error" && (
               <div
@@ -321,10 +412,10 @@ export function StoryReader({
                 </p>
                 <div className="mt-5 flex flex-wrap justify-center gap-3">
                   <Link
-                    href="/create"
+                    href={adventure ? `/book/${adventure.bookId}` : "/create"}
                     className="inline-flex min-h-12 items-center rounded-full bg-plum px-6 font-semibold text-white"
                   >
-                    Write another story
+                    {adventure ? "Start another adventure" : "Write another story"}
                   </Link>
                   <Link
                     href="/"
@@ -336,14 +427,14 @@ export function StoryReader({
               </div>
             )}
 
-            {!busy && !ended && live.state !== "resting" && (
+            {!busy && !ended && last && live.state !== "resting" && (
               <div className="rounded-2xl bg-[var(--reader-accent)]/[0.06] p-5 ring-1 ring-[var(--reader-accent)]/30 sm:p-6">
                 {needsStyle ? (
                   <StyleSelector
                     heading="Before you choose… how do you want to play?"
                     characters={story.cast}
                     onDone={(style, characterId) => {
-                      track("style_chosen", { context: "cyo", style });
+                      track("style_chosen", { context, style });
                       save(setStoryStyle(story, style, characterId));
                     }}
                   />
@@ -423,7 +514,7 @@ export function StoryReader({
                 <button
                   type="button"
                   onClick={() => {
-                    track("undo", { context: "cyo" });
+                    track("undo", { context, bookId: adventure?.bookId });
                     save(undoLastChoice(story));
                   }}
                   className="min-h-11 rounded-full px-4 text-sm font-semibold ring-2 ring-[var(--reader-line)] hover:bg-[var(--reader-line)]"

@@ -1,18 +1,18 @@
-import type { BookProgress, CyoStory } from "./types";
+import type { BookProgress, Story } from "./types";
 
 /** Everything the signed-in reader has saved (GET /api/me). */
 export interface UserData {
   user: { email: string };
   books: BookProgress[];
-  stories: CyoStory[];
+  stories: Story[];
 }
 
-export type RemoteKind = "book" | "create";
+export type RemoteKind = "book" | "story";
 
 /** The account's saved data on the server. Injected so the store can be tested without fetch. */
 export interface RemoteApi {
   load(): Promise<UserData>;
-  put(kind: RemoteKind, id: string, body: unknown, opts: { keepalive: boolean }): Promise<void>;
+  put(kind: RemoteKind, id: string, body: unknown): Promise<void>;
   remove(kind: RemoteKind, id: string): Promise<void>;
 }
 
@@ -29,8 +29,12 @@ export class RemoteError extends Error {
   }
 }
 
-const PATHS: Record<RemoteKind, string> = { book: "/api/me/books", create: "/api/me/stories" };
-/** Browsers cap keepalive request bodies at 64 KB in total. */
+const PATHS: Record<RemoteKind, string> = { book: "/api/me/books", story: "/api/me/stories" };
+/**
+ * Writes use keepalive so they finish even if the reader leaves the page mid-request (a plain
+ * fetch is cancelled on unload). Browsers cap keepalive bodies at 64 KB in total, so a very long
+ * story is sent as a normal request instead.
+ */
 const KEEPALIVE_MAX = 60_000;
 
 async function check(res: Response): Promise<Response> {
@@ -44,14 +48,14 @@ export const httpRemote: RemoteApi = {
     const res = await check(await fetch("/api/me", { cache: "no-store" }));
     return (await res.json()) as UserData;
   },
-  async put(kind, id, body, { keepalive }) {
+  async put(kind, id, body) {
     const json = JSON.stringify(body);
     await check(
       await fetch(`${PATHS[kind]}/${encodeURIComponent(id)}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: json,
-        keepalive: keepalive && json.length < KEEPALIVE_MAX,
+        keepalive: json.length < KEEPALIVE_MAX,
       }),
     );
   },

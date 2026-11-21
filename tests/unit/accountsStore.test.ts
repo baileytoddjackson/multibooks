@@ -10,7 +10,7 @@ const user = (id: string, email: string) => ({
 });
 
 const saved = (id: string, updatedAt: number, data: unknown = { v: updatedAt }): SavedRecord => ({
-  kind: "create",
+  kind: "story",
   id,
   title: `Story ${id}`,
   data,
@@ -65,7 +65,7 @@ describe.each(BACKENDS)("accounts and saved stories on $name", ({ make }) => {
     await store.putSaved("u2", saved("s1", 5));
     expect((await store.listSaved("u1")).map((s) => s.id)).toEqual(["s2", "s1"]);
     expect((await store.listSaved("u2")).map((s) => s.data)).toEqual([{ v: 5 }]);
-    await store.deleteSaved("u1", "create", "s1");
+    await store.deleteSaved("u1", "story", "s1");
     expect((await store.listSaved("u1")).map((s) => s.id)).toEqual(["s2"]);
     expect(await store.listSaved("u2")).toHaveLength(1);
   });
@@ -86,7 +86,7 @@ describe.each(BACKENDS)("accounts and saved stories on $name", ({ make }) => {
     await store.putSaved("u1", saved("alice", 4));
     const all = await store.listSaved("u1");
     expect(all.map((s) => [s.kind, s.id])).toEqual([
-      ["create", "alice"],
+      ["story", "alice"],
       ["book", "alice"],
     ]);
     expect(all[1].bookId).toBe("alice");

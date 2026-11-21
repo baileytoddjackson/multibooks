@@ -53,15 +53,15 @@ test("canon reader in every theme", async ({ page }) => {
   }
 });
 
-test("adventure: style picker, choice and detour", async ({ page }) => {
+test("adventure: style picker, entry choice and adventure page", async ({ page }) => {
   await toFirstChoice(page);
   await expectAccessible(page, "style picker");
   await page.getByRole("radio", { name: /Direct the story/ }).click();
   await page.getByRole("button", { name: "Let's go" }).click();
   await expectAccessible(page, "choice prompt");
-  await page.getByTestId("choice-prompt").getByRole("button").first().click();
-  await expect(page.getByText("The original story continues")).toBeVisible({ timeout: 15_000 });
-  await expectAccessible(page, "detour");
+  await page.getByTestId("choice-prompt").getByRole("listitem").first().getByRole("button").click();
+  await expect(page.getByTestId("cyo-choices")).toBeVisible({ timeout: 15_000 });
+  await expectAccessible(page, "adventure page");
 });
 
 test("Create Your Own stepper and story", async ({ page }) => {

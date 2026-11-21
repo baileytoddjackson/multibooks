@@ -1,15 +1,16 @@
 /**
- * Builds content/books/<id>/adventure-map.json: one choice point per selected chapter.
+ * Builds content/books/<id>/adventure-map.json: the book's entry choice point, where Adventure
+ * Mode leaves the original text (CHOICE_POINT_CAPS allows more, but the app only uses the first).
  *
- * 1. Picks chapters in code: always chapter 1 (the intro choice), then evenly spaced chapters,
- *    skipping essay-style chapters and anything flagged for graphic content (see adventureMap.ts).
+ * 1. Picks chapters in code: always chapter 1 (the intro choice), then (if the cap allows) evenly
+ *    spaced chapters, skipping essay-style and flagged chapters (see adventureMap.ts).
  * 2. Asks the model (Batch API) to place one choice point in each chapter, shown with paragraph ids.
  * 3. Re-validates every anchor, rejoin and character in code; rejected proposals are reported.
  *
  *   npm run content:maps                    # all books
  *   npm run content:maps -- --book alice
  *
- * Re-running bumps the map version, which invalidates cached detours for that book.
+ * Re-running bumps the map version.
  * Without ANTHROPIC_API_KEY it writes a mechanical placeholder map (for tests and local dev).
  */
 import path from "node:path";

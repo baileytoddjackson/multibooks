@@ -1,24 +1,10 @@
 import type { UsageKind } from "@/lib/llm/types";
 
 /**
- * Server-side persistence boundary: accounts and sessions, each reader's saved stories, shared
- * detour cache, generation locks, usage/cost logging, rate limiting and analytics events. Implemented with libSQL (SQLite locally, Turso on Vercel);
+ * Server-side persistence boundary: accounts and sessions, each reader's saved stories,
+ * usage/cost logging, rate limiting and analytics events. Implemented with libSQL (SQLite locally, Turso on Vercel);
  * another backend only needs to implement this interface.
  */
-export interface CachedDetour {
-  cacheKey: string;
-  payload: DetourPayload;
-  source: "generated" | "prewarm" | "approved";
-  createdAt: number;
-}
-
-/** What readers get for a detour: 1-2 short segments in the author's voice. */
-export interface DetourPayload {
-  segments: string[];
-  /** Note shown when the chosen character isn't in this scene and the narrator tells it instead. */
-  narratorFallbackNote?: string;
-}
-
 export interface UsageRecord {
   sessionId?: string;
   kind: UsageKind;
@@ -55,8 +41,11 @@ export interface SessionUser {
   email: string;
 }
 
-/** "book" = progress through one book (id is the book id); "create" = a Create Your Own story. */
-export type SavedKind = "book" | "create";
+/**
+ * "book" = progress reading one book as written (id is the book id); "story" = a Create Your Own
+ * or Adventure Mode story (book_id is set for adventures).
+ */
+export type SavedKind = "book" | "story";
 
 /** One reader's saved reading or story, stored as JSON alongside a few columns for listing. */
 export interface SavedRecord {
@@ -74,22 +63,6 @@ export type SqlDialect = "sqlite" | "postgres";
 export interface ServerStore {
   /** Which SQL dialect `query` speaks (the admin stats SQL adapts to it). */
   readonly dialect: SqlDialect;
-
-  getDetour(cacheKey: string): Promise<CachedDetour | undefined>;
-  putDetour(
-    d: CachedDetour & { bookId: string; cpId: string; optionId: string; perspective: string },
-  ): Promise<void>;
-  listDetours(
-    bookId?: string,
-  ): Promise<
-    (CachedDetour & { bookId: string; cpId: string; optionId: string; perspective: string })[]
-  >;
-
-  deleteDetour(cacheKey: string): Promise<void>;
-
-  /** Returns true if this caller now holds the lock (no one else is generating this key). */
-  acquireLock(cacheKey: string, ttlMs: number): Promise<boolean>;
-  releaseLock(cacheKey: string): Promise<void>;
 
   logUsage(u: UsageRecord): Promise<void>;
   /** Estimated spend so far for a UTC day ("YYYY-MM-DD"). */

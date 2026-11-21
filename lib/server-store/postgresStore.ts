@@ -9,8 +9,6 @@ import { SqlStore, type Executor, type SqlArg } from "./sqlStore";
  * them. The app connects directly as the database owner, which RLS doesn't restrict.
  */
 const TABLES = [
-  "detours",
-  "generation_locks",
   "llm_usage",
   "daily_spend",
   "counters",
@@ -21,21 +19,6 @@ const TABLES = [
 ];
 
 const MIGRATIONS = [
-  `CREATE TABLE IF NOT EXISTS detours (
-     cache_key TEXT PRIMARY KEY,
-     book_id TEXT NOT NULL,
-     cp_id TEXT NOT NULL,
-     option_id TEXT NOT NULL,
-     perspective TEXT NOT NULL,
-     payload_json TEXT NOT NULL,
-     source TEXT NOT NULL,
-     created_at BIGINT NOT NULL
-   )`,
-  `CREATE INDEX IF NOT EXISTS detours_book ON detours(book_id, cp_id)`,
-  `CREATE TABLE IF NOT EXISTS generation_locks (
-     cache_key TEXT PRIMARY KEY,
-     expires_at BIGINT NOT NULL
-   )`,
   `CREATE TABLE IF NOT EXISTS llm_usage (
      id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
      ts BIGINT NOT NULL,

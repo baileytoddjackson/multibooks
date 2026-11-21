@@ -3,17 +3,6 @@ import { utcDay, type ServerStore } from "@/lib/server-store/ServerStore";
 import { toPositional } from "@/lib/server-store/postgresStore";
 import { BACKENDS } from "./storeBackends";
 
-const detour = {
-  cacheKey: "k1",
-  bookId: "alice",
-  cpId: "cp01",
-  optionId: "p1",
-  perspective: "narrator",
-  payload: { segments: ["Once upon a time."] },
-  source: "generated" as const,
-  createdAt: 1,
-};
-
 describe.each(BACKENDS)("ServerStore on $name", ({ make }) => {
   let store: ServerStore;
   let cleanup: () => Promise<void>;
@@ -22,35 +11,9 @@ describe.each(BACKENDS)("ServerStore on $name", ({ make }) => {
   });
   afterEach(async () => cleanup());
 
-  it("stores and returns detours, updating on conflict", async () => {
-    expect(await store.getDetour("k1")).toBeUndefined();
-    await store.putDetour(detour);
-    expect((await store.getDetour("k1"))?.payload.segments).toEqual(["Once upon a time."]);
-    await store.putDetour({ ...detour, payload: { segments: ["Edited."] }, source: "approved" });
-    const got = await store.getDetour("k1");
-    expect(got?.payload.segments).toEqual(["Edited."]);
-    expect(got?.source).toBe("approved");
-    expect(await store.listDetours("alice")).toHaveLength(1);
-  });
-
-  it("lets exactly one of many concurrent callers take a generation lock", async () => {
-    const results = await Promise.all(
-      Array.from({ length: 25 }, () => store.acquireLock("k", 30_000)),
-    );
-    expect(results.filter(Boolean)).toHaveLength(1);
-    await store.releaseLock("k");
-    expect(await store.acquireLock("k", 30_000)).toBe(true);
-  });
-
-  it("takes over an expired lock", async () => {
-    expect(await store.acquireLock("k", -1)).toBe(true); // already expired
-    expect(await store.acquireLock("k", 30_000)).toBe(true);
-    expect(await store.acquireLock("k", 30_000)).toBe(false);
-  });
-
   it("accumulates daily spend from usage logs", async () => {
     const base = {
-      kind: "detour" as const,
+      kind: "adventure_cont" as const,
       model: "claude-haiku-5-5",
       inputTokens: 1000,
       outputTokens: 500,

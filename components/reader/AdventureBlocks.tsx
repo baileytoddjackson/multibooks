@@ -1,153 +1,94 @@
 "use client";
 
-import { useEffect } from "react";
+import { useState } from "react";
 import { castAvailableAt } from "@/lib/content/adventureMap";
-import {
-  choiceView,
-  type AdventureState,
-  type PageBlock,
-  type Resolution,
-} from "@/lib/engine/bookAdventure";
+import { choiceView, type ChoiceView, type PageBlock } from "@/lib/engine/bookAdventure";
 import type { InteractionStyle } from "@/lib/client-store/types";
-import { track } from "@/lib/analytics/track";
-import { useDetour } from "@/lib/reader/useDetour";
 import type { AdventureOption, ChoicePoint } from "@/lib/schemas/adventure";
 import type { Character } from "@/lib/schemas/content";
 import { ChoicePrompt } from "./ChoicePrompt";
-import { DetourPassage } from "./DetourPassage";
 import { Passage } from "./Passage";
 import { StyleSelector } from "./StyleSelector";
 
-export interface AdventureActions {
-  choose: (cp: ChoicePoint, option: AdventureOption) => void;
-  keepOriginal: (cpId: string, from?: "choice" | "detour" | "resting") => void;
-  setStyle: (style: InteractionStyle, characterId?: string) => void;
-  setDetourText: (cpId: string, segments: string[]) => void;
-  undo: () => void;
+export interface EntryChoice {
+  option: AdventureOption;
+  view: ChoiceView;
+  style: InteractionStyle;
+  characterId?: string;
 }
 
+/** The entry chapter in Adventure Mode: original text, then the choice that starts the adventure. */
 export function AdventureBlocks({
   blocks,
-  state,
   cast,
-  bookId,
-  sessionId,
-  actions,
+  onStart,
+  onKeepOriginal,
 }: {
   blocks: PageBlock[];
-  state: AdventureState;
   cast: Character[];
-  bookId: string;
-  sessionId: string;
-  actions: AdventureActions;
+  onStart: (choice: EntryChoice) => void;
+  onKeepOriginal: () => void;
 }) {
   return (
     <>
-      {blocks.map((b, i) => {
-        if (b.type === "canon") return <Passage key={i} paragraphs={b.paragraphs} />;
-        if (b.type === "choice") {
-          return (
-            <ChoiceBlock key={b.cp.id} cp={b.cp} state={state} cast={cast} actions={actions} />
-          );
-        }
-        return (
-          <DetourBlock
-            key={`${b.cp.id}-${b.resolution.optionId}`}
-            resolution={b.resolution}
-            bookId={bookId}
-            sessionId={sessionId}
-            actions={actions}
+      {blocks.map((b, i) =>
+        b.type === "canon" ? (
+          <Passage key={i} paragraphs={b.paragraphs} />
+        ) : (
+          <EntryChoiceBlock
+            key={b.cp.id}
+            cp={b.cp}
+            cast={cast}
+            onStart={onStart}
+            onKeepOriginal={onKeepOriginal}
           />
-        );
-      })}
+        ),
+      )}
     </>
   );
 }
 
-function ChoiceBlock({
+function EntryChoiceBlock({
   cp,
-  state,
   cast,
-  actions,
+  onStart,
+  onKeepOriginal,
 }: {
   cp: ChoicePoint;
-  state: AdventureState;
   cast: Character[];
-  actions: AdventureActions;
+  onStart: (choice: EntryChoice) => void;
+  onKeepOriginal: () => void;
 }) {
-  const introduced = castAvailableAt(cast, cp.chapter);
+  const [style, setStyle] = useState<{ style: InteractionStyle; characterId?: string }>();
+  const [starting, setStarting] = useState(false);
   const wrapper =
     "not-prose my-8 rounded-2xl bg-[var(--reader-accent)]/[0.06] p-5 font-sans text-base ring-1 ring-[var(--reader-accent)]/30 sm:p-6";
 
-  // The first choice (or the first after switching into adventure mode) introduces the style.
-  if (!state.style) {
+  // First, how the reader wants to play; then the choice itself.
+  if (!style) {
     return (
       <div className={wrapper}>
-        <StyleSelector characters={introduced} onDone={actions.setStyle} />
+        <StyleSelector
+          characters={castAvailableAt(cast, cp.chapter)}
+          onDone={(s, characterId) => setStyle({ style: s, characterId })}
+        />
       </div>
     );
   }
-  const name = cast.find((c) => c.id === state.characterId)?.name;
-  const view = choiceView(cp, state.style, state.characterId, name);
+  const name = cast.find((c) => c.id === style.characterId)?.name;
+  const view = choiceView(cp, style.style, style.characterId, name);
   return (
     <div className={wrapper}>
       <ChoicePrompt
         cp={cp}
         view={view}
-        onChoose={(o) => actions.choose(cp, o)}
-        onKeepOriginal={() => actions.keepOriginal(cp.id, "choice")}
+        disabled={starting}
+        onChoose={(option) => {
+          setStarting(true);
+          onStart({ option, view, ...style });
+        }}
+        onKeepOriginal={onKeepOriginal}
       />
     </div>
-  );
-}
-
-function DetourBlock({
-  resolution,
-  bookId,
-  sessionId,
-  actions,
-}: {
-  resolution: Extract<Resolution, { kind: "detour" }>;
-  bookId: string;
-  sessionId: string;
-  actions: AdventureActions;
-}) {
-  const needsText = resolution.segments.length === 0;
-  const { status, retry } = useDetour(
-    needsText
-      ? {
-          bookId,
-          cpId: resolution.cpId,
-          optionId: resolution.optionId,
-          perspective: resolution.perspective,
-          sessionId,
-        }
-      : null,
-  );
-
-  const { setDetourText } = actions;
-  useEffect(() => {
-    if (status.state === "ready") {
-      track("detour_served", { bookId, cpId: resolution.cpId, cached: status.cached });
-      setDetourText(resolution.cpId, status.segments);
-    } else if (status.state === "resting") {
-      track("generation_blocked", { context: "book", reason: status.reason });
-    } else if (status.state === "error") {
-      track("error_shown", { context: "book", code: "detour_failed" });
-    }
-  }, [status, resolution.cpId, setDetourText, bookId]);
-
-  return (
-    <DetourPassage
-      choiceLabel={resolution.optionLabel}
-      status={status}
-      segments={resolution.segments}
-      note={resolution.narratorFallbackNote}
-      onRetry={retry}
-      onReturnToOriginal={() =>
-        actions.keepOriginal(resolution.cpId, status.state === "resting" ? "resting" : "detour")
-      }
-      onUndo={actions.undo}
-    />
   );
 }

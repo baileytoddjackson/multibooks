@@ -3,7 +3,8 @@ import type { Effort } from "./models";
 import type { TokenUsage } from "./pricing";
 
 /** Every model call is tagged so usage and cost can be broken down in /admin/stats. */
-export type UsageKind = "detour" | "cyo_open" | "cyo_cont" | "moderation" | "offline";
+export type UsageKind =
+  "adventure_open" | "adventure_cont" | "cyo_open" | "cyo_cont" | "moderation" | "offline";
 
 export interface StructuredRequest<T> {
   kind: UsageKind;

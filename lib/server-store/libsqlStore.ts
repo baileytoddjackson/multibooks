@@ -5,21 +5,6 @@ import { SqlStore, type Executor } from "./sqlStore";
 
 /** SQLite / libSQL backend: a local file for development and tests (or a Turso URL). */
 const MIGRATIONS = [
-  `CREATE TABLE IF NOT EXISTS detours (
-     cache_key TEXT PRIMARY KEY,
-     book_id TEXT NOT NULL,
-     cp_id TEXT NOT NULL,
-     option_id TEXT NOT NULL,
-     perspective TEXT NOT NULL,
-     payload_json TEXT NOT NULL,
-     source TEXT NOT NULL,
-     created_at INTEGER NOT NULL
-   )`,
-  `CREATE INDEX IF NOT EXISTS detours_book ON detours(book_id, cp_id)`,
-  `CREATE TABLE IF NOT EXISTS generation_locks (
-     cache_key TEXT PRIMARY KEY,
-     expires_at INTEGER NOT NULL
-   )`,
   `CREATE TABLE IF NOT EXISTS llm_usage (
      id INTEGER PRIMARY KEY AUTOINCREMENT,
      ts INTEGER NOT NULL,

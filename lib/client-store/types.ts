@@ -1,9 +1,9 @@
-import type { AdventureState } from "@/lib/engine/bookAdventure";
 import type { BookId } from "@/lib/schemas/content";
 
-/** Paragraph ids look like "c03p017" (chapter 3, paragraph 17). */
+/** Paragraph ids look like "c003p017" (chapter 3, paragraph 17). */
 export type ParagraphId = string;
 
+/** "canon" = read it as written; "adventure" = a generated story that grows out of the book. */
 export type ReadingMode = "canon" | "adventure";
 export type InteractionStyle = "direct" | "character" | "both";
 /** "narrator" or a character id from the book's curated cast. */
@@ -16,51 +16,89 @@ export interface Session {
   createdAt: number;
 }
 
-/** Adventure progress for a book (choices made, style, character). See lib/engine/bookAdventure.ts. */
-export type { AdventureState } from "@/lib/engine/bookAdventure";
-
+/** Where a reader is in a book they're reading as written. */
 export interface BookProgress {
   bookId: BookId;
-  mode: ReadingMode;
   position: ParagraphId;
   /** 0..1 through the canon text, for the progress bar and "Continue reading". */
   fraction: number;
-  adventure?: AdventureState;
   wordsRead: number;
   updatedAt: number;
 }
 
-export interface CyoSegment {
+export interface StorySegment {
   text: string;
   /** Label of the choice that led to this segment, if any. */
   choiceMade?: string;
   /** Running summary after this segment (kept per segment so undo restores it exactly). */
   summary: string;
+  /**
+   * Adventure Mode only: short facts the story has established so far (who's who, what was
+   * found, promises made), kept so later pages stay consistent with them.
+   */
+  facts?: string[];
   /** Choices offered after this segment (empty = "Keep reading" or the end). */
   choices: string[];
   isEnding?: boolean;
 }
 
-export interface CyoCastMember {
+export interface CastMember {
   id: string;
   name: string;
   oneLine: string;
 }
 
-export interface CyoStory {
+interface StoryBase {
   id: string;
   title: string;
-  genre: string;
-  setting: string;
-  details?: string;
-  segments: CyoSegment[];
-  cast: CyoCastMember[];
+  segments: StorySegment[];
+  /** Characters the reader can play as. */
+  cast: CastMember[];
   style?: InteractionStyle;
   characterId?: string;
   status: "active" | "done";
   createdAt: number;
   updatedAt: number;
 }
+
+/** A Create Your Own story (genre → setting → details). */
+export interface CyoStory extends StoryBase {
+  kind?: "create";
+  genre: string;
+  setting: string;
+  details?: string;
+}
+
+/** Where an adventure left the book: the reader's first choice. */
+export interface AdventureBranch {
+  chapter: number;
+  cpId: string;
+  optionId: string;
+  /** The option's label, as the reader saw it. */
+  choice: string;
+  /** "narrator" or the character id the story follows. */
+  perspective: string;
+}
+
+/**
+ * An Adventure Mode story: it starts from a book's real opening, then becomes a new story that
+ * loosely follows the book's storyline. One-way: it never returns to the original text.
+ */
+export interface AdventureStory extends StoryBase {
+  kind: "adventure";
+  bookId: BookId;
+  branch: AdventureBranch;
+}
+
+export type Story = CyoStory | AdventureStory;
+
+export function isAdventure(s: Story): s is AdventureStory {
+  return s.kind === "adventure";
+}
+
+/** Older names, still used by Create Your Own code. */
+export type CyoSegment = StorySegment;
+export type CyoCastMember = CastMember;
 
 export type FontSize = "s" | "m" | "l";
 export type ReaderTheme = "light" | "sepia" | "dark";

@@ -2,7 +2,7 @@ import type { BookId } from "@/lib/schemas/content";
 import { DEFAULT_READER_PREFS, type ProgressStore } from "./ProgressStore";
 import type { RemoteApi, RemoteKind, UserData } from "./remote";
 import { RemoteError, SignedOutError } from "./remote";
-import type { BookProgress, CyoStory, ReaderPrefs, Session } from "./types";
+import type { BookProgress, ReaderPrefs, Session, Story } from "./types";
 
 /**
  * The client store for a signed-in reader.
@@ -10,6 +10,8 @@ import type { BookProgress, CyoStory, ReaderPrefs, Session } from "./types";
  * - Book progress and stories belong to the account: loaded once per page from the server, kept
  *   in memory so the UI can read them synchronously, and written back shortly after each change
  *   (one coalesced write per record, flushed when the page is hidden).
+ * - Until the server confirms a write, the change also waits in a localStorage outbox, so it
+ *   survives the page closing mid-request.
  * - The anonymous analytics session and reader preferences belong to the device and stay in
  *   localStorage. The analytics id is never sent with account data, so research events can't be
  *   linked to an account.
@@ -17,7 +19,21 @@ import type { BookProgress, CyoStory, ReaderPrefs, Session } from "./types";
 export type StoreStatus = "loading" | "ready" | "error";
 
 const PREFIX = "multibooks:v1:";
-const DEVICE_KEYS = { session: `${PREFIX}session`, prefs: `${PREFIX}prefs` } as const;
+const DEVICE_KEYS = {
+  session: `${PREFIX}session`,
+  prefs: `${PREFIX}prefs`,
+  outbox: `${PREFIX}outbox`,
+} as const;
+
+/**
+ * Changes the server hasn't confirmed yet, kept in localStorage so none are lost if the page
+ * closes mid-request (or a new page loads before the save lands). Merged back in and re-sent
+ * after the next load, but only for the same account.
+ */
+interface Outbox {
+  email?: string;
+  records: Record<string, { kind: RemoteKind; id: string; body: BookProgress | Story }>;
+}
 
 /** Minimal Storage surface so tests can pass an in-memory map. */
 export interface KeyValueStorage {
@@ -50,7 +66,7 @@ function randomId(): string {
 
 export class SyncedProgressStore implements ProgressStore {
   private books = new Map<string, BookProgress>();
-  private stories = new Map<string, CyoStory>();
+  private stories = new Map<string, Story>();
   /** Deleted before the server data arrived; skipped when merging it. */
   private deleted = new Set<string>();
   private pending = new Map<string, Pending>();
@@ -93,9 +109,10 @@ export class SyncedProgressStore implements ProgressStore {
         }
         for (const s of data.stories) {
           const local = this.stories.get(s.id);
-          if (!this.deleted.has(`create:${s.id}`) && (!local || local.updatedAt < s.updatedAt))
+          if (!this.deleted.has(`story:${s.id}`) && (!local || local.updatedAt < s.updatedAt))
             this.stories.set(s.id, s);
         }
+        this.replayOutbox(data.user.email);
         this.state = "ready";
         this.changed();
       },
@@ -116,6 +133,49 @@ export class SyncedProgressStore implements ProgressStore {
     return this.load();
   }
 
+  /* ── Outbox ── */
+
+  private readOutbox(): Outbox {
+    const o = this.readLocal<Outbox | null>(DEVICE_KEYS.outbox, null);
+    return o && typeof o.records === "object" && o.records ? o : { records: {} };
+  }
+
+  private updateOutbox(change: (o: Outbox) => void) {
+    const o = this.readOutbox();
+    change(o);
+    if (this.user) o.email = this.user.email;
+    this.writeLocal(DEVICE_KEYS.outbox, o);
+  }
+
+  /** After loading: re-apply and re-send this account's unconfirmed changes. */
+  private replayOutbox(email: string) {
+    const o = this.readOutbox();
+    if (o.email && o.email !== email) {
+      this.writeLocal(DEVICE_KEYS.outbox, { email, records: {} });
+      return;
+    }
+    for (const [key, r] of Object.entries(o.records)) {
+      const current = r.kind === "book" ? this.books.get(r.id) : this.stories.get(r.id);
+      if (this.deleted.has(key) || (current && current.updatedAt >= r.body.updatedAt)) {
+        delete o.records[key];
+        continue;
+      }
+      if (r.kind === "book") this.books.set(r.id, r.body as BookProgress);
+      else this.stories.set(r.id, r.body as Story);
+      this.schedule(r.kind, r.id, 0, 0);
+    }
+    this.writeLocal(DEVICE_KEYS.outbox, { ...o, email });
+  }
+
+  /** Forgets unconfirmed changes (on sign-out, so the next person on this device can't see them). */
+  clearOutbox(): void {
+    try {
+      this.storage.removeItem(DEVICE_KEYS.outbox);
+    } catch {
+      // Inaccessible storage: nothing was kept there anyway.
+    }
+  }
+
   /* ── Writing back ── */
 
   private changed() {
@@ -134,9 +194,11 @@ export class SyncedProgressStore implements ProgressStore {
       timer: setTimeout(() => void this.write(kind, id), delay),
       tries: existing ? Math.min(existing.tries, tries) : tries,
     });
+    const body = kind === "book" ? this.books.get(id) : this.stories.get(id);
+    if (body) this.updateOutbox((o) => void (o.records[key] = { kind, id, body }));
   }
 
-  private async write(kind: RemoteKind, id: string, keepalive = false) {
+  private async write(kind: RemoteKind, id: string) {
     const key = this.key(kind, id);
     const p = this.pending.get(key);
     if (!p) return;
@@ -145,7 +207,12 @@ export class SyncedProgressStore implements ProgressStore {
     const body = kind === "book" ? this.books.get(id) : this.stories.get(id);
     if (!body) return;
     try {
-      await this.remote.put(kind, id, body, { keepalive });
+      await this.remote.put(kind, id, body);
+      // Confirmed: drop it from the outbox, unless a newer change has replaced it since.
+      this.updateOutbox((o) => {
+        const r = o.records[key];
+        if (r && r.body.updatedAt <= body.updatedAt) delete o.records[key];
+      });
     } catch (err) {
       if (err instanceof SignedOutError) return this.opts.onSignedOut?.();
       const retryable = !(err instanceof RemoteError) || err.retryable;
@@ -153,17 +220,20 @@ export class SyncedProgressStore implements ProgressStore {
       if (retryable && p.tries + 1 < MAX_TRIES && !this.pending.has(key)) {
         this.schedule(kind, id, p.tries + 1, this.retryDelayMs * (p.tries + 1));
       } else if (!retryable) {
+        // The server refused this record; resending it would fail again.
+        this.updateOutbox((o) => void delete o.records[key]);
         console.error(`Couldn't save ${key}`, err);
       }
+      // Out of retries (e.g. offline): it stays in the outbox for the next load.
     }
   }
 
   /** Sends every queued write now (e.g. when the page is being hidden or before signing out). */
-  async flush(keepalive = true): Promise<void> {
+  async flush(): Promise<void> {
     await Promise.all(
       [...this.pending.keys()].map((key) => {
         const [kind, ...rest] = key.split(":");
-        return this.write(kind as RemoteKind, rest.join(":"), keepalive);
+        return this.write(kind as RemoteKind, rest.join(":"));
       }),
     );
   }
@@ -173,6 +243,7 @@ export class SyncedProgressStore implements ProgressStore {
     const p = this.pending.get(key);
     if (p) clearTimeout(p.timer);
     this.pending.delete(key);
+    this.updateOutbox((o) => void delete o.records[key]);
     if (this.state !== "ready") this.deleted.add(key);
     this.remote.remove(kind, id).catch((err) => {
       if (err instanceof SignedOutError) this.opts.onSignedOut?.();
@@ -246,23 +317,25 @@ export class SyncedProgressStore implements ProgressStore {
     this.removeRemote("book", bookId);
   }
 
-  getStory(id: string): CyoStory | undefined {
+  getStory(id: string): Story | undefined {
     return this.stories.get(id);
   }
 
-  saveStory(story: CyoStory): void {
+  saveStory(story: Story): void {
     this.stories.set(story.id, story);
-    this.deleted.delete(this.key("create", story.id));
-    this.schedule("create", story.id);
+    this.deleted.delete(this.key("story", story.id));
+    // Stories change only at discrete moments (a new page, undo, rename), so save right away:
+    // a reader who leaves straight after a new page must find it on the next screen.
+    this.schedule("story", story.id, 0, 0);
   }
 
-  listStories(): CyoStory[] {
+  listStories(): Story[] {
     return [...this.stories.values()].sort((a, b) => b.updatedAt - a.updatedAt);
   }
 
   deleteStory(id: string): void {
     this.stories.delete(id);
-    this.removeRemote("create", id);
+    this.removeRemote("story", id);
   }
 }
 

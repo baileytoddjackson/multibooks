@@ -12,9 +12,7 @@ test("canon reading still works when the budget is used up", async ({ page }) =>
   await expect(page.getByText(/^Page 2 of/)).toBeVisible();
 });
 
-test("a new adventure detour shows the resting message and offers the original", async ({
-  page,
-}) => {
+test("a new adventure shows the resting message and stays saved", async ({ page }) => {
   await page.goto("/read/alice/1?mode=adventure");
   await expect(page).toHaveURL(/page=1/);
   for (
@@ -26,17 +24,14 @@ test("a new adventure detour shows the resting message and offers the original",
   }
   await page.getByRole("radio", { name: /Direct the story/ }).click();
   await page.getByRole("button", { name: "Let's go" }).click();
-  await page.getByTestId("choice-prompt").getByRole("button").first().click();
+  await page.getByTestId("choice-prompt").getByRole("listitem").first().getByRole("button").click();
 
-  const detour = page.getByTestId("detour");
-  await expect(detour.getByText("The story machine is resting for today.")).toBeVisible();
-  // No raw errors, and the reader can't get stuck: returning to the original unblocks the page.
+  await expect(page).toHaveURL(/\/story\//);
+  await expect(page.getByText("The story machine is resting for today.")).toBeVisible();
+  // No raw errors, and the adventure is saved so it can be picked up tomorrow.
   await expect(page.getByText(/error|failed|500/i)).toHaveCount(0);
-  await page
-    .getByRole("button", { name: /Return to the original story|Read the original instead/ })
-    .first()
-    .click();
-  await expect(page.getByRole("button", { name: /Next (page|chapter)/ })).toBeEnabled();
+  await page.goto("/");
+  await expect(page.getByRole("link", { name: /Alice in Wonderland: my adventure/ })).toBeVisible();
 });
 
 test("Create Your Own shows a friendly resting screen, not an error", async ({ page }) => {

@@ -1,5 +1,5 @@
 import type { BookId } from "@/lib/schemas/content";
-import type { BookProgress, CyoStory, ReaderPrefs, Session } from "./types";
+import type { BookProgress, ReaderPrefs, Session, Story } from "./types";
 
 /**
  * Client persistence boundary. Book progress and stories belong to the signed-in account (see
@@ -14,9 +14,10 @@ export interface ProgressStore {
   listBookProgress(): BookProgress[];
   clearBookProgress(bookId: BookId): void;
 
-  getStory(id: string): CyoStory | undefined;
-  saveStory(story: CyoStory): void;
-  listStories(): CyoStory[];
+  /** Create Your Own stories and Adventure Mode stories. */
+  getStory(id: string): Story | undefined;
+  saveStory(story: Story): void;
+  listStories(): Story[];
   deleteStory(id: string): void;
 
   getReaderPrefs(): ReaderPrefs;

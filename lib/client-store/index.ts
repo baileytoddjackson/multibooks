@@ -33,9 +33,9 @@ export function getStore(): SyncedProgressStore {
     const s = store;
     // Send queued writes before the page goes away.
     document.addEventListener("visibilitychange", () => {
-      if (document.visibilityState === "hidden") void s.flush(true);
+      if (document.visibilityState === "hidden") void s.flush();
     });
-    window.addEventListener("pagehide", () => void s.flush(true));
+    window.addEventListener("pagehide", () => void s.flush());
   }
   return store;
 }
@@ -88,9 +88,10 @@ export function useStoreStatus(): StoreStatus {
 
 /** Saves anything pending, ends the session and goes to the sign-in page. */
 export async function signOut(): Promise<void> {
-  await getStore()
-    .flush(false)
-    .catch(() => undefined);
+  const store = getStore();
+  await store.flush().catch(() => undefined);
+  // Shared classroom devices: nothing of this account's is left behind on the device.
+  store.clearOutbox();
   await fetch("/api/auth/logout", { method: "POST" }).catch(() => undefined);
   // A full load on purpose: drops this account's data from memory.
   // eslint-disable-next-line @next/next/no-location-assign-relative-destination

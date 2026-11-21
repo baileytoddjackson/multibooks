@@ -1,13 +1,15 @@
 import type {
   CyoCastMember,
-  CyoSegment,
   CyoStory,
   InteractionStyle,
+  Story,
+  StorySegment,
 } from "@/lib/client-store/types";
 
 /**
- * Create Your Own story state (pure). The story is a list of segments; each one remembers the
- * summary and choices that followed it, so undo is simply "drop the last segment".
+ * Story state (pure), shared by Create Your Own and Adventure Mode. A story is a list of
+ * segments; each one remembers the summary (and, for adventures, the facts) and choices that
+ * followed it, so undo is simply "drop the last segment".
  */
 
 export interface OpeningResult {
@@ -21,6 +23,8 @@ export interface OpeningResult {
 export interface ContinuationResult {
   story: string;
   summary: string;
+  /** Adventure Mode only. */
+  facts?: string[];
   choices: string[];
   isEnding: boolean;
 }
@@ -64,17 +68,18 @@ export function createStory(
   };
 }
 
-export function lastSegment(s: CyoStory): CyoSegment {
+/** The latest segment. Every story has one, except an adventure whose first page is still coming. */
+export function lastSegment(s: Story): StorySegment {
   return s.segments[s.segments.length - 1];
 }
 
 /** Turn number = segments written so far (the opening is turn 1). */
-export function turn(s: CyoStory): number {
+export function turn(s: Story): number {
   return s.segments.length;
 }
 
 /** Segments in a row since the reader last made a choice. */
-export function segmentsSinceChoice(s: CyoStory): number {
+export function segmentsSinceChoice(s: Story): number {
   let n = 0;
   for (let i = s.segments.length - 1; i > 0; i--) {
     if (s.segments[i].choiceMade) break;
@@ -87,7 +92,7 @@ export function segmentsSinceChoice(s: CyoStory): number {
  * A choice point every 1-3 segments. After a choice, the next segment may skip choices
  * ("Keep reading"); once one segment has gone by without a choice, the next one must offer them.
  */
-export function mustOfferChoices(s: CyoStory): boolean {
+export function mustOfferChoices(s: Story): boolean {
   return segmentsSinceChoice(s) >= 1;
 }
 
@@ -97,7 +102,7 @@ export type WrapUp = "none" | "offer" | "forced";
  * Soft cap: from `softCap` turns on, offer "Ready to write the ending?". Hard cap: the next
  * segment must be the ending.
  */
-export function wrapUpState(s: CyoStory, softCap: number, hardCap: number): WrapUp {
+export function wrapUpState(s: Story, softCap: number, hardCap: number): WrapUp {
   if (s.status === "done") return "none";
   const t = turn(s);
   if (t >= hardCap - 1) return "forced";
@@ -105,16 +110,17 @@ export function wrapUpState(s: CyoStory, softCap: number, hardCap: number): Wrap
   return "none";
 }
 
-export function appendSegment(
-  s: CyoStory,
+export function appendSegment<S extends Story>(
+  s: S,
   choiceMade: string | undefined,
   res: ContinuationResult,
   now = Date.now(),
-): CyoStory {
-  const seg: CyoSegment = {
+): S {
+  const seg: StorySegment = {
     text: res.story,
     choiceMade,
     summary: res.summary,
+    ...(res.facts ? { facts: res.facts } : {}),
     choices: res.isEnding ? [] : res.choices,
     isEnding: res.isEnding || undefined,
   };
@@ -126,8 +132,11 @@ export function appendSegment(
   };
 }
 
-/** "Go back one choice": removes segments back to (and including) the last chosen one. */
-export function undoLastChoice(s: CyoStory, now = Date.now()): CyoStory {
+/**
+ * "Go back one choice": removes segments back to (and including) the last chosen one. The first
+ * segment always stays (for an adventure, that's the one-way step away from the book).
+ */
+export function undoLastChoice<S extends Story>(s: S, now = Date.now()): S {
   if (s.segments.length <= 1) return s;
   let i = s.segments.length - 1;
   while (i > 0 && !s.segments[i].choiceMade) i--;
@@ -135,15 +144,15 @@ export function undoLastChoice(s: CyoStory, now = Date.now()): CyoStory {
   return { ...s, segments: s.segments.slice(0, keep), status: "active", updatedAt: now };
 }
 
-export function canUndo(s: CyoStory): boolean {
+export function canUndo(s: Story): boolean {
   return s.segments.length > 1;
 }
 
-export function setStoryStyle(
-  s: CyoStory,
+export function setStoryStyle<S extends Story>(
+  s: S,
   style: InteractionStyle,
   characterId?: string,
-): CyoStory {
+): S {
   return {
     ...s,
     style,
@@ -152,11 +161,11 @@ export function setStoryStyle(
   };
 }
 
-export function renameStory(s: CyoStory, title: string): CyoStory {
+export function renameStory<S extends Story>(s: S, title: string): S {
   const t = title.trim().slice(0, 80);
   return t ? { ...s, title: t, updatedAt: Date.now() } : s;
 }
 
-export function wordCount(s: CyoStory): number {
+export function wordCount(s: Story): number {
   return s.segments.reduce((n, seg) => n + seg.text.split(/\s+/).filter(Boolean).length, 0);
 }

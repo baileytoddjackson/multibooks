@@ -26,10 +26,6 @@ const LABELS: Record<string, string> = {
   direct: "Direct the story",
   character: "Be a character",
   both: "Both",
-  choice: "At a choice",
-  detour: "From a detour",
-  resting: "When generation was resting",
-  menu: "From the menu",
   daily_budget: "Daily budget reached",
   session_limit: "Device limit reached",
   rate_limited: "Rate limited",
@@ -192,13 +188,13 @@ async function Gate({ searchParams }: { searchParams: PageProps<"/admin/stats">[
         />
         <StatTile
           label="Choices made"
-          value={int(s.choices.book + s.choices.cyo)}
-          sub={`${int(s.choices.book)} in books · ${int(s.choices.cyo)} in stories`}
+          value={int(s.choices.book + s.choices.adventure + s.choices.cyo)}
+          sub={`${int(s.choices.book + s.choices.adventure)} in adventures · ${int(s.choices.cyo)} in Create Your Own`}
         />
         <StatTile
-          label="Detour cache hit rate"
-          value={s.detours.served ? pct(s.detours.hitRate) : "–"}
-          sub={`${int(s.detours.cached)} of ${int(s.detours.served)} served from cache`}
+          label="Adventures started"
+          value={int(s.adventures.started)}
+          sub={`${int(s.adventures.finished)} finished`}
         />
         <StatTile
           label="Spend in range"
@@ -211,7 +207,7 @@ async function Gate({ searchParams }: { searchParams: PageProps<"/admin/stats">[
 
       <Panel
         title="Today's spend"
-        note="Live generation pauses at the daily budget; cached content and reading keep working."
+        note="Live generation pauses at the daily budget; reading as written keeps working."
       >
         <Meter
           value={s.todaySpend}
@@ -227,11 +223,11 @@ async function Gate({ searchParams }: { searchParams: PageProps<"/admin/stats">[
         <Panel title="Reading mode chosen">
           <BarList rows={s.modes} labelFor={label} />
         </Panel>
-        <Panel title="Interaction style" note="Books and Create Your Own">
+        <Panel title="Interaction style" note="Adventures and Create Your Own">
           <BarList rows={s.styles} labelFor={label} />
         </Panel>
-        <Panel title="Returns to the original story">
-          <BarList rows={s.returnsToCanon} labelFor={label} />
+        <Panel title="Adventures started, by book">
+          <BarList rows={s.adventuresByBook} labelFor={label} />
         </Panel>
         <Panel
           title="Create Your Own funnel"
@@ -267,7 +263,8 @@ async function Gate({ searchParams }: { searchParams: PageProps<"/admin/stats">[
           rows={s.usageByKind.map((k) => ({
             kind:
               {
-                detour: "Book detours",
+                adventure_open: "Adventure openings",
+                adventure_cont: "Adventure pages",
                 cyo_open: "Story openings",
                 cyo_cont: "Story continuations",
                 moderation: "Moderation checks",

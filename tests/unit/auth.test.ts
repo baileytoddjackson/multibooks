@@ -68,12 +68,10 @@ describe("saved data validation", () => {
   it("accepts valid book progress and rejects junk", () => {
     const ok = {
       bookId: "alice",
-      mode: "adventure",
       position: "c001p004",
       fraction: 0.2,
       wordsRead: 10,
       updatedAt: 1,
-      adventure: { style: "direct", history: [{ cpId: "cp01", kind: "original" }] },
     };
     expect(BookProgressSchema.safeParse(ok).success).toBe(true);
     expect(BookProgressSchema.safeParse({ ...ok, bookId: "dracula" }).success).toBe(false);

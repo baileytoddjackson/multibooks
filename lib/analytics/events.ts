@@ -7,7 +7,9 @@ import { z } from "zod";
  */
 /** Ids, enums and codes only: lowercase letters, digits, "-" and "_". No room for free text. */
 const id = z.string().regex(/^[a-z0-9_-]{1,60}$/);
-const context = z.enum(["book", "cyo"]);
+/** "book" = reading a book (as written, or its opening before an adventure); "adventure" = an
+ * Adventure Mode story; "cyo" = Create Your Own. */
+const context = z.enum(["book", "adventure", "cyo"]);
 const style = z.enum(["direct", "character", "both"]);
 
 export const EventSchemas = {
@@ -22,12 +24,9 @@ export const EventSchemas = {
     perspective: id.optional(),
     turn: z.number().int().min(0).max(500).optional(),
   }),
-  detour_served: z.object({ bookId: id, cpId: id, cached: z.boolean() }),
-  return_to_canon: z.object({
-    bookId: id,
-    cpId: id.optional(),
-    from: z.enum(["choice", "detour", "menu", "resting"]),
-  }),
+  /** The reader left a book's original text at its entry choice. */
+  adventure_started: z.object({ bookId: id, optionId: id, style }),
+  adventure_finished: z.object({ bookId: id, turns: z.number().int().min(1).max(500) }),
   undo: z.object({ context, bookId: id.optional() }),
   words_read: z.object({
     context,
@@ -52,7 +51,7 @@ export const EventSchemas = {
     context,
     reason: z.enum(["daily_budget", "session_limit", "rate_limited"]),
   }),
-  error_shown: z.object({ context: z.enum(["book", "cyo", "page"]), code: id }),
+  error_shown: z.object({ context: z.enum(["book", "adventure", "cyo", "page"]), code: id }),
   feedback_clicked: z.object({}),
 } satisfies Record<string, z.ZodType>;
 

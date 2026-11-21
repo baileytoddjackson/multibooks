@@ -1,7 +1,5 @@
 import type {
   AnalyticsEvent,
-  CachedDetour,
-  DetourPayload,
   SavedKind,
   SavedRecord,
   ServerStore,
@@ -30,13 +28,6 @@ export interface Executor {
   batch(statements: { sql: string; args: SqlArg[] }[]): Promise<void>;
 }
 
-type DetourRow = CachedDetour & {
-  bookId: string;
-  cpId: string;
-  optionId: string;
-  perspective: string;
-};
-
 export class SqlStore implements ServerStore {
   private ready: Promise<void>;
   readonly dialect: SqlDialect;
@@ -54,77 +45,6 @@ export class SqlStore implements ServerStore {
   private async exec(sql: string, args: SqlArg[] = []) {
     await this.ready;
     return this.db.exec(sql, args);
-  }
-
-  async getDetour(cacheKey: string): Promise<CachedDetour | undefined> {
-    const r = await this.exec(
-      `SELECT cache_key, payload_json, source, created_at FROM detours WHERE cache_key = ?`,
-      [cacheKey],
-    );
-    const row = r.rows[0];
-    if (!row) return undefined;
-    return {
-      cacheKey: String(row.cache_key),
-      payload: JSON.parse(String(row.payload_json)) as DetourPayload,
-      source: row.source as CachedDetour["source"],
-      createdAt: Number(row.created_at),
-    };
-  }
-
-  async putDetour(d: DetourRow): Promise<void> {
-    await this.exec(
-      `INSERT INTO detours (cache_key, book_id, cp_id, option_id, perspective, payload_json, source, created_at)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-       ON CONFLICT(cache_key) DO UPDATE SET payload_json = excluded.payload_json,
-         source = excluded.source, created_at = excluded.created_at`,
-      [
-        d.cacheKey,
-        d.bookId,
-        d.cpId,
-        d.optionId,
-        d.perspective,
-        JSON.stringify(d.payload),
-        d.source,
-        d.createdAt,
-      ],
-    );
-  }
-
-  async listDetours(bookId?: string): Promise<DetourRow[]> {
-    const r = await this.exec(
-      `SELECT * FROM detours ${bookId ? "WHERE book_id = ?" : ""} ORDER BY book_id, cp_id, option_id, perspective`,
-      bookId ? [bookId] : [],
-    );
-    return r.rows.map((row) => ({
-      cacheKey: String(row.cache_key),
-      bookId: String(row.book_id),
-      cpId: String(row.cp_id),
-      optionId: String(row.option_id),
-      perspective: String(row.perspective),
-      payload: JSON.parse(String(row.payload_json)) as DetourPayload,
-      source: row.source as CachedDetour["source"],
-      createdAt: Number(row.created_at),
-    }));
-  }
-
-  async deleteDetour(cacheKey: string): Promise<void> {
-    await this.exec(`DELETE FROM detours WHERE cache_key = ?`, [cacheKey]);
-  }
-
-  async acquireLock(cacheKey: string, ttlMs: number): Promise<boolean> {
-    const now = Date.now();
-    // Inserts a new lock, or takes over an expired one; a live lock leaves rowsAffected at 0.
-    const r = await this.exec(
-      `INSERT INTO generation_locks (cache_key, expires_at) VALUES (?, ?)
-       ON CONFLICT(cache_key) DO UPDATE SET expires_at = excluded.expires_at
-       WHERE generation_locks.expires_at < ?`,
-      [cacheKey, now + ttlMs, now],
-    );
-    return r.rowsAffected === 1;
-  }
-
-  async releaseLock(cacheKey: string): Promise<void> {
-    await this.exec(`DELETE FROM generation_locks WHERE cache_key = ?`, [cacheKey]);
   }
 
   async logUsage(u: UsageRecord): Promise<void> {

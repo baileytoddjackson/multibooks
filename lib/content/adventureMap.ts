@@ -8,14 +8,17 @@ import type {
 } from "@/lib/schemas/adventure";
 import type { Chapter, Character, ChapterSummary } from "@/lib/schemas/content";
 
-/** Max choice points per book (keeps adventures paced and the cache small). */
+/**
+ * Choice points per book. Adventure Mode uses one: the entry choice in the opening chapter, where
+ * the story leaves the original text (after that, the story writes its own choices).
+ */
 export const CHOICE_POINT_CAPS: Record<string, number> = {
-  alice: 12,
-  odyssey: 16,
-  "moby-dick": 20,
+  alice: 1,
+  odyssey: 1,
+  "moby-dick": 1,
 };
 
-/** Paragraphs a detour may replace before the original resumes. */
+/** How far after the choice its scene may end in the original (checked, never shown). */
 export const MAX_SKIPPED_PARAGRAPHS = 6;
 /** The first choice comes after the reader has had a real taste of the original. */
 export const MIN_INTRO_WORDS = 800;

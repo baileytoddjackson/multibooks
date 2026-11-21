@@ -3,22 +3,29 @@
 import type { ChoiceView } from "@/lib/engine/bookAdventure";
 import type { AdventureOption, ChoicePoint } from "@/lib/schemas/adventure";
 
-/** The inline "What would you like to do next?" moment, styled as part of the page. */
+/**
+ * The inline moment where Adventure Mode leaves the book, styled as part of the page. Choosing is
+ * one-way, so the prompt says so before the reader picks.
+ */
 export function ChoicePrompt({
   cp,
   view,
+  disabled,
   onChoose,
   onKeepOriginal,
 }: {
   cp: ChoicePoint;
   view: ChoiceView;
+  disabled?: boolean;
   onChoose: (option: AdventureOption) => void;
   onKeepOriginal: () => void;
 }) {
   const headingId = `choice-${cp.id}`;
+  const noteId = `choice-note-${cp.id}`;
   return (
     <section
       aria-labelledby={headingId}
+      aria-describedby={noteId}
       className="flex flex-col gap-3"
       data-testid="choice-prompt"
     >
@@ -33,8 +40,9 @@ export function ChoicePrompt({
           <li key={o.id}>
             <button
               type="button"
+              disabled={disabled}
               onClick={() => onChoose(o)}
-              className="flex min-h-14 w-full items-center gap-3 rounded-2xl bg-[var(--reader-bg)] px-4 py-3 text-left font-reading text-[1.05em] ring-2 ring-[var(--reader-line)] transition-colors hover:ring-[var(--reader-accent)]"
+              className="flex min-h-14 w-full items-center gap-3 rounded-2xl bg-[var(--reader-bg)] px-4 py-3 text-left font-reading text-[1.05em] ring-2 ring-[var(--reader-line)] transition-colors hover:ring-[var(--reader-accent)] disabled:opacity-60"
             >
               <span aria-hidden="true" className="text-[var(--reader-accent)]">
                 ✦
@@ -44,12 +52,16 @@ export function ChoicePrompt({
           </li>
         ))}
       </ul>
+      <p id={noteId} className="text-sm text-[var(--reader-muted)]">
+        From here the story is yours: it follows the book loosely, but it won&apos;t go back to the
+        original text.
+      </p>
       <button
         type="button"
         onClick={onKeepOriginal}
         className="min-h-11 self-start rounded-lg px-2 text-sm font-semibold text-[var(--reader-muted)] underline-offset-4 hover:underline"
       >
-        Keep reading the original instead
+        Read the original instead
       </button>
     </section>
   );

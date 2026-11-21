@@ -1,6 +1,5 @@
 /**
- * Rules shared by every runtime prompt. Changing anything here changes generated text, so bump
- * PROMPT_VERSION (lib/prompts/version.ts) to invalidate cached detours.
+ * Rules shared by every runtime prompt (Adventure Mode, Create Your Own, moderation).
  */
 
 export const AUDIENCE_AND_SAFETY = `You are writing for readers aged 11-14 in a school reading app.

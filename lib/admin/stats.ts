@@ -61,9 +61,10 @@ export interface Stats {
   avgActiveMinutes: number;
   totalWords: number;
   avgWordsPerSession: number;
-  choices: { book: number; cyo: number };
-  detours: { served: number; cached: number; hitRate: number };
-  returnsToCanon: Breakdown[];
+  /** Choices at a book's entry choice, inside adventures, and in Create Your Own stories. */
+  choices: { book: number; adventure: number; cyo: number };
+  adventures: { started: number; finished: number };
+  adventuresByBook: Breakdown[];
   undos: number;
   books: Breakdown[];
   modes: Breakdown[];
@@ -140,17 +141,10 @@ export async function getStats(store: ServerStore, f: StatsFilter, today: string
     `SELECT ${j.text("context")} AS c, COUNT(*) AS n FROM events WHERE ${ch.sql} GROUP BY c`,
     ch.args,
   );
-  const choices = { book: 0, cyo: 0 };
-  for (const r of choiceRows) if (r.c === "book" || r.c === "cyo") choices[r.c] = num(r.n);
-
-  const ds = ev("type = 'detour_served'");
-  const [det] = await q(
-    `SELECT COUNT(*) AS served, SUM(CASE WHEN ${j.bool("cached")} THEN 1 ELSE 0 END) AS cached
-     FROM events WHERE ${ds.sql}`,
-    ds.args,
-  );
-  const served = num(det?.served);
-  const cached = num(det?.cached);
+  const choices = { book: 0, adventure: 0, cyo: 0 };
+  for (const r of choiceRows) {
+    if (r.c === "book" || r.c === "adventure" || r.c === "cyo") choices[r.c] = num(r.n);
+  }
 
   const funnel: Breakdown[] = [
     { label: "Opened the stepper", value: await distinctSessions("type = 'create_started'") },
@@ -236,8 +230,11 @@ export async function getStats(store: ServerStore, f: StatsFilter, today: string
     totalWords: num(words?.n),
     avgWordsPerSession: sessions ? num(words?.n) / sessions : 0,
     choices,
-    detours: { served, cached, hitRate: served ? cached / served : 0 },
-    returnsToCanon: await groupCount("return_to_canon", "from"),
+    adventures: {
+      started: await countOf("adventure_started"),
+      finished: await countOf("adventure_finished"),
+    },
+    adventuresByBook: await groupCount("adventure_started", "bookId"),
     undos: await countOf("undo"),
     books: await groupCount("book_selected", "bookId"),
     modes: await groupCount("mode_chosen", "mode"),

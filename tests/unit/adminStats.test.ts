@@ -28,8 +28,15 @@ async function seed(store: ServerStore) {
       "MS-ENG-P3",
     ),
     ev("s1", "choice_made", { context: "book", bookId: "alice", cpId: "cp01" }, "MS-ENG-P3"),
-    ev("s1", "detour_served", { bookId: "alice", cpId: "cp01", cached: true }, "MS-ENG-P3"),
-    ev("s1", "detour_served", { bookId: "alice", cpId: "cp02", cached: false }, "MS-ENG-P3"),
+    ev(
+      "s1",
+      "adventure_started",
+      { bookId: "alice", optionId: "p1", style: "character" },
+      "MS-ENG-P3",
+    ),
+    ev("s1", "choice_made", { context: "adventure", bookId: "alice", turn: 2 }, "MS-ENG-P3"),
+    ev("s1", "choice_made", { context: "adventure", bookId: "alice", turn: 3 }, "MS-ENG-P3"),
+    ev("s1", "adventure_finished", { bookId: "alice", turns: 4 }, "MS-ENG-P3"),
     ev("s1", "words_read", { context: "book", words: 600 }, "MS-ENG-P3"),
     ev("s1", "session_heartbeat", { path: "read" }, "MS-ENG-P3"),
     ev("s1", "session_heartbeat", { path: "read" }, "MS-ENG-P3"),
@@ -56,7 +63,7 @@ async function seed(store: ServerStore) {
   await store.logUsage({
     ...usage,
     sessionId: "s1",
-    kind: "detour",
+    kind: "adventure_cont",
     bookId: "alice",
     estCostUsd: 0.0005,
   });
@@ -77,8 +84,9 @@ describe.each(BACKENDS)("admin stats on $name", ({ make }) => {
     expect(s.sessions).toBe(2);
     expect(s.totalWords).toBe(850);
     expect(s.avgActiveMinutes).toBeCloseTo(0.5); // 2 heartbeats × 30s over 2 sessions
-    expect(s.choices).toEqual({ book: 1, cyo: 1 });
-    expect(s.detours).toEqual({ served: 2, cached: 1, hitRate: 0.5 });
+    expect(s.choices).toEqual({ book: 1, adventure: 2, cyo: 1 });
+    expect(s.adventures).toEqual({ started: 1, finished: 1 });
+    expect(s.adventuresByBook).toEqual([{ label: "alice", value: 1 }]);
     expect(s.books.map((b) => [b.label, b.value]).sort()).toEqual([
       ["alice", 1],
       ["moby-dick", 1],
@@ -90,7 +98,7 @@ describe.each(BACKENDS)("admin stats on $name", ({ make }) => {
     expect(s.surpriseUseRate).toBe(1);
     expect(s.totalCost).toBeCloseTo(0.0012, 6);
     expect(s.todaySpend).toBeCloseTo(0.0012, 6);
-    expect(s.usageByKind.map((k) => k.kind).sort()).toEqual(["cyo_open", "detour"]);
+    expect(s.usageByKind.map((k) => k.kind).sort()).toEqual(["adventure_cont", "cyo_open"]);
     expect(s.codes.map((c) => [c.code, c.sessions, c.words]).sort()).toEqual([
       ["LIB-OCT20", 1, 250],
       ["MS-ENG-P3", 1, 600],
