@@ -8,6 +8,8 @@ import { safeNextPath } from "@/lib/auth/constants";
 type Mode = "login" | "signup";
 
 const MESSAGES: Record<string, string> = {
+  unavailable:
+    "We can't reach your account right now. Please try again in a minute. If it keeps happening, let whoever invited you know.",
   bad_code: "That access code isn't right. Check your invite link or ask whoever invited you.",
   signup_closed: "Sign-up isn't open right now.",
   email_taken: "There's already an account with that email. Try signing in instead.",

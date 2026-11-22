@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { accessCodeMatches } from "@/lib/auth/accessCode";
 import { isPublicPath, safeNextPath } from "@/lib/auth/constants";
 import { hashToken, safeEqual } from "@/lib/auth/crypto";
@@ -93,5 +93,33 @@ describe("saved data validation", () => {
     expect(CyoStorySchema.safeParse(story).success).toBe(true);
     const huge = { ...story, segments: [{ text: "x".repeat(9000), summary: "", choices: [] }] };
     expect(CyoStorySchema.safeParse(huge).success).toBe(false);
+  });
+});
+
+describe("auth route errors", () => {
+  it("turns an unexpected failure into a clear 503 without logging the request", async () => {
+    const { withAuthErrors } = await import("@/lib/auth/accounts");
+    const logged: unknown[] = [];
+    const spy = vi.spyOn(console, "error").mockImplementation((...a) => void logged.push(...a));
+    const route = withAuthErrors("signup", async () => {
+      throw new Error("(ENOTFOUND) tenant/user not found");
+    });
+    const res = await route(
+      new Request("http://x/api/auth/signup", {
+        method: "POST",
+        body: JSON.stringify({ password: "secret-password" }),
+      }),
+    );
+    expect(res.status).toBe(503);
+    expect(await res.json()).toMatchObject({ error: "unavailable" });
+    expect(logged.join(" ")).toContain("tenant/user not found");
+    expect(logged.join(" ")).not.toContain("secret-password");
+    spy.mockRestore();
+  });
+
+  it("passes normal responses through", async () => {
+    const { withAuthErrors } = await import("@/lib/auth/accounts");
+    const route = withAuthErrors("login", async () => Response.json({ ok: true }));
+    expect((await route(new Request("http://x"))).status).toBe(200);
   });
 });

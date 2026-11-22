@@ -31,8 +31,33 @@ export async function tooManyAuthAttempts(request: Request, kind: string): Promi
 }
 
 export type AuthError =
-  "bad_request" | "bad_code" | "signup_closed" | "email_taken" | "bad_credentials" | "slow_down";
+  | "unavailable"
+  | "bad_request"
+  | "bad_code"
+  | "signup_closed"
+  | "email_taken"
+  | "bad_credentials"
+  | "slow_down";
 
 export function authError(error: AuthError, status: number, message?: string): Response {
   return Response.json({ error, message }, { status });
+}
+
+/**
+ * Wraps an auth route so an unexpected failure (usually the database being unreachable) is
+ * logged for the server logs and answered with a clear 503, instead of a bare 500. Never logs
+ * the request body (it holds the password).
+ */
+export function withAuthErrors(
+  name: string,
+  handler: (request: Request) => Promise<Response>,
+): (request: Request) => Promise<Response> {
+  return async (request) => {
+    try {
+      return await handler(request);
+    } catch (err) {
+      console.error(`[auth] ${name} failed:`, err instanceof Error ? err.message : err);
+      return authError("unavailable", 503);
+    }
+  };
 }

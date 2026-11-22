@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { authError, EmailSchema, tooManyAuthAttempts } from "@/lib/auth/accounts";
+import { authError, EmailSchema, tooManyAuthAttempts, withAuthErrors } from "@/lib/auth/accounts";
 import { dummyHash, PASSWORD_MAX, verifyPassword } from "@/lib/auth/password";
 import { startSession } from "@/lib/auth/session";
 import { serverStore } from "@/lib/server-store";
@@ -10,7 +10,7 @@ const BodySchema = z.object({
   password: z.string().min(1).max(PASSWORD_MAX),
 });
 
-export async function POST(request: Request) {
+export const POST = withAuthErrors("login", async (request) => {
   if (await tooManyAuthAttempts(request, "login")) return authError("slow_down", 429);
 
   const parsed = BodySchema.safeParse(await request.json().catch(() => null));
@@ -24,4 +24,4 @@ export async function POST(request: Request) {
 
   const cookie = await startSession(request, user.id);
   return Response.json({ ok: true }, { headers: { "Set-Cookie": cookie } });
-}
+});

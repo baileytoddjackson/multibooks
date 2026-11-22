@@ -1,7 +1,13 @@
 import { randomUUID } from "node:crypto";
 import { z } from "zod";
 import { accessCodeMatches } from "@/lib/auth/accessCode";
-import { authError, EmailSchema, PasswordSchema, tooManyAuthAttempts } from "@/lib/auth/accounts";
+import {
+  authError,
+  EmailSchema,
+  PasswordSchema,
+  tooManyAuthAttempts,
+  withAuthErrors,
+} from "@/lib/auth/accounts";
 import { hashPassword } from "@/lib/auth/password";
 import { startSession } from "@/lib/auth/session";
 import { env } from "@/lib/env";
@@ -17,7 +23,7 @@ const BodySchema = z.object({
   accessCode: z.string().max(100),
 });
 
-export async function POST(request: Request) {
+export const POST = withAuthErrors("signup", async (request) => {
   if (await tooManyAuthAttempts(request, "signup")) return authError("slow_down", 429);
 
   const parsed = BodySchema.safeParse(await request.json().catch(() => null));
@@ -40,4 +46,4 @@ export async function POST(request: Request) {
 
   const cookie = await startSession(request, user.id);
   return Response.json({ ok: true }, { headers: { "Set-Cookie": cookie } });
-}
+});
