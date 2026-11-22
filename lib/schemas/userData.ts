@@ -71,6 +71,16 @@ export const AdventureStorySchema: z.ZodType<AdventureStory> = z.object({
     optionId: Id,
     choice: Text(200),
     perspective: Id,
+    lead: z
+      .array(
+        z.object({
+          id: z.string().regex(/^c\d{3}p\d{3}$/),
+          text: Text(6000),
+          kind: z.enum(["verse", "break"]).optional(),
+        }),
+      )
+      .max(80)
+      .optional(),
   }),
 });
 

@@ -2,7 +2,7 @@ import type { AdventureStory, InteractionStyle } from "@/lib/client-store/types"
 import { castAvailableAt } from "@/lib/content/adventureMap";
 import type { ChoiceView } from "@/lib/engine/bookAdventure";
 import type { AdventureOption, ChoicePoint } from "@/lib/schemas/adventure";
-import type { BookMeta, Character } from "@/lib/schemas/content";
+import type { BookMeta, Character, Paragraph } from "@/lib/schemas/content";
 
 function randomId(): string {
   return typeof crypto !== "undefined" && "randomUUID" in crypto
@@ -22,6 +22,8 @@ export function newAdventure(input: {
   view: ChoiceView;
   style: InteractionStyle;
   characterId?: string;
+  /** The original text on the reader's page up to the choice (see AdventureBranch.lead). */
+  lead?: Paragraph[];
   now?: number;
   id?: string;
 }): AdventureStory {
@@ -45,6 +47,7 @@ export function newAdventure(input: {
       optionId: input.option.id,
       choice: input.option.label,
       perspective: input.view.perspective,
+      ...(input.lead?.length ? { lead: input.lead } : {}),
     },
     status: "active",
     createdAt: now,

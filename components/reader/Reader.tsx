@@ -89,7 +89,11 @@ export function Reader({ book, toc, chapter, map, cast }: ReaderProps) {
 
   const startAdventure = ({ option, view, style, characterId }: EntryChoice) => {
     if (!entry) return;
-    const story = newAdventure({ book, entry, cast, option, view, style, characterId });
+    // The page the reader is on, up to the choice: the adventure page starts with it unchanged.
+    const anchor = chapter.paragraphs.findIndex((p) => p.id === entry.anchorAfter);
+    const pageStart = pageRange(chapter, pageForParagraph(chapter, entry.anchorAfter)).start;
+    const lead = anchor >= 0 ? chapter.paragraphs.slice(pageStart, anchor + 1) : undefined;
+    const story = newAdventure({ book, entry, cast, option, view, style, characterId, lead });
     track("choice_made", {
       context: "book",
       bookId: book.id,

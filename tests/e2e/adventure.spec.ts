@@ -43,10 +43,16 @@ test("book → adventure: the story leaves the original text and keeps going", a
 
 test("an adventure is its own story: first page, choices, keep going, undo", async ({ page }) => {
   await readToEntryChoice(page);
+  // The last line of the original before the choice…
+  const lastOriginal = (await page.locator("article p[id]").last().innerText()).trim();
   const label = await startAdventure(page);
 
   // A new story page, not the book reader.
   await expect(page).toHaveURL(/\/story\/[0-9a-f-]+$/);
+  // …is still there, unchanged, at the top: the story reads on up to the decision.
+  const lead = page.getByTestId("adventure-lead");
+  await expect(lead).toContainText("From the book");
+  await expect(lead).toContainText(lastOriginal);
   await expect(
     page.getByText("✦ An adventure from Alice's Adventures in Wonderland"),
   ).toBeVisible();

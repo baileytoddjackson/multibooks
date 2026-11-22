@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { Passage } from "@/components/reader/Passage";
 import { ReaderControls } from "@/components/reader/ReaderControls";
 import { StyleSelector } from "@/components/reader/StyleSelector";
 import { FeedbackLink } from "@/components/ui/FeedbackLink";
@@ -344,6 +345,14 @@ export function StoryReader({
           </header>
 
           <div className="prose-book mx-auto">
+            {adventure?.branch.lead?.length ? (
+              <div data-testid="adventure-lead">
+                <p className="mb-4 text-center font-sans text-xs font-semibold tracking-[0.2em] text-[var(--reader-muted)] uppercase">
+                  From the book
+                </p>
+                <Passage paragraphs={adventure.branch.lead} />
+              </div>
+            ) : null}
             {story.segments.map((seg, i) => (
               <div
                 key={i}

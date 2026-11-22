@@ -1,4 +1,4 @@
-import type { BookId } from "@/lib/schemas/content";
+import type { BookId, Paragraph } from "@/lib/schemas/content";
 
 /** Paragraph ids look like "c003p017" (chapter 3, paragraph 17). */
 export type ParagraphId = string;
@@ -78,6 +78,11 @@ export interface AdventureBranch {
   choice: string;
   /** "narrator" or the character id the story follows. */
   perspective: string;
+  /**
+   * The original text of the page the reader was on, up to the choice. The adventure page shows
+   * it first, so the story reads on unchanged up to the decision.
+   */
+  lead?: Paragraph[];
 }
 
 /**
