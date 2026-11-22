@@ -2,153 +2,355 @@
   "bookId": "sherlock",
   "chapters": [
     {
-      "summary": "[Placeholder] To Sherlock Holmes she is always the woman. I have seldom heard him mention her under any other name. In his eyes she eclipses and predominates the whole of her sex. It was not that he felt any emotion akin to love for Irene Adler. All emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced…",
+      "summary": "Holmes is hard at work on a new case when Watson visits him at Baker Street. A masked visitor arrives, who turns out to be the King of Bohemia. He wants back a photograph that shows him with Irene Adler, a woman he once wrote letters to. Holmes agrees to help. He and Watson go to Briony Lodge, where Holmes stages a fake fire to find where the photograph is hidden. Irene escapes with her husband, leaving only a note. Holmes gets the photograph anyway, but Irene has outwitted him.",
       "keyEvents": [
-        "A Scandal in Bohemia"
+        "Watson visits Holmes at Baker Street and Holmes deduces his recent activities",
+        "The King of Bohemia comes to hire Holmes to recover a photograph of himself with Irene Adler",
+        "Holmes and Watson watch Irene Adler at Briony Lodge",
+        "Holmes fakes an injury and Watson sets off a fake fire to reveal the hiding place",
+        "Holmes finds the photograph and a note, learning Irene has fled to the Continent with her husband"
       ],
-      "charactersPresent": [],
-      "setting": "",
+      "charactersPresent": [
+        "Sherlock Holmes",
+        "Watson",
+        "King of Bohemia",
+        "Irene Adler",
+        "Godfrey Norton",
+        "Mrs. Turner"
+      ],
+      "setting": "Baker Street, London, and Briony Lodge in Serpentine Avenue",
       "kind": "narrative",
-      "contentNotes": [],
+      "contentNotes": [
+        "Holmes uses cocaine, mentioned as part of his habits",
+        "A man is struck and falsely appears badly hurt during a staged street fight",
+        "Deception and a staged fire"
+      ],
       "index": 1,
-      "generatedBy": "placeholder"
+      "generatedBy": "claude-haiku-5-5"
     },
     {
-      "summary": "[Placeholder] I had called upon my friend, Mr. Sherlock Holmes, one day in the autumn of last year and found him in deep conversation with a very stout, florid-faced, elderly gentleman with fiery red hair. With an apology for my intrusion, I was about to withdraw when Holmes pulled me abruptly into the room and closed the door behind me. “You…",
+      "summary": "Dr. Watson visits Sherlock Holmes and meets Jabez Wilson, a pawnbroker with bright red hair. Wilson tells how his assistant Vincent Spaulding showed him an advertisement offering paid work to red-headed men. Wilson applied, was hired by Duncan Ross, and spent eight weeks copying the Encyclopaedia Britannica. One morning he found the office closed and a notice saying the League was dissolved. Holmes noticed signs that Spaulding was secretly digging a tunnel from the cellar. That night Holmes, Watson, the police agent Jones, and bank director Merryweather wait in a bank cellar. They catch John Clay, who was trying to rob the gold, and his accomplice escapes.",
       "keyEvents": [
-        "The Red-Headed League"
+        "Jabez Wilson describes the Red-headed League advertisement",
+        "Wilson is hired and copies the Encyclopaedia for eight weeks",
+        "Wilson finds the League dissolved and the office closed",
+        "Holmes deduces a tunnel from the cellar and plans a stakeout",
+        "Holmes, Jones and Merryweather trap John Clay in the bank cellar"
       ],
-      "charactersPresent": [],
-      "setting": "",
+      "charactersPresent": [
+        "Sherlock Holmes",
+        "Watson",
+        "Jabez Wilson",
+        "Vincent Spaulding",
+        "Duncan Ross",
+        "Jones",
+        "Merryweather",
+        "John Clay"
+      ],
+      "setting": "Baker Street, Saxe-Coburg Square, and a City bank cellar in London",
       "kind": "narrative",
-      "contentNotes": [],
+      "contentNotes": [
+        "An attempted bank robbery with a revolver drawn and a pistol knocked away",
+        "Violent struggle as a suspect is seized and handcuffed",
+        "Deception and fraud by criminals"
+      ],
       "index": 2,
-      "generatedBy": "placeholder"
+      "generatedBy": "claude-haiku-5-5"
     },
     {
-      "summary": "[Placeholder] “My dear fellow,” said Sherlock Holmes as we sat on either side of the fire in his lodgings at Baker Street, “life is infinitely stranger than anything which the mind of man could invent. We would not dare to conceive the things which are really mere commonplaces of existence. If we could fly out of that window hand in hand,…",
+      "summary": "Sherlock Holmes and Dr. Watson talk about strange real-life cases. Miss Mary Sutherland visits Holmes because her fiance, Hosmer Angel, vanished on their wedding morning at a church. She has a small income and a stepfather, Mr. Windibank. Holmes studies her clues, including her typewritten letters from Angel. He writes to Windibank asking him to visit. When Windibank arrives, Holmes shows that the letters were typed on Windibank's own typewriter and that Windibank was Angel in disguise. Holmes locks the door and explains the plot. Windibank runs away. Holmes says the law cannot touch him.",
       "keyEvents": [
-        "A Case of Identity"
+        "Miss Sutherland visits Holmes about her missing fiance Hosmer Angel",
+        "Angel vanishes from a hansom-and-four-wheeler wedding morning at St. Saviour's",
+        "Holmes notices typewriting clues in Angel's letters",
+        "Windibank arrives and Holmes links the typewriter to him",
+        "Holmes explains Windibank posed as Angel to keep Mary at home"
       ],
-      "charactersPresent": [],
-      "setting": "",
+      "charactersPresent": [
+        "Sherlock Holmes",
+        "Dr. Watson",
+        "Miss Mary Sutherland",
+        "Mr. James Windibank"
+      ],
+      "setting": "Baker Street lodgings in London",
       "kind": "narrative",
-      "contentNotes": [],
+      "contentNotes": [
+        "A man deceives and manipulates a young woman for money, and she is left distressed",
+        "Mention of a husband who hurls false teeth at his wife in a news story",
+        "Mention of drinking in a newspaper case",
+        "Windibank is locked in a room and threatened with a whip"
+      ],
       "index": 3,
-      "generatedBy": "placeholder"
+      "generatedBy": "claude-haiku-5-5"
     },
     {
-      "summary": "[Placeholder] We were seated at breakfast one morning, my wife and I, when the maid brought in a telegram. It was from Sherlock Holmes and ran in this way: “Have you a couple of days to spare? Have just been wired for from the west of England in connection with Boscombe Valley tragedy. Shall be glad if you will come with…",
+      "summary": "Watson travels with Sherlock Holmes to the west of England to look into the death of Charles McCarthy at Boscombe Pool. McCarthy's son James has been arrested for the killing. Holmes and Watson meet Lestrade and Alice Turner, who insists James is innocent. At the pool, Holmes reads the ground and finds clues, including a stone and cigar ash. He works out that the killer was left-handed, lame, and had been in Australia. John Turner then confesses to Holmes and Watson that he killed McCarthy to protect his daughter. James is later acquitted.",
       "keyEvents": [
-        "The Boscombe Valley Mystery"
+        "Holmes telegraphs Watson asking him to join a case in Herefordshire",
+        "Holmes and Watson meet Lestrade and Alice Turner at Ross",
+        "Holmes examines the tracks and finds a stone at Boscombe Pool",
+        "Holmes explains his deductions about the killer and the word Ballarat",
+        "John Turner arrives and confesses to killing McCarthy"
       ],
-      "charactersPresent": [],
-      "setting": "",
-      "kind": "narrative",
-      "contentNotes": [],
+      "charactersPresent": [
+        "Sherlock Holmes",
+        "Watson",
+        "Lestrade",
+        "Alice Turner",
+        "John Turner",
+        "James McCarthy"
+      ],
+      "setting": "Baker Street, a train to Ross, the Hereford Arms, Boscombe Pool, and the hotel",
+      "kind": "mixed",
+      "contentNotes": [
+        "A man is murdered by a blow to the head",
+        "A young man is arrested and jailed for murder",
+        "Turner confesses to the killing and reveals his past as a highway robber",
+        "Turner is dying of a chronic illness"
+      ],
       "index": 4,
-      "generatedBy": "placeholder"
+      "generatedBy": "claude-haiku-5-5"
     },
     {
-      "summary": "[Placeholder] When I glance over my notes and records of the Sherlock Holmes cases between the years ’82 and ’90, I am faced by so many which present strange and interesting features that it is no easy matter to know which to choose and which to leave. Some, however, have already gained publicity through the papers, and others have not offered…",
+      "summary": "Watson is visited on a stormy night in September by John Openshaw, a young man from Horsham. Openshaw tells how his uncle Elias received a letter with five orange pips and the letters K. K. K., and died in what was called a suicide. Years later his father received the same warning and died in a fall into a chalk-pit. Now John has received the warning too. Holmes advises him to put a page from his uncle's diary into the brass box and place it on the sundial. Holmes explains the secret society of the Ku Klux Klan. The next morning Watson reads that Openshaw was found drowned near Waterloo Bridge. Holmes sends a warning to the captain of the Lone Star, but the ship is later lost at sea.",
       "keyEvents": [
-        "The Five Orange Pips"
+        "Openshaw arrives at Baker Street and tells his family's story",
+        "Uncle Elias dies after receiving a letter with orange pips",
+        "Father dies in a chalk-pit after receiving the same warning",
+        "John receives the warning and Holmes gives him advice",
+        "Openshaw is found drowned near Waterloo Bridge"
       ],
-      "charactersPresent": [],
-      "setting": "",
+      "charactersPresent": [
+        "Sherlock Holmes",
+        "Watson",
+        "John Openshaw"
+      ],
+      "setting": "Baker Street, London, and later Waterloo Bridge",
       "kind": "narrative",
-      "contentNotes": [],
+      "contentNotes": [
+        "Multiple deaths, including a suicide, a fatal fall, and a drowning",
+        "Threatening letters with orange pips and secret society references",
+        "Ku Klux Klan referenced as a violent secret society",
+        "Racist language and views expressed by a character",
+        "Holmes sends a threatening warning and plans revenge"
+      ],
       "index": 5,
-      "generatedBy": "placeholder"
+      "generatedBy": "claude-haiku-5-5"
     },
     {
-      "summary": "[Placeholder] Isa Whitney, brother of the late Elias Whitney, D.D., Principal of the Theological College of St. George’s, was much addicted to opium. The habit grew upon him, as I understand, from some foolish freak when he was at college; for having read De Quincey’s description of his dreams and sensations, he had drenched his tobacco with laudanum in an attempt…",
+      "summary": "Dr. Watson is called at night by Kate Whitney, whose husband Isa has vanished into an opium den. Watson goes to the den and finds Isa, then sees Sherlock Holmes disguised as an old opium smoker. Holmes explains that Neville St. Clair disappeared after his wife saw him at a window above the den. Holmes takes Watson to The Cedars in Lee, where Mrs. St. Clair shows a letter from her husband. Holmes then goes to Bow Street, where he washes the beggar Hugh Boone's face and reveals him to be Neville St. Clair. St. Clair explains he had disguised himself as a beggar to earn money and hid his secret from his family.",
       "keyEvents": [
-        "The Man with the Twisted Lip"
+        "Kate Whitney asks Watson to find her opium-addicted husband Isa",
+        "Watson finds Isa at the Bar of Gold opium den and sends him home",
+        "Holmes reveals himself in disguise and explains the missing man case",
+        "Mrs. St. Clair receives a letter from her husband",
+        "Holmes washes the beggar Boone's face, revealing Neville St. Clair"
       ],
-      "charactersPresent": [],
-      "setting": "",
+      "charactersPresent": [
+        "Watson",
+        "Kate Whitney",
+        "Isa Whitney",
+        "Sherlock Holmes",
+        "Mrs. St. Clair",
+        "Inspector Bradstreet",
+        "Neville St. Clair"
+      ],
+      "setting": "London opium den, Lee in Kent, and Bow Street police station",
       "kind": "narrative",
-      "contentNotes": [],
+      "contentNotes": [
+        "opium addiction and opium den",
+        "a man is presumed dead and bodies are thought to be thrown into the river",
+        "a suspected murder that turns out not to have happened",
+        "begging and deception"
+      ],
       "index": 6,
-      "generatedBy": "placeholder"
+      "generatedBy": "claude-haiku-5-5"
     },
     {
-      "summary": "[Placeholder] I had called upon my friend Sherlock Holmes upon the second morning after Christmas, with the intention of wishing him the compliments of the season. He was lounging upon the sofa in a purple dressing-gown, a pipe-rack within his reach upon the right, and a pile of crumpled morning papers, evidently newly studied, near at hand. Beside the couch was…",
+      "summary": "Dr. Watson visits Sherlock Holmes the day after Christmas and finds him studying an old battered hat. Holmes explains that a commissionaire named Peterson found the hat and a goose after a man lost them in a fight. Holmes reasons out details about the hat's owner, Henry Baker. Then Peterson returns with a blue stone found inside the goose's crop. Holmes learns the stone is the stolen blue carbuncle, and he places an advertisement to find Baker. Baker comes to claim the hat and takes a new goose. Holmes and Watson then trace the geese to a salesman and a small man named James Ryder. Ryder confesses that he hid the stone in a goose to smuggle it out. Holmes lets him go and says he hopes to save a soul.",
       "keyEvents": [
-        "The Adventure of the Blue Carbuncle"
+        "Holmes studies an old hat left by a man who lost a goose",
+        "Peterson finds a blue stone in the goose's crop",
+        "Holmes places an advertisement to find Henry Baker",
+        "Baker claims the hat and takes a replacement goose",
+        "Holmes traces the geese to Breckinridge and Ryder"
       ],
-      "charactersPresent": [],
-      "setting": "",
+      "charactersPresent": [
+        "Sherlock Holmes",
+        "Watson",
+        "Peterson",
+        "Henry Baker",
+        "Breckinridge",
+        "James Ryder"
+      ],
+      "setting": "Baker Street, London, then the Alpha Inn, Covent Garden Market, and a cab",
       "kind": "narrative",
-      "contentNotes": [],
+      "contentNotes": [
+        "A man is struck and a shop window is smashed in a street fight",
+        "A man is accused of theft and faints in court",
+        "Drinking, including brandy and beer",
+        "Ryder pleads and sobs, and Holmes sends him away",
+        "A bird is killed and eaten"
+      ],
       "index": 7,
-      "generatedBy": "placeholder"
+      "generatedBy": "claude-haiku-5-5"
     },
     {
-      "summary": "[Placeholder] On glancing over my notes of the seventy odd cases in which I have during the last eight years studied the methods of my friend Sherlock Holmes, I find many tragic, some comic, a large number merely strange, but none commonplace; for, working as he did rather for the love of his art than for the acquirement of wealth, he…",
+      "summary": "Helen Stoner visits Sherlock Holmes and Dr. Watson early one morning. She tells them her twin sister Julia died after hearing a whistle at night and crying out about a speckled band. Helen now fears the same fate, since she sleeps in Julia's room. Holmes and Watson travel to Stoke Moran and examine the rooms. Dr. Grimesby Roylott, Helen's stepfather, arrives in town and threatens Holmes. That night, Holmes and Watson wait in Helen's room in the dark. They hear a hiss and a strange sound, and then a terrible cry. They find Dr. Roylott dead, with a swamp adder wrapped around his head. Holmes puts the snake in the safe.",
       "keyEvents": [
-        "The Adventure of the Speckled Band"
+        "Helen Stoner visits Holmes early in the morning",
+        "Holmes and Watson examine the rooms at Stoke Moran",
+        "Roylott threatens Holmes at the lodgings",
+        "Holmes and Watson wait in the bedroom at night",
+        "A snake attacks and Roylott dies"
       ],
-      "charactersPresent": [],
-      "setting": "",
+      "charactersPresent": [
+        "Sherlock Holmes",
+        "Dr. Watson",
+        "Helen Stoner",
+        "Dr. Grimesby Roylott",
+        "Mrs. Hudson"
+      ],
+      "setting": "London lodgings, then Stoke Moran in Surrey",
       "kind": "narrative",
-      "contentNotes": [],
+      "contentNotes": [
+        "A man is beaten to death in the past (a butler in India)",
+        "A sister dies of a snake bite (implied, cause revealed later)",
+        "A man dies from a venomous snake bite",
+        "Threats of violence and a man bending a poker",
+        "A woman shows bruises on her wrist from a stepfather's grip"
+      ],
       "index": 8,
-      "generatedBy": "placeholder"
+      "generatedBy": "claude-haiku-5-5"
     },
     {
-      "summary": "[Placeholder] Of all the problems which have been submitted to my friend, Mr. Sherlock Holmes, for solution during the years of our intimacy, there were only two which I was the means of introducing to his notice—that of Mr. Hatherley’s thumb, and that of Colonel Warburton’s madness. Of these the latter may have afforded a finer field for an acute and…",
+      "summary": "Dr. Watson is woken early by a guard who brings in Victor Hatherley, a young hydraulic engineer with a bloody, injured hand. Hatherley tells how Colonel Lysander Stark hired him for a night job at Eyford, claiming a hydraulic press was needed for fuller's-earth. At the house he met a frightened woman who warned him to leave. Stark trapped him in the press, which began to crush him, but he escaped through a panel and jumped from a window, losing his thumb. Holmes and Watson then travel to Eyford, where they find the house burning and a severed thumb in an upper window.",
       "keyEvents": [
-        "The Adventure of the Engineer’s Thumb"
+        "Hatherley arrives injured at Watson's consulting-room",
+        "Stark hires Hatherley for a midnight job at Eyford",
+        "A woman warns Hatherley to leave the house",
+        "Stark traps Hatherley in the hydraulic press",
+        "Hatherley escapes through a panel and jumps from a window, losing his thumb"
       ],
-      "charactersPresent": [],
-      "setting": "",
+      "charactersPresent": [
+        "Victor Hatherley",
+        "Sherlock Holmes",
+        "Watson",
+        "Colonel Lysander Stark",
+        "Elise",
+        "Fritz",
+        "Mr. Ferguson",
+        "Inspector Bradstreet"
+      ],
+      "setting": "London (Watson's consulting-room and Baker Street) and Eyford, Berkshire",
       "kind": "narrative",
-      "contentNotes": [],
+      "contentNotes": [
+        "A man's thumb is hacked off",
+        "Attempted murder: a man is nearly crushed in a hydraulic press",
+        "A house burns down",
+        "Implied coining (counterfeiting) operation"
+      ],
       "index": 9,
-      "generatedBy": "placeholder"
+      "generatedBy": "claude-haiku-5-5"
     },
     {
-      "summary": "[Placeholder] The Lord St. Simon marriage, and its curious termination, have long ceased to be a subject of interest in those exalted circles in which the unfortunate bridegroom moves. Fresh scandals have eclipsed it, and their more piquant details have drawn the gossips away from this four-year-old drama. As I have reason to believe, however, that the full facts have never…",
+      "summary": "Sherlock Holmes receives a letter from Lord St. Simon, whose bride vanished at their wedding breakfast. Holmes reads newspaper clippings with Watson, then questions the nobleman about his bride, Hatty Doran. Lord St. Simon describes the dropped bouquet, a note-like gesture, and the maid Alice, and says Flora Millar, a former dancer, caused a disturbance. Lestrade arrives soaked from dragging the Serpentine, carrying the wedding dress and a card-case note signed F. H. M. Holmes sees the hotel bill on the back and says the bride is a myth. Later Holmes produces the missing bride, Mrs. Hay Moulton, and her first husband, Frank Hay Moulton, who was thought dead. Lord St. Simon storms out, and Holmes explains his reasoning.",
       "keyEvents": [
-        "The Adventure of the Noble Bachelor"
+        "Holmes receives a letter from Lord St. Simon about his missing bride",
+        "Holmes questions Lord St. Simon about the wedding and the bride's maid",
+        "Lestrade shows the wedding dress and a note signed F. H. M.",
+        "Holmes reads the hotel bill and says the bride is a myth",
+        "Holmes brings Mrs. Moulton and her first husband to meet Lord St. Simon"
       ],
-      "charactersPresent": [],
-      "setting": "",
+      "charactersPresent": [
+        "Sherlock Holmes",
+        "Watson",
+        "Lord St. Simon",
+        "Lestrade",
+        "Mrs. Moulton",
+        "Francis Hay Moulton"
+      ],
+      "setting": "Baker Street rooms in London",
       "kind": "narrative",
-      "contentNotes": [],
+      "contentNotes": [
+        "a woman's first husband was reported killed by Apache Indians in a newspaper story",
+        "a woman's earlier secret marriage and a bigamy-like situation",
+        "a bride's dress and shoes found in the Serpentine",
+        "a woman was arrested on suspicion",
+        "mention of a jealous former lover who wrote threatening letters and pushed into a house",
+        "mention of a drinking supper (whisky and soda, cigars)"
+      ],
       "index": 10,
-      "generatedBy": "placeholder"
+      "generatedBy": "claude-haiku-5-5"
     },
     {
-      "summary": "[Placeholder] “Holmes,” said I as I stood one morning in our bow-window looking down the street, “here is a madman coming along. It seems rather sad that his relatives should allow him to come out alone.” My friend rose lazily from his armchair and stood with his hands in the pockets of his dressing-gown, looking over my shoulder. It was a…",
+      "summary": "Alexander Holder, a rich banker, rushes to Baker Street in distress. He tells Holmes that the Beryl Coronet, which he kept in his house, was damaged, and that his son Arthur was caught holding it. Holmes and Watson visit Fairbank, where Holmes studies the house and the snowy tracks. He finds that Mary Holder, the banker's niece, had passed the coronet to Sir George Burnwell through a window. Holmes disguises himself, gets the missing gems back, and the banker apologises to Arthur. Mary has run off with Sir George.",
       "keyEvents": [
-        "The Adventure of the Beryl Coronet"
+        "Alexander Holder arrives at Baker Street in distress about the missing Beryl Coronet",
+        "Holder reports that his son Arthur was caught with the damaged coronet",
+        "Holmes examines Fairbank and the stable lane",
+        "Holmes finds that Mary Holder gave the coronet to Sir George Burnwell",
+        "Holmes recovers the three gems and Holder apologises to Arthur"
       ],
-      "charactersPresent": [],
-      "setting": "",
+      "charactersPresent": [
+        "Holmes",
+        "Watson",
+        "Alexander Holder",
+        "Mary Holder",
+        "Arthur Holder",
+        "Sir George Burnwell",
+        "Lucy Parr",
+        "Francis Prosper"
+      ],
+      "setting": "Baker Street, London, and Fairbank in Streatham",
       "kind": "narrative",
-      "contentNotes": [],
+      "contentNotes": [
+        "A man beats his head against a wall in distress",
+        "A character faints after a scream",
+        "A struggle and a cut over a man's eye in the snow",
+        "Theft of a national treasure and an accusation of theft against a young man",
+        "A young woman secretly runs off with a man described as a dangerous gambler",
+        "Mention of gambling debts and card-playing"
+      ],
       "index": 11,
-      "generatedBy": "placeholder"
+      "generatedBy": "claude-haiku-5-5"
     },
     {
-      "summary": "[Placeholder] “To the man who loves art for its own sake,” remarked Sherlock Holmes, tossing aside the advertisement sheet of The Daily Telegraph, “it is frequently in its least important and lowliest manifestations that the keenest pleasure is to be derived. It is pleasant to me to observe, Watson, that you have so far grasped this truth that in these little…",
+      "summary": "Violet Hunter, a governess, visits Sherlock Holmes about a strange job offer. Mr. Jephro Rucastle wants her to cut her hair and wear a blue dress, and pays very well. Holmes sends her to the Copper Beeches in Hampshire. There she finds a locked wing, a hidden prisoner, and a huge mastiff. Holmes and Watson go to the house and find the prisoner gone, and Rucastle is badly hurt by his own dog. Mrs. Toller explains that Rucastle had locked up his daughter Alice to stop her marrying Mr. Fowler.",
       "keyEvents": [
-        "The Adventure of the Copper Beeches"
+        "Violet Hunter asks Holmes for advice about a governess post",
+        "She takes the job at the Copper Beeches and cuts her hair",
+        "She finds a locked wing and a hidden prisoner",
+        "Holmes and Watson rescue the house and find the prisoner gone",
+        "Rucastle is attacked and badly hurt by the mastiff"
       ],
-      "charactersPresent": [],
-      "setting": "",
+      "charactersPresent": [
+        "Sherlock Holmes",
+        "Watson",
+        "Violet Hunter",
+        "Mr. Rucastle",
+        "Mrs. Toller",
+        "Mrs. Rucastle"
+      ],
+      "setting": "Baker Street, then Winchester, then the Copper Beeches in Hampshire",
       "kind": "narrative",
-      "contentNotes": [],
+      "contentNotes": [
+        "A dog attacks and nearly kills a man, and Watson shoots the dog",
+        "A woman is locked in a room and a cellar",
+        "Drunkenness (Toller)",
+        "Threats of violence against Violet Hunter",
+        "Mention of a brain-fever illness"
+      ],
       "index": 12,
-      "generatedBy": "placeholder"
+      "generatedBy": "claude-haiku-5-5"
     }
   ],
-  "synopsis": "[Placeholder] Twelve baffling cases, one brilliant detective, and a doctor who writes it all down.",
+  "synopsis": "Sherlock Holmes and Dr. Watson solve a series of strange cases in London and the English countryside. A king wants back a photograph of himself with Irene Adler, but she outwits Holmes and escapes with her husband, leaving only a note. A red-haired pawnbroker's assistant is revealed as a criminal digging a tunnel into a bank, and John Clay is caught in the cellar. Mary Sutherland's missing fiance turns out to be her stepfather in disguise, and he runs away. At Boscombe Pool, James McCarthy is cleared when John Turner confesses to killing his father to protect his daughter. John Openshaw is threatened by a secret society and later found drowned. A missing man is found begging in disguise, a stolen blue carbuncle is traced through a goose, and Dr. Roylott dies from a swamp adder. Victor Hatherley escapes a deadly press, Lord St. Simon's bride is revealed alive, and Holmes recovers the Beryl Coronet. At Copper Beeches, Violet Hunter finds a hidden prisoner, Alice Rucastle, locked away by her father.",
   "majorArcs": [
-    "(placeholder)",
-    "(placeholder)"
+    "Holmes outwitted by a clever woman",
+    "Crimes hidden behind disguises",
+    "Secret societies and deadly threats",
+    "Murders solved by close observation",
+    "Family betrayals and stolen treasures"
   ]
 }

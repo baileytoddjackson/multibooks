@@ -23,13 +23,14 @@ const summary = (index: number, kind: ChapterSummary["kind"] = "narrative"): Cha
 });
 
 describe("book outline", () => {
-  it("groups the chapters after the branch into at most a dozen beats", () => {
+  it("groups the book from the branch on into at most a dozen beats", () => {
     const chapters = Array.from({ length: 136 }, (_, i) =>
       summary(i + 1, i % 3 ? "narrative" : "essay"),
     );
     const beats = buildOutline({ chapters }, 1);
     expect(beats).toHaveLength(MAX_BEATS);
-    expect(beats[0].chapters[0]).toBe(2);
+    // The reader left chapter 1 part way through, so its later events are still ahead.
+    expect(beats[0].chapters[0]).toBe(1);
     expect(beats[beats.length - 1].chapters[1]).toBe(136);
     // Contiguous, no gaps.
     for (let i = 1; i < beats.length; i++) {
@@ -39,14 +40,18 @@ describe("book outline", () => {
   });
 
   it("prefers story chapters over essay chapters", () => {
-    const beats = buildOutline({ chapters: [summary(1), summary(2, "essay"), summary(3)] }, 1, 1);
+    const beats = buildOutline(
+      { chapters: [summary(1, "essay"), summary(2, "essay"), summary(3)] },
+      1,
+      1,
+    );
     expect(beats[0].events).toContain("event 3a");
     expect(beats[0].events).not.toContain("event 2a");
   });
 
   it("uses one beat per chapter for short books", () => {
     const chapters = Array.from({ length: 5 }, (_, i) => summary(i + 1));
-    expect(buildOutline({ chapters }, 1).map((b) => b.chapters)).toEqual([
+    expect(buildOutline({ chapters }, 2).map((b) => b.chapters)).toEqual([
       [2, 2],
       [3, 3],
       [4, 4],
@@ -109,7 +114,7 @@ describe("adventure prompts", () => {
       synopsis: "A girl falls into Wonderland.",
       cast,
       chapter: chapter as never,
-      chapterSummary: "Alice follows the rabbit.",
+
       cp,
       option,
       firstBeat: { chapters: [2, 2], events: "the pool of tears" },
@@ -119,6 +124,9 @@ describe("adventure prompts", () => {
     expect(p.user).not.toContain("AFTER THE CHOICE");
     expect(p.user).toContain('They chose: "Climb the table"');
     expect(p.user).toContain("the pool of tears");
+    // Nothing after the choice is presented as already read.
+    expect(p.user).toContain("Nothing after the choice has happened yet");
+    expect(p.user).toContain("none of it has\nhappened unless the adventure itself says so");
     expect(p.system).toContain("never goes back to the original text");
     expect(p.mock().choices.length).toBeGreaterThanOrEqual(2);
   });

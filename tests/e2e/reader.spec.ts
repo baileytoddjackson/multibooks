@@ -84,15 +84,22 @@ test("Sherlock Holmes reads as written, story by story", async ({ page }) => {
   ).toBeVisible();
 });
 
-test("Adventure Mode waits for a book's real content instead of showing placeholders", async ({
-  page,
-}) => {
-  // Sherlock's summaries and entry choice are placeholders until content:summaries and
-  // content:maps run with an API key; then this test should be updated.
+test("Sherlock Holmes can be played as an adventure", async ({ page }) => {
   await page.goto("/book/sherlock");
-  await expect(page.getByTestId("mode-adventure-soon")).toContainText("Coming soon");
-  await expect(page.getByTestId("mode-adventure")).toHaveCount(0);
-  await page.goto("/read/sherlock/1?mode=adventure");
-  await expect(page.getByText("Adventures for this book are still being written")).toBeVisible();
-  await expect(page.getByTestId("choice-prompt")).toHaveCount(0);
+  await page.getByTestId("mode-adventure").click();
+  await expect(page).toHaveURL(/\/read\/sherlock\/1\?mode=adventure/);
+  for (let i = 0; i < 6; i++) {
+    if (await page.getByText("how do you want to play?", { exact: false }).isVisible()) break;
+    await page.getByRole("button", { name: /Next page/ }).click();
+  }
+  await page.getByRole("radio", { name: /Be a character/ }).click();
+  await page.getByRole("radio", { name: /Dr. Watson/ }).click();
+  await page.getByRole("button", { name: "Let's go" }).click();
+  const prompt = page.getByTestId("choice-prompt");
+  await expect(prompt).toContainText("Baker Street");
+  await prompt.getByRole("listitem").first().getByRole("button").click();
+  await expect(page).toHaveURL(/\/story\//);
+  await expect(
+    page.getByText("✦ An adventure from The Adventures of Sherlock Holmes"),
+  ).toBeVisible();
 });

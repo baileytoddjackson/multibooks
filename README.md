@@ -98,6 +98,9 @@ All of these accept `--book alice|odyssey|moby-dick|sherlock`.
    PGLAF mirror if the main site is down.)
 4. Until summaries and the adventure map come from the model (not placeholders), the book reads
    as written and its Adventure Mode shows "Coming soon".
+5. Read the generated entry choice before committing. It must come after 800-4,000 words of the
+   opening chapter (`content:validate` checks this), and its options should start a new story,
+   not lead back to the original. Edit labels that don't suit the age group.
 
 ## Adventure Mode
 

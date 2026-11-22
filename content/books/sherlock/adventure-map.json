@@ -1,81 +1,87 @@
 {
   "bookId": "sherlock",
-  "version": 1,
-  "generatedBy": "placeholder",
+  "version": 3,
+  "generatedBy": "claude-haiku-5-5",
   "choicePoints": [
     {
       "id": "cp01",
       "chapter": 1,
-      "anchorAfter": "c001p010",
-      "rejoinAt": "c001p012",
-      "prompt": "[Placeholder] What would you like to do next?",
+      "anchorAfter": "c001p034",
+      "rejoinAt": "c001p040",
+      "prompt": "A carriage has stopped outside Baker Street, and a heavy step is climbing the stairs. What should happen next?",
       "isIntro": true,
       "availableCharacters": [
         "holmes",
-        "watson",
-        "irene-adler"
+        "watson"
       ],
       "plotOptions": [
         {
           "id": "p1",
-          "label": "[Placeholder] Try path 1",
-          "detourBrief": "Placeholder detour 1: a short side moment that leads back to the original text.",
-          "mustPreserve": []
+          "label": "Peek out the window to spot the mysterious visitor",
+          "detourBrief": "The narrator describes a tall figure in a dark cloak below, carrying a sealed box. Holmes and Watson hurry to the stairs, and a small brass key falls from the visitor's pocket. The chase to return it starts a new mystery across London, one in which the visitor's true purpose is still unknown.",
+          "mustPreserve": [
+            "Holmes is a brilliant detective who notices tiny details.",
+            "Watson is a loyal doctor who narrates the adventures."
+          ]
         },
         {
           "id": "p2",
-          "label": "[Placeholder] Try path 2",
-          "detourBrief": "Placeholder detour 2: a short side moment that leads back to the original text.",
-          "mustPreserve": []
+          "label": "Hide behind the door and listen to the visitor",
+          "detourBrief": "Holmes and Watson wait quietly behind the door and overhear a whispered conversation in a foreign accent. They learn a secret about a missing letter, and a note slips under the door, asking for help. The pair must decide whether to trust the stranger and follow the trail through the city's foggy streets.",
+          "mustPreserve": [
+            "Holmes values careful observation over guesswork.",
+            "Watson is a kind friend who cares about his companions."
+          ]
         },
         {
           "id": "p3",
-          "label": "[Placeholder] Try path 3",
-          "detourBrief": "Placeholder detour 3: a short side moment that leads back to the original text.",
-          "mustPreserve": []
+          "label": "Open the door and welcome the visitor in",
+          "detourBrief": "Holmes greets the visitor warmly and invites them to sit, but the visitor arrives wearing a clever disguise. Their request turns out to be a puzzle about a lost gift for a friend. Holmes and Watson agree to help, and the adventure sends them to a theatre where a famous singer is said to be performing.",
+          "mustPreserve": [
+            "Holmes is a brilliant detective who notices tiny details.",
+            "Watson is a loyal doctor who narrates the adventures."
+          ]
         }
       ],
       "characterOptions": {
         "holmes": [
           {
             "id": "holmes-1",
-            "label": "[Placeholder] Try path 1",
-            "detourBrief": "Placeholder detour 1: a short side moment that leads back to the original text.",
-            "mustPreserve": []
+            "label": "Study the visitor's footsteps to guess their size and mood",
+            "detourBrief": "Holmes says the steps are heavy but hesitant, and he deduces the visitor is worried about something hidden. He sketches the clues on his notebook, and the adventure begins with a list of small details that point to a missing photograph in a nearby house.",
+            "mustPreserve": [
+              "Holmes can read clues from tiny details like shoes and footsteps.",
+              "Holmes thinks carefully before he forms any theory."
+            ]
           },
           {
             "id": "holmes-2",
-            "label": "[Placeholder] Try path 2",
-            "detourBrief": "Placeholder detour 2: a short side moment that leads back to the original text.",
-            "mustPreserve": []
+            "label": "Sit back and wait with calm patience",
+            "detourBrief": "Holmes stays relaxed in his armchair, eyes half closed, pretending not to care. Then he quietly says the visitor will soon reveal a secret. The story begins with Holmes setting a clever trap by the window, and the trap will reveal the visitor's true identity.",
+            "mustPreserve": [
+              "Holmes is a calm and clever detective.",
+              "Holmes enjoys puzzles that others find impossible."
+            ]
           }
         ],
         "watson": [
           {
             "id": "watson-1",
-            "label": "[Placeholder] Try path 1",
-            "detourBrief": "Placeholder detour 1: a short side moment that leads back to the original text.",
-            "mustPreserve": []
+            "label": "Grab the doorknob and step forward bravely",
+            "detourBrief": "Watson, eager to protect his friend, hurries to the door and calls out a cheerful greeting. The visitor pauses, startled, and drops a folded letter. Watson picks it up, and the adventure begins as the two friends follow a faint scent of perfume into the night.",
+            "mustPreserve": [
+              "Watson is a loyal friend and a trained doctor.",
+              "Watson tells the story of his adventures with Holmes."
+            ]
           },
           {
             "id": "watson-2",
-            "label": "[Placeholder] Try path 2",
-            "detourBrief": "Placeholder detour 2: a short side moment that leads back to the original text.",
-            "mustPreserve": []
-          }
-        ],
-        "irene-adler": [
-          {
-            "id": "irene-adler-1",
-            "label": "[Placeholder] Try path 1",
-            "detourBrief": "Placeholder detour 1: a short side moment that leads back to the original text.",
-            "mustPreserve": []
-          },
-          {
-            "id": "irene-adler-2",
-            "label": "[Placeholder] Try path 2",
-            "detourBrief": "Placeholder detour 2: a short side moment that leads back to the original text.",
-            "mustPreserve": []
+            "label": "Take notes on everything you see and hear",
+            "detourBrief": "Watson pulls out his notebook and writes down every sound, from the creak of the stairs to the tap of the visitor's cane. Later, these notes reveal a pattern that suggests the visitor is connected to a famous opera house. The adventure starts with Watson comparing his notes to Holmes's clues.",
+            "mustPreserve": [
+              "Watson is a careful and loyal friend.",
+              "Watson records the cases that Holmes solves."
+            ]
           }
         ]
       }

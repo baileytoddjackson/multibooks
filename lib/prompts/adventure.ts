@@ -81,7 +81,9 @@ export interface AdventureBook {
 
 function bookHeader({ book, synopsis, cast }: AdventureBook): string {
   return `Book: ${book.title} by ${book.author}${book.translator ? ` (translated by ${book.translator})` : ""}
-<book_premise>${synopsis}</book_premise>
+<original_book_story>${synopsis}</original_book_story>
+(The original book's plot, for its world and characters. In this adventure, none of it has
+happened unless the adventure itself says so.)
 <book_characters>
 ${cast.map((c) => `- ${c.name}: ${c.oneLine}`).join("\n")}
 </book_characters>`;
@@ -89,15 +91,19 @@ ${cast.map((c) => `- ${c.name}: ${c.oneLine}`).join("\n")}
 
 function beatGuide(beat: Beat | undefined, isFinalBeat: boolean): string {
   if (!beat) return "";
+  const where =
+    beat.chapters[0] === beat.chapters[1]
+      ? `chapter ${beat.chapters[0]}`
+      : `chapters ${beat.chapters[0]}-${beat.chapters[1]}`;
   return `<book_storyline_around_now>
-In the book, around this point (chapters ${beat.chapters[0]}-${beat.chapters[1]}): ${beat.events}
+In the original book, around this point (${where}): ${beat.events}
 ${isFinalBeat ? "This is where the book heads toward its ending, so this adventure can start building toward a big finish of its own." : ""}
 </book_storyline_around_now>
 A loose guide only. Use what fits this adventure; skip what doesn't.`;
 }
 
 /** Last ~`maxWords` words of the original up to and including the paragraph before the choice. */
-export function textBeforeChoice(chapter: Chapter, anchorId: string, maxWords = 220): string {
+export function textBeforeChoice(chapter: Chapter, anchorId: string, maxWords = 400): string {
   const anchor = chapter.paragraphs.findIndex((p) => p.id === anchorId);
   const out: string[] = [];
   let words = 0;
@@ -114,22 +120,23 @@ export function textBeforeChoice(chapter: Chapter, anchorId: string, maxWords = 
 
 export interface AdventureOpeningInput extends AdventureBook {
   chapter: Chapter;
-  chapterSummary: string;
+  /** Summaries of chapters before the entry chapter, if any (the reader has read those). */
+  earlierChapters?: string;
   cp: ChoicePoint;
   option: AdventureOption;
   /** The character the reader plays, if any. */
   character?: Character;
-  /** The first beat of the book's storyline after the opening chapter. */
+  /** The first beat of the book's storyline after the choice (the rest of its chapter). */
   firstBeat?: Beat;
 }
 
 export function buildAdventureOpeningPrompt(input: AdventureOpeningInput) {
-  const { book, chapter, chapterSummary, cp, option, character } = input;
+  const { book, chapter, earlierChapters, cp, option, character } = input;
   const user = `${bookHeader(input)}
 
 ${perspectiveInstructions(character)}
 
-The reader read the book's opening chapter as written. So far in it: ${chapterSummary}
+The reader has read the original text up to the choice${earlierChapters ? `, including the earlier chapters: ${earlierChapters}` : ""}. Nothing after the choice has happened yet.
 
 <original_text_just_before_the_choice>
 ${textBeforeChoice(chapter, cp.anchorAfter)}

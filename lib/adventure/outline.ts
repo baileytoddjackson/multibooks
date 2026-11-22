@@ -4,8 +4,9 @@ import type { Summaries } from "@/lib/schemas/content";
  * The book's storyline as a loose outline for Adventure Mode.
  *
  * An adventure leaves the original text at its first choice, but it should still feel like the
- * book: the same world, the same characters, and roughly the same big story. So the chapters after
- * the branch are grouped into a dozen or so "beats" (a few key events each), and each new page is
+ * book: the same world, the same characters, and roughly the same big story. So the book from the
+ * branch on (the rest of its chapter, then the chapters after it) is grouped into a dozen or so
+ * "beats" (a few key events each), and each new page is
  * told which beat the book would be at by now. The prompt treats it as a suggestion only: what
  * the reader has already chosen always wins.
  */
@@ -24,14 +25,17 @@ function clip(text: string, words: number): string {
   return w.length <= words ? w.join(" ") : `${w.slice(0, words).join(" ")} …`;
 }
 
-/** Groups the chapters after `fromChapter` into at most `maxBeats` evenly sized beats. */
+/**
+ * Groups the chapters from `fromChapter` (where the adventure branched; the reader left it part
+ * way through, so its later events are still ahead) into at most `maxBeats` evenly sized beats.
+ */
 export function buildOutline(
   summaries: Pick<Summaries, "chapters">,
   fromChapter: number,
   maxBeats = MAX_BEATS,
 ): Beat[] {
   const later = summaries.chapters
-    .filter((c) => c.index > fromChapter)
+    .filter((c) => c.index >= fromChapter)
     .sort((a, b) => a.index - b.index);
   if (!later.length) return [];
   const n = Math.min(maxBeats, later.length);

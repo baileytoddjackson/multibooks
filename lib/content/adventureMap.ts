@@ -21,8 +21,10 @@ export const CHOICE_POINT_CAPS: Record<string, number> = {
 
 /** How far after the choice its scene may end in the original (checked, never shown). */
 export const MAX_SKIPPED_PARAGRAPHS = 6;
-/** The first choice comes after the reader has had a real taste of the original. */
+/** The first choice comes after the reader has had a real taste of the original… */
 export const MIN_INTRO_WORDS = 800;
+/** …but within the first few pages, so the adventure starts soon (about 25 minutes of reading). */
+export const MAX_INTRO_WORDS = 4000;
 
 /**
  * Chapters that never get a choice point, and that Adventure Mode's storyline outline leaves out
@@ -149,6 +151,7 @@ export function normalizeChoicePoint(
   if (isIntro && a >= 0) {
     const wordsBefore = paras.slice(0, a + 1).reduce((n, p) => n + countWords(p.text), 0);
     if (wordsBefore < MIN_INTRO_WORDS) errors.push(`intro choice after only ${wordsBefore} words`);
+    if (wordsBefore > MAX_INTRO_WORDS) errors.push(`intro choice after ${wordsBefore} words`);
   }
 
   const prompt = out.prompt.trim();
@@ -199,6 +202,19 @@ export function validateMap(
   if (!map.choicePoints[0]?.isIntro) errors.push("first choice point must be the intro");
   if (map.choicePoints.filter((c) => c.isIntro).length !== 1)
     errors.push("exactly one intro choice point");
+  const intro = map.choicePoints[0];
+  const introChapter = intro && chapters.get(intro.chapter);
+  if (intro?.isIntro && introChapter) {
+    const a = introChapter.paragraphs.findIndex((p) => p.id === intro.anchorAfter);
+    const words = introChapter.paragraphs
+      .slice(0, a + 1)
+      .reduce((n, p) => n + countWords(p.text), 0);
+    if (a >= 0 && (words < MIN_INTRO_WORDS || words > MAX_INTRO_WORDS)) {
+      errors.push(
+        `intro choice after ${words} words (allowed ${MIN_INTRO_WORDS}-${MAX_INTRO_WORDS})`,
+      );
+    }
+  }
 
   const ids = new Set<string>();
   let last = -1;

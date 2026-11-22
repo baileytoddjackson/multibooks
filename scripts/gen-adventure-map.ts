@@ -17,6 +17,7 @@ import path from "node:path";
 import {
   castAvailableAt,
   CHOICE_POINT_CAPS,
+  MAX_INTRO_WORDS,
   MAX_SKIPPED_PARAGRAPHS,
   MIN_INTRO_WORDS,
   normalizeChoicePoint,
@@ -65,7 +66,7 @@ function placeholderChoicePoint(
   while (paras[rejoin]?.kind === "break") rejoin++;
   const opt = (n: number) => ({
     label: `[Placeholder] Try path ${n}`,
-    detourBrief: `Placeholder detour ${n}: a short side moment that leads back to the original text.`,
+    detourBrief: `Placeholder option ${n}: where the adventure would go from this choice.`,
     mustPreserve: [],
   });
   const available = castAvailableAt(cast, ch.index).map((c) => c.id);
@@ -121,6 +122,7 @@ async function processBook(id: ScriptBookId) {
           cast: castHere,
           isIntro,
           minIntroWords: MIN_INTRO_WORDS,
+          maxIntroWords: MAX_INTRO_WORDS,
         }),
         schema: ChoicePointOutputSchema,
         maxTokens: 6000,

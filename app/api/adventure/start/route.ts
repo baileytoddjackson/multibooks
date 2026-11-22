@@ -68,7 +68,11 @@ export async function POST(request: Request) {
         synopsis: ctx.summaries.synopsis,
         cast,
         chapter,
-        chapterSummary: ctx.summaries.chapters.find((s) => s.index === cp.chapter)?.summary ?? "",
+        earlierChapters:
+          ctx.summaries.chapters
+            .filter((s) => s.index < cp.chapter)
+            .map((s) => s.summary)
+            .join(" ") || undefined,
         cp,
         option,
         character: view.perspective === "narrator" ? undefined : character,

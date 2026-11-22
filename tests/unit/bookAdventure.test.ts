@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { choiceView, entryChoicePoint, layoutEntryPage } from "@/lib/engine/bookAdventure";
+import {
+  adventureAvailable,
+  choiceView,
+  entryChoicePoint,
+  layoutEntryPage,
+} from "@/lib/engine/bookAdventure";
 import type { AdventureMap, ChoicePoint } from "@/lib/schemas/adventure";
 
 const opt = (id: string) => ({
@@ -93,5 +98,25 @@ describe("layoutEntryPage", () => {
     const ch2 = { ...chapter, index: 2 };
     expect(layoutEntryPage(ch2, { start: 0, end: 10 }, cp).blocked).toBe(false);
     expect(layoutEntryPage(chapter, { start: 0, end: 10 }, undefined).blocked).toBe(false);
+  });
+});
+
+describe("adventureAvailable", () => {
+  const map: AdventureMap = {
+    bookId: "alice",
+    version: 1,
+    generatedBy: "model",
+    choicePoints: [cp],
+  };
+  const real = { chapters: [{ generatedBy: "model" }] };
+
+  it("needs a real entry choice and real summaries", () => {
+    expect(adventureAvailable(map, real)).toBe(true);
+    // Content written without an API key never reaches readers.
+    expect(adventureAvailable({ ...map, generatedBy: "placeholder" }, real)).toBe(false);
+    expect(entryChoicePoint({ ...map, generatedBy: "placeholder" })).toBeUndefined();
+    expect(adventureAvailable(map, { chapters: [{ generatedBy: "placeholder" }] })).toBe(false);
+    expect(adventureAvailable(undefined, real)).toBe(false);
+    expect(adventureAvailable(map, { chapters: [] })).toBe(false);
   });
 });

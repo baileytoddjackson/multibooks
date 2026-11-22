@@ -61,7 +61,8 @@ Write the choice:
 - characterOptions: for each listed character who is actually present in this scene, exactly 2
   options written as what THAT character might do or notice. Only use the character ids given.
 - detourBrief for every option: at most 60 words describing where this choice leads: how the
-  adventure's first page could go, and how it starts to change the story.
+  adventure's first page could go, and how it starts to change the story. Never describe the
+  scene returning to what happens next in the original: from this choice on, the story is new.
 - mustPreserve: 1-3 facts about the world or characters the adventure should keep (who they are,
   how the world works), not plot events.
 
@@ -79,17 +80,23 @@ export function adventureMapUser(args: {
   cast: { id: string; name: string; oneLine: string }[];
   isIntro: boolean;
   minIntroWords: number;
+  maxIntroWords: number;
 }): string {
-  const { bookTitle, chapter, chapterSummary, cast, isIntro, minIntroWords } = args;
+  const { bookTitle, chapter, chapterSummary, cast, isIntro, minIntroWords, maxIntroWords } = args;
   const heading = [chapter.title, chapter.subtitle].filter(Boolean).join(": ");
-  const text = chapter.paragraphs
+  // For the first choice, show only the opening: the adventure should start within a few pages.
+  let words = 0;
+  const shown = isIntro
+    ? chapter.paragraphs.filter((p) => (words += p.text.split(/\s+/).length) <= maxIntroWords)
+    : chapter.paragraphs;
+  const text = shown
     .map((p) => (p.kind === "break" ? `[${p.id}] * * *` : `[${p.id}] ${p.text}`))
     .join("\n\n");
   const castList = cast.length
     ? cast.map((c) => `- ${c.id}: ${c.name} (${c.oneLine})`).join("\n")
     : "(none yet: return an empty characterOptions list)";
   const intro = isIntro
-    ? `\nThis is the FIRST choice in the book. Place it after at least ${minIntroWords} words of the original, near the end of the chapter if possible, so the reader has settled into the story first.\n`
+    ? `\nThis is the FIRST choice in the book, where it turns into the reader's adventure. Only the opening of the chapter is shown. Place the choice after at least ${minIntroWords} words, at the first strong decision point in the text shown, so the reader has settled in but the adventure starts within a few pages.\n`
     : "";
   return `Book: ${bookTitle}
 Chapter ${chapter.index}: ${heading}
