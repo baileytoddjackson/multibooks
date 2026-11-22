@@ -8,6 +8,7 @@ import { getStats, listGroupCodes, statsWindow } from "@/lib/admin/stats";
 import { getBook } from "@/lib/content/books";
 import { genreLabel } from "@/lib/cyo/genres";
 import { env } from "@/lib/env";
+import { llmConfigProblem } from "@/lib/llm/client";
 import { serverStore, utcDay } from "@/lib/server-store";
 
 export const metadata: Metadata = { title: "Pilot stats", robots: { index: false, follow: false } };
@@ -108,9 +109,21 @@ async function Gate({ searchParams }: { searchParams: PageProps<"/admin/stats">[
   const store = serverStore();
   const s = await getStats(store, { ...window, sessionCode: code }, utcDay());
   const allCodes = await listGroupCodes(store);
+  const llmProblem = llmConfigProblem(e);
 
   return (
     <div className="flex flex-col gap-6">
+      {llmProblem && (
+        <p
+          role="alert"
+          className="rounded-2xl bg-coral/10 p-4 text-coral-strong ring-1 ring-coral/30"
+        >
+          <strong>Live story writing is off on this deployment:</strong> {llmProblem}. Set{" "}
+          <code>LLM_PROVIDER=anthropic</code> and <code>ANTHROPIC_API_KEY</code> in Vercel, then
+          redeploy. Until then, adventures and Create Your Own show a &ldquo;try again&rdquo;
+          message.
+        </p>
+      )}
       <header className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <h1 className="font-display text-3xl font-semibold">Pilot stats</h1>
