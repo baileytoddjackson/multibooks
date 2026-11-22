@@ -1,8 +1,9 @@
 import { expect, test } from "./fixtures";
 import { seedLibrary } from "./seed";
 
-const entryTitles = (page: import("@playwright/test").Page) =>
-  page.getByTestId("library-entry").getByRole("heading").allInnerTexts();
+/** The library's titles, in order. Retries until they match (the list loads after the page). */
+const expectTitles = (page: import("@playwright/test").Page, titles: string[]) =>
+  expect(page.getByTestId("library-entry").getByRole("heading")).toHaveText(titles);
 
 test("the library lists everything, newest first, with clear details", async ({
   page,
@@ -15,7 +16,7 @@ test("the library lists everything, newest first, with clear details", async ({
   await expect(page).toHaveURL(/\/library$/);
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("My library");
   await expect(page.getByText("5 items")).toBeVisible();
-  expect(await entryTitles(page)).toEqual([
+  await expectTitles(page, [
     "The Café Under the Hill",
     "Ahab's Second Chance",
     "The Odyssey",
@@ -46,27 +47,29 @@ test("search, filters and sort narrow the list and stay in the URL", async ({
 
   await page.getByLabel("Search").fill("cafe");
   await expect(page.getByText("1 of 5 items")).toBeVisible();
-  expect(await entryTitles(page)).toEqual(["The Café Under the Hill"]);
+  await expectTitles(page, ["The Café Under the Hill"]);
   await expect(page).toHaveURL(/q=cafe/);
   await page.getByLabel("Search").fill("");
 
   await page.getByText("Adventures", { exact: true }).click();
-  expect(await entryTitles(page)).toEqual(["The Café Under the Hill", "Ahab's Second Chance"]);
+  await expectTitles(page, ["The Café Under the Hill", "Ahab's Second Chance"]);
   await page.getByLabel("Book", { exact: true }).selectOption("moby-dick");
-  expect(await entryTitles(page)).toEqual(["Ahab's Second Chance"]);
+  await expectTitles(page, ["Ahab's Second Chance"]);
   await expect(page).toHaveURL(/book=moby-dick/);
   await expect(page).toHaveURL(/mode=adventure/);
 
   // Filters survive a reload.
   await page.reload();
-  expect(await entryTitles(page)).toEqual(["Ahab's Second Chance"]);
+  await expectTitles(page, ["Ahab's Second Chance"]);
   await page.getByRole("button", { name: "Clear filters" }).click();
   await expect(page.getByText("5 items")).toBeVisible();
 
   await page.getByLabel("Sort by").selectOption("title");
-  expect((await entryTitles(page))[0]).toBe("Ahab's Second Chance");
+  await expect(page.getByTestId("library-entry").getByRole("heading").first()).toHaveText(
+    "Ahab's Second Chance",
+  );
   await page.getByLabel("Sort by").selectOption("book");
-  expect(await entryTitles(page)).toEqual([
+  await expectTitles(page, [
     "The Café Under the Hill",
     "Alice's Adventures in Wonderland",
     "Ahab's Second Chance",
@@ -129,5 +132,5 @@ test("the home page shows recent items with a link to the full library", async (
   await expect(stories.getByRole("link", { name: /Café Under the Hill/ })).toBeVisible();
   await page.getByRole("link", { name: "See all in My library" }).first().click();
   await expect(page).toHaveURL(/\/library\?mode=canon$/);
-  expect(await entryTitles(page)).toEqual(["The Odyssey", "Alice's Adventures in Wonderland"]);
+  await expectTitles(page, ["The Odyssey", "Alice's Adventures in Wonderland"]);
 });
